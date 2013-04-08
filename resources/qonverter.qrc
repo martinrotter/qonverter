@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/">
+        <file>graphics/qonverter.png</file>
+        <file>text/CHANGELOG</file>
+        <file>text/AUTHORS</file>
+        <file>database/init.sql</file>
+        <file>graphics/flags/cs.png</file>
+        <file>graphics/flags/en.png</file>
+        <file>graphics/settings_general.png</file>
+        <file>graphics/settings_language.png</file>
+        <file>graphics/settings_ui.png</file>
+        <file>graphics/settings_calculator.png</file>
+        <file>graphics/clear_contents.png</file>
+        <file>graphics/close_app.png</file>
+        <file>graphics/settings_all.png</file>
+        <file>text/COPYING_HTML</file>
+        <file>rates/eurofxref-daily.xml</file>
+        <file>graphics/swap.png</file>
+        <file>graphics/qt_logo.png</file>
+        <file>graphics/variables.png</file>
+    </qresource>
+</RCC>

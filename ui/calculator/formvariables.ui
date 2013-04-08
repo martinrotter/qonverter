@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FormVariables</class>
+ <widget class="QDialog" name="FormVariables">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>738</width>
+    <height>359</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Variables, Constants and Functions</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="2" column="5">
+    <widget class="QPushButton" name="m_btnDeleteVariable">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string>Delete Variable</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="4">
+    <widget class="QPushButton" name="m_btnEditVariable">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>Edit Variable</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="3">
+    <widget class="QPushButton" name="m_btnAddVariable">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="text">
+      <string>Add Variable</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="2">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Expanding</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>60</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="2" column="1">
+    <widget class="QComboBox" name="m_cmbSelectType">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="currentIndex">
+      <number>6</number>
+     </property>
+     <property name="sizeAdjustPolicy">
+      <enum>QComboBox::AdjustToContents</enum>
+     </property>
+     <item>
+      <property name="text">
+       <string>Constants</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Impilicitly-created variables</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Explicitly-created variables</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Critical variables</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Functions</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>All variables</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Everything</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Display</string>
+     </property>
+     <property name="buddy">
+      <cstring>m_cmbSelectType</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="7">
+    <widget class="QScrollArea" name="scrollArea">
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="scrollAreaWidgetContents">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>720</width>
+        <height>285</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="ConstantsView" name="m_treeVarsConsts">
+         <property name="editTriggers">
+          <set>QAbstractItemView::NoEditTriggers</set>
+         </property>
+         <property name="indentation">
+          <number>0</number>
+         </property>
+         <property name="itemsExpandable">
+          <bool>false</bool>
+         </property>
+         <property name="sortingEnabled">
+          <bool>true</bool>
+         </property>
+         <property name="expandsOnDoubleClick">
+          <bool>false</bool>
+         </property>
+         <attribute name="headerDefaultSectionSize">
+          <number>50</number>
+         </attribute>
+         <attribute name="headerMinimumSectionSize">
+          <number>20</number>
+         </attribute>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Filter</string>
+     </property>
+     <property name="buddy">
+      <cstring>m_txtFilter</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="LineEdit" name="m_txtFilter">
+     <property name="toolTip">
+      <string>Insert regular expression for filtering visible items.</string>
+     </property>
+     <property name="placeholderText">
+      <string>Filter pattern for visible items</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="2" colspan="5">
+    <widget class="QDialogButtonBox" name="m_buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Close</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+  <zorder>m_btnEditVariable</zorder>
+  <zorder>m_btnAddVariable</zorder>
+  <zorder>m_btnDeleteVariable</zorder>
+  <zorder>m_buttonBox</zorder>
+  <zorder>scrollArea</zorder>
+  <zorder>m_cmbSelectType</zorder>
+  <zorder>label</zorder>
+  <zorder>label_2</zorder>
+  <zorder>m_txtFilter</zorder>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ConstantsView</class>
+   <extends>QTreeView</extends>
+   <header>constantsview.h</header>
+  </customwidget>
+  <customwidget>
+   <class>LineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>lineedit.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>m_buttonBox</tabstop>
+  <tabstop>m_treeVarsConsts</tabstop>
+  <tabstop>m_cmbSelectType</tabstop>
+  <tabstop>m_txtFilter</tabstop>
+  <tabstop>m_btnAddVariable</tabstop>
+  <tabstop>m_btnEditVariable</tabstop>
+  <tabstop>m_btnDeleteVariable</tabstop>
+  <tabstop>scrollArea</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>m_buttonBox</sender>
+   <signal>clicked(QAbstractButton*)</signal>
+   <receiver>FormVariables</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>257</x>
+     <y>326</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

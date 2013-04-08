@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FormMain</class>
+ <widget class="QMainWindow" name="FormMain">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>257</width>
+    <height>286</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string notr="true"/>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="m_centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>5</number>
+    </property>
+    <property name="topMargin">
+     <number>5</number>
+    </property>
+    <property name="rightMargin">
+     <number>5</number>
+    </property>
+    <property name="bottomMargin">
+     <number>5</number>
+    </property>
+    <item>
+     <widget class="StackedWidget" name="m_stackedWidget">
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="FormCalculator" name="m_pageCalculator"/>
+      <widget class="FormUnitConverter" name="m_pageUnitConverter"/>
+      <widget class="FormCurrencyConverter" name="m_pageCurrencyConverter"/>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="m_menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>257</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>&amp;Help </string>
+    </property>
+    <addaction name="m_actionAboutQt"/>
+    <addaction name="m_actionAboutQonverter"/>
+   </widget>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="m_actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menu_Tools">
+    <property name="title">
+     <string>&amp;Tools</string>
+    </property>
+    <addaction name="m_actionSettings"/>
+    <addaction name="separator"/>
+    <addaction name="m_actionVariables"/>
+   </widget>
+   <widget class="QMenu" name="menu_View">
+    <property name="title">
+     <string>&amp;View</string>
+    </property>
+    <addaction name="m_actionCalculator"/>
+    <addaction name="m_actionUnitConverter"/>
+    <addaction name="m_actionCurrencyConverter"/>
+    <addaction name="separator"/>
+    <addaction name="m_actionDisplayKeypad"/>
+   </widget>
+   <addaction name="menu_File"/>
+   <addaction name="menu_View"/>
+   <addaction name="menu_Tools"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <action name="m_actionAboutQt">
+   <property name="text">
+    <string>About &amp;Qt</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true"/>
+   </property>
+  </action>
+  <action name="m_actionAboutQonverter">
+   <property name="text">
+    <string>&amp;About Qonverter</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true"/>
+   </property>
+  </action>
+  <action name="m_actionSettings">
+   <property name="text">
+    <string>&amp;Settings</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="m_actionQuit">
+   <property name="text">
+    <string>&amp;Quit</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Ctrl+Shift+Q</string>
+   </property>
+  </action>
+  <action name="m_actionUnitConverter">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Unit Converter</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Ctrl+Shift+U</string>
+   </property>
+  </action>
+  <action name="m_actionDisplayKeypad">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Display Calculator &amp;Keypad</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Ctrl+Shift+K</string>
+   </property>
+  </action>
+  <action name="m_actionCurrencyConverter">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Cu&amp;rrency Converter</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Ctrl+Shift+R</string>
+   </property>
+  </action>
+  <action name="m_actionVariables">
+   <property name="text">
+    <string>Display &amp;Variables and Functions</string>
+   </property>
+   <property name="toolTip">
+    <string>Displays simple list of declared variables.</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Ctrl+Shift+V</string>
+   </property>
+  </action>
+  <action name="m_actionCalculator">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Calculator</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Ctrl+Shift+C</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>FormCalculator</class>
+   <extends>QWidget</extends>
+   <header>formcalculator.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>FormUnitConverter</class>
+   <extends>QWidget</extends>
+   <header>formunitconverter.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>StackedWidget</class>
+   <extends>QStackedWidget</extends>
+   <header>stackedwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>FormCurrencyConverter</class>
+   <extends>QWidget</extends>
+   <header>formcurrencyconverter.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

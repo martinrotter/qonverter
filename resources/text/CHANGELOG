@@ -1,0 +1,67 @@
+<body>
+[1.0.5]
+<ul>
+<li>Many refactorings and code simplifications done.</li>
+<li>Added some fallback icons.</li>
+<li>Updated default currency rates.</li>
+<li>Massive variables/constants rewriting.</li>
+<li>Changes to variable overview, added functions and item sorting and filtering.</li>
+<li>Changes to syntax highlighter.</li>
+<li>Added more functions to function overview dialog.</li>
+<li>Added frequency to unit converter.</li>
+<li>Added regular expression filter into variable overview dialog.<li>
+</ul>
+<br>
+[1.0.4]
+<ul>
+<li>Variable overview now displays complex numbers with 'i'.</li>
+<li>Variable add/edit dialog now supports input formulas.</li>
+<li>Colored background for constants and variables.</li>
+<li>Colored signalization of value correctness in add/edit variable dialog.</li>
+<li>Colored signalization of name correctness in add/edit variable dialog.</li>
+</ul>
+<br>
+[1.0.3]
+<ul>
+<li>User-defined variables.</li>
+<li>User interface little tweaked.</li>
+<li>Code cleanup.</li>
+<li>Initial "welcome" screen added.</li>
+<li>Qonverter starts centered when launched for the first time.</li>
+<li>Automatic remembering of previous results via "ans" and "ansx" variables.</li>
+<li>Built-in "m" memory variable to store the result.</li>
+<li>Changeable result/error on-the-fly mode message time limit.</li>
+<li>Switchable option for selecting contents of final result after calculation, thx to Tomáš Kukučka for this.</li>
+<li>Changeable font for on-thy-fly mode popup panel.</li>
+<li>Update core currency rates.</li>
+<li>Added several constants.</li>
+<li>Variable overview display type of variables.</li>
+<li>Selectable type in dialog for adding/editing variables.</li>
+<li>Allowed full adding/editing/deleting of variables.</li>
+</ul>
+<br>
+[1.0.2]
+<ul>
+<li>Many bug fixes included.</li>
+<li>Modern skin updated.</li>
+<li>Unit converter has new units swap button.</li>
+</ul>
+<br>
+[1.0.1]
+<ul>
+<li>Initial second generation release.</li>
+<li>Based on modified version of the mighty muParserX library.</li>
+<li>New artwork.</li>
+<li>Rewritten user interface.</li>
+<li>Support for skins with graphics in file system.</li>
+<li>Support for switchable styles which can be loaded from relative application path.</li>
+<li>Several skins included.</li>
+<li>New language selection dialog with graphical flags.</li>
+<li>Changeable colors for syntax highlighting.</li>
+<li>Calculator on-the-fly mode with error reporting.</li>
+<li>Changeable font for calculator.</li>
+<li>Hideable calculator keypad.</li>
+<li>KFaenza fall back icons.</li>
+<li></li>
+</ul>
+</body>

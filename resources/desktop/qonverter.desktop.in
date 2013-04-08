@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Encoding=UTF-8
+Exec=qonverter
+Name=Qonverter
+GenericName=Simple (yet powerful) calculator
+GenericName[]=Jednoduchá (a přesto mocná) kalkulačka
+Comment=Simple (yet powerful) calculator with some unusual functions
+Comment[cs]=Jednoduchá (a přesto mocná) kalkulačka s neobvyklými funkcemi
+Icon=qonverter
+Terminal=false
+Categories=Qt;Office;Utility
+
