@@ -1,6 +1,10 @@
 <body>
 [1.0.5]
 <ul>
+<li>Fixed missing "exp" for exp function.</li>
+</ul>
+[1.0.5]
+<ul>
 <li>Many refactorings and code simplifications done.</li>
 <li>Added some fallback icons.</li>
 <li>Updated default currency rates.</li>

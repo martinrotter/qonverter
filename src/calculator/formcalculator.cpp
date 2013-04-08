@@ -124,6 +124,7 @@ FormCalculator::FormCalculator(QWidget *parent) : QWidget(parent), m_ui(new Ui::
   m_ui->m_btnImag->setOutput("imag");
   m_ui->m_btnArg->setOutput("arg");
   m_ui->m_btnNorm->setOutput("norm");
+  m_ui->m_btnExp->setOutput("exp");
 
   // Prepare gui of calculator widget.
   m_highlighter = new CalculatorHighlighter(m_ui->m_input);
