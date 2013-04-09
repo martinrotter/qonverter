@@ -171,7 +171,7 @@ bool CalculatorInput::matchRightPar(QTextBlock current_block, int index, int num
   return false;
 }
 
-// Inspired by http://qt-project.org/doc/qt-4.8/tools-customcompleter.html
+// Inspired by http://qt-project.org/doc/qt-4.8/tools-customcompleter.html.
 void CalculatorInput::keyPressEvent(QKeyEvent *e) {
   switch (e->key()) {
     case Qt::Key_Enter:
@@ -189,6 +189,10 @@ void CalculatorInput::keyPressEvent(QKeyEvent *e) {
       e->accept();
       break;
   }
+
+  // TODO: Find out the cause of "missing" newly created items in the popup.
+  // THIS IS VERY UGLY HACK!!!!!!!!!!!!!!!!!!!
+  m_completer->setModel(CalculatorWrapper::getInstance().getCalculator()->getConstantsModel());
 
   bool trigger_hortcut = ((e->modifiers() & Qt::ControlModifier) && e->key() == Qt::Key_Space);
   if (trigger_hortcut == false) {
@@ -208,6 +212,7 @@ void CalculatorInput::keyPressEvent(QKeyEvent *e) {
 
   QRect cr = cursorRect();
   QString completion_prefix = textUnderCursor();
+
   bool has_modifier = (e->modifiers() != Qt::NoModifier) &&
                       (ctrl_shift_pressed == false);
 

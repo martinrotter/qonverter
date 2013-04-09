@@ -69,7 +69,7 @@
 #define APP_LANG_PATH QApplication::applicationDirPath() + QString("/l10n")
 #define APP_SKIN_PATH QApplication::applicationDirPath() + QString("/skins")
 #define APP_PLUGIN_PATH QApplication::applicationDirPath() + QString("/plugins")
-#define APP_INFO_PATH QApplication::applicationDirPath() + QString("/information")
+#define APP_INFO_PATH QApplication::applicationDirPath()
 #endif
 
 #endif // DEFS_H

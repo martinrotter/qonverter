@@ -144,12 +144,8 @@ void FormMain::saveBeforeQuit() {
 
   // Delete settings manually.
   Settings::deleteSettings();
-}
 
-void FormMain::quit() {
-  // Quit the application.
-  qDebug("Quitting application.");
-  qApp->quit();
+  qDebug("Exiting the application.");
 }
 
 void FormMain::createMenus() {
@@ -195,7 +191,7 @@ void FormMain::createAppConnections() {
     if (QSystemTrayIcon::isSystemTrayAvailable() == false ||
         Settings::value(APP_CFG_GUI, "tray_icon_enabled", false).toBool() == false ||
         Settings::value(APP_CFG_GUI, "tray_icon_action", 0).toBool() == true) {
-      quit();
+      qApp->quit();
     }
     // Notify user that Qonverter runs in tray icon mode.
     else if (Settings::value(APP_CFG_GUI, "first_start_tray", true).toBool() == true) {
@@ -208,7 +204,10 @@ void FormMain::createAppConnections() {
 
 void FormMain::createGuiConnections() {
   // Menu connections.
-  connect(m_ui->m_actionQuit, &QAction::triggered, this, &FormMain::quit);
+  connect(m_ui->m_actionQuit, &QAction::triggered, [=] () {
+    // Lambda here, because static methods are NOT supported by new s/s syntax.
+    qApp->quit();
+  });
 
   connect(m_ui->m_actionAboutQonverter, &QAction::triggered, [=] () {
     FormAbout(this).exec();

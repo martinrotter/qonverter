@@ -1,20 +1,20 @@
 /*
-	This file is part of Qonverter.
-	
-	Qonverter is free software: you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation, either version 3 of the License, or
-	(at your option) any later version.
-	
-	Qonverter is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
-	
-	You should have received a copy of the GNU General Public License
-	along with Qonverter.  If not, see <http://www.gnu.org/licenses/>.
-	
-	Copyright 2012 - 2013 Martin Rotter
+ This file is part of Qonverter.
+
+ Qonverter is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ Qonverter is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with Qonverter.  If not, see <http://www.gnu.org/licenses/>.
+
+ Copyright 2012 - 2013 Martin Rotter
 */
 
 #include <QDir>
@@ -231,9 +231,21 @@ void FormSettings::saveLanguages() {
 
   if (new_lang != actual_lang) {
     Settings::setValue(APP_CFG_LANG, "language", new_lang);
-    QMessageBox::information(this,
-                             tr("Language Changed"),
-                             tr("Language of Qonverter was changed. Note that changes will take effect on next Qonverter start."));
+
+    QMessageBox box_restart(QMessageBox::Question, tr("Language Changed"),
+                            tr("Language of Qonverter was changed. Note that changes will take effect on next Qonverter start."),
+                            QMessageBox::Yes | QMessageBox::No, this);
+
+    if (box_restart.exec() == QMessageBox::Yes) {
+      if (QProcess::startDetached(qApp->applicationFilePath()) == false) {
+        QMessageBox::warning(this,
+                             tr("Problem with Qonverter Restart"),
+                             tr("Qonverter couldn't be restarted, please restart it manually for changes to take effect."));
+      }
+      else {
+        qApp->quit();
+      }
+    }
   }
 }
 

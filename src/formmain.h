@@ -58,9 +58,6 @@ class FormMain : public QMainWindow {
     void saveBeforeQuit();
 
   public slots:
-    // Quits the application.
-    void quit();
-
     // Hides the window.
     void hideWindow();
 

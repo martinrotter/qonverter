@@ -103,7 +103,7 @@ void UnitConverter::loadUnitsAndMangitudes() {
   QList<QString> angle; angle << QObject::tr("rad") << QObject::tr("grad") << QObject::tr("deg");
   QList<QString> area; area << QObject::tr("m²") << QObject::tr("mm²") << QObject::tr("cm²") << QObject::tr("dm²") << QObject::tr("a (are") << QObject::tr("ha (hectare)") <<
                                QObject::tr("km²") << QObject::tr("ft² (square foot)") << QObject::tr("yd² (square yard)") <<
-                               QObject::tr("mi² (square mile)") << QObject::tr("rood (rood)") << QObject::tr("cuerda [Guatemala] ") <<
+                               QObject::tr("mi² (square mile)") << QObject::tr("rood (rood)") << QObject::tr("cuerda [Guatemala]") <<
                                QObject::tr("cuerda [Puerto Rico]");
   QList<QString> density; density << QObject::tr("kg/m3") << QObject::tr("g/cm3") << QObject::tr("g/m3") << QObject::tr("mg/m3") <<
                                      QObject::tr("lb/US gal (pound per gallon)") <<
@@ -112,12 +112,12 @@ void UnitConverter::loadUnitsAndMangitudes() {
                                      QObject::tr("lb/cu.ft (pound per cubic foot)") <<
                                      QObject::tr("lb/cu.in (pound per cubic inch)");
   QList<QString> current; current << QObject::tr("A (Amper)") << QObject::tr("abamp (electromag. unit)") << QObject::tr("esu/s");
-  QList<QString> voltage; voltage << QObject::tr("V (Volt)") << QObject::tr("aV (abVolt)") << QObject::tr("kW (kiloVolt)") <<
+  QList<QString> voltage; voltage << QObject::tr("V (Volt)") << QObject::tr("aV (abVolt)") << QObject::tr("kV (kiloVolt)") <<
                                      QObject::tr("V int. (international Volt)") << QObject::tr("sV (statVolt)");
   QList<QString> work; work << QObject::tr("j (Joule)") << QObject::tr("btu-iso (Brittish thermal unit)") <<
                                QObject::tr("cal (calorie)") << QObject::tr("chu-it (Celsius heat unit)") <<
                                QObject::tr("eV (electronVolt)") << QObject::tr("eh (atomic unit of energy)") <<
-                               QObject::tr("kWh (kilowatt-hour)");
+                               QObject::tr("kWh (kiloWatt-hour)");
   QList<QString> force; force << QObject::tr("N (Newton)") << QObject::tr("pond") << QObject::tr("kilopond");
   QList<QString> entropy; entropy << QObject::tr("B (byte)") << QObject::tr("b (bit)") << QObject::tr("kB (kilobyte)") <<
                                      QObject::tr("MB (megabyte)") << QObject::tr("GB (gigabyte)") << QObject::tr("TB (terabyte)") <<
@@ -133,7 +133,7 @@ void UnitConverter::loadUnitsAndMangitudes() {
                                            QObject::tr("violle (Violle's candle)") <<
                                            QObject::tr("pentane candle") << QObject::tr("spermacet candle") <<
                                            QObject::tr("carcel lamp") << QObject::tr("Harcourt's lamp") <<
-                                           QObject::tr("HK (hefner candle)");
+                                           QObject::tr("HK (Hefner's candle)");
   QList<QString> mass; mass << QObject::tr("kg (kilogram)") << QObject::tr("g (gram)") << QObject::tr("mg (miligram)") <<
                                QObject::tr("q (quintal)") << QObject::tr("t (tonne)") << QObject::tr("pound (troy)") <<
                                QObject::tr("pound (avoirdupois)") << QObject::tr("ounce (avoirdupois)") <<
@@ -175,7 +175,7 @@ void UnitConverter::loadUnitsAndMangitudes() {
   m_magnitudeNames << QObject::tr("Acceleration") << QObject::tr("Angle") << QObject::tr("Area") <<
                       QObject::tr("Density") << QObject::tr("El. current") <<
                       QObject::tr("El. voltage") << QObject::tr("Energy & work") <<
-                      QObject::tr("Force") << QObject::tr("Inf. entropy") <<
+                      QObject::tr("Force") << QObject::tr("Digital information") <<
                       QObject::tr("Length") << QObject::tr("Luminance") <<
                       QObject::tr("Luminosity") << QObject::tr("Mass") <<
                       /*QObject::tr("Numeric systems") <<*/ QObject::tr("Power") <<

@@ -53,6 +53,8 @@ class FormVariables : public QDialog {
     // Deletes currently selected variable and reloads the list.
     void deleteVariable();
 
+    void enableVariableButtons(const QModelIndex &current_index);
+
   private:
     Ui::FormVariables *m_ui;
     ConstantsModel *m_model;

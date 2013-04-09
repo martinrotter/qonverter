@@ -47,15 +47,7 @@ FormVariables::FormVariables(QWidget *parent) : QDialog(parent), m_ui(new Ui::Fo
   m_model = (ConstantsModel*) m_filterModel->sourceModel();
 
   connect(m_ui->m_treeVarsConsts, &ConstantsView::currentItemChanged,
-          [=] (const QModelIndex &current) {
-    QModelIndex source_index = m_filterModel->mapToSource(current);
-    MemoryPlace::Type type = static_cast<MemoryPlace::Type>(m_model->data(m_model->index(source_index.row(),
-                                                                                         (int) ConstantsModel::ENTITY_TYPE),
-                                                                          Qt::UserRole).toInt());
-
-    m_ui->m_btnEditVariable->setEnabled(type != MemoryPlace::CONSTANT && type != MemoryPlace::FUNCTION);
-    m_ui->m_btnDeleteVariable->setEnabled(type != MemoryPlace::CONSTANT && type != MemoryPlace::FUNCTION && type != MemoryPlace::SPECIAL_VARIABLE);
-  });
+          this, &FormVariables::enableVariableButtons);
 
   connect(m_ui->m_btnAddVariable, &QPushButton::clicked,
           this, &FormVariables::addVariable);
@@ -75,6 +67,7 @@ FormVariables::FormVariables(QWidget *parent) : QDialog(parent), m_ui(new Ui::Fo
           static_cast<void (QComboBox::*)(int index)>(&QComboBox::currentIndexChanged),
           [=] (int index) {
     m_filterModel->setFilterMemoryPlaceType(static_cast<ConstantsFilterModel::FilterMemoryPlaceType>(index));
+    enableVariableButtons(m_ui->m_treeVarsConsts->currentIndex());
   });
 
   connect(m_ui->m_cmbSelectType,
@@ -84,6 +77,16 @@ FormVariables::FormVariables(QWidget *parent) : QDialog(parent), m_ui(new Ui::Fo
   connect(m_ui->m_txtFilter, &LineEdit::textChanged,
           m_filterModel,
           static_cast<void (ConstantsFilterModel::*) (const QString &text)>(&ConstantsFilterModel::setFilterRegExp));
+}
+
+void FormVariables::enableVariableButtons(const QModelIndex &current) {
+  QModelIndex source_index = m_filterModel->mapToSource(current);
+  MemoryPlace::Type type = static_cast<MemoryPlace::Type>(m_model->data(m_model->index(source_index.row(),
+                                                                                       (int) ConstantsModel::ENTITY_TYPE),
+                                                                        Qt::UserRole).toInt());
+
+  m_ui->m_btnEditVariable->setEnabled(type != MemoryPlace::CONSTANT && type != MemoryPlace::FUNCTION);
+  m_ui->m_btnDeleteVariable->setEnabled(type != MemoryPlace::CONSTANT && type != MemoryPlace::FUNCTION && type != MemoryPlace::SPECIAL_VARIABLE);
 }
 
 FormVariables::~FormVariables() {

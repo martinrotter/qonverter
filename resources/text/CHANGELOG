@@ -6,6 +6,10 @@
 <li>Added arcus functions.</li>
 <li>Removed single-instance functionality along with DBus support which is not needed anymore.</li>
 <li>Changelog, thanks to and license separated out from the executable file.</li>
+<li>Optimizations in code.</li>
+<li>Some language corrections.</li>
+<li>Fixed clickable "edit variable" button for constants.</li>
+<li>Hacked missing implicitly-defined variables from the popup.</li>
 </ul>
 [1.0.5]
 <ul>

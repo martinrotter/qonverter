@@ -67,7 +67,7 @@ class CalculatorInput : public QPlainTextEdit {
 
     void insertCompletion(const QString& completion);
 
-  public:
+  private:
     QCompleter *m_completer;
 };
 
