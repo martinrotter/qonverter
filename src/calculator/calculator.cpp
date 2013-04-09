@@ -30,6 +30,7 @@
 #include "settings.h"
 #include "defs.h"
 #include "constantsmodel.h"
+#include "mpFuncNonCmplx.h"
 
 
 Calculator::Calculator(QObject *parent) : QObject(parent) {
@@ -245,12 +246,18 @@ void Calculator::loadConstants() {
   addMemoryPlace("_ar", tr("Artin's constant"), MemoryPlace::CONSTANT, 0.373955813619202);
 
   // Define functions.
-  addMemoryPlace("sin", tr("Sine function"), MemoryPlace::FUNCTION);
-  addMemoryPlace("cos", tr("Cosine function"), MemoryPlace::FUNCTION);
-  addMemoryPlace("tan", tr("Tangent function"), MemoryPlace::FUNCTION);
-  addMemoryPlace("sinh", tr("Hyperbolic sine function"), MemoryPlace::FUNCTION);
-  addMemoryPlace("cosh", tr("Hyperbolic cosine function"), MemoryPlace::FUNCTION);
-  addMemoryPlace("tanh", tr("Hyperbolic tangent function"), MemoryPlace::FUNCTION);
+  addMemoryPlace("asin", tr("Arcus sine"), MemoryPlace::FUNCTION);
+  addMemoryPlace("acos", tr("Arcus cosine"), MemoryPlace::FUNCTION);
+  addMemoryPlace("atan", tr("Arcus tangent"), MemoryPlace::FUNCTION);
+  addMemoryPlace("asinh", tr("Arcus hyperbolic sine"), MemoryPlace::FUNCTION);
+  addMemoryPlace("acosh", tr("Arcus hyperbolic cosine"), MemoryPlace::FUNCTION);
+  addMemoryPlace("atanh", tr("Arcus hyperbolic tangent"), MemoryPlace::FUNCTION);
+  addMemoryPlace("sin", tr("Sine"), MemoryPlace::FUNCTION);
+  addMemoryPlace("cos", tr("Cosine"), MemoryPlace::FUNCTION);
+  addMemoryPlace("tan", tr("Tangent"), MemoryPlace::FUNCTION);
+  addMemoryPlace("sinh", tr("Hyperbolic sine"), MemoryPlace::FUNCTION);
+  addMemoryPlace("cosh", tr("Hyperbolic cosine"), MemoryPlace::FUNCTION);
+  addMemoryPlace("tanh", tr("Hyperbolic tangent"), MemoryPlace::FUNCTION);
   addMemoryPlace("abs", tr("Absolute value of a number"), MemoryPlace::FUNCTION);
   addMemoryPlace("ln", tr("Natural logarithm (base _e)"), MemoryPlace::FUNCTION);
   addMemoryPlace("log", tr("Logarithm (base 10)"), MemoryPlace::FUNCTION);
@@ -284,6 +291,17 @@ void Calculator::initialize() {
   m_parser->DefineInfixOprtChars(_T("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ()/+-*^?<>=#!$%&|~'_√"));
   m_parser->DefineFun(new FunMedian());
   m_parser->DefineInfixOprt(new OprtSqrt());
+
+  // These are normally in pckNON_COMPLEX but that package
+  // conflicts with complex. So add some functions
+  // from it manually.
+  m_parser->DefineFun(new FunASin());
+  m_parser->DefineFun(new FunACos());
+  m_parser->DefineFun(new FunATan());
+  m_parser->DefineFun(new FunASinH());
+  m_parser->DefineFun(new FunACosH());
+  m_parser->DefineFun(new FunATanH());
+
 
   // Enables or disables outputs for calculator.
   m_parser->EnableDebugDump(false, false);

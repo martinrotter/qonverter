@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 2.8.10)
 project(qonverter)
 set(APP_NAME "Qonverter")
 set(APP_LOW_NAME "qonverter")
-set(APP_VERSION "1.0.5-prealfa")
+set(APP_VERSION "1.0.6-prealfa")
 set(APP_AUTHOR "Martin Rotter")
 set(APP_URL "http://code.google.com/p/qonverter")
 
@@ -76,6 +76,13 @@ else()
     message(STATUS "[qonverter] A debug build. -DDEBUG is defined")
     add_definitions(-DDEBUG)
     set(CMAKE_BUILD_TYPE debug)
+# Enable compiler warnings.
+# See http://stackoverflow.com/questions/2368811/how-to-set-warning-level-in-cmake
+if(CMAKE_COMPILER_IS_GNUCC OR CMAKE_COMPILER_IS_GNUCXX)
+    add_definitions(-pedantic -Wall -Wextra)
+elseif(CMAKE_BUILD_TOOL MATCHES "(msdev|devenv|nmake)")
+    add_definitions(/W2)
+endif(CMAKE_COMPILER_IS_GNUCC OR CMAKE_COMPILER_IS_GNUCXX)
 endif()
 
 # Check for C++ 11 features availability.
@@ -101,14 +108,6 @@ if(WIN32)
     # UNICODE support with Visual C++ and MinGW.
     set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -D_UNICODE")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D_UNICODE")
-endif()
-
-# Enable compiler warnings.
-# See http://stackoverflow.com/questions/2368811/how-to-set-warning-level-in-cmake
-if(CMAKE_COMPILER_IS_GNUCC OR CMAKE_COMPILER_IS_GNUCXX)
-    add_definitions(-pedantic -Wall -Wextra)
-elseif(CMAKE_BUILD_TOOL MATCHES "(msdev|devenv|nmake)")
-    add_definitions(/W2)
 endif()
 
 # Find all needed Qt modules.

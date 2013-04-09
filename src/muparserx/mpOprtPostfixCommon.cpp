@@ -40,7 +40,7 @@ MUP_NAMESPACE_START
       //                 If the compiler does not support IEEE 754, chances are 
       //                 you are running on a pretty fucked up system.
       //
-      if ( //!std::numeric_limits<float_type>::is_iec559 &&
+      if (// !std::numeric_limits<float_type>::is_iec559 &&
            (result>std::numeric_limits<float_type>::max() || result < 1.0) )
       {
         throw ParserError(ErrorContext(ecOVERFLOW, GetExprPos(), GetIdent()));
@@ -62,5 +62,44 @@ MUP_NAMESPACE_START
   {
     return new OprtFact(*this);
   }
+
+  //-----------------------------------------------------------
+  //
+  // class OprtPercentage
+  //
+  //-----------------------------------------------------------
+
+    OprtPercentage::OprtPercentage()
+      :IOprtPostfix(_T("%"))
+    {}
+
+    //-----------------------------------------------------------
+    void OprtPercentage::Eval(ptr_val_type& ret, const ptr_val_type *arg, int)
+    {
+
+      switch (arg[0]->GetType()) {
+        case 'i':
+        case 'f': {
+          float_type input = arg[0]->GetFloat();
+          *ret = input / 100.0;
+          break;
+        }
+        default:
+          throw ParserError(ErrorContext(ecTYPE_CONFLICT_FUN, GetExprPos(), GetIdent(), arg[0]->GetType(), 'f', 1));
+          break;
+      }
+    }
+
+    //-----------------------------------------------------------
+    const char_type* OprtPercentage::GetDesc() const
+    {
+      return _T("x% - Returns percentage of integer/float.");
+    }
+
+    //-----------------------------------------------------------
+    IToken* OprtPercentage::Clone() const
+    {
+      return new OprtPercentage(*this);
+    }
 
 }

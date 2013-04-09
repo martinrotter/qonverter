@@ -1670,7 +1670,7 @@ Proměnné nejsou vytvářený v průběžném režimu kalkulačky nebo převodn
     <message>
         <location filename="../src/unitconverter/unitconverter.cpp" line="136"/>
         <source>HK (hefner candle)</source>
-        <translation>HK (Hefnerova candle)</translation>
+        <translation>HK (Hefnerova svíčka)</translation>
     </message>
     <message>
         <location filename="../src/unitconverter/unitconverter.cpp" line="137"/>
@@ -2110,7 +2110,7 @@ Proměnné nejsou vytvářený v průběžném režimu kalkulačky nebo převodn
     <message>
         <location filename="../src/unitconverter/unitconverter.cpp" line="178"/>
         <source>Inf. entropy</source>
-        <translation>Entropie dat</translation>
+        <translation>Množství dat</translation>
     </message>
     <message>
         <location filename="../src/unitconverter/unitconverter.cpp" line="179"/>

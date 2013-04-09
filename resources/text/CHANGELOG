@@ -1,7 +1,9 @@
 <body>
-[1.0.5]
+[1.0.6]
 <ul>
 <li>Fixed missing "exp" for exp function.</li>
+<li>Added percentage % operator.</li>
+<li>Added arcus functions.</li>
 </ul>
 [1.0.5]
 <ul>

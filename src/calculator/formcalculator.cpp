@@ -273,8 +273,6 @@ void FormCalculator::manageResult(Calculator::CallerFunction function,
         m_ui->m_input->moveCursor(QTextCursor::End);
       }
       m_ui->m_input->setFocus(Qt::TabFocusReason);
-      // TODO: Tady zkusit resetovat popup z kompleteru
-      // pro opraveni chyby s chybejicima polozkama
       break;
     default:
       break;
