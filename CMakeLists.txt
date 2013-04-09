@@ -120,15 +120,6 @@ find_package(Qt5Xml)
 find_package(Qt5Network)
 find_package(Qt5LinguistTools)
 
-if(Qt5DBus_FOUND)
-    message(STATUS "[qonverter] Qt DBUS module found. It's good.")
-    add_definitions(-DHAVE_DBUS)
-    set(APP_HEADERS src/dbusadaptor.h)
-    set(APP_SOURCES src/dbusadaptor.cpp)
-else()
-    message(STATUS "[qonverter] Qt DBUS is not found. Disabling it.")
-endif()
-
 # Compile application icon if compiling with MinGW.
 if(MINGW)
     set(WINDRES windres.exe)
@@ -193,7 +184,6 @@ set(APP_SOURCES
     src/formabout.cpp
     src/formmain.cpp
     src/formsettings.cpp
-    src/singleapplication.cpp
     src/database.cpp
     src/lineedit.cpp
     src/stackedwidget.cpp
@@ -227,7 +217,6 @@ set(APP_HEADERS
     src/formmain.h
     src/formabout.h
     src/formsettings.h
-    src/singleapplication.h
     src/lineedit.h
     src/stackedwidget.h
     src/calculator/formcalculator.h
@@ -280,6 +269,7 @@ set(APP_TRANSLATIONS_WO_QT
     localization/qonverter_cs.ts
 )
 
+# Add skins.
 set(APP_SKIN_PLAIN
     resources/skins/base/plain.qss
 )
@@ -289,6 +279,8 @@ set(APP_SKIN_MODERN
 )
 
 set(APP_MISC
+    resources/text/COPYING_HTML
+    resources/text/AUTHORS
     resources/text/COPYING
     resources/text/CHANGELOG
 )
@@ -343,18 +335,12 @@ qt5_use_modules(${EXE_NAME}
     Xml
 )
 
-if(Qt5DBus_FOUND)
-    qt5_use_modules(${EXE_NAME}
-	DBus
-    )
-endif()
-
 # Installation stage.
 if(APPLE)
     # Mac's bundle install.
     message(STATUS "[qonverter] You will probably install on Mac OS.")
     set_target_properties(${EXE_NAME} PROPERTIES MACOSX_BUNDLE_INFO_PLIST "${CMAKE_SOURCE_DIR}/resources/macosx/Info.plist.in")
-    set(MACOSX_BUNDLE_ICON_FILE rssguard.icns)
+    #set(MACOSX_BUNDLE_ICON_FILE qonverter.icns)
     set(MACOSX_BUNDLE_INFO_STRING "${EXE_NAME} ${APP_VERSION}")
     set(MACOSX_BUNDLE_GUI_IDENTIFIER "com.googlecode.qonverter")
     set(MACOSX_BUNDLE_LONG_VERSION_STRING "${APP_VERSION}")
@@ -366,6 +352,7 @@ if(APPLE)
     install(TARGETS ${EXE_NAME} BUNDLE DESTINATION ${CMAKE_INSTALL_PREFIX})
     install(FILES ${APP_QM} DESTINATION ${CMAKE_INSTALL_PREFIX}/${EXE_NAME}.app/Contents/Resources/l10n)
     install(FILES ${APP_SKINS} DESTINATION ${CMAKE_INSTALL_PREFIX}/${EXE_NAME}.app/Contents/Resources/skins)
+    install(FILES ${APP_MISC} DESTINATION ${CMAKE_INSTALL_PREFIX}/${EXE_NAME}.app/Contents/Resources/information)
     configure_file(resources/macosx/bundle.cmake.in ${CMAKE_CURRENT_BINARY_DIR}/bundle.cmake @ONLY)
     add_custom_target(bundle ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_DIR}/bundle.cmake)
 elseif(WIN32)
@@ -381,6 +368,7 @@ elseif(OS2)
     install(FILES ${APP_QM} DESTINATION ./l10n)
     install(FILES ${APP_SKIN_PLAIN} DESTINATION ./skins/base)
     install(FILES ${APP_SKIN_MODERN} DESTINATION ./skins/base)
+    install(FILES ${APP_MISC} DESTINATION ./)
 elseif(UNIX)
     message(STATUS "[qonverter] You will probably install on Linux.")
     install(TARGETS ${EXE_NAME} RUNTIME DESTINATION bin)
@@ -389,6 +377,7 @@ elseif(UNIX)
     install(FILES ${APP_QM} DESTINATION share/qonverter/l10n)
     install(FILES ${APP_SKIN_PLAIN} DESTINATION share/qonverter/skins/base)
     install(FILES ${APP_SKIN_MODERN} DESTINATION share/qonverter/skins/base)
+    install(FILES ${APP_MISC} DESTINATION share/qonverter/information)
 endif()
 
 # Custom target for packaging.

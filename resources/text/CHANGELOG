@@ -4,6 +4,8 @@
 <li>Fixed missing "exp" for exp function.</li>
 <li>Added percentage % operator.</li>
 <li>Added arcus functions.</li>
+<li>Removed single-instance functionality along with DBus support which is not needed anymore.</li>
+<li>Changelog, thanks to and license separated out from the executable file.</li>
 </ul>
 [1.0.5]
 <ul>

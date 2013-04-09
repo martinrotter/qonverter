@@ -378,9 +378,6 @@ void FormSettings::loadGeneral() {
 #endif
   m_ui->m_listMode->setCurrentRow(Settings::value(APP_CFG_GEN,
                                                   "start_mode", 0).toInt());
-  m_ui->m_checkOneInstance->setChecked(Settings::value(APP_CFG_GEN,
-                                                       "one_instance_only",
-                                                       true).toBool());
   m_ui->m_checkLaunchHidden->setChecked(Settings::value(APP_CFG_GEN,
                                                         "start_hidden",
                                                         false).toBool());
@@ -400,9 +397,6 @@ void FormSettings::saveGeneral() {
     Settings::setValue(APP_CFG_GEN,
                        "start_mode", m_ui->m_listMode->currentRow());
   }
-  Settings::setValue(APP_CFG_GEN,
-                     "one_instance_only",
-                     m_ui->m_checkOneInstance->isChecked());
   Settings::setValue(APP_CFG_GEN,
                      "start_hidden",
                      m_ui->m_checkLaunchHidden->isChecked());

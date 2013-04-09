@@ -27,7 +27,7 @@
    <item row="0" column="1">
     <widget class="QStackedWidget" name="m_stackedSettings">
      <property name="currentIndex">
-      <number>3</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="m_pageGeneral">
       <layout class="QHBoxLayout" name="horizontalLayout">
@@ -57,7 +57,7 @@
             <x>0</x>
             <y>0</y>
             <width>603</width>
-            <height>417</height>
+            <height>418</height>
            </rect>
           </property>
           <layout class="QFormLayout" name="formLayout">
@@ -83,7 +83,14 @@
              </property>
             </widget>
            </item>
-           <item row="3" column="0">
+           <item row="1" column="0">
+            <widget class="QCheckBox" name="m_checkLaunchHidden">
+             <property name="text">
+              <string>Launch Qonverter hidden (this is allowed only if tray icon as enabled and available)</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
             <widget class="QLabel" name="label_10">
              <property name="text">
               <string>Initial mode</string>
@@ -93,7 +100,7 @@
              </property>
             </widget>
            </item>
-           <item row="4" column="0" colspan="2">
+           <item row="3" column="0" colspan="2">
             <widget class="QListWidget" name="m_listMode">
              <item>
               <property name="text">
@@ -110,20 +117,6 @@
                <string>Currency Converter</string>
               </property>
              </item>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QCheckBox" name="m_checkOneInstance">
-             <property name="text">
-              <string>Enable only one instance of Qonverter to run (this can sometimes cause problem with programmatic applicaiton restart)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QCheckBox" name="m_checkLaunchHidden">
-             <property name="text">
-              <string>Launch Qonverter hidden (this is allowed only if tray icon as enabled and available)</string>
-             </property>
             </widget>
            </item>
           </layout>
@@ -160,7 +153,7 @@
             <x>0</x>
             <y>0</y>
             <width>603</width>
-            <height>417</height>
+            <height>418</height>
            </rect>
           </property>
           <layout class="QFormLayout" name="formLayout_2">
@@ -300,8 +293,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>98</width>
-            <height>71</height>
+            <width>603</width>
+            <height>418</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_2">
@@ -420,8 +413,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>586</width>
-            <height>458</height>
+            <width>589</width>
+            <height>476</height>
            </rect>
           </property>
           <layout class="QFormLayout" name="formLayout_3">

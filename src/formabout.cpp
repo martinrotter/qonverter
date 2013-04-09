@@ -1,20 +1,20 @@
 /*
-	This file is part of Qonverter.
-	
-	Qonverter is free software: you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation, either version 3 of the License, or
-	(at your option) any later version.
-	
-	Qonverter is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
-	
-	You should have received a copy of the GNU General Public License
-	along with Qonverter.  If not, see <http://www.gnu.org/licenses/>.
-	
-	Copyright 2012 - 2013 Martin Rotter
+ This file is part of Qonverter.
+
+ Qonverter is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ Qonverter is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with Qonverter.  If not, see <http://www.gnu.org/licenses/>.
+
+ Copyright 2012 - 2013 Martin Rotter
 */
 
 #include <QFile>
@@ -36,19 +36,31 @@ FormAbout::FormAbout(QWidget *parent) : QDialog(parent), m_ui(new Ui::FormAbout)
   QFile file;
   str.setDevice(&file);
 
-  file.setFileName(":/text/COPYING_HTML");
-  file.open(QIODevice::ReadOnly | QIODevice::Text);
-  m_ui->m_txtLicense->setText(str.readAll());
+  file.setFileName(APP_INFO_PATH + "/COPYING_HTML");
+  if (file.open(QIODevice::ReadOnly | QIODevice::Text) == true) {
+    m_ui->m_txtLicense->setText(str.readAll());
+  }
+  else {
+    m_ui->m_txtLicense->setText(tr("License not found."));
+  }
   file.close();
 
-  file.setFileName(":/text/AUTHORS");
-  file.open(QIODevice::ReadOnly | QIODevice::Text);
-  m_ui->m_txtThanks->setText(str.readAll());
+  file.setFileName(APP_INFO_PATH + "/AUTHORS");
+  if (file.open(QIODevice::ReadOnly | QIODevice::Text) == true) {
+    m_ui->m_txtThanks->setText(str.readAll());
+  }
+  else {
+    m_ui->m_txtThanks->setText(tr("Thanks to not found."));
+  }
   file.close();
 
-  file.setFileName(":/text/CHANGELOG");
-  file.open(QIODevice::ReadOnly | QIODevice::Text);
-  m_ui->m_txtChangelog->setText(str.readAll());
+  file.setFileName(APP_INFO_PATH + "/CHANGELOG");
+  if (file.open(QIODevice::ReadOnly | QIODevice::Text) == true) {
+    m_ui->m_txtChangelog->setText(str.readAll());
+  }
+  else {
+    m_ui->m_txtChangelog->setText(tr("Changelog not found."));
+  }
   file.close();
 
   // Set other informative texts.
@@ -62,7 +74,7 @@ FormAbout::FormAbout(QWidget *parent) : QDialog(parent), m_ui(new Ui::FormAbout)
                                                           CMAKE_VERSION,
                                                           APP_REVISION,
                                                           Date::fromString(QString("%1 %2").arg(__DATE__,
-                                                                                                   __TIME__)).toString(Qt::DefaultLocaleShortDate),
+                                                                                                __TIME__)).toString(Qt::DefaultLocaleShortDate),
                                                           QT_VERSION_STR,
                                                           qVersion(),
                                                           QString::fromStdWString(MUP_PARSER_VERSION)));

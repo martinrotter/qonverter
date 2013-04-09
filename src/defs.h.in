@@ -54,25 +54,22 @@
 #define COLOR_BRACES_B	    "color_braces_b"
 #define COLOR_STRINGS	    "color_strings"
 
+// TODO: OS/2 support missing. No way to test this w/o OS/2 machine.
 #if defined(Q_OS_LINUX)
 #define APP_LANG_PATH APP_PREFIX + QString("/share/@APP_LOW_NAME@/l10n")
 #define APP_SKIN_PATH APP_PREFIX + QString("/share/@APP_LOW_NAME@/skins")
 #define APP_PLUGIN_PATH APP_PREFIX + QString("/share/@APP_LOW_NAME@/plugins")
+#define APP_INFO_PATH APP_PREFIX + QString("/share/@APP_LOW_NAME@/information")
 #elif defined(Q_OS_MAC)
 #define APP_LANG_PATH QApplication::applicationDirPath() + "/../Resources/l10n"
 #define APP_SKIN_PATH QApplication::applicationDirPath() + "/../Resources/skins"
 #define APP_PLUGIN_PATH QApplication::applicationDirPath() + "/../Resources/plugins"
+#define APP_INFO_PATH QApplication::applicationDirPath() + "/../Resources/information"
 #elif defined(Q_OS_WIN) || defined(Q_OS_OS2)
 #define APP_LANG_PATH QApplication::applicationDirPath() + QString("/l10n")
 #define APP_SKIN_PATH QApplication::applicationDirPath() + QString("/skins")
 #define APP_PLUGIN_PATH QApplication::applicationDirPath() + QString("/plugins")
-#endif
-
-#ifdef HAVE_DBUS
-// Keep the string synced with dbusadaptor.h
-#define DBUS_SERVICE	    "org.qonverter.application"
-#define DBUS_PATH	    "/Qonverter"
-#define DBUS_INTERFACE	    "org.qonverter.application"
+#define APP_INFO_PATH QApplication::applicationDirPath() + QString("/information")
 #endif
 
 #endif // DEFS_H

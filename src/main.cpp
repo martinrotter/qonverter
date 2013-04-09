@@ -1,20 +1,20 @@
 /*
-	This file is part of Qonverter.
-	
-	Qonverter is free software: you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation, either version 3 of the License, or
-	(at your option) any later version.
-	
-	Qonverter is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
-	
-	You should have received a copy of the GNU General Public License
-	along with Qonverter.  If not, see <http://www.gnu.org/licenses/>.
-	
-	Copyright 2012 - 2013 Martin Rotter
+ This file is part of Qonverter.
+
+ Qonverter is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ Qonverter is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with Qonverter.  If not, see <http://www.gnu.org/licenses/>.
+
+ Copyright 2012 - 2013 Martin Rotter
 */
 
 #include <QApplication>
@@ -31,7 +31,6 @@
 #include "debug.h"
 #include "defs.h"
 #include "settings.h"
-#include "singleapplication.h"
 #include "uifactory.h"
 
 #ifdef HAVE_DBUS
@@ -61,36 +60,7 @@ int main(int argc, char *argv[]) {
   // Setup debug output system.
   qInstallMessageHandler(Debug::debugHandler);
 
-  // Obtain username for local server key/name
-  // The logic behind is to have unique (per session)
-  // ID for rssguard to ensure only one app is started
-  // Let's suppose it's not possible to start 2 sessions
-  // for one user on Windows (username only). But check
-  // the DISPLAY on UN*X where it's possible.
-  // Examples:
-  //		mac: pvanek_/tmp/launch-sXYeRy/org.macosforge.xquartz:0
-  //		linux: pvanek_:0
-  QString uname;
-#ifdef Q_OS_UNIX
-  // Mac, GNU/Linux and the other Unices.
-  uname = qgetenv("USER");
-#endif
-#ifdef Q_OS_WIN
-  // Windows.
-  uname = qgetenv("USERNAME");
-#endif
-  if (uname.isEmpty() == true) {
-    qDebug("Cannot get uname. Using default.");
-    uname = APP_LOW_NAME;
-  }
-
-  SingleApplication qonverter_app(argc, argv, uname);
-
-  if (Settings::value(APP_CFG_GEN, "one_instance_only", true).toBool() == true &&
-      qonverter_app.isRunning() == true) {
-    qDebug("Qonverter is already running.");
-    return EXIT_SUCCESS;
-  }
+  QApplication qonverter_app(argc, argv);
 
   // Add 3rd party plugin directory to application PATH variable.
   // This is useful for styles, encoders, ...
@@ -117,12 +87,12 @@ int main(int argc, char *argv[]) {
                                       "base/plain.qss").toString());
 
   // Load language and setup locale.
-  QRegExp sep("[_|.]+");
+  QRegExp separator("[_|.]+");
   QTranslator qt_translator, app_translator;
   QString lang = Settings::value(APP_CFG_LANG,
                                  "language",
                                  "qonverter_en.qm").toString();
-  QString locale_name = lang.section(sep, 1, 1);
+  QString locale_name = lang.section(separator, 1, 1);
 
   // Try to load selected language file.
   if (app_translator.load(lang, APP_LANG_PATH) == true) {
@@ -154,8 +124,7 @@ int main(int argc, char *argv[]) {
 
   // Create main window and set title.
   FormMain qonverter_window;
-  qonverter_window.setWindowTitle(QObject::tr("%1 %2 (as %3)").arg(APP_NAME, APP_VERSION,
-                                                                   uname));
+  qonverter_window.setWindowTitle(QString("%1 %2").arg(APP_NAME, APP_VERSION));
 
 #ifdef HAVE_DBUS
   new DBusAdaptor(&qonverter_window);
