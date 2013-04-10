@@ -96,7 +96,7 @@ if("${CMAKE_CXX_COMPILER_ID}" MATCHES "GNU")
 	add_definitions(-std=c++11)
     endif()
 elseif("${CMAKE_CXX_COMPILER_ID}" MATCHES "Clang")
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -stdlib=libc++")
 elseif(${MSVC_VERSION} VERSION_LESS 1600)
     message(FATAL_ERROR "Your C++ compiler does not support C++ 11.")
 endif()
@@ -278,6 +278,7 @@ set(APP_SKIN_MODERN
     resources/skins/base/modern.qss
 )
 
+# Add needed text files.
 set(APP_MISC
     resources/text/COPYING_HTML
     resources/text/AUTHORS

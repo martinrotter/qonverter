@@ -11,6 +11,8 @@
 <li>Fixed clickable "edit variable" button for constants.</li>
 <li>Hacked missing implicitly-defined variables from the popup.</li>
 <li>Added tolower functions.</li>
+<li>Tweaked completer popup panel to display more information.</li>
+<li>Changed dimensions of completer popup panel.</li>
 </ul>
 [1.0.5]
 <ul>

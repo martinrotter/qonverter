@@ -134,6 +134,10 @@ QVariant ConstantsModel::data(const QModelIndex &index, int role) const {
 QVariant ConstantsModel::headerData(int section, Qt::Orientation orientation, int role) const {
   Q_UNUSED(orientation)
 
+  if (section >= m_headerData.size() || section < 0) {
+    return QVariant();
+  }
+
   switch (role) {
     case Qt::DisplayRole:
     case Qt::ToolTipRole:
