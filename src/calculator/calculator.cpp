@@ -271,6 +271,7 @@ void Calculator::loadConstants() {
   addMemoryPlace("str2dbl", tr("String to double converter"), MemoryPlace::FUNCTION);
   addMemoryPlace("strlen", tr("Length of a string"), MemoryPlace::FUNCTION);
   addMemoryPlace("toupper", tr("Converts string to upper characters"), MemoryPlace::FUNCTION);
+  addMemoryPlace("tolower", tr("Converts string to lower characters"), MemoryPlace::FUNCTION);
   addMemoryPlace("real", tr("Real number of the complex number"), MemoryPlace::FUNCTION);
   addMemoryPlace("imag", tr("Imaginary part of the complex number"), MemoryPlace::FUNCTION);
   addMemoryPlace("arg", tr("The arguent of the complex number"), MemoryPlace::FUNCTION);
