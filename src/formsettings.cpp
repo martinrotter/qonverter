@@ -235,6 +235,7 @@ void FormSettings::saveLanguages() {
     QMessageBox box_restart(QMessageBox::Question, tr("Language Changed"),
                             tr("Language of Qonverter was changed. Note that changes will take effect on next Qonverter start."),
                             QMessageBox::Yes | QMessageBox::No, this);
+    box_restart.setInformativeText(tr("Do you want to restart now?"));
 
     if (box_restart.exec() == QMessageBox::Yes) {
       if (QProcess::startDetached(qApp->applicationFilePath()) == false) {
