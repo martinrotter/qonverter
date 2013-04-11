@@ -47,13 +47,6 @@ struct MemoryPlace {
     // So there is way to distinguish variables from constants.
     Variable *m_variable;
 
-    // Some variables are created implicitly by calculator engine.
-    // These variables are special because they are cleaned automatically
-    // by calculator engine.
-    // Each constant has set this to true
-    // Each variable has set this to true or false.
-    bool m_shadow;
-
     // Constructs "empty" variable.
     // This constructor is used for constructing
     // "shallow" clones of implicitly-created variables.

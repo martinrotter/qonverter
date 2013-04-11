@@ -210,11 +210,14 @@ void UnitConverter::convert(int magnitude_index, int input_unit,
                                          input_value));
 }
 
-QString UnitConverter::convertByMultiplication(int magnitude_index, int input_unit,
-                                               int output_unit, const QString &input_value) {
+QString UnitConverter::convertByMultiplication(int magnitude_index,
+                                               int input_unit,
+                                               int output_unit,
+                                               const QString &input_value) {
   double input_number = input_value.toDouble();
-
-  return QString::number(input_number * m_unitValues[magnitude_index][input_unit] / m_unitValues[magnitude_index][output_unit],
+  return QString::number(input_number *
+                         m_unitValues[magnitude_index][input_unit] /
+                         m_unitValues[magnitude_index][output_unit],
                          'g',
                          10);
 }

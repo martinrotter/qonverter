@@ -278,6 +278,16 @@ set(APP_SKIN_MODERN
     resources/skins/base/modern.qss
 )
 
+set(APP_SKIN_DARK
+    resources/skins/fancy/dark.qss
+)
+
+set(APP_SKIN_DARK_IMAGES
+    resources/skins/fancy/images/down_arrow.png
+    resources/skins/fancy/images/handle.png
+    resources/skins/fancy/images/checkbox.png
+)
+
 # Add needed text files.
 set(APP_MISC
     resources/text/COPYING_HTML
@@ -363,6 +373,8 @@ if(WIN32)
     install(FILES ${APP_QM} DESTINATION ./l10n)
     install(FILES ${APP_SKIN_PLAIN} DESTINATION ./skins/base)
     install(FILES ${APP_SKIN_MODERN} DESTINATION ./skins/base)
+    install(FILES ${APP_SKIN_DARK} DESTINATION ./skins/fancy)
+    install(FILES ${APP_SKIN_DARK_IMAGES} DESTINATION ./skins/fancy/images)
     install(FILES ${APP_MISC} DESTINATION ./)
 elseif(OS2)
     message(STATUS "[qonverter] You will probably install on OS/2.")
@@ -370,6 +382,8 @@ elseif(OS2)
     install(FILES ${APP_QM} DESTINATION ./l10n)
     install(FILES ${APP_SKIN_PLAIN} DESTINATION ./skins/base)
     install(FILES ${APP_SKIN_MODERN} DESTINATION ./skins/base)
+    install(FILES ${APP_SKIN_DARK} DESTINATION ./skins/fancy)
+    install(FILES ${APP_SKIN_DARK_IMAGES} DESTINATION ./skins/fancy/images)
     install(FILES ${APP_MISC} DESTINATION ./)
 elseif(UNIX)
     message(STATUS "[qonverter] You will probably install on Linux.")
@@ -379,6 +393,8 @@ elseif(UNIX)
     install(FILES ${APP_QM} DESTINATION share/qonverter/l10n)
     install(FILES ${APP_SKIN_PLAIN} DESTINATION share/qonverter/skins/base)
     install(FILES ${APP_SKIN_MODERN} DESTINATION share/qonverter/skins/base)
+    install(FILES ${APP_SKIN_DARK} DESTINATION share/qonverter/skins/fancy)
+    install(FILES ${APP_SKIN_DARK_IMAGES} DESTINATION share/qonverter/skins/fancy/images)
     install(FILES ${APP_MISC} DESTINATION share/qonverter/information)
 endif()
 

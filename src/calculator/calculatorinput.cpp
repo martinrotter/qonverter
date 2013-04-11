@@ -60,6 +60,27 @@ void CalculatorInput::setCompleterModel() {
   m_completer->setModel((QAbstractItemModel*) CalculatorWrapper::getInstance().getCalculator()->getConstantsModel());
   m_completer->setCompletionColumn(0);
   m_completer->setCompletionRole(Qt::DisplayRole);
+
+  // Create view for completer and assign it to completer.
+  QTreeView *tree_view = new QTreeView();
+  m_completer->setPopup(tree_view);
+
+  // Setup look & feel of the view.
+  tree_view->setRootIsDecorated(false);
+  tree_view->setAnimated(true);
+  tree_view->setAllColumnsShowFocus(true);
+  tree_view->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+  tree_view->setSelectionBehavior(QAbstractItemView::SelectRows);
+  tree_view->header()->hide();
+
+  // Hide some columns (these are the "value" and "type" of memory places.
+  // TODO: Perhaps display "value" or "type" of memory place too.
+  tree_view->header()->setSectionHidden(1, true);
+  tree_view->header()->setSectionHidden(2, true);
+
+  // Tweak width of displayed columns.
+  tree_view->header()->setSectionResizeMode(0, QHeaderView::Fixed);
+  tree_view->header()->setSectionResizeMode(1, QHeaderView::Stretch);
 }
 
 CalculatorInput::~CalculatorInput() {
@@ -190,7 +211,7 @@ void CalculatorInput::keyPressEvent(QKeyEvent *e) {
       break;
   }
 
-  // TODO: Find out the cause of "missing" newly created items in the popup.
+  // TODO: Find out the cause of "missing" newly created items in the popup w/o current hack.
   // THIS IS VERY UGLY HACK!!!!!!!!!!!!!!!!!!!
   m_completer->setModel(CalculatorWrapper::getInstance().getCalculator()->getConstantsModel());
 
@@ -208,9 +229,17 @@ void CalculatorInput::keyPressEvent(QKeyEvent *e) {
     return;
   }
 
+  // TODO: Check delimiters and remove all non-operators.
   static QString word_delimiters("~!@#$%^&*()+{}|:\"<>?,./;'[]\\-=");
 
   QRect cr = cursorRect();
+
+  // Move the viewport of popup treeview little down
+  // and make it horizontally fit in the parent textbox.
+  cr.setLeft(0);
+  cr.setWidth(width());
+  cr.translate(0, 3);
+
   QString completion_prefix = textUnderCursor();
 
   bool has_modifier = (e->modifiers() != Qt::NoModifier) &&
@@ -227,9 +256,6 @@ void CalculatorInput::keyPressEvent(QKeyEvent *e) {
     m_completer->setCompletionPrefix(completion_prefix);
     //m_completer->popup()->setCurrentIndex(m_completer->completionModel()->index(0, 0));
   }
-
-  cr.setWidth(m_completer->popup()->sizeHintForColumn(0)
-              + m_completer->popup()->verticalScrollBar()->sizeHint().width());
 
   m_completer->complete(cr); // popup it up!
 }

@@ -7,7 +7,7 @@ pkgdesc='Very simple and easy-to-use desktop calculator with unusual functions.'
 arch=('i686' 'x86_64')
 url="http://code.google.com/p/qonverter"
 license=('GPL3')
-depends=(qt5-base hicolor-icon-theme)
+depends=(qt5-base)
 makedepends=(gcc git cmake)
 
 _gitname=qonverter
