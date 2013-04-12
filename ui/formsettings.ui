@@ -57,7 +57,7 @@
             <x>0</x>
             <y>0</y>
             <width>603</width>
-            <height>418</height>
+            <height>417</height>
            </rect>
           </property>
           <layout class="QFormLayout" name="formLayout">
@@ -152,8 +152,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>603</width>
-            <height>418</height>
+            <width>340</width>
+            <height>295</height>
            </rect>
           </property>
           <layout class="QFormLayout" name="formLayout_2">
@@ -293,8 +293,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>603</width>
-            <height>418</height>
+            <width>98</width>
+            <height>71</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_2">
@@ -413,8 +413,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>589</width>
-            <height>476</height>
+            <width>326</width>
+            <height>458</height>
            </rect>
           </property>
           <layout class="QFormLayout" name="formLayout_3">
@@ -769,7 +769,7 @@ QListView::item {
       <bool>false</bool>
      </property>
      <property name="alternatingRowColors">
-      <bool>true</bool>
+      <bool>false</bool>
      </property>
      <property name="selectionBehavior">
       <enum>QAbstractItemView::SelectRows</enum>

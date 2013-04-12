@@ -44,6 +44,7 @@ ConstantsView::ConstantsView(QWidget *parent)
   setSelectionMode(QAbstractItemView::SingleSelection);
 
   // Tweak columns.
+  header()->setSortIndicatorShown(false);
   header()->setSectionsMovable(false);
   header()->setSectionsClickable(true);
   header()->setSectionResizeMode(0, QHeaderView::ResizeToContents);

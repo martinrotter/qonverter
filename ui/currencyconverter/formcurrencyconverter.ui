@@ -83,7 +83,7 @@ currency</string>
         <string>Select input currency.</string>
        </property>
        <property name="alternatingRowColors">
-        <bool>true</bool>
+        <bool>false</bool>
        </property>
       </widget>
      </item>
@@ -99,7 +99,7 @@ currency</string>
         <string>Select output currency.</string>
        </property>
        <property name="alternatingRowColors">
-        <bool>true</bool>
+        <bool>false</bool>
        </property>
       </widget>
      </item>

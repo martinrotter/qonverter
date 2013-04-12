@@ -225,9 +225,9 @@ void Calculator::loadConstants() {
   m_parser->ClearConst();
 
   // Define constants.
-  addMemoryPlace("i", tr("Imaginary unit"), MemoryPlace::CONSTANT, cmplx_type(0.0, 1.0));
-  addMemoryPlace("_phi", tr("Golden ratio"), MemoryPlace::CONSTANT, 1.618033988749894);
-  addMemoryPlace("_d", tr("Silver ratio"), MemoryPlace::CONSTANT, 2.414213562373095);
+  addMemoryPlace("i", tr("imaginary unit"), MemoryPlace::CONSTANT, cmplx_type(0.0, 1.0));
+  addMemoryPlace("_phi", tr("golden ratio"), MemoryPlace::CONSTANT, 1.618033988749894);
+  addMemoryPlace("_d", tr("silver ratio"), MemoryPlace::CONSTANT, 2.414213562373095);
   addMemoryPlace("_pi", tr("Archimedes' constant"), MemoryPlace::CONSTANT, 3.141592653589793);
   addMemoryPlace("_e", tr("Euler's number"), MemoryPlace::CONSTANT, 2.718281828459045);
   addMemoryPlace("_z", tr("Apéry's constant"), MemoryPlace::CONSTANT, 1.202056903159594);
@@ -239,45 +239,45 @@ void Calculator::loadConstants() {
   addMemoryPlace("_fb", tr("Feigenbaum bifurcation velocity"), MemoryPlace::CONSTANT, 4.669201609102990);
   addMemoryPlace("_ga", tr("Gauss' constant"), MemoryPlace::CONSTANT, 0.834626841674073);
   addMemoryPlace("_la", tr("Laplace limit constant"), MemoryPlace::CONSTANT, 0.662743419349181);
-  addMemoryPlace("_ma", tr("Magic angle [in radians]"), MemoryPlace::CONSTANT, 0.955316618124509);
-  addMemoryPlace("_ta", tr("Tetrahedral angle [in radians]"), MemoryPlace::CONSTANT, 1.910633236249018);
-  addMemoryPlace("_gr", tr("Gravitoid constant"), MemoryPlace::CONSTANT, 1.240806478802799);
-  addMemoryPlace("_sd", tr("Square drill constant"), MemoryPlace::CONSTANT, 0.987700390736053);
+  addMemoryPlace("_ma", tr("magic angle [in radians]"), MemoryPlace::CONSTANT, 0.955316618124509);
+  addMemoryPlace("_ta", tr("tetrahedral angle [in radians]"), MemoryPlace::CONSTANT, 1.910633236249018);
+  addMemoryPlace("_gr", tr("gravitoid constant"), MemoryPlace::CONSTANT, 1.240806478802799);
+  addMemoryPlace("_sd", tr("square drill constant"), MemoryPlace::CONSTANT, 0.987700390736053);
   addMemoryPlace("_ar", tr("Artin's constant"), MemoryPlace::CONSTANT, 0.373955813619202);
 
   // Define functions.
-  addMemoryPlace("asin", tr("Arcus sine"), MemoryPlace::FUNCTION);
-  addMemoryPlace("acos", tr("Arcus cosine"), MemoryPlace::FUNCTION);
-  addMemoryPlace("atan", tr("Arcus tangent"), MemoryPlace::FUNCTION);
-  addMemoryPlace("asinh", tr("Arcus hyperbolic sine"), MemoryPlace::FUNCTION);
-  addMemoryPlace("acosh", tr("Arcus hyperbolic cosine"), MemoryPlace::FUNCTION);
-  addMemoryPlace("atanh", tr("Arcus hyperbolic tangent"), MemoryPlace::FUNCTION);
-  addMemoryPlace("sin", tr("Sine"), MemoryPlace::FUNCTION);
-  addMemoryPlace("cos", tr("Cosine"), MemoryPlace::FUNCTION);
-  addMemoryPlace("tan", tr("Tangent"), MemoryPlace::FUNCTION);
-  addMemoryPlace("sinh", tr("Hyperbolic sine"), MemoryPlace::FUNCTION);
-  addMemoryPlace("cosh", tr("Hyperbolic cosine"), MemoryPlace::FUNCTION);
-  addMemoryPlace("tanh", tr("Hyperbolic tangent"), MemoryPlace::FUNCTION);
-  addMemoryPlace("abs", tr("Absolute value of a number"), MemoryPlace::FUNCTION);
-  addMemoryPlace("ln", tr("Natural logarithm (base _e)"), MemoryPlace::FUNCTION);
-  addMemoryPlace("log", tr("Logarithm (base 10)"), MemoryPlace::FUNCTION);
-  addMemoryPlace("log10", tr("Logarithm (base 10)"), MemoryPlace::FUNCTION);
-  addMemoryPlace("log2", tr("Logarithm (base 2)"), MemoryPlace::FUNCTION);
-  addMemoryPlace("sqrt", tr("Square root"), MemoryPlace::FUNCTION);
-  addMemoryPlace("exp", tr("Exponential function"), MemoryPlace::FUNCTION);
-  addMemoryPlace("min", tr("Minimum of numbers"), MemoryPlace::FUNCTION);
-  addMemoryPlace("max", tr("Maximum of numbers"), MemoryPlace::FUNCTION);
-  addMemoryPlace("sum", tr("Sum of numbers"), MemoryPlace::FUNCTION);
-  addMemoryPlace("str2dbl", tr("String to double converter"), MemoryPlace::FUNCTION);
-  addMemoryPlace("strlen", tr("Length of a string"), MemoryPlace::FUNCTION);
-  addMemoryPlace("toupper", tr("Converts string to upper characters"), MemoryPlace::FUNCTION);
-  addMemoryPlace("tolower", tr("Converts string to lower characters"), MemoryPlace::FUNCTION);
-  addMemoryPlace("real", tr("Real number of the complex number"), MemoryPlace::FUNCTION);
-  addMemoryPlace("imag", tr("Imaginary part of the complex number"), MemoryPlace::FUNCTION);
-  addMemoryPlace("arg", tr("The arguent of the complex number"), MemoryPlace::FUNCTION);
-  addMemoryPlace("conj", tr("The complex conjugate of the complex number"), MemoryPlace::FUNCTION);
-  addMemoryPlace("norm", tr("The norm of the complex number"), MemoryPlace::FUNCTION);
-  addMemoryPlace("median", tr("The median"), MemoryPlace::FUNCTION);
+  addMemoryPlace("asin", tr("arcus sine"), MemoryPlace::FUNCTION);
+  addMemoryPlace("acos", tr("arcus cosine"), MemoryPlace::FUNCTION);
+  addMemoryPlace("atan", tr("arcus tangent"), MemoryPlace::FUNCTION);
+  addMemoryPlace("asinh", tr("arcus hyperbolic sine"), MemoryPlace::FUNCTION);
+  addMemoryPlace("acosh", tr("arcus hyperbolic cosine"), MemoryPlace::FUNCTION);
+  addMemoryPlace("atanh", tr("arcus hyperbolic tangent"), MemoryPlace::FUNCTION);
+  addMemoryPlace("sin", tr("sine"), MemoryPlace::FUNCTION);
+  addMemoryPlace("cos", tr("cosine"), MemoryPlace::FUNCTION);
+  addMemoryPlace("tan", tr("tangent"), MemoryPlace::FUNCTION);
+  addMemoryPlace("sinh", tr("hyperbolic sine"), MemoryPlace::FUNCTION);
+  addMemoryPlace("cosh", tr("hyperbolic cosine"), MemoryPlace::FUNCTION);
+  addMemoryPlace("tanh", tr("hyperbolic tangent"), MemoryPlace::FUNCTION);
+  addMemoryPlace("abs", tr("absolute value of a number"), MemoryPlace::FUNCTION);
+  addMemoryPlace("ln", tr("natural logarithm (base _e)"), MemoryPlace::FUNCTION);
+  addMemoryPlace("log", tr("logarithm (base 10)"), MemoryPlace::FUNCTION);
+  addMemoryPlace("log10", tr("logarithm (base 10)"), MemoryPlace::FUNCTION);
+  addMemoryPlace("log2", tr("logarithm (base 2)"), MemoryPlace::FUNCTION);
+  addMemoryPlace("sqrt", tr("square root"), MemoryPlace::FUNCTION);
+  addMemoryPlace("exp", tr("exponential function"), MemoryPlace::FUNCTION);
+  addMemoryPlace("min", tr("minimum of numbers"), MemoryPlace::FUNCTION);
+  addMemoryPlace("max", tr("maximum of numbers"), MemoryPlace::FUNCTION);
+  addMemoryPlace("sum", tr("sum of numbers"), MemoryPlace::FUNCTION);
+  addMemoryPlace("str2dbl", tr("string to double converter"), MemoryPlace::FUNCTION);
+  addMemoryPlace("strlen", tr("length of a string"), MemoryPlace::FUNCTION);
+  addMemoryPlace("toupper", tr("upper-cased version of the string"), MemoryPlace::FUNCTION);
+  addMemoryPlace("tolower", tr("lower-cased version of the string"), MemoryPlace::FUNCTION);
+  addMemoryPlace("real", tr("real number of the complex number"), MemoryPlace::FUNCTION);
+  addMemoryPlace("imag", tr("imaginary part of the complex number"), MemoryPlace::FUNCTION);
+  addMemoryPlace("arg", tr("arguent of the complex number"), MemoryPlace::FUNCTION);
+  addMemoryPlace("conj", tr("complex conjugate of the complex number"), MemoryPlace::FUNCTION);
+  addMemoryPlace("norm", tr("norm of the complex number"), MemoryPlace::FUNCTION);
+  addMemoryPlace("median", tr("median"), MemoryPlace::FUNCTION);
 }
 
 void Calculator::initialize() {
