@@ -323,7 +323,7 @@ void FormSettings::loadInterface() {
   m_ui->m_listStyles->addItems(QStyleFactory::keys());
   QList<QListWidgetItem*> list_of_styles = m_ui->m_listStyles->findItems(Settings::value(APP_CFG_GUI,
                                                                                          "style",
-                                                                                         QApplication::style()->objectName()).toString(),
+                                                                                         qApp->style()->objectName()).toString(),
                                                                          Qt::MatchFixedString);
 
   if (list_of_styles.isEmpty() == false) {
