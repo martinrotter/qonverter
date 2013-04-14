@@ -71,6 +71,9 @@ void LineEdit::onTextChanged(const QString &new_text) {
   if (isReadOnly() == false && isEnabled() == true && m_clearButtonEnabled == true) {
     m_clearButton->setVisible(new_text.isEmpty() == false);
   }
+  else {
+    m_clearButton->setVisible(false);
+  }
 }
 
 void LineEdit::setClearButtonEnabled(bool enable) {

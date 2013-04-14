@@ -14,7 +14,7 @@
 <li>Tweaked completer popup panel to display more information.</li>
 <li>Changed dimensions of completer popup panel.</li>
 <li>Added initial implementation of dark skin.</li>
-</ul>
+<li>Tweaked dark skin.</li>
 [1.0.5]
 <ul>
 <li>Many refactorings and code simplifications done.</li>
