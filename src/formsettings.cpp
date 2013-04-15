@@ -300,6 +300,11 @@ void FormSettings::loadCalculator() {
   m_ui->m_checkFinish->setChecked(Settings::value(APP_CFG_CALC,
                                                   "select_result",
                                                   true).toBool());
+
+  // Auto-completion.
+  m_ui->m_spinCompleterMaxItems->setValue(Settings::value(APP_CFG_CALC,
+                                                          "completer_max_items",
+                                                          7).toInt());
 }
 
 void FormSettings::saveCalculator() {
@@ -312,10 +317,15 @@ void FormSettings::saveCalculator() {
   }
 
   Settings::setValue(APP_CFG_CALC, "on-the-fly", m_ui->m_checkOnTheFly->isChecked());
-  Settings::setValue(APP_CFG_CALC, "implicit_value_creation", m_ui->m_checkVars->isChecked());
+  Settings::setValue(APP_CFG_CALC, "implicit_value_creation",
+                     m_ui->m_checkVars->isChecked());
   Settings::setValue(APP_CFG_CALC, "length_error", m_ui->m_spinErrorTime->value());
   Settings::setValue(APP_CFG_CALC, "length_fly", m_ui->m_spinFlyTime->value());
   Settings::setValue(APP_CFG_CALC, "select_result", m_ui->m_checkFinish->isChecked());
+
+  // Auto-completion.
+  Settings::setValue(APP_CFG_CALC, "completer_max_items",
+                     m_ui->m_spinCompleterMaxItems->value());
 }
 
 void FormSettings::loadInterface() {

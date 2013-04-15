@@ -1,7 +1,8 @@
 <body>
 [1.0.7]
 <ul>
-<li>Update dark skin once again.</li>
+<li>Added option to setup max number of visible items for auto-completion.</li>
+<li>Updated dark skin once again.</li>
 </ul>
 [1.0.6]
 <ul>

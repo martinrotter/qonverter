@@ -4,11 +4,6 @@
 <context>
     <name>Calculator</name>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="60"/>
-        <source>Predefined memory</source>
-        <translation>Předdefinovaná paměťová buňka</translation>
-    </message>
-    <message>
         <location filename="../src/calculator/calculator.cpp" line="231"/>
         <source>Archimedes&apos; constant</source>
         <translation>Archimédova konstanta</translation>
@@ -69,14 +64,9 @@
         <translation>Artinova konstanta</translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="382"/>
-        <source>Result of &apos;ans&apos; before previous calculation</source>
-        <translation>Hodnota &apos;ans&apos; před předchozím výpočtem</translation>
-    </message>
-    <message>
-        <location filename="../src/calculator/calculator.cpp" line="386"/>
-        <source>Result of previous calculation</source>
-        <translation>Výsledek předchozího výpočtu</translation>
+        <location filename="../src/calculator/calculator.cpp" line="60"/>
+        <source>predefined memory</source>
+        <translation>předdefinovaná paměť</translation>
     </message>
     <message>
         <location filename="../src/calculator/calculator.cpp" line="228"/>
@@ -268,6 +258,16 @@
         <location filename="../src/calculator/calculator.cpp" line="280"/>
         <source>median</source>
         <translation>medián</translation>
+    </message>
+    <message>
+        <location filename="../src/calculator/calculator.cpp" line="382"/>
+        <source>result of &apos;ans&apos; before previous calculation</source>
+        <translation>hodnota &apos;ans&apos; před předchozím výpočtem</translation>
+    </message>
+    <message>
+        <location filename="../src/calculator/calculator.cpp" line="386"/>
+        <source>result of previous calculation</source>
+        <translation>výsledek předchozího výpočtu</translation>
     </message>
 </context>
 <context>

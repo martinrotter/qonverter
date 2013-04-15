@@ -4,11 +4,6 @@
 <context>
     <name>Calculator</name>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="60"/>
-        <source>Predefined memory</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../src/calculator/calculator.cpp" line="231"/>
         <source>Archimedes&apos; constant</source>
         <translation type="unfinished"></translation>
@@ -69,13 +64,8 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="382"/>
-        <source>Result of &apos;ans&apos; before previous calculation</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/calculator/calculator.cpp" line="386"/>
-        <source>Result of previous calculation</source>
+        <location filename="../src/calculator/calculator.cpp" line="60"/>
+        <source>predefined memory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -267,6 +257,16 @@
     <message>
         <location filename="../src/calculator/calculator.cpp" line="280"/>
         <source>median</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/calculator/calculator.cpp" line="382"/>
+        <source>result of &apos;ans&apos; before previous calculation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/calculator/calculator.cpp" line="386"/>
+        <source>result of previous calculation</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

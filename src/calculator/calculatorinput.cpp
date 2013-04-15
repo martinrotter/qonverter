@@ -118,8 +118,13 @@ QString CalculatorInput::textUnderCursor() const {
 
 void CalculatorInput::initialize() {
   // Gets current font from settings and applies it to input.
-  setFont(Settings::value(APP_CFG_CALC, "font_input",
+  setFont(Settings::value(APP_CFG_CALC,
+                          "font_input",
                           QFont()).value<QFont>());
+  // Set maximum number of visible items for completer.
+  m_completer->setMaxVisibleItems(Settings::value(APP_CFG_CALC,
+                                                  "completer_max_items",
+                                                  7).toInt());
 }
 
 bool CalculatorInput::matchLeftPar(QTextBlock current_block, int index, int num_right_par, QChar lft, QChar rgt) {

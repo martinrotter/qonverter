@@ -57,7 +57,7 @@ void Calculator::loadMemoryPlaces() {
   changeAns(Value(0));
 
   // Create "m" variable.
-  addMemoryPlace("m", tr("Predefined memory"), MemoryPlace::SPECIAL_VARIABLE, Value(0));
+  addMemoryPlace("m", tr("predefined memory"), MemoryPlace::SPECIAL_VARIABLE, Value(0));
 
   // TODO: Now do loading of variables from the database.
 }
@@ -379,11 +379,11 @@ void Calculator::changeAns(const Value &new_value) {
                                       ConstantsModel::RAW_VALUE).value<Value*>();
 
   editMemoryPlace("ansx",
-                  tr("Result of 'ans' before previous calculation"),
+                  tr("result of 'ans' before previous calculation"),
                   MemoryPlace::SPECIAL_VARIABLE,
                   value_of_ans == nullptr ? Value(0) : Value(*value_of_ans));
   editMemoryPlace("ans",
-                  tr("Result of previous calculation"),
+                  tr("result of previous calculation"),
                   MemoryPlace::SPECIAL_VARIABLE,
                   new_value);
 }
