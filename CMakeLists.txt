@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 2.8.10)
 project(qonverter)
 set(APP_NAME "Qonverter")
 set(APP_LOW_NAME "qonverter")
-set(APP_VERSION "1.0.7-alfa")
+set(APP_VERSION "1.0.7-alpha")
 set(APP_AUTHOR "Martin Rotter")
 set(APP_URL "http://code.google.com/p/qonverter")
 

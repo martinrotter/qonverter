@@ -3,7 +3,7 @@
  * Qonverter skin file *
  ***********************
  * Author:  Martin Rotter
- * Version: 2.3
+ * Version: 2.4
  *
  * Distributed under GNU GPL 3 (or later) license.
  * Based on http://tech-artists.org/forum/showthread.php?2359-Release-Qt-dark-orange-stylesheet.
@@ -17,10 +17,6 @@ QWidget {
 QWidget::item:hover {
     background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #569de5, stop: 1 #4b8ac9);
     color: #000000;
-}
-
-QWidget:item:selected {
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #569de5, stop: 1 #447cb5);
 }
 
 QWidget:disabled {
@@ -81,6 +77,7 @@ QMenu::item {
 
 QMenu::item:selected {
     color: #000000;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #569de5, stop: 1 #447cb5);
 }
 
 QMenu::separator {
@@ -122,7 +119,6 @@ QComboBox {
 }
 
 QComboBox:hover, QPushButton:hover {
-    /*border: 1px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #569de5, stop: 1 #447cb5);*/
 	background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #569de5, stop: 1 #447cb5);
 	color: black;
 }
@@ -130,7 +126,6 @@ QComboBox:hover, QPushButton:hover {
 QComboBox:on {
     padding: 1px;
     background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
-    selection-background-color: #ffaa00;
 }
 
 QComboBox QAbstractItemView {
