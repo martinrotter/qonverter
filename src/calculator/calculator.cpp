@@ -19,6 +19,7 @@
 
 #include <QThread>
 #include <QDebug>
+#include <QSqlQuery>
 #include <QMessageBox>
 
 #include <sstream>
@@ -29,6 +30,7 @@
 #include "extensions.h"
 #include "settings.h"
 #include "defs.h"
+#include "database.h"
 #include "constantsmodel.h"
 #include "mpFuncNonCmplx.h"
 
@@ -37,12 +39,12 @@ Calculator::Calculator(QObject *parent) : QObject(parent) {
   // Register custom types for passing via signal/slot mechanism.
   qRegisterMetaType<Value>("Value");
   qRegisterMetaType<Calculator::CallerFunction>("Calculator::CallerFunction");
+
+  // Set proper object name.
+  setObjectName("Calculator");
 }
 
 Calculator::~Calculator() {
-  // Store variables into database.
-  saveMemoryPlaces();
-
   qDebug("Deleting calculator.");
   qDeleteAll(m_memoryPlaces);
   delete m_parser;
@@ -86,6 +88,24 @@ void Calculator::consolidateMemoryPlaces() {
 
 void Calculator::saveMemoryPlaces() {
   // TODO: Now do storing variables into the database.
+  QSqlDatabase database = Database::addDatabaseConnection(objectName());
+  QSqlQuery query_obj(database);
+  QString query_string = "INSERT INTO q_variables VALUES('%1', '%2');";
+
+  // Qo through variables.
+  // Special variables have application-session scope and are not saved!
+  foreach (MemoryPlace *place, m_memoryPlaces) {
+    if (place->m_type == MemoryPlace::EXPLICIT_VARIABLE ||
+        place->m_type == MemoryPlace::IMPLICIT_VARIABLE) {
+      query_obj.exec(query_string.arg(place->m_name,
+                                      place->m_value->GetType() == 'v' ?
+                                        "" :
+                                        QString::fromStdWString(place->m_value->ToString())));
+    }
+  }
+
+  query_obj.finish();
+  Database::removeDatabaseConnection(objectName());
 }
 
 bool Calculator::removeMemoryPlace(const QString &name) {
@@ -302,7 +322,6 @@ void Calculator::initialize() {
   m_parser->DefineFun(new FunASinH());
   m_parser->DefineFun(new FunACosH());
   m_parser->DefineFun(new FunATanH());
-
 
   // Enables or disables outputs for calculator.
   m_parser->EnableDebugDump(false, false);

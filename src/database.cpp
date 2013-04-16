@@ -28,7 +28,7 @@
 
 
 QSqlDatabase Database::addDatabaseConnection(const QString &name) {
-  QString db_path = getDatabasePath();
+  QString db_path = QDir::toNativeSeparators(getDatabasePath());
   QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE", name);
   QString folder = db_path.left(db_path.lastIndexOf(QDir::separator()) + 1);
 
@@ -52,7 +52,7 @@ QSqlDatabase Database::addDatabaseConnection(const QString &name) {
 
     // Execute test query.
     // This query checks for existence of tables and schema_version key.
-    QSqlQuery q = db.exec("SELECT value FROM q_information, q_history, q_variables WHERE q_information.key = 'schema_version'");
+    QSqlQuery q = db.exec("SELECT q_information.value FROM q_information WHERE q_information.key = 'schema_version'");
 
     if (q.lastError().isValid() == true) {
       // Query returns error.

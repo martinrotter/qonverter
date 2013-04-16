@@ -20,6 +20,7 @@
 #include <QDesktopWidget>
 #include <QMessageBox>
 #include <QApplication>
+#include <QSqlDatabase>
 
 #include "formmain.h"
 #include "formabout.h"
@@ -141,6 +142,11 @@ void FormMain::saveBeforeQuit() {
   // Save settings.
   Settings::setValue(APP_CFG_GUI, "window_position", pos());
   Settings::setValue(APP_CFG_GUI, "window_size", size());
+
+  // Store variables into database.
+  // It's needed to be called now, because
+  // QSQLITE driver gets freed from the memory very soon.
+  CalculatorWrapper::getInstance().getCalculator()->saveMemoryPlaces();
 
   // Delete settings manually.
   Settings::deleteSettings();
