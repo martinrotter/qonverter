@@ -9,6 +9,7 @@ url="http://code.google.com/p/qonverter"
 license=('GPL3')
 depends=(qt5-base)
 makedepends=(gcc git cmake)
+conflicts=(qonverter)
 
 _gitname=qonverter
 _gitroot=https://Rotter.Martinos@code.google.com/p/qonverter/
