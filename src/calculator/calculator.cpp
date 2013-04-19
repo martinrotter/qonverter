@@ -20,6 +20,7 @@
 #include <QThread>
 #include <QDebug>
 #include <QSqlQuery>
+#include <QSqlRecord>
 #include <QMessageBox>
 
 #include <sstream>
@@ -45,10 +46,71 @@ Calculator::Calculator(QObject *parent) : QObject(parent) {
 }
 
 Calculator::~Calculator() {
+  // Delete needed properties.
   qDebug("Deleting calculator.");
   qDeleteAll(m_memoryPlaces);
   delete m_parser;
   delete m_constantsModel;
+}
+
+void Calculator::loadStoredMemoryPlaces() {
+  // Create database connection for storing variables and so on.
+  QSqlDatabase database = Database::addDatabaseConnection(objectName());
+
+  // Create query object and string.
+  QSqlQuery query_obj(database);
+  QString query_load_variables = "SELECT name, value, desc FROM q_variables";
+  QString var_name, var_value, var_desc;
+
+  // Execute the query.
+  query_obj.exec(query_load_variables);
+
+  int name_col = query_obj.record().indexOf("name");
+  int value_col = query_obj.record().indexOf("value");
+  int desc_col = query_obj.record().indexOf("desc");
+  Value value_of_variable;
+
+  // Iterate over the variables.
+  while (query_obj.next() == true) {
+    // Fetch variable data from database.
+    var_name = query_obj.value(name_col).toString();
+    var_value = query_obj.value(value_col).toString();
+    var_desc = query_obj.value(desc_col).toString();
+
+    // Variable has empty content, this is probably the best
+    // way to encode VOID variables.
+    if (var_value.isEmpty()) {
+      // Construct new VOID value.
+      value_of_variable = Value();
+      qDebug("Constructing new VOID value for variable '%s'.",
+             qPrintable(var_name));
+    }
+    // Variable contains specific value.
+    else {
+      try {
+        // Try to re-establish the value.
+        value_of_variable = calculateExpressionSynchronously(INTERNAL,
+                                                             var_value);
+      }
+      catch (...) {
+        // Value couldn't be re-established.
+        // Skip this variable.
+        qWarning("Variable '%s' was not re-established. It is not well-formed.",
+                 qPrintable(var_name));
+        continue;
+      }
+    }
+
+    // Try to add variable with reconstructed value.
+    if (!addMemoryPlace(var_name, var_desc,
+                        MemoryPlace::EXPLICIT_VARIABLE, value_of_variable)) {
+      qWarning("Variable '%s' could not be added. Value was reconstructed but variable name is not allowed.",
+               qPrintable(var_name));
+    }
+  }
+
+  // Remove database connection.
+  Database::removeDatabaseConnection(objectName());
 }
 
 void Calculator::loadMemoryPlaces() {
@@ -58,10 +120,12 @@ void Calculator::loadMemoryPlaces() {
   // Create initial "ansx", "ans" variables.
   changeAns(Value(0));
 
-  // Create "m" variable.
-  addMemoryPlace("m", tr("predefined memory"), MemoryPlace::SPECIAL_VARIABLE, Value(0));
+  // Load variables stored in SQLite database.
+  loadStoredMemoryPlaces();
 
-  // TODO: Now do loading of variables from the database.
+  // Create "m" variable.
+  // This fails (returns false) if "m" was added from database.
+  addMemoryPlace("m", tr("predefined memory"), MemoryPlace::SPECIAL_VARIABLE, Value(0));
 }
 
 void Calculator::consolidateMemoryPlaces() {
@@ -87,24 +151,39 @@ void Calculator::consolidateMemoryPlaces() {
 }
 
 void Calculator::saveMemoryPlaces() {
-  // TODO: Now do storing variables into the database.
+  // Create database connection for storing variables and so on.
   QSqlDatabase database = Database::addDatabaseConnection(objectName());
+
+  // Create query and query strings.
   QSqlQuery query_obj(database);
-  QString query_string = "INSERT INTO q_variables VALUES('%1', '%2');";
+  QString query_clear_table = "DELETE FROM q_variables";
+  QString query_add_variable = "INSERT INTO q_variables VALUES('%1', '%2', '%3');";
+
+  // Clear table contents.
+  query_obj.exec(query_clear_table);
+
+  // Start the transaction.
+  query_obj.exec("BEGIN TRANSACTION");
 
   // Qo through variables.
-  // Special variables have application-session scope and are not saved!
+  // Special variables have application-session scope and are not saved,
+  // but this is not the case of "m" variable.
   foreach (MemoryPlace *place, m_memoryPlaces) {
     if (place->m_type == MemoryPlace::EXPLICIT_VARIABLE ||
         place->m_type == MemoryPlace::IMPLICIT_VARIABLE) {
-      query_obj.exec(query_string.arg(place->m_name,
-                                      place->m_value->GetType() == 'v' ?
-                                        "" :
-                                        QString::fromStdWString(place->m_value->ToString())));
+      // We need to store "" for VOID variables, for better recovering
+      // value when variables are loaded.
+      query_obj.exec(query_add_variable.arg(place->m_name,
+                                            place->m_value->GetType() == 'v' ?
+                                              "" :
+                                              QString::fromStdWString(place->m_value->ToString()),
+                                            place->m_description));
     }
   }
 
-  query_obj.finish();
+  // Commit the transaction.
+  query_obj.exec("COMMIT");
+
   Database::removeDatabaseConnection(objectName());
 }
 
@@ -335,11 +414,14 @@ void Calculator::initialize() {
   emit initialized();
 }
 
-void Calculator::calculateExpression(Calculator::CallerFunction function, QString expression) {
+Value Calculator::calculateExpressionSynchronously(Calculator::CallerFunction function,
+                                                   QString expression) {
   switch (function) {
     case CALCULATOR_ONTHEFLY:
     case CONVERTER_ONTHEFLY:
     case EDITOR_ONTHEFLY:
+      // Used for evaluating variables stored in textual form.
+    case INTERNAL:
       m_parser->EnableAutoCreateVar(false);
       break;
     case CALCULATOR_RESULT:
@@ -352,11 +434,19 @@ void Calculator::calculateExpression(Calculator::CallerFunction function, QStrin
   }
 
   m_parser->SetExpr(expression.toStdWString());
+
+  qDebug().nospace() << "Evaluating expression in thread " << QThread::currentThreadId() << ".";
+  return m_parser->Eval();
+}
+
+void Calculator::calculateExpression(Calculator::CallerFunction function,
+                                     QString expression) {
   Value result;
 
   try {
-    qDebug().nospace() << "Evaluating expression in thread " << QThread::currentThreadId() << ".";
-    result = m_parser->Eval();
+    // Try to calculate the result.
+    result = calculateExpressionSynchronously(function,
+                                              expression);
   }
   catch (ParserError &e) {
     // We got error so asker needs to be alerted about that.

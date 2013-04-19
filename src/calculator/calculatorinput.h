@@ -25,6 +25,7 @@
 
 class QCompleter;
 
+// TODO: Use completer for all line edits which do use computations.
 class CalculatorInput : public QPlainTextEdit {
     Q_OBJECT
 

@@ -105,7 +105,7 @@ QSqlDatabase Database::getDatabaseConnection(const QString &name) {
 
 void Database::removeDatabaseConnection(const QString &name) {
   QSqlDatabase::removeDatabase(name);
-  qDebug("Remevoed database connection %s.", qPrintable(name));
+  qDebug("Removed database connection %s.", qPrintable(name));
 }
 
 QString Database::getDatabasePath() {

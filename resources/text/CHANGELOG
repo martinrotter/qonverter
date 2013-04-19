@@ -3,6 +3,8 @@
 <ul>
 <li>Added option to setup max number of visible items for auto-completion.</li>
 <li>Updated dark skin once again.</li>
+<li>Explicit/implicit variables are now stored in persistent storage so 
+that they can be used in next Qonverter session.</li>
 </ul>
 [1.0.6]
 <ul>

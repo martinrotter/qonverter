@@ -76,6 +76,10 @@ void FormMain::createTrayIcon() {
         (*m_trayIcon).setToolTip(QString("Qonverter ") + APP_VERSION);
         (*m_trayIcon).show();
 
+        // TODO: Disable tray icon menu
+        // if any modal dialog is displayed.
+        // Or fix the related bug.
+
         // We create connections here and not in createGuiConnections because of
         // switchable system tray.
         connect(m_trayIcon.data(), &SystemTrayIcon::activated,
@@ -143,9 +147,9 @@ void FormMain::saveBeforeQuit() {
   Settings::setValue(APP_CFG_GUI, "window_position", pos());
   Settings::setValue(APP_CFG_GUI, "window_size", size());
 
-  // Store variables into database.
-  // It's needed to be called now, because
-  // QSQLITE driver gets freed from the memory very soon.
+  // Store variables from calculator into database.
+  // This needs to be called here, because QSQL* objects are freed
+  // too soon.
   CalculatorWrapper::getInstance().getCalculator()->saveMemoryPlaces();
 
   // Delete settings manually.

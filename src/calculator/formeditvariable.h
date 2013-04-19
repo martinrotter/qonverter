@@ -30,6 +30,7 @@ namespace Ui {
   class FormEditVariable;
 }
 
+// TODO: Crash when FormEditVariable is opened and app is closed via tray.
 class FormEditVariable : public QDialog {
     Q_OBJECT
     

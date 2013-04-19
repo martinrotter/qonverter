@@ -234,7 +234,6 @@ void CalculatorInput::keyPressEvent(QKeyEvent *e) {
     return;
   }
 
-  // TODO: Check delimiters and remove all non-operators.
   static QString word_delimiters("~!@#$%^&*()+{}|:\"<>?,./;'[]\\-=");
 
   QRect cr = cursorRect();

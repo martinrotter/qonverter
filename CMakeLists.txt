@@ -86,6 +86,7 @@ endif(CMAKE_COMPILER_IS_GNUCC OR CMAKE_COMPILER_IS_GNUCXX)
 endif()
 
 # Check for C++ 11 features availability.
+# See http://stackoverflow.com/questions/10984442/how-to-detect-c11-support-of-a-compiler-with-cmake
 if("${CMAKE_CXX_COMPILER_ID}" MATCHES "GNU")
     execute_process(
 	COMMAND ${CMAKE_CXX_COMPILER} -dumpversion OUTPUT_VARIABLE GCC_VERSION
@@ -111,9 +112,6 @@ if(WIN32)
 endif()
 
 # Find all needed Qt modules.
-if(UNIX)
-    find_package(Qt5DBus)
-endif()
 find_package(Qt5Sql)
 find_package(Qt5Widgets)
 find_package(Qt5Xml)
@@ -416,11 +414,5 @@ add_custom_target(dist COMMAND ${CMAKE_MAKE_PROGRAM} package_source)
 add_custom_target(lupdate
     ${Qt5Core_QMAKE_EXECUTABLE} -project -o ${CMAKE_CURRENT_BINARY_DIR}/qonverter.pro
         COMMAND ${Qt5_LUPDATE_EXECUTABLE} -ts ${APP_TRANSLATIONS_WO_QT} -no-obsolete -pro ${CMAKE_CURRENT_BINARY_DIR}/qonverter.pro
-	WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-)
-
-add_custom_target(lrelease
-    ${Qt5Core_QMAKE_EXECUTABLE} -project -o ${CMAKE_CURRENT_BINARY_DIR}/qonverter.pro
-        COMMAND ${Qt5_LRELEASE_EXECUTABLE} -compress ${CMAKE_CURRENT_BINARY_DIR}/qonverter.pro
 	WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
 )

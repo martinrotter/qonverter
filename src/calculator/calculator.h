@@ -44,7 +44,8 @@ class Calculator : public QObject {
       CONVERTER_ERROR,
       CONVERTER_ONTHEFLY,
       EDITOR_ONTHEFLY,
-      EDITOR_ERROR
+      EDITOR_ERROR,
+      INTERNAL
     };
 
     // Constructors and destructors.
@@ -67,6 +68,8 @@ class Calculator : public QObject {
     void resultCalculated(const Calculator::CallerFunction &function,
                           const Value &result = Value(),
                           const QString &info = QString());
+
+    // This signal is emitted if calculator initialization completes.
     void initialized();
 
   public slots:
@@ -76,8 +79,11 @@ class Calculator : public QObject {
     // Resets built-in constants.
     void loadConstants();
 
-    // Loads stored variables from external file, SQLite.
+    // Loads all variables and constants.
     void loadMemoryPlaces();
+
+    // Loads stored variables from external file, SQLite.
+    void loadStoredMemoryPlaces();
 
     // Save loaded variables into external file.
     void saveMemoryPlaces();
@@ -115,7 +121,15 @@ class Calculator : public QObject {
     int countOfMemoryPlaces();
 
     // Calculates input expression.
+    // This method encapsulates calculateExpressionSynchronously method
+    // and is purposed for ASYNCHRONOUS calculations.
     void calculateExpression(Calculator::CallerFunction function, QString expression);
+
+    // Calculates input expression.
+    // This method returns result synchronously w/o exception handling.
+    // It it primarily used for evaluating stored variables.
+    Value calculateExpressionSynchronously(Calculator::CallerFunction function,
+                                           QString expression);
 
   private:
     ConstantsModel *m_constantsModel;

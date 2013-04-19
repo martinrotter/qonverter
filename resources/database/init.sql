@@ -12,5 +12,6 @@ DROP TABLE IF EXISTS q_variables;
 -- !
 CREATE TABLE IF NOT EXISTS q_variables (
     name	TEXT	PRIMARY KEY NOT NULL,
-    value	TEXT	NOT NULL
+    value	TEXT	NOT NULL,
+	desc	TEXT
 );
