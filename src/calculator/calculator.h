@@ -61,21 +61,6 @@ class Calculator : public QObject {
     // This method wraps bool ParserXBase::IsFunDefined(const string_type &ident).
     bool isFunDefined(const QString &function_name);
 
-  signals:
-    // Is emitted if result is calculated:
-    // a) result is calculated successfully and is stored in result variables, into is empty.
-    // b) error occurred and exception info is stored in info variable, result is empty.
-    void resultCalculated(const Calculator::CallerFunction &function,
-                          const Value &result = Value(),
-                          const QString &info = QString());
-
-    // This signal is emitted if calculator initialization completes.
-    void initialized();
-
-  public slots:
-    // Sets up calculator and  creates built-in constants.
-    void initialize();
-
     // Resets built-in constants.
     void loadConstants();
 
@@ -121,15 +106,30 @@ class Calculator : public QObject {
     int countOfMemoryPlaces();
 
     // Calculates input expression.
-    // This method encapsulates calculateExpressionSynchronously method
-    // and is purposed for ASYNCHRONOUS calculations.
-    void calculateExpression(Calculator::CallerFunction function, QString expression);
-
-    // Calculates input expression.
     // This method returns result synchronously w/o exception handling.
     // It it primarily used for evaluating stored variables.
     Value calculateExpressionSynchronously(Calculator::CallerFunction function,
                                            QString expression);
+
+  signals:
+    // Is emitted if result is calculated:
+    // a) result is calculated successfully and is stored in result variables, into is empty.
+    // b) error occurred and exception info is stored in info variable, result is empty.
+    void resultCalculated(const Calculator::CallerFunction &function,
+                          const Value &result = Value(),
+                          const QString &info = QString());
+
+    // This signal is emitted if calculator initialization completes.
+    void initialized();
+
+  public slots:
+    // Sets up calculator and  creates built-in constants.
+    void initialize();
+
+    // Calculates input expression.
+    // This method encapsulates calculateExpressionSynchronously method
+    // and is purposed for ASYNCHRONOUS calculations.
+    void calculateExpression(Calculator::CallerFunction function, QString expression);
 
   private:
     ConstantsModel *m_constantsModel;

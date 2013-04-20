@@ -37,6 +37,11 @@
 #include "dbusadaptor.h"
 #endif
 
+// TODO: Check out possibility of using Google Breakpad
+// http://blog.inventic.eu/2012/08/qt-and-google-breakpad/
+// https://code.google.com/p/google-breakpad/
+// https://github.com/AlekSi/breakpad-qt
+
 
 int main(int argc, char *argv[]) {
   //: FOR TRANSLATOR: Name of language, e.g. English.

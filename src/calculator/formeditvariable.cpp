@@ -28,7 +28,7 @@
 FormEditVariable::FormEditVariable(QWidget *parent)
   : QDialog(parent), m_ui(new Ui::FormEditVariable) {
   m_ui->setupUi(this);
-  
+
   // Set flags.
   setWindowFlags(Qt::MSWindowsFixedSizeDialogHint | Qt::Dialog);
 

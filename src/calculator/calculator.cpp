@@ -114,6 +114,9 @@ void Calculator::loadStoredMemoryPlaces() {
 }
 
 void Calculator::loadMemoryPlaces() {
+  // Clear local memory places storage.
+  m_memoryPlaces.clear();
+
   // Load built-in constants.
   loadConstants();
 
