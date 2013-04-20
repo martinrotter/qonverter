@@ -6,6 +6,7 @@
 <li>Explicit/implicit variables are now stored in persistent storage so 
 that they can be used in next Qonverter session.</li>
 <li>Compilation script tweaked and cleaned, e.g. verbose compilation outputs added.</li>
+<li>Fixed crash with tray icon context menu if any modal dialog is displayed.</li>
 </ul>
 [1.0.6]
 <ul>

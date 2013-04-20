@@ -1,26 +1,27 @@
 /*
-	This file is part of Qonverter.
-	
-	Qonverter is free software: you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation, either version 3 of the License, or
-	(at your option) any later version.
-	
-	Qonverter is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
-	
-	You should have received a copy of the GNU General Public License
-	along with Qonverter.  If not, see <http://www.gnu.org/licenses/>.
-	
-	Copyright 2012 - 2013 Martin Rotter
+    This file is part of Qonverter.
+
+    Qonverter is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Qonverter is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Qonverter.  If not, see <http://www.gnu.org/licenses/>.
+
+    Copyright 2012 - 2013 Martin Rotter
 */
 
 #include <QDesktopWidget>
 #include <QMessageBox>
 #include <QApplication>
 #include <QSqlDatabase>
+#include <QWindow>
 
 #include "formmain.h"
 #include "formabout.h"
@@ -72,21 +73,40 @@ void FormMain::createTrayIcon() {
         // Tray icon is not created but should be used. Create it.
         m_trayIcon = new SystemTrayIcon(QIcon(":/graphics/qonverter.png"),
                                         qApp);
-        (*m_trayIcon).setContextMenu(m_trayMenu);
+        //(*m_trayIcon).setContextMenu(m_trayMenu);
         (*m_trayIcon).setToolTip(QString("Qonverter ") + APP_VERSION);
         (*m_trayIcon).show();
-
-        // TODO: Disable tray icon menu
-        // if any modal dialog is displayed.
-        // Or fix the related bug.
 
         // We create connections here and not in createGuiConnections because of
         // switchable system tray.
         connect(m_trayIcon.data(), &SystemTrayIcon::activated,
                 [=] (QSystemTrayIcon::ActivationReason reason) {
-          if (reason == QSystemTrayIcon::Trigger) {
-            // User clicked tray icon.
-            switchWindowVisibility();
+          switch (reason) {
+            case QSystemTrayIcon::Trigger:
+              // User clicked tray icon.
+              switchWindowVisibility();
+              break;
+            case QSystemTrayIcon::Context: {
+              // User requests tray icon context menu.
+              // Check if context menu should be displayed.
+              // It is not available if any modal dialog is opened.
+              QWidget *active_modal_dialog = QApplication::activeModalWidget();
+
+              if (active_modal_dialog == nullptr) {
+                // No modal dialogs are visible, display the menu.
+                m_trayMenu->exec(QCursor::pos());
+              }
+              else {
+                // At least one modal dialog is shown.
+                // Disable menu in this case.
+                (*m_trayIcon).showMessage(QString("Qonverter ") + APP_VERSION,
+                                          tr("Close opened modal dialogs first."),
+                                          QSystemTrayIcon::Warning);
+              }
+              break;
+            }
+            default:
+              break;
           }
         });
       }
