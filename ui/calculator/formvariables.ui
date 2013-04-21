@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>FormVariables</class>
  <widget class="QDialog" name="FormVariables">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -141,7 +144,7 @@
         <x>0</x>
         <y>0</y>
         <width>720</width>
-        <height>283</height>
+        <height>285</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
@@ -232,14 +235,14 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>ConstantsView</class>
-   <extends>QTreeView</extends>
-   <header>constantsview.h</header>
-  </customwidget>
-  <customwidget>
    <class>LineEdit</class>
    <extends>QLineEdit</extends>
    <header>lineedit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ConstantsView</class>
+   <extends>QTreeView</extends>
+   <header>constantsview.h</header>
   </customwidget>
  </customwidgets>
  <tabstops>

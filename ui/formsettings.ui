@@ -3,7 +3,7 @@
  <class>FormSettings</class>
  <widget class="QDialog" name="FormSettings">
   <property name="windowModality">
-   <enum>Qt::NonModal</enum>
+   <enum>Qt::WindowModal</enum>
   </property>
   <property name="geometry">
    <rect>
@@ -59,8 +59,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>426</width>
-            <height>138</height>
+            <width>533</width>
+            <height>142</height>
            </rect>
           </property>
           <layout class="QFormLayout" name="formLayout">
@@ -155,8 +155,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>340</width>
-            <height>295</height>
+            <width>423</width>
+            <height>307</height>
            </rect>
           </property>
           <layout class="QFormLayout" name="formLayout_2">
@@ -297,7 +297,7 @@
             <x>0</x>
             <y>0</y>
             <width>98</width>
-            <height>71</height>
+            <height>70</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_2">
@@ -416,8 +416,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>586</width>
-            <height>519</height>
+            <width>589</width>
+            <height>546</height>
            </rect>
           </property>
           <layout class="QFormLayout" name="formLayout_3">

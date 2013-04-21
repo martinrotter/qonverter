@@ -19,12 +19,12 @@
 
 #include <QDir>
 #include <QTranslator>
-#include <QMessageBox>
 #include <QProcess>
 #include <QFontDialog>
 #include <QColorDialog>
 #include <QStyleFactory>
 
+#include "messagebox.h"
 #include "settings.h"
 #include "formsettings.h"
 #include "formmain.h"
@@ -232,16 +232,16 @@ void FormSettings::saveLanguages() {
   if (new_lang != actual_lang) {
     Settings::setValue(APP_CFG_LANG, "language", new_lang);
 
-    QMessageBox box_restart(QMessageBox::Question, tr("Language Changed"),
-                            tr("Language of Qonverter was changed. Note that changes will take effect on next Qonverter start."),
-                            QMessageBox::Yes | QMessageBox::No, this);
-    box_restart.setInformativeText(tr("Do you want to restart now?"));
-
-    if (box_restart.exec() == QMessageBox::Yes) {
+    if (MessageBox::question(this, tr("Language Changed"),
+                             tr("Language of Qonverter was changed. Note that changes will take effect on next Qonverter start."),
+                             tr("Do you want to restart now?"),
+                             QMessageBox::Yes | QMessageBox::No,
+                             QMessageBox::Yes) ==
+        QMessageBox::Yes) {
       if (QProcess::startDetached(qApp->applicationFilePath()) == false) {
-        QMessageBox::warning(this,
-                             tr("Problem with Qonverter Restart"),
-                             tr("Qonverter couldn't be restarted, please restart it manually for changes to take effect."));
+        MessageBox::warning(this,
+                            tr("Problem with Qonverter Restart"),
+                            tr("Qonverter couldn't be restarted, please restart it manually for changes to take effect."));
       }
       else {
         qApp->quit();

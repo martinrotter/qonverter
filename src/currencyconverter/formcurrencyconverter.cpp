@@ -17,8 +17,7 @@
     Copyright 2012 - 2013 Martin Rotter
 */
 
-#include <QMessageBox>
-
+#include "messagebox.h"
 #include "formcurrencyconverter.h"
 #include "currencyconverter.h"
 
@@ -64,17 +63,17 @@ FormCurrencyConverter::FormCurrencyConverter(QWidget *parent)
 
     switch (status) {
       case CurrencyConverter::NOT_DOWNLOADED:
-        QMessageBox::warning(this, tr("Rates Not Updated"),
+        MessageBox::warning(this, tr("Rates Not Updated"),
                              tr("Currency rates were not downloaded successfully. Check your internet connection."));
         break;
       case CurrencyConverter::NOT_SAVED:
-        QMessageBox::warning(this, tr("Rates Not Updated"),
+        MessageBox::warning(this, tr("Rates Not Updated"),
                              tr("Currency rates were not saved successfully. Target location is not writable."));
         break;
       case CurrencyConverter::OK:
         initialize();
-        QMessageBox::information(this, tr("Rates Updated"),
-                                 tr("Currency rates were updated and loaded successfully."));
+        MessageBox::information(this, tr("Rates Updated"),
+                                tr("Currency rates were updated and loaded successfully."));
         break;
       default:
         break;

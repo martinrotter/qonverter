@@ -18,8 +18,8 @@
 */
 
 #include <QPushButton>
-#include <QMessageBox>
 
+#include "messagebox.h"
 #include "formeditvariable.h"
 #include "calculatorwrapper.h"
 #include "calculator.h"
@@ -125,10 +125,10 @@ int FormEditVariable::execAdd() {
       accept();
     }
     else {
-      QMessageBox::warning(this,
-                           tr("Invalid Variable Setup"),
-                           tr("Cannot add variable \'%1\'. "
-                              "Its name is invalid or is already used.").arg(m_ui->m_txtName->text()));
+      MessageBox::warning(this,
+                          tr("Invalid Variable Setup"),
+                          tr("Cannot add variable \'%1\'. "
+                             "Its name is invalid or is already used.").arg(m_ui->m_txtName->text()));
     }
   });
 
@@ -161,7 +161,7 @@ int FormEditVariable::execEdit(const QString &name, const QString &value,
       accept();
     }
     else {
-      QMessageBox::warning(this,
+      MessageBox::warning(this,
                            tr("Invalid Variable Setup"),
                            tr("Cannot edit variable \'%1\'. "
                               "Its value is not well-formed or another error occured.").arg(m_ui->m_txtName->text()));

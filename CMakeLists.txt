@@ -207,6 +207,7 @@ set(APP_SOURCES
   src/calculator/memoryplace.cpp
   src/calculator/memorymap.cpp
   src/calculator/constantsfiltermodel.cpp
+  src/messagebox.cpp
 )
 
 # Add headers.

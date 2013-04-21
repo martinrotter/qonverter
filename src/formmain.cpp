@@ -18,9 +18,7 @@
 */
 
 #include <QDesktopWidget>
-#include <QMessageBox>
 #include <QApplication>
-#include <QSqlDatabase>
 #include <QWindow>
 
 #include "formmain.h"
@@ -28,6 +26,7 @@
 #include "formsettings.h"
 #include "formvariables.h"
 
+#include "messagebox.h"
 #include "settings.h"
 #include "defs.h"
 #include "calculatorwrapper.h"
@@ -112,8 +111,8 @@ void FormMain::createTrayIcon() {
       }
     }
     else {
-      QMessageBox::warning(this, tr("System Tray Icon Not Available"),
-                           tr("Your system doesn't seem to support system tray icon. Tray icon wasn't loaded and Qonverter runs in single window mode."));
+      MessageBox::warning(this, tr("System Tray Icon Not Available"),
+                          tr("Your system doesn't seem to support system tray icon. Tray icon wasn't loaded and Qonverter runs in single window mode."));
     }
   }
   else {
@@ -268,16 +267,15 @@ void FormMain::createGuiConnections() {
   connect(m_ui->m_actionAboutQt, &QAction::triggered, [=] () {
     // Display custom about Qt dialog.
     // Default dialog is too ugly and big.
-    QMessageBox about_box(this);
-    about_box.setIconPixmap(QIcon::fromTheme("qtlogo",
-                                             QIcon(":/graphics/qt_logo.png")).pixmap(32,
-                                                                                     32));
-    about_box.setText(tr("<p>This software uses Qt.</p>"
-                         "<p>Check <a href=\"http://www.qt-project.org\">www.qt-project.org</a> for more information.</p>"));
-    about_box.setWindowIcon(QIcon(about_box.iconPixmap()));
-    about_box.setWindowTitle(tr("About Qt"));
-
-    about_box.exec();
+    MessageBox::custom(this,
+                       tr("About Qt"),
+                       tr("<p>This software uses Qt.</p>"
+                          "<p>Check <a href=\"http://www.qt-project.org\">www.qt-project.org</a> for more information.</p>"),
+                       QMessageBox::Ok,
+                       QMessageBox::Ok,
+                       QIcon::fromTheme("qtlogo",
+                                        QIcon(":/graphics/qt_logo.png")).pixmap(32,
+                                                                                32));
   });
 
   // Display 'Variables' dialog.
