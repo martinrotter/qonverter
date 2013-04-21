@@ -39,7 +39,7 @@ MemoryPlace::~MemoryPlace() {
   // Free resources of this object if:
   if (m_type == CONSTANT || m_type == FUNCTION) {
     delete m_value;
-    qDebug("Constant '%s' deleted.", qPrintable(m_name));
+    qDebug("Constant/function '%s' deleted.", qPrintable(m_name));
   }
   else if (m_type == EXPLICIT_VARIABLE || m_type == SPECIAL_VARIABLE) {
     delete m_value;

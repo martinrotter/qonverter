@@ -30,7 +30,7 @@
    <item row="0" column="1">
     <widget class="QStackedWidget" name="m_stackedSettings">
      <property name="currentIndex">
-      <number>3</number>
+      <number>2</number>
      </property>
      <widget class="QWidget" name="m_pageGeneral">
       <layout class="QHBoxLayout" name="horizontalLayout">
@@ -59,8 +59,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>533</width>
-            <height>142</height>
+            <width>603</width>
+            <height>418</height>
            </rect>
           </property>
           <layout class="QFormLayout" name="formLayout">
@@ -155,8 +155,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>423</width>
-            <height>307</height>
+            <width>603</width>
+            <height>418</height>
            </rect>
           </property>
           <layout class="QFormLayout" name="formLayout_2">
@@ -248,7 +248,11 @@
             </widget>
            </item>
            <item row="2" column="0" colspan="2">
-            <widget class="QListWidget" name="m_listStyles"/>
+            <widget class="QListWidget" name="m_listStyles">
+             <property name="toolTip">
+              <string>Styles are provided by the Qt core. Style is provided for each major desktop environment.</string>
+             </property>
+            </widget>
            </item>
            <item row="3" column="0">
             <widget class="QLabel" name="label_9">
@@ -261,7 +265,11 @@
             </widget>
            </item>
            <item row="4" column="0" colspan="2">
-            <widget class="QListWidget" name="m_listSkins"/>
+            <widget class="QListWidget" name="m_listSkins">
+             <property name="toolTip">
+              <string>Skins are style extenders. They are held in plain text files with CSS-like syntax. Skins can provide richer user experience.</string>
+             </property>
+            </widget>
            </item>
           </layout>
          </widget>
@@ -296,8 +304,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>98</width>
-            <height>70</height>
+            <width>603</width>
+            <height>418</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_2">
@@ -415,7 +423,7 @@
           <property name="geometry">
            <rect>
             <x>0</x>
-            <y>0</y>
+            <y>-128</y>
             <width>589</width>
             <height>546</height>
            </rect>
@@ -588,6 +596,12 @@
               </item>
               <item row="7" column="0" colspan="2">
                <widget class="QPushButton" name="m_btnCalcReset">
+                <property name="toolTip">
+                 <string>Restores colors of all elements to original state. Default colors depend on colors of your desktop environment.</string>
+                </property>
+                <property name="statusTip">
+                 <string>s</string>
+                </property>
                 <property name="text">
                  <string>Restore default colors</string>
                 </property>
@@ -755,6 +769,9 @@ Note that variables are not created during on-the-fly subcomputations in calcula
                   <width>110</width>
                   <height>16777215</height>
                  </size>
+                </property>
+                <property name="toolTip">
+                 <string>Specifies maximum number of visible rows of auto-completion panel. Optimal value seems to be between 5 and 7.</string>
                 </property>
                </widget>
               </item>
