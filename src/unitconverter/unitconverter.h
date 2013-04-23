@@ -41,7 +41,6 @@ class UnitConverter : public QObject {
 
   protected:
     // Loads magnitudes and rates, including coefficients.
-    // TODO: Perhaps do some loading from the database.
     void loadUnitsAndMangitudes();
 
     // Converter input_value according to selected mangitude and units

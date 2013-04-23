@@ -386,13 +386,13 @@
         <location filename="../ui/calculator/formcalculator.ui" line="64"/>
         <location filename="../build/ui_formcalculator.h" line="753"/>
         <source>Input your mathematical expressions here.</source>
-        <translation type="unfinished"></translation>
+        <translation>Zadejte svůj matematický výraz sem.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="119"/>
         <location filename="../build/ui_formcalculator.h" line="756"/>
         <source>Logical disjunction.</source>
-        <translation type="unfinished"></translation>
+        <translation>Logický součet.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="150"/>
@@ -404,271 +404,271 @@
         <location filename="../ui/calculator/formcalculator.ui" line="181"/>
         <location filename="../build/ui_formcalculator.h" line="762"/>
         <source>Inequality &apos;&lt;&apos; operator.</source>
-        <translation type="unfinished"></translation>
+        <translation>Operátor nerovnosti &apos;&lt;&apos;.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="212"/>
         <location filename="../build/ui_formcalculator.h" line="765"/>
         <source>Inequality &apos;&gt;&apos; operator.</source>
-        <translation type="unfinished"></translation>
+        <translation>Operátor nerovnosti &apos;&gt;&apos;.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="243"/>
         <location filename="../build/ui_formcalculator.h" line="768"/>
         <source>Equality operator.</source>
-        <translation type="unfinished"></translation>
+        <translation>Operátor rovnosti.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="274"/>
         <location filename="../build/ui_formcalculator.h" line="771"/>
         <source>Logical conjunction.</source>
-        <translation type="unfinished"></translation>
+        <translation>Logický součin.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="305"/>
         <location filename="../build/ui_formcalculator.h" line="774"/>
         <source>Bitwise AND operator.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitový AND operátor.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="342"/>
         <location filename="../build/ui_formcalculator.h" line="777"/>
         <source>Clear input of the calculator.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vymazat vstup kalkulačky.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="373"/>
         <location filename="../build/ui_formcalculator.h" line="780"/>
         <source>Real part of the complex number.</source>
-        <translation type="unfinished"></translation>
+        <translation>Reálná část komplexního čísla.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="404"/>
         <location filename="../build/ui_formcalculator.h" line="783"/>
         <source>Bitwise OR operator.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitový OR operátor.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="435"/>
         <location filename="../build/ui_formcalculator.h" line="786"/>
         <source>Absolute value of the number.</source>
-        <translation type="unfinished"></translation>
+        <translation>Absolutní hodnota čísla.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="466"/>
         <location filename="../build/ui_formcalculator.h" line="789"/>
         <source>Multiplies the number with another.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vynásobí číslo s jiným číslem.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="497"/>
         <location filename="../build/ui_formcalculator.h" line="792"/>
         <source>Sinus of an angle.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sinus úhlu.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="534"/>
         <location filename="../build/ui_formcalculator.h" line="795"/>
         <source>7</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="571"/>
         <location filename="../build/ui_formcalculator.h" line="798"/>
         <source>8</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="652"/>
         <location filename="../build/ui_formcalculator.h" line="804"/>
         <source>9</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="720"/>
         <location filename="../build/ui_formcalculator.h" line="810"/>
         <source>4</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="757"/>
         <location filename="../build/ui_formcalculator.h" line="813"/>
         <source>5</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="788"/>
         <location filename="../build/ui_formcalculator.h" line="816"/>
         <source>Natural logarithm.</source>
-        <translation type="unfinished"></translation>
+        <translation>Přirozený logaritmus.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="819"/>
         <location filename="../build/ui_formcalculator.h" line="819"/>
         <source>Minimum of the numeric array.</source>
-        <translation type="unfinished"></translation>
+        <translation>Minimum z pole čísel.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="856"/>
         <location filename="../build/ui_formcalculator.h" line="822"/>
         <source>1</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="893"/>
         <location filename="../build/ui_formcalculator.h" line="825"/>
         <source>2</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="930"/>
         <location filename="../build/ui_formcalculator.h" line="828"/>
         <source>3</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="961"/>
         <location filename="../build/ui_formcalculator.h" line="831"/>
         <source>Exponents the base by number.</source>
-        <translation type="unfinished"></translation>
+        <translation>Exponuje základ s daným exponentem.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="998"/>
         <location filename="../build/ui_formcalculator.h" line="834"/>
         <source>6</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1029"/>
         <location filename="../build/ui_formcalculator.h" line="837"/>
         <source>Norm of the complex number.</source>
-        <translation type="unfinished"></translation>
+        <translation>Norma komplexního čísla.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1060"/>
         <location filename="../build/ui_formcalculator.h" line="840"/>
         <source>Divides one number with another.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vydělí jedno číslo druhým.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1091"/>
         <location filename="../build/ui_formcalculator.h" line="843"/>
         <source>Maximum of the numeric array.</source>
-        <translation type="unfinished"></translation>
+        <translation>Maximum z pole čísel.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1122"/>
         <location filename="../build/ui_formcalculator.h" line="846"/>
         <source>Logarithm with base 10.</source>
-        <translation type="unfinished"></translation>
+        <translation>Logaritmus o základu 10.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1153"/>
         <location filename="../build/ui_formcalculator.h" line="849"/>
         <source>Subtracts two numbers.</source>
-        <translation type="unfinished"></translation>
+        <translation>Odečte dvě čísla.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1190"/>
         <location filename="../build/ui_formcalculator.h" line="852"/>
         <source>Calculate the expression.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vypočítat vzorec.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1221"/>
         <location filename="../build/ui_formcalculator.h" line="855"/>
         <source>Cosinus of an angle.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kosinus úhlu.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1252"/>
         <location filename="../build/ui_formcalculator.h" line="858"/>
         <source>Exponential function.</source>
-        <translation type="unfinished"></translation>
+        <translation>Exponenciální funkce.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1289"/>
         <location filename="../build/ui_formcalculator.h" line="861"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1320"/>
         <location filename="../build/ui_formcalculator.h" line="864"/>
         <source>Tangent of an angle.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tangens úhlu.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1351"/>
         <location filename="../build/ui_formcalculator.h" line="867"/>
         <source>Sum of the numeric array.</source>
-        <translation type="unfinished"></translation>
+        <translation>Součet pole čísel.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1382"/>
         <location filename="../build/ui_formcalculator.h" line="870"/>
         <source>Argument of the complex number.</source>
-        <translation type="unfinished"></translation>
+        <translation>Argument komplexního čísla.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1413"/>
         <location filename="../build/ui_formcalculator.h" line="873"/>
         <source>Imaginary part of the complex number.</source>
-        <translation type="unfinished"></translation>
+        <translation>Imaginární část komplexního čísla.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1444"/>
         <location filename="../build/ui_formcalculator.h" line="876"/>
         <source>Computes the square root of a number.</source>
-        <translation type="unfinished"></translation>
+        <translation>Druhá odmocnina čísla.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1482"/>
         <location filename="../build/ui_formcalculator.h" line="879"/>
         <source>.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1513"/>
         <location filename="../build/ui_formcalculator.h" line="882"/>
         <source>Adds two numbers.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sečte dvě čísla.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1544"/>
         <location filename="../build/ui_formcalculator.h" line="885"/>
         <source>Shifts the number to right.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitově posune číslo vpravo.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1575"/>
         <location filename="../build/ui_formcalculator.h" line="888"/>
         <source>Shifts the number to left.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitově posune číslo vlevo.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1606"/>
         <location filename="../build/ui_formcalculator.h" line="891"/>
-        <source>Set the value of &apos;m&apos; variable to value of calculated expression.</source>
-        <translation type="unfinished"></translation>
+        <source>Set the value of &apos;m&apos; variable to value of entered expression.</source>
+        <translation>Nastaví hodnotu proměnné &apos;m&apos; na výsledek zadaného výrazu.</translation>
+    </message>
+    <message>
+        <location filename="../ui/calculator/formcalculator.ui" line="1674"/>
+        <location filename="../build/ui_formcalculator.h" line="897"/>
+        <source>Add the result of entered expression to the &apos;m&apos; variable.</source>
+        <translation>Přičíst výsledek zadaného výrazu k proměnné &apos;m&apos;.</translation>
+    </message>
+    <message>
+        <location filename="../ui/calculator/formcalculator.ui" line="1711"/>
+        <location filename="../build/ui_formcalculator.h" line="900"/>
+        <source>Subtract the result of entered expression from the &apos;m&apos; variable.</source>
+        <translation>Odečíst výsledek zadaného výrazu od proměnné &apos;m&apos;.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1637"/>
         <location filename="../build/ui_formcalculator.h" line="894"/>
         <source>Set the &apos;m&apos; variable to zero.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/calculator/formcalculator.ui" line="1674"/>
-        <location filename="../build/ui_formcalculator.h" line="897"/>
-        <source>Add the result of calculated expression to the &apos;m&apos; variable.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/calculator/formcalculator.ui" line="1711"/>
-        <location filename="../build/ui_formcalculator.h" line="900"/>
-        <source>Subtract the result of calculated expression from the &apos;m&apos; variable.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nastaví proměnnou &apos;m&apos; na hodnotu 0.</translation>
     </message>
     <message>
         <location filename="../src/calculator/formcalculator.cpp" line="262"/>
@@ -1185,13 +1185,13 @@ jednotka</translation>
         <location filename="../ui/formsettings.ui" line="253"/>
         <location filename="../build/ui_formsettings.h" line="590"/>
         <source>Styles are provided by the Qt core. Style is provided for each major desktop environment.</source>
-        <translation type="unfinished"></translation>
+        <translation>Styly poskytuje jádro knihovny Qt a jsou poskytovány pro většinu oblíbených desktopových prostředí.</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="270"/>
         <location filename="../build/ui_formsettings.h" line="594"/>
         <source>Skins are style extenders. They are held in plain text files with CSS-like syntax. Skins can provide richer user experience.</source>
-        <translation type="unfinished"></translation>
+        <translation>Skiny jsou nadstavby stylů. Jsou uchovávány v běžných textových souborech a mají syntax podobnou k CSS. Skiny mohou nabídnout bohatší prožitek z rozhraní aplikace.</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="450"/>
@@ -1241,13 +1241,13 @@ jednotka</translation>
         <location filename="../ui/formsettings.ui" line="600"/>
         <location filename="../build/ui_formsettings.h" line="620"/>
         <source>Restores colors of all elements to original state. Default colors depend on colors of your desktop environment.</source>
-        <translation type="unfinished"></translation>
+        <translation>Obnoví barvy všech textových elementů vstupu kalkulačky. Výchozí barvy závisí na barvách Vašeho desktopového prostředí.</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="603"/>
         <location filename="../build/ui_formsettings.h" line="623"/>
         <source>s</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="606"/>
@@ -1293,7 +1293,7 @@ Proměnné nejsou vytvářený v průběžném režimu kalkulačky nebo převodn
         <location filename="../ui/formsettings.ui" line="774"/>
         <location filename="../build/ui_formsettings.h" line="647"/>
         <source>Specifies maximum number of visible rows of auto-completion panel. Optimal value seems to be between 5 and 7.</source>
-        <translation type="unfinished"></translation>
+        <translation>Specifikuje maximální počet viditelných řádků v panelu automatického doplňování. Optimální hodnota se nachází někde mezi 5 a 7.</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="859"/>
@@ -1618,7 +1618,7 @@ Proměnné nejsou vytvářený v průběžném režimu kalkulačky nebo převodn
         <location filename="../src/main.cpp" line="52"/>
         <source>LANG_VERSION</source>
         <extracomment>FOR TRANSLATOR: Version of your translation, e.g. 1.0.</extracomment>
-        <translation>1.4</translation>
+        <translation>1.5</translation>
     </message>
     <message>
         <location filename="../src/formsettings.cpp" line="176"/>

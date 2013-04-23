@@ -1603,7 +1603,7 @@
          </size>
         </property>
         <property name="toolTip">
-         <string>Set the value of 'm' variable to value of calculated expression.</string>
+         <string>Set the value of 'm' variable to value of entered expression.</string>
         </property>
         <property name="text">
          <string notr="true">MS</string>
@@ -1671,7 +1671,7 @@
          </font>
         </property>
         <property name="toolTip">
-         <string>Add the result of calculated expression to the 'm' variable.</string>
+         <string>Add the result of entered expression to the 'm' variable.</string>
         </property>
         <property name="text">
          <string notr="true">M+</string>
@@ -1708,7 +1708,7 @@
          </font>
         </property>
         <property name="toolTip">
-         <string>Subtract the result of calculated expression from the 'm' variable.</string>
+         <string>Subtract the result of entered expression from the 'm' variable.</string>
         </property>
         <property name="text">
          <string notr="true">M-</string>

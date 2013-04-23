@@ -3,11 +3,6 @@
 
 #include <QMessageBox>
 
-// TODO: Dodělat metodu ::custom,
-// která bude navíc brat ikonu, která se zobrazí jako hlavní ikona dialogu.
-// použije se to pro About Qt.
-// Ve windows overit jakou ikonu maji dialogy v zahlavi a overit
-// chovani s tray ikonou.
 
 // Static methods in this class wrap QMessageBox.
 // Reason is that that static methods of QMessageBox

@@ -649,25 +649,25 @@
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1606"/>
         <location filename="../build/ui_formcalculator.h" line="891"/>
-        <source>Set the value of &apos;m&apos; variable to value of calculated expression.</source>
+        <source>Set the value of &apos;m&apos; variable to value of entered expression.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/calculator/formcalculator.ui" line="1674"/>
+        <location filename="../build/ui_formcalculator.h" line="897"/>
+        <source>Add the result of entered expression to the &apos;m&apos; variable.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/calculator/formcalculator.ui" line="1711"/>
+        <location filename="../build/ui_formcalculator.h" line="900"/>
+        <source>Subtract the result of entered expression from the &apos;m&apos; variable.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1637"/>
         <location filename="../build/ui_formcalculator.h" line="894"/>
         <source>Set the &apos;m&apos; variable to zero.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/calculator/formcalculator.ui" line="1674"/>
-        <location filename="../build/ui_formcalculator.h" line="897"/>
-        <source>Add the result of calculated expression to the &apos;m&apos; variable.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/calculator/formcalculator.ui" line="1711"/>
-        <location filename="../build/ui_formcalculator.h" line="900"/>
-        <source>Subtract the result of calculated expression from the &apos;m&apos; variable.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
