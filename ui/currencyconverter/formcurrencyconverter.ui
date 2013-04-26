@@ -169,7 +169,7 @@ currency</string>
          </widget>
         </item>
         <item>
-         <widget class="QDoubleSpinBox" name="m_spinInput">
+         <widget class="DoubleSpinBox" name="m_spinInput">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
             <horstretch>0</horstretch>
@@ -228,7 +228,7 @@ currency</string>
          </widget>
         </item>
         <item>
-         <widget class="QDoubleSpinBox" name="m_spinOutput">
+         <widget class="DoubleSpinBox" name="m_spinOutput">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
             <horstretch>0</horstretch>
@@ -371,6 +371,13 @@ currency</string>
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>DoubleSpinBox</class>
+   <extends>QDoubleSpinBox</extends>
+   <header>doublespinbox.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

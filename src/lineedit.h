@@ -61,6 +61,8 @@ class LineEdit : public QLineEdit {
     // Places clear button into the correct position.
     void resizeEvent(QResizeEvent *event);
 
+    void keyPressEvent(QKeyEvent *event);
+
     // Returns width of QLineEdit frame.
     int frameWidth() const;
 

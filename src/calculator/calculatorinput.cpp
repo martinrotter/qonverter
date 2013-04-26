@@ -20,6 +20,11 @@
 #include <QCompleter>
 #include <QScrollBar>
 
+#if defined(Q_OS_WIN)
+#include <windows.h>
+#include <winuser.h>
+#endif
+
 #include "calculatorinput.h"
 #include "calculatorhighlighter.h"
 #include "formcalculator.h"
@@ -211,6 +216,14 @@ void CalculatorInput::keyPressEvent(QKeyEvent *e) {
     case Qt::Key_Backtab:
       e->ignore();
       return;
+#if defined(Q_OS_WIN)
+    case Qt::Key_Comma:
+      if (e->nativeVirtualKey() == VK_DECIMAL) {
+        insertPlainText(".");
+        e->ignore();
+        return;
+      }
+#endif
     default:
       e->accept();
       break;
@@ -261,7 +274,8 @@ void CalculatorInput::keyPressEvent(QKeyEvent *e) {
     //m_completer->popup()->setCurrentIndex(m_completer->completionModel()->index(0, 0));
   }
 
-  m_completer->complete(cr); // popup it up!
+  // Display auto-completion panel.
+  m_completer->complete(cr);
 }
 
 void CalculatorInput::matchPar() {

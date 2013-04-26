@@ -9,6 +9,7 @@ that they can be used in next Qonverter session.</li>
 <li>Fixed crash with tray icon context menu if any modal dialog is displayed.</li>
 <li>All dialogs are now modal and tray icon menu cannot be used if any modal dialog is opened.</li>
 <li>Added some tooltips and texts.</li>
+<li>Dot is now printed out if user hits decimal separator keyboard button.</li>
 </ul>
 [1.0.6]
 <ul>

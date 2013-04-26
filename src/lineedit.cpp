@@ -1,20 +1,20 @@
 /*
-	This file is part of Qonverter.
-	
-	Qonverter is free software: you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation, either version 3 of the License, or
-	(at your option) any later version.
-	
-	Qonverter is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
-	
-	You should have received a copy of the GNU General Public License
-	along with Qonverter.  If not, see <http://www.gnu.org/licenses/>.
-	
-	Copyright 2012 - 2013 Martin Rotter
+    This file is part of Qonverter.
+
+    Qonverter is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Qonverter is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Qonverter.  If not, see <http://www.gnu.org/licenses/>.
+
+    Copyright 2012 - 2013 Martin Rotter
 */
 
 /****************************************************************************
@@ -28,7 +28,13 @@
 
 #include <QToolButton>
 #include <QStyle>
+#include <QLocale>
 #include <QKeyEvent>
+
+#if defined(Q_OS_WIN)
+#include <windows.h>
+#include <winuser.h>
+#endif
 
 #include "lineedit.h"
 
@@ -92,6 +98,24 @@ void LineEdit::setReadOnly(bool read_only) {
 
 int LineEdit::frameWidth() const {
   return style()->pixelMetric(QStyle::PM_DefaultFrameWidth, 0, this);
+}
+
+void LineEdit::keyPressEvent(QKeyEvent *event) {
+  // Make sure that commas are replaced by dots
+  // as decimal separator.
+#if defined(Q_OS_WIN)
+  if (event->key() == Qt::Key_Comma &&
+      event->nativeVirtualKey() == VK_DECIMAL) {
+    insert(".");
+    event->ignore();
+    return;
+  }
+#endif
+  // TODO: Check this for Linux.
+  // It seems that linux uses dot by default which is good.
+
+  // React as normal line edit.
+  QLineEdit::keyPressEvent(event);
 }
 
 void LineEdit::resizeEvent(QResizeEvent *event) {

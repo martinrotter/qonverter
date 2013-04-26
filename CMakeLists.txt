@@ -208,6 +208,7 @@ set(APP_SOURCES
   src/calculator/memorymap.cpp
   src/calculator/constantsfiltermodel.cpp
   src/messagebox.cpp
+  src/doublespinbox.cpp
 )
 
 # Add headers.
@@ -236,6 +237,7 @@ set(APP_HEADERS
   src/calculator/formeditvariable.h
   src/formwelcome.h
   src/calculator/constantsfiltermodel.h
+  src/doublespinbox.h
 )
 
 # Add form files.

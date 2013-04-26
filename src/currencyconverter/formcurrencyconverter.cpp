@@ -20,6 +20,7 @@
 #include "messagebox.h"
 #include "formcurrencyconverter.h"
 #include "currencyconverter.h"
+#include "lineedit.h"
 
 
 FormCurrencyConverter *FormCurrencyConverter::s_instance;
