@@ -111,8 +111,6 @@ void LineEdit::keyPressEvent(QKeyEvent *event) {
     return;
   }
 #endif
-  // TODO: Check this for Linux.
-  // It seems that linux uses dot by default which is good.
 
   // React as normal line edit.
   QLineEdit::keyPressEvent(event);

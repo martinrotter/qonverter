@@ -10,6 +10,9 @@ DoubleSpinBox::DoubleSpinBox(QWidget *parent) : QDoubleSpinBox(parent) {
   // TODO: Problem with styling. Solve with QPaletter if
   // other solutions fail.
   LineEdit *line_edit = new LineEdit();
+  line_edit->setMinimumHeight(line_edit->minimumSizeHint().height());
+  line_edit->setStyleSheet("LineEdit { background: transparent; }");
   line_edit->setClearButtonEnabled(false);
+
   setLineEdit(line_edit);
 }

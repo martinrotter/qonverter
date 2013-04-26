@@ -80,16 +80,15 @@ QLineEdit {
     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffffff, stop: 1 #f7f7f7);
     border-radius: 1px;
     border: 1px solid gray;
-	padding-bottom: 2px;
     selection-background-color: #e1e1e1;
-	selection-color: black;
+    selection-color: black;
 }
 QLineEdit[readOnly="true"] {
     color: gray;
     font-weight: lighter;
 }
 LineEdit {
-	padding-right: 25px;
+    padding-right: 25px;
 }
 
 /* spin boxes and other stuff */
