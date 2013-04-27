@@ -20,6 +20,7 @@
 #include <QApplication>
 #include <QTranslator>
 #include <QSystemTrayIcon>
+#include <QDir>
 
 // Needed for setting ini file format on Mac OS.
 #ifdef Q_OS_MAC
@@ -67,9 +68,18 @@ int main(int argc, char *argv[]) {
 
   QApplication qonverter_app(argc, argv);
 
+  // TODO: Investigate behaviour of Qt plugins loading.
+  // This has something to do with dynamic dll loading during run time.
+#if !defined Q_OS_WIN
   // Add 3rd party plugin directory to application PATH variable.
   // This is useful for styles, encoders, ...
+  // This is probably not needed on Windows.
   QApplication::addLibraryPath(APP_PLUGIN_PATH);
+#endif
+
+  foreach (QString path, QApplication::libraryPaths()) {
+    qDebug("Path for libraries: %s", qPrintable(path));
+  }
 
   // These settings needs to be set before any QSettings object.
   qonverter_app.setApplicationName(APP_NAME);
