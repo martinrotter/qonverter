@@ -32,6 +32,14 @@ QSqlDatabase Database::addDatabaseConnection(const QString &name) {
   QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE", name);
   QString folder = db_path.left(db_path.lastIndexOf(QDir::separator()) + 1);
 
+  // Check if SQLite driver is available.
+  // It it isn't, then variables cannot be persistently
+  // stored.
+  if (!db.isValid()) {
+    qFatal("QSQLITE database server was NOT found. Make sure that application and its dependencies are installed correctly.");
+    return db;
+  }
+
   db.setDatabaseName(db_path);
   qDebug("Opening database '%s'.",
          qPrintable(QDir::toNativeSeparators(db.databaseName())));

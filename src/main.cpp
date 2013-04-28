@@ -70,10 +70,11 @@ int main(int argc, char *argv[]) {
 
   // TODO: Investigate behaviour of Qt plugins loading.
   // This has something to do with dynamic dll loading during run time.
-#if !defined Q_OS_WIN
+
   // Add 3rd party plugin directory to application PATH variable.
   // This is useful for styles, encoders, ...
-  // This is probably not needed on Windows.
+  // This is probably not needed on Windows or Linux, not sure about Mac OS X.
+#if defined(Q_OS_MAC)
   QApplication::addLibraryPath(APP_PLUGIN_PATH);
 #endif
 

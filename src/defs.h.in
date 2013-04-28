@@ -58,7 +58,7 @@
 #if defined(Q_OS_LINUX)
 #define APP_LANG_PATH APP_PREFIX + QString("/share/qonverter/l10n")
 #define APP_SKIN_PATH APP_PREFIX + QString("/share/qonverter/skins")
-#define APP_PLUGIN_PATH APP_PREFIX + QString("/share/qonverter/plugins")
+//#define APP_PLUGIN_PATH APP_PREFIX + QString("/share/qonverter/plugins")
 #define APP_INFO_PATH APP_PREFIX + QString("/share/qonverter/information")
 #elif defined(Q_OS_MAC)
 #define APP_LANG_PATH QApplication::applicationDirPath() + "/../Resources/l10n"
