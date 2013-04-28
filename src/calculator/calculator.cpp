@@ -54,11 +54,8 @@ Calculator::~Calculator() {
 }
 
 void Calculator::loadStoredMemoryPlaces() {
-  // Create database connection for storing variables and so on.
-  QSqlDatabase database = Database::addDatabaseConnection(objectName());
-
   // Create query object and string.
-  QSqlQuery query_obj(database);
+  QSqlQuery query_obj(m_database);
   QString query_load_variables = "SELECT name, value, desc FROM q_variables";
   QString var_name, var_value, var_desc;
 
@@ -108,9 +105,6 @@ void Calculator::loadStoredMemoryPlaces() {
                qPrintable(var_name));
     }
   }
-
-  // Remove database connection.
-  Database::removeDatabaseConnection(objectName());
 }
 
 void Calculator::loadMemoryPlaces() {
@@ -154,11 +148,8 @@ void Calculator::consolidateMemoryPlaces() {
 }
 
 void Calculator::saveMemoryPlaces() {
-  // Create database connection for storing variables and so on.
-  QSqlDatabase database = Database::addDatabaseConnection(objectName());
-
   // Create query and query strings.
-  QSqlQuery query_obj(database);
+  QSqlQuery query_obj(m_database);
   QString query_clear_table = "DELETE FROM q_variables";
   QString query_add_variable = "INSERT INTO q_variables VALUES('%1', '%2', '%3');";
 
@@ -186,8 +177,6 @@ void Calculator::saveMemoryPlaces() {
 
   // Commit the transaction.
   query_obj.exec("COMMIT");
-
-  Database::removeDatabaseConnection(objectName());
 }
 
 bool Calculator::removeMemoryPlace(const QString &name) {
@@ -410,6 +399,9 @@ void Calculator::initialize() {
 
   // Create constants model.
   m_constantsModel = new ConstantsModel(this);
+
+  // Establish database connection.
+  m_database = Database::addDatabaseConnection(objectName());
 
   // Load variables and constants.
   loadMemoryPlaces();

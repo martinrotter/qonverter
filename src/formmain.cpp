@@ -27,6 +27,7 @@
 #include "formvariables.h"
 
 #include "messagebox.h"
+#include "database.h"
 #include "settings.h"
 #include "defs.h"
 #include "calculatorwrapper.h"

@@ -3,6 +3,7 @@
 <ul>
 <li>Added option to setup max number of visible items for auto-completion.</li>
 <li>Updated dark skin once again.</li>
+<li>Fixed memory leak when loading and saving variables.</li>
 <li>Explicit/implicit variables are now stored in persistent storage so 
 that they can be used in next Qonverter session.</li>
 <li>Compilation script tweaked and cleaned, e.g. verbose compilation outputs added.</li>

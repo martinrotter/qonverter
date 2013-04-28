@@ -24,6 +24,7 @@
 #include <QMap>
 #include <QVariant>
 #include <QPointer>
+#include <QSqlDatabase>
 
 #include "mpParser.h"
 #include "memoryplace.h"
@@ -135,6 +136,7 @@ class Calculator : public QObject {
     ConstantsModel *m_constantsModel;
     ParserX *m_parser;
     MemoryMap m_memoryPlaces;
+    QSqlDatabase m_database;
 };
 
 Q_DECLARE_METATYPE(MemoryPlace::Type)
