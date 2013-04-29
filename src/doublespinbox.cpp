@@ -7,11 +7,12 @@ DoubleSpinBox::DoubleSpinBox(QWidget *parent) : QDoubleSpinBox(parent) {
   // because dot is better for separator than comma is.
   setLocale(QLocale::English);
 
-  // TODO: Problem with styling. Solve with QPaletter if
-  // other solutions fail.
+  // Replace default line edit component with custom one.
   LineEdit *line_edit = new LineEdit();
   line_edit->setMinimumHeight(line_edit->minimumSizeHint().height());
   line_edit->setStyleSheet("LineEdit { background: transparent; }");
+
+  // Clear button is not needed.
   line_edit->setClearButtonEnabled(false);
 
   setLineEdit(line_edit);

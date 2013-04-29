@@ -60,6 +60,7 @@ class CalculatorInput : public QPlainTextEdit {
 
   public slots:
     // Needed because of special calculator initialization.
+    // Sets the singleton calculator model as data source for auto-completion.
     void setCompleterModel();
 
   protected slots:

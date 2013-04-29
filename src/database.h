@@ -34,6 +34,8 @@ class Database {
     // Removes already existing SQLite connection.
     static void removeDatabaseConnection(const QString &name);
 
+    static void removeAllConnections();
+
   private:
     // Returns standard path to store application database file.
     static QString getDatabasePath();

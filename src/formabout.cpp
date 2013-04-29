@@ -37,7 +37,7 @@ FormAbout::FormAbout(QWidget *parent) : QDialog(parent), m_ui(new Ui::FormAbout)
   str.setDevice(&file);
 
   file.setFileName(APP_INFO_PATH + "/COPYING_HTML");
-  if (file.open(QIODevice::ReadOnly | QIODevice::Text) == true) {
+  if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
     m_ui->m_txtLicense->setText(str.readAll());
   }
   else {
@@ -46,7 +46,7 @@ FormAbout::FormAbout(QWidget *parent) : QDialog(parent), m_ui(new Ui::FormAbout)
   file.close();
 
   file.setFileName(APP_INFO_PATH + "/AUTHORS");
-  if (file.open(QIODevice::ReadOnly | QIODevice::Text) == true) {
+  if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
     m_ui->m_txtThanks->setText(str.readAll());
   }
   else {
@@ -55,7 +55,7 @@ FormAbout::FormAbout(QWidget *parent) : QDialog(parent), m_ui(new Ui::FormAbout)
   file.close();
 
   file.setFileName(APP_INFO_PATH + "/CHANGELOG");
-  if (file.open(QIODevice::ReadOnly | QIODevice::Text) == true) {
+  if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
     m_ui->m_txtChangelog->setText(str.readAll());
   }
   else {

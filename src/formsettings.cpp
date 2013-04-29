@@ -97,7 +97,7 @@ FormSettings::FormSettings(QWidget *parent) : QDialog(parent), m_ui(new Ui::Form
                                                 this,
                                                 tr("Select New Color"));
 
-      if (new_color.isValid() == true) {
+      if (new_color.isValid()) {
         m_tempSettings.m_calcColors[i] = new_color;
         loadCalculator();
       }
@@ -177,9 +177,9 @@ void FormSettings::loadLanguages() {
     QString lang_email = translator.translate("QObject", "LANG_EMAIL");
     QString lang_website = translator.translate("QObject", "LANG_WEBSITE");
 
-    if (lang_name.isEmpty() == true ||
-        lang_abbrev.isEmpty() == true ||
-        lang_version.isEmpty() == true) {
+    if (lang_name.isEmpty() ||
+        lang_abbrev.isEmpty() ||
+        lang_version.isEmpty()) {
       continue;
     }
     else {
@@ -205,15 +205,15 @@ void FormSettings::loadLanguages() {
                                                                                                                           1),
                                                                     Qt::MatchExactly,
                                                                     1);
-  if (list_langs.isEmpty() == false) {
-    m_ui->m_treeLangs->setCurrentItem(list_langs.at(0));
+  if (!list_langs.isEmpty()) {
+    m_ui->m_treeLangs->setCurrentItem(list_langs[0]);
   }
   else {
     QList<QTreeWidgetItem*> list_def = m_ui->m_treeLangs->findItems("en",
                                                                     Qt::MatchExactly,
                                                                     1);
-    if (list_def.isEmpty() == false) {
-      m_ui->m_treeLangs->setCurrentItem(list_def.at(0));
+    if (!list_def.isEmpty()) {
+      m_ui->m_treeLangs->setCurrentItem(list_def[0]);
     }
   }
 }
@@ -223,7 +223,7 @@ void FormSettings::saveLanguages() {
                                         "language",
                                         "qonverter_en.qm").toString();
 
-  if (m_ui->m_treeLangs->selectedItems().isEmpty() == true) {
+  if (m_ui->m_treeLangs->selectedItems().isEmpty()) {
     return;
   }
 
@@ -238,7 +238,7 @@ void FormSettings::saveLanguages() {
                              QMessageBox::Yes | QMessageBox::No,
                              QMessageBox::Yes) ==
         QMessageBox::Yes) {
-      if (QProcess::startDetached(qApp->applicationFilePath()) == false) {
+      if (!QProcess::startDetached(qApp->applicationFilePath())) {
         MessageBox::warning(this,
                             tr("Problem with Qonverter Restart"),
                             tr("Qonverter couldn't be restarted, please restart it manually for changes to take effect."));
@@ -336,7 +336,7 @@ void FormSettings::loadInterface() {
                                                                                          qApp->style()->objectName()).toString(),
                                                                          Qt::MatchFixedString);
 
-  if (list_of_styles.isEmpty() == false) {
+  if (!list_of_styles.isEmpty()) {
     m_ui->m_listStyles->setCurrentItem(list_of_styles[0]);
   }
 
@@ -361,7 +361,7 @@ void FormSettings::loadInterface() {
                                                                                        "base/plain.qss").toString(),
                                                                        Qt::MatchFixedString);
 
-  if (list_of_skins.isEmpty() == false) {
+  if (!list_of_skins.isEmpty()) {
     m_ui->m_listSkins->setCurrentItem(list_of_skins[0]);
   }
 
@@ -375,11 +375,11 @@ void FormSettings::loadInterface() {
 }
 
 void FormSettings::saveInterface() {
-  if (m_ui->m_listStyles->selectedItems().isEmpty() == false) {
+  if (!m_ui->m_listStyles->selectedItems().isEmpty()) {
     Settings::setValue(APP_CFG_GUI, "style", m_ui->m_listStyles->currentItem()->text());
   }
 
-  if (m_ui->m_listSkins->selectedItems().isEmpty() == false) {
+  if (!m_ui->m_listSkins->selectedItems().isEmpty()) {
     Settings::setValue(APP_CFG_GUI, "skin", m_ui->m_listSkins->currentItem()->text());
   }
 
@@ -409,14 +409,14 @@ void FormSettings::loadGeneral() {
 void FormSettings::saveGeneral() {
 #ifdef Q_OS_WIN
   QSettings sett("HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run", QSettings::NativeFormat);
-  if (m_ui->m_checkStartup->isChecked() == true) {
+  if (m_ui->m_checkStartup->isChecked()) {
     sett.setValue(APP_LOW_NAME, QApplication::applicationFilePath().replace('/', '\\'));
   }
   else {
     sett.remove(APP_LOW_NAME);
   }
 #endif
-  if (m_ui->m_listMode->selectedItems().isEmpty() == false) {
+  if (!m_ui->m_listMode->selectedItems().isEmpty()) {
     Settings::setValue(APP_CFG_GEN,
                        "start_mode", m_ui->m_listMode->currentRow());
   }

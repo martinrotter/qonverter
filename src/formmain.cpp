@@ -36,7 +36,7 @@
 #include "extensions.h"
 #include "stackedwidget.h"
 #include "systemtrayicon.h"
-
+#include "database.h"
 
 FormMain::FormMain(QWidget *parent) : QMainWindow(parent), m_ui(new Ui::FormMain) {
   m_ui->setupUi(this);
@@ -45,6 +45,7 @@ FormMain::FormMain(QWidget *parent) : QMainWindow(parent), m_ui(new Ui::FormMain
   createMenus();
   createTrayIcon();
 
+  // Establish signal-slot connections.
   createGuiConnections();
   createAppConnections();
 
@@ -58,22 +59,20 @@ FormMain::~FormMain() {
   delete m_trayMenu;
 
   // Make sure tray icon is deleted too.
-  if (m_trayIcon.isNull() == false) {
+  if (!m_trayIcon.isNull()) {
     delete m_trayIcon.data();
   }
 }
 
 void FormMain::createTrayIcon() {
   // User has enabled tray icon.
-  if (Settings::value(APP_CFG_GUI, "tray_icon_enabled", false).toBool() == true) {
+  if (Settings::value(APP_CFG_GUI, "tray_icon_enabled", false).toBool()) {
     // Tray icon is really available.
-    if (QSystemTrayIcon::isSystemTrayAvailable() == true) {
+    if (QSystemTrayIcon::isSystemTrayAvailable()) {
       // Make sure tray icon allocated only if it's not already loaded.
-      if (m_trayIcon.isNull() == true) {
+      if (m_trayIcon.isNull()) {
         // Tray icon is not created but should be used. Create it.
-        m_trayIcon = new SystemTrayIcon(QIcon(":/graphics/qonverter.png"),
-                                        qApp);
-        //(*m_trayIcon).setContextMenu(m_trayMenu);
+        m_trayIcon = new SystemTrayIcon(QIcon(":/graphics/qonverter.png"), qApp);
         (*m_trayIcon).setToolTip(QString("Qonverter ") + APP_VERSION);
         (*m_trayIcon).show();
 
@@ -118,7 +117,7 @@ void FormMain::createTrayIcon() {
   }
   else {
     // Make sure tray icon is not loaded if user doesn't need it.
-    if (m_trayIcon.isNull() == false) {
+    if (!m_trayIcon.isNull()) {
       delete m_trayIcon.data();
     };
   }
@@ -154,7 +153,7 @@ void FormMain::showWindow() {
 }
 
 void FormMain::switchWindowVisibility() {
-  if (isVisible() == true) {
+  if (isVisible()) {
     hideWindow();
   }
   else {
@@ -171,6 +170,9 @@ void FormMain::saveBeforeQuit() {
   // This needs to be called here, because QSQL* objects are freed
   // too soon.
   CalculatorWrapper::getInstance().getCalculator()->saveMemoryPlaces();
+
+  // Databases are now not needed, all data are stored in this point.
+  Database::removeAllConnections();
 
   // Delete settings manually.
   Settings::deleteSettings();
@@ -218,13 +220,13 @@ void FormMain::createAppConnections() {
   //  a) when last visible window is closed (single-window mode)
   //  b) when quit() is called explicitly (tray-icon mode)
   connect(qApp, &QApplication::lastWindowClosed, [=] () {
-    if (QSystemTrayIcon::isSystemTrayAvailable() == false ||
-        Settings::value(APP_CFG_GUI, "tray_icon_enabled", false).toBool() == false ||
-        Settings::value(APP_CFG_GUI, "tray_icon_action", 0).toBool() == true) {
+    if (!QSystemTrayIcon::isSystemTrayAvailable() ||
+        !Settings::value(APP_CFG_GUI, "tray_icon_enabled", false).toBool() ||
+        Settings::value(APP_CFG_GUI, "tray_icon_action", 0).toBool()) {
       qApp->quit();
     }
     // Notify user that Qonverter runs in tray icon mode.
-    else if (Settings::value(APP_CFG_GUI, "first_start_tray", true).toBool() == true) {
+    else if (Settings::value(APP_CFG_GUI, "first_start_tray", true).toBool()) {
       Settings::setValue(APP_CFG_GUI, "first_start_tray", false);
       m_trayIcon.data()->showMessage(QString("Qonverter ") + APP_VERSION,
                                      tr("Application is hidden in notification area."));

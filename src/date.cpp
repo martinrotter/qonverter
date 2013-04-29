@@ -38,7 +38,7 @@ QDateTime Date::fromString(const QString &date_time) {
   foreach (QString pattern, date_patterns) {
     temp = date.left(pattern.size());
     dt = locale.toDateTime(temp, pattern);
-    if (dt.isValid() == true) {
+    if (dt.isValid()) {
       return dt;
     }
   }
