@@ -53,6 +53,14 @@ LineEdit::LineEdit(QWidget *parent) : QLineEdit(parent) {
   m_clearButton->hide();
   m_clearButtonEnabled = true;
 
+  // TODO: Udelat novou tridu ValidatedLineEdit, te pres style sheet dat novej margin vpravo,
+  // v tomto marginu pridat novej QToolButton s ikonou,
+  // ta se bude menit pri textChanged a bude zobrazovat "fajfku".
+  // Pri kliknuti na fajfku se zobrazi stav
+  // napriklad jako tooltip nebo balloon tip
+  // http://qt.gitorious.org/qt/qt/blobs/4.7/src/gui/util/qsystemtrayicon_p.h trida (QBaloonTip)
+  // pokusit se tu tridu vyseparovat.
+
   // Create necessary connections.
   connect(m_clearButton, &QToolButton::clicked, this, &LineEdit::clear);
   connect(this, &LineEdit::textChanged, this, &LineEdit::onTextChanged);

@@ -36,12 +36,30 @@ FormAbout::FormAbout(QWidget *parent) : QDialog(parent), m_ui(new Ui::FormAbout)
   QFile file;
   str.setDevice(&file);
 
-  file.setFileName(APP_INFO_PATH + "/COPYING_HTML");
+  file.setFileName(APP_INFO_PATH + "/COPYING_GNU_HTML");
   if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-    m_ui->m_txtLicense->setText(str.readAll());
+    m_ui->m_txtLicenseGnu->setText(str.readAll());
   }
   else {
-    m_ui->m_txtLicense->setText(tr("License not found."));
+    m_ui->m_txtLicenseGnu->setText(tr("License not found."));
+  }
+  file.close();
+
+  file.setFileName(APP_INFO_PATH + "/COPYING_BSD");
+  if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+    m_ui->m_txtLicenseBsd->setText(str.readAll());
+  }
+  else {
+    m_ui->m_txtLicenseBsd->setText(tr("License not found."));
+  }
+  file.close();
+
+  file.setFileName(APP_INFO_PATH + "/COPYING_FLAGS");
+  if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+    m_ui->m_txtLicenseFlags->setText(str.readAll());
+  }
+  else {
+    m_ui->m_txtLicenseFlags->setText(tr("License not found."));
   }
   file.close();
 

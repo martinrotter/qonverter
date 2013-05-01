@@ -138,9 +138,6 @@
      <property name="toolTip">
       <string>Insert your mathematical expression here.</string>
      </property>
-     <property name="styleSheet">
-      <string notr="true"/>
-     </property>
      <property name="placeholderText">
       <string>Input expression</string>
      </property>
