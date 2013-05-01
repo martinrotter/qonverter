@@ -57,6 +57,9 @@
      <height>21</height>
     </rect>
    </property>
+   <property name="nativeMenuBar">
+    <bool>true</bool>
+   </property>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
      <string>&amp;Help </string>
@@ -160,13 +163,13 @@
   </action>
   <action name="m_actionVariables">
    <property name="text">
-    <string>Display &amp;Variables and Functions</string>
+    <string>&amp;Variables, Constants and Functions</string>
    </property>
    <property name="toolTip">
     <string>Displays simple list of declared variables.</string>
    </property>
    <property name="shortcut">
-    <string notr="true">Ctrl+Shift+V</string>
+    <string>Ctrl+Shift+V</string>
    </property>
   </action>
   <action name="m_actionCalculator">

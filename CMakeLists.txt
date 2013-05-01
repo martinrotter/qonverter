@@ -296,6 +296,7 @@ set(APP_MISC
   resources/text/COPYING_GNU
   resources/text/COPYING_BSD
   resources/text/COPYING_FLAGS
+  resources/text/COPYING_GNU_LGPL_HTML
   resources/text/CHANGELOG
 )
 
