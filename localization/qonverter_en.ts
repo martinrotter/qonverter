@@ -4,268 +4,268 @@
 <context>
     <name>Calculator</name>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="333"/>
+        <location filename="../src/calculator/calculator.cpp" line="322"/>
         <source>Archimedes&apos; constant</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="334"/>
+        <location filename="../src/calculator/calculator.cpp" line="323"/>
         <source>Euler&apos;s number</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="335"/>
+        <location filename="../src/calculator/calculator.cpp" line="324"/>
         <source>ApÃ©ry&apos;s constant</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="336"/>
+        <location filename="../src/calculator/calculator.cpp" line="325"/>
         <source>EulerâMascheroni constant</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="337"/>
+        <location filename="../src/calculator/calculator.cpp" line="326"/>
         <source>Pythagoras&apos; constant</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="338"/>
+        <location filename="../src/calculator/calculator.cpp" line="327"/>
         <source>Gelfond&apos;s constant</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="339"/>
+        <location filename="../src/calculator/calculator.cpp" line="328"/>
         <source>Gelfond-Schneider constant</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="340"/>
+        <location filename="../src/calculator/calculator.cpp" line="329"/>
         <source>Feigenbaum reduction parameter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="341"/>
+        <location filename="../src/calculator/calculator.cpp" line="330"/>
         <source>Feigenbaum bifurcation velocity</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="342"/>
+        <location filename="../src/calculator/calculator.cpp" line="331"/>
         <source>Gauss&apos; constant</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="343"/>
+        <location filename="../src/calculator/calculator.cpp" line="332"/>
         <source>Laplace limit constant</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="348"/>
+        <location filename="../src/calculator/calculator.cpp" line="337"/>
         <source>Artin&apos;s constant</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="131"/>
+        <location filename="../src/calculator/calculator.cpp" line="125"/>
         <source>predefined memory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="330"/>
+        <location filename="../src/calculator/calculator.cpp" line="319"/>
         <source>imaginary unit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="331"/>
+        <location filename="../src/calculator/calculator.cpp" line="320"/>
         <source>golden ratio</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="332"/>
+        <location filename="../src/calculator/calculator.cpp" line="321"/>
         <source>silver ratio</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="344"/>
+        <location filename="../src/calculator/calculator.cpp" line="333"/>
         <source>magic angle [in radians]</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="345"/>
+        <location filename="../src/calculator/calculator.cpp" line="334"/>
         <source>tetrahedral angle [in radians]</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="346"/>
+        <location filename="../src/calculator/calculator.cpp" line="335"/>
         <source>gravitoid constant</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="347"/>
+        <location filename="../src/calculator/calculator.cpp" line="336"/>
         <source>square drill constant</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="351"/>
+        <location filename="../src/calculator/calculator.cpp" line="340"/>
         <source>arcus sine</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="352"/>
+        <location filename="../src/calculator/calculator.cpp" line="341"/>
         <source>arcus cosine</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="353"/>
+        <location filename="../src/calculator/calculator.cpp" line="342"/>
         <source>arcus tangent</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="354"/>
+        <location filename="../src/calculator/calculator.cpp" line="343"/>
         <source>arcus hyperbolic sine</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="355"/>
+        <location filename="../src/calculator/calculator.cpp" line="344"/>
         <source>arcus hyperbolic cosine</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="356"/>
+        <location filename="../src/calculator/calculator.cpp" line="345"/>
         <source>arcus hyperbolic tangent</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="357"/>
+        <location filename="../src/calculator/calculator.cpp" line="346"/>
         <source>sine</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="358"/>
+        <location filename="../src/calculator/calculator.cpp" line="347"/>
         <source>cosine</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="359"/>
+        <location filename="../src/calculator/calculator.cpp" line="348"/>
         <source>tangent</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="360"/>
+        <location filename="../src/calculator/calculator.cpp" line="349"/>
         <source>hyperbolic sine</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="361"/>
+        <location filename="../src/calculator/calculator.cpp" line="350"/>
         <source>hyperbolic cosine</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="362"/>
+        <location filename="../src/calculator/calculator.cpp" line="351"/>
         <source>hyperbolic tangent</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="363"/>
+        <location filename="../src/calculator/calculator.cpp" line="352"/>
         <source>absolute value of a number</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="364"/>
+        <location filename="../src/calculator/calculator.cpp" line="353"/>
         <source>natural logarithm (base _e)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="365"/>
-        <location filename="../src/calculator/calculator.cpp" line="366"/>
+        <location filename="../src/calculator/calculator.cpp" line="354"/>
+        <location filename="../src/calculator/calculator.cpp" line="355"/>
         <source>logarithm (base 10)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="367"/>
+        <location filename="../src/calculator/calculator.cpp" line="356"/>
         <source>logarithm (base 2)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="368"/>
+        <location filename="../src/calculator/calculator.cpp" line="357"/>
         <source>square root</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="369"/>
+        <location filename="../src/calculator/calculator.cpp" line="358"/>
         <source>exponential function</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="370"/>
+        <location filename="../src/calculator/calculator.cpp" line="359"/>
         <source>minimum of numbers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="371"/>
+        <location filename="../src/calculator/calculator.cpp" line="360"/>
         <source>maximum of numbers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="372"/>
+        <location filename="../src/calculator/calculator.cpp" line="361"/>
         <source>sum of numbers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="373"/>
+        <location filename="../src/calculator/calculator.cpp" line="362"/>
         <source>string to double converter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="374"/>
+        <location filename="../src/calculator/calculator.cpp" line="363"/>
         <source>length of a string</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="375"/>
+        <location filename="../src/calculator/calculator.cpp" line="364"/>
         <source>upper-cased version of the string</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="376"/>
+        <location filename="../src/calculator/calculator.cpp" line="365"/>
         <source>lower-cased version of the string</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="377"/>
+        <location filename="../src/calculator/calculator.cpp" line="366"/>
         <source>real number of the complex number</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="378"/>
+        <location filename="../src/calculator/calculator.cpp" line="367"/>
         <source>imaginary part of the complex number</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="379"/>
+        <location filename="../src/calculator/calculator.cpp" line="368"/>
         <source>arguent of the complex number</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="380"/>
+        <location filename="../src/calculator/calculator.cpp" line="369"/>
         <source>complex conjugate of the complex number</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="381"/>
+        <location filename="../src/calculator/calculator.cpp" line="370"/>
         <source>norm of the complex number</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="382"/>
+        <location filename="../src/calculator/calculator.cpp" line="371"/>
         <source>median</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="494"/>
+        <location filename="../src/calculator/calculator.cpp" line="486"/>
         <source>result of &apos;ans&apos; before previous calculation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="498"/>
+        <location filename="../src/calculator/calculator.cpp" line="490"/>
         <source>result of previous calculation</source>
         <translation type="unfinished"></translation>
     </message>
@@ -302,68 +302,103 @@
     <name>FormAbout</name>
     <message>
         <location filename="../ui/formabout.ui" line="29"/>
-        <location filename="../build/ui_formabout.h" line="215"/>
+        <location filename="../build/ui_formabout.h" line="321"/>
         <source>About Qonverter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/formabout.ui" line="121"/>
-        <location filename="../build/ui_formabout.h" line="218"/>
+        <location filename="../build/ui_formabout.h" line="324"/>
         <source>Information</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/formabout.ui" line="160"/>
-        <location filename="../build/ui_formabout.h" line="219"/>
+        <location filename="../build/ui_formabout.h" line="333"/>
+        <source>Licenses</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/formabout.ui" line="181"/>
+        <location filename="../ui/formabout.ui" line="184"/>
+        <location filename="../build/ui_formabout.h" line="325"/>
+        <location filename="../build/ui_formabout.h" line="326"/>
         <source>GNU GPL License</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/formabout.ui" line="202"/>
-        <location filename="../build/ui_formabout.h" line="221"/>
+        <location filename="../ui/formabout.ui" line="243"/>
+        <location filename="../ui/formabout.ui" line="246"/>
+        <location filename="../build/ui_formabout.h" line="327"/>
+        <location filename="../build/ui_formabout.h" line="328"/>
+        <source>GNU LGPL License</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/formabout.ui" line="305"/>
+        <location filename="../ui/formabout.ui" line="308"/>
+        <location filename="../build/ui_formabout.h" line="329"/>
+        <location filename="../build/ui_formabout.h" line="330"/>
+        <source>BSD 3-Clause License</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/formabout.ui" line="375"/>
+        <location filename="../ui/formabout.ui" line="378"/>
+        <location filename="../build/ui_formabout.h" line="331"/>
+        <location filename="../build/ui_formabout.h" line="332"/>
+        <source>Go Squared License (for flags in settings)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/formabout.ui" line="441"/>
+        <location filename="../build/ui_formabout.h" line="335"/>
         <source>Thanks to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/formabout.ui" line="234"/>
-        <location filename="../build/ui_formabout.h" line="220"/>
+        <location filename="../ui/formabout.ui" line="473"/>
+        <location filename="../build/ui_formabout.h" line="334"/>
         <source>Thanks to page is available only in English language.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/formabout.ui" line="242"/>
-        <location filename="../build/ui_formabout.h" line="223"/>
+        <location filename="../ui/formabout.ui" line="481"/>
+        <location filename="../build/ui_formabout.h" line="337"/>
         <source>Changelog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/formabout.ui" line="271"/>
-        <location filename="../build/ui_formabout.h" line="222"/>
+        <location filename="../ui/formabout.ui" line="510"/>
+        <location filename="../build/ui_formabout.h" line="336"/>
         <source>Changelog page is available only in English language.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/formabout.cpp" line="44"/>
+        <location filename="../src/formabout.cpp" line="53"/>
+        <location filename="../src/formabout.cpp" line="62"/>
+        <location filename="../src/formabout.cpp" line="71"/>
         <source>License not found.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/formabout.cpp" line="53"/>
+        <location filename="../src/formabout.cpp" line="80"/>
         <source>Thanks to not found.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/formabout.cpp" line="62"/>
+        <location filename="../src/formabout.cpp" line="89"/>
         <source>Changelog not found.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/formabout.cpp" line="67"/>
+        <location filename="../src/formabout.cpp" line="94"/>
         <source>&lt;b&gt;Qonverter&lt;/b&gt;&lt;br&gt;&lt;b&gt;Version:&lt;/b&gt; %1 (build on %2 with CMake %3)&lt;br&gt;&lt;b&gt;Revision:&lt;/b&gt; %4&lt;br&gt;&lt;b&gt;Build date:&lt;/b&gt; %5&lt;br&gt;&lt;b&gt;Qt:&lt;/b&gt; %6 (compiled against %7)&lt;br&gt;&lt;b&gt;muParserX:&lt;/b&gt; %8</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/formabout.cpp" line="82"/>
+        <location filename="../src/formabout.cpp" line="109"/>
         <source>&lt;body&gt;Qonverter is simple (yet powerful) calculator with some unusual functions.&lt;br&gt;&lt;br&gt;This software is distributed under the terms of GNU General Public License, version 3 or later. muParserX library is distributed under the terms of BSD 3-Clause License.&lt;br&gt;&lt;br&gt;Contacts:&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;mailto://rotter.martinos@gmail.com&quot;&gt;rotter.martinos@gmail&lt;/a&gt;  ~email&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://code.google.com/p/qonverter&quot;&gt;code.google.com/p/qonverter&lt;/a&gt; ~website&lt;/li&gt;&lt;/ul&gt;You can obtain source code for Qonverterd from its website.&lt;br&gt;&lt;br&gt;&lt;br&gt;Copyright 2011-%1 Martin Rotter&lt;/body&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -753,28 +788,28 @@ currency</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/currencyconverter/formcurrencyconverter.cpp" line="66"/>
-        <location filename="../src/currencyconverter/formcurrencyconverter.cpp" line="70"/>
+        <location filename="../src/currencyconverter/formcurrencyconverter.cpp" line="67"/>
+        <location filename="../src/currencyconverter/formcurrencyconverter.cpp" line="71"/>
         <source>Rates Not Updated</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/currencyconverter/formcurrencyconverter.cpp" line="67"/>
+        <location filename="../src/currencyconverter/formcurrencyconverter.cpp" line="68"/>
         <source>Currency rates were not downloaded successfully. Check your internet connection.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/currencyconverter/formcurrencyconverter.cpp" line="71"/>
+        <location filename="../src/currencyconverter/formcurrencyconverter.cpp" line="72"/>
         <source>Currency rates were not saved successfully. Target location is not writable.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/currencyconverter/formcurrencyconverter.cpp" line="75"/>
+        <location filename="../src/currencyconverter/formcurrencyconverter.cpp" line="76"/>
         <source>Rates Updated</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/currencyconverter/formcurrencyconverter.cpp" line="76"/>
+        <location filename="../src/currencyconverter/formcurrencyconverter.cpp" line="77"/>
         <source>Currency rates were updated and loaded successfully.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -783,79 +818,79 @@ currency</source>
     <name>FormEditVariable</name>
     <message>
         <location filename="../ui/calculator/formeditvariable.ui" line="23"/>
-        <location filename="../build/ui_formeditvariable.h" line="153"/>
+        <location filename="../build/ui_formeditvariable.h" line="150"/>
         <source>Add Variable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/calculator/formeditvariable.ui" line="46"/>
-        <location filename="../build/ui_formeditvariable.h" line="156"/>
+        <location filename="../ui/calculator/formeditvariable.ui" line="29"/>
+        <location filename="../build/ui_formeditvariable.h" line="151"/>
         <source>Name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/calculator/formeditvariable.ui" line="121"/>
-        <location filename="../build/ui_formeditvariable.h" line="171"/>
+        <location filename="../ui/calculator/formeditvariable.ui" line="65"/>
+        <location filename="../build/ui_formeditvariable.h" line="155"/>
         <source>Name of variable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/calculator/formeditvariable.ui" line="56"/>
-        <location filename="../build/ui_formeditvariable.h" line="157"/>
+        <location filename="../ui/calculator/formeditvariable.ui" line="72"/>
+        <location filename="../build/ui_formeditvariable.h" line="156"/>
         <source>Description</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/calculator/formeditvariable.ui" line="79"/>
-        <location filename="../build/ui_formeditvariable.h" line="160"/>
+        <location filename="../ui/calculator/formeditvariable.ui" line="95"/>
+        <location filename="../build/ui_formeditvariable.h" line="159"/>
         <source>INTEGER</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/calculator/formeditvariable.ui" line="84"/>
-        <location filename="../build/ui_formeditvariable.h" line="161"/>
+        <location filename="../ui/calculator/formeditvariable.ui" line="100"/>
+        <location filename="../build/ui_formeditvariable.h" line="160"/>
         <source>FLOAT</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/calculator/formeditvariable.ui" line="89"/>
-        <location filename="../build/ui_formeditvariable.h" line="162"/>
+        <location filename="../ui/calculator/formeditvariable.ui" line="105"/>
+        <location filename="../build/ui_formeditvariable.h" line="161"/>
         <source>BOOLEAN</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/calculator/formeditvariable.ui" line="94"/>
-        <location filename="../build/ui_formeditvariable.h" line="163"/>
+        <location filename="../ui/calculator/formeditvariable.ui" line="110"/>
+        <location filename="../build/ui_formeditvariable.h" line="162"/>
         <source>STRING</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/calculator/formeditvariable.ui" line="99"/>
-        <location filename="../build/ui_formeditvariable.h" line="164"/>
+        <location filename="../ui/calculator/formeditvariable.ui" line="115"/>
+        <location filename="../build/ui_formeditvariable.h" line="163"/>
         <source>COMPLEX</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/calculator/formeditvariable.ui" line="104"/>
-        <location filename="../build/ui_formeditvariable.h" line="165"/>
+        <location filename="../ui/calculator/formeditvariable.ui" line="120"/>
+        <location filename="../build/ui_formeditvariable.h" line="164"/>
         <source>VOID</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/calculator/formeditvariable.ui" line="138"/>
-        <location filename="../build/ui_formeditvariable.h" line="173"/>
+        <location filename="../ui/calculator/formeditvariable.ui" line="141"/>
+        <location filename="../build/ui_formeditvariable.h" line="170"/>
         <source>Description of variable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/calculator/formeditvariable.ui" line="66"/>
-        <location filename="../build/ui_formeditvariable.h" line="168"/>
+        <location filename="../ui/calculator/formeditvariable.ui" line="82"/>
+        <location filename="../build/ui_formeditvariable.h" line="167"/>
         <source>Select type of variable.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/calculator/formeditvariable.cpp" line="107"/>
-        <source>Result of expression is of type &apos;%1&apos; and can be used as initial value for variable &apos;%2&apos;.</source>
+        <source>Result of expression is of type &apos;%1&apos; and can be used as value for variable &apos;%2&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -880,34 +915,34 @@ currency</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/calculator/formeditvariable.ui" line="118"/>
-        <location filename="../ui/calculator/formeditvariable.ui" line="174"/>
-        <location filename="../build/ui_formeditvariable.h" line="170"/>
-        <location filename="../build/ui_formeditvariable.h" line="174"/>
+        <location filename="../ui/calculator/formeditvariable.ui" line="62"/>
+        <location filename="../ui/calculator/formeditvariable.ui" line="180"/>
+        <location filename="../build/ui_formeditvariable.h" line="154"/>
+        <location filename="../build/ui_formeditvariable.h" line="172"/>
         <source>0</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/calculator/formeditvariable.ui" line="177"/>
-        <location filename="../build/ui_formeditvariable.h" line="175"/>
+        <location filename="../ui/calculator/formeditvariable.ui" line="183"/>
+        <location filename="../build/ui_formeditvariable.h" line="173"/>
         <source>Input value here</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/calculator/formeditvariable.ui" line="29"/>
-        <location filename="../build/ui_formeditvariable.h" line="154"/>
+        <location filename="../ui/calculator/formeditvariable.ui" line="39"/>
+        <location filename="../build/ui_formeditvariable.h" line="152"/>
         <source>Calc. Value</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/calculator/formeditvariable.ui" line="131"/>
-        <location filename="../build/ui_formeditvariable.h" line="172"/>
+        <location filename="../ui/calculator/formeditvariable.ui" line="134"/>
+        <location filename="../build/ui_formeditvariable.h" line="169"/>
         <source>Calculated value</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/calculator/formeditvariable.ui" line="36"/>
-        <location filename="../build/ui_formeditvariable.h" line="155"/>
+        <location filename="../ui/calculator/formeditvariable.ui" line="46"/>
+        <location filename="../build/ui_formeditvariable.h" line="153"/>
         <source>Input Value</source>
         <translation type="unfinished"></translation>
     </message>
@@ -920,85 +955,91 @@ currency</source>
 <context>
     <name>FormMain</name>
     <message>
-        <location filename="../ui/formmain.ui" line="62"/>
-        <location filename="../build/ui_formmain.h" line="164"/>
+        <location filename="../ui/formmain.ui" line="65"/>
+        <location filename="../build/ui_formmain.h" line="165"/>
         <source>&amp;Help </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/formmain.ui" line="69"/>
-        <location filename="../build/ui_formmain.h" line="165"/>
+        <location filename="../ui/formmain.ui" line="72"/>
+        <location filename="../build/ui_formmain.h" line="166"/>
         <source>&amp;File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/formmain.ui" line="75"/>
-        <location filename="../build/ui_formmain.h" line="166"/>
+        <location filename="../ui/formmain.ui" line="78"/>
+        <location filename="../build/ui_formmain.h" line="167"/>
         <source>&amp;Tools</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/formmain.ui" line="83"/>
-        <location filename="../build/ui_formmain.h" line="167"/>
+        <location filename="../ui/formmain.ui" line="86"/>
+        <location filename="../build/ui_formmain.h" line="168"/>
         <source>&amp;View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/formmain.ui" line="98"/>
+        <location filename="../ui/formmain.ui" line="101"/>
         <location filename="../build/ui_formmain.h" line="152"/>
         <source>About &amp;Qt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/formmain.ui" line="106"/>
+        <location filename="../ui/formmain.ui" line="109"/>
         <location filename="../build/ui_formmain.h" line="153"/>
         <source>&amp;About Qonverter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/formmain.ui" line="114"/>
+        <location filename="../ui/formmain.ui" line="117"/>
         <location filename="../build/ui_formmain.h" line="154"/>
         <source>&amp;Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/formmain.ui" line="122"/>
+        <location filename="../ui/formmain.ui" line="125"/>
         <location filename="../build/ui_formmain.h" line="155"/>
         <source>&amp;Quit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/formmain.ui" line="144"/>
+        <location filename="../ui/formmain.ui" line="147"/>
         <location filename="../build/ui_formmain.h" line="157"/>
         <source>Display Calculator &amp;Keypad</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/formmain.ui" line="177"/>
+        <location filename="../ui/formmain.ui" line="166"/>
+        <location filename="../build/ui_formmain.h" line="159"/>
+        <source>&amp;Variables, Constants and Functions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/formmain.ui" line="172"/>
         <location filename="../build/ui_formmain.h" line="163"/>
+        <source>Ctrl+Shift+V</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/formmain.ui" line="180"/>
+        <location filename="../build/ui_formmain.h" line="164"/>
         <source>&amp;Calculator</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/formmain.ui" line="133"/>
+        <location filename="../ui/formmain.ui" line="136"/>
         <location filename="../build/ui_formmain.h" line="156"/>
         <source>&amp;Unit Converter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/formmain.ui" line="155"/>
+        <location filename="../ui/formmain.ui" line="158"/>
         <location filename="../build/ui_formmain.h" line="158"/>
         <source>Cu&amp;rrency Converter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/formmain.ui" line="163"/>
-        <location filename="../build/ui_formmain.h" line="159"/>
-        <source>Display &amp;Variables and Functions</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/formmain.ui" line="166"/>
+        <location filename="../ui/formmain.ui" line="169"/>
         <location filename="../build/ui_formmain.h" line="161"/>
         <source>Displays simple list of declared variables.</source>
         <translation type="unfinished"></translation>
@@ -1019,22 +1060,22 @@ currency</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/formmain.cpp" line="205"/>
+        <location filename="../src/formmain.cpp" line="208"/>
         <source>Tray Icon Menu</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/formmain.cpp" line="229"/>
+        <location filename="../src/formmain.cpp" line="232"/>
         <source>Application is hidden in notification area.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/formmain.cpp" line="272"/>
+        <location filename="../src/formmain.cpp" line="275"/>
         <source>&lt;p&gt;This software uses Qt.&lt;/p&gt;&lt;p&gt;Check &lt;a href=&quot;http://www.qt-project.org&quot;&gt;www.qt-project.org&lt;/a&gt; for more information.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/formmain.cpp" line="271"/>
+        <location filename="../src/formmain.cpp" line="274"/>
         <source>About Qt</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1405,69 +1446,63 @@ Note that variables are not created during on-the-fly subcomputations in calcula
 <context>
     <name>FormUnitConverter</name>
     <message>
-        <location filename="../ui/unitconverter/formunitconverter.ui" line="145"/>
-        <location filename="../build/ui_formunitconverter.h" line="157"/>
+        <location filename="../ui/unitconverter/formunitconverter.ui" line="94"/>
+        <location filename="../build/ui_formunitconverter.h" line="154"/>
         <source>Input expression</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/unitconverter/formunitconverter.ui" line="94"/>
-        <location filename="../build/ui_formunitconverter.h" line="146"/>
+        <location filename="../ui/unitconverter/formunitconverter.ui" line="120"/>
+        <location filename="../build/ui_formunitconverter.h" line="156"/>
         <source>Result of your expression is displayed here.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/unitconverter/formunitconverter.ui" line="52"/>
-        <location filename="../build/ui_formunitconverter.h" line="136"/>
+        <location filename="../build/ui_formunitconverter.h" line="142"/>
         <source>Swap selected units.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/unitconverter/formunitconverter.ui" line="75"/>
-        <location filename="../build/ui_formunitconverter.h" line="140"/>
+        <location filename="../build/ui_formunitconverter.h" line="146"/>
         <source>Select input unit.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/unitconverter/formunitconverter.ui" line="82"/>
-        <location filename="../build/ui_formunitconverter.h" line="143"/>
+        <location filename="../build/ui_formunitconverter.h" line="149"/>
         <source>Select output unit.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/unitconverter/formunitconverter.ui" line="103"/>
-        <location filename="../build/ui_formunitconverter.h" line="149"/>
+        <location filename="../ui/unitconverter/formunitconverter.ui" line="129"/>
+        <location filename="../build/ui_formunitconverter.h" line="159"/>
         <source>Result of expression</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/unitconverter/formunitconverter.ui" line="126"/>
-        <location filename="../build/ui_formunitconverter.h" line="151"/>
+        <location filename="../ui/unitconverter/formunitconverter.ui" line="136"/>
+        <location filename="../build/ui_formunitconverter.h" line="161"/>
         <source>Final result of conversion is displayed here.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/unitconverter/formunitconverter.ui" line="139"/>
-        <location filename="../build/ui_formunitconverter.h" line="155"/>
+        <location filename="../ui/unitconverter/formunitconverter.ui" line="91"/>
+        <location filename="../build/ui_formunitconverter.h" line="152"/>
         <source>Insert your mathematical expression here.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/unitconverter/formunitconverter.ui" line="193"/>
-        <location filename="../build/ui_formunitconverter.h" line="159"/>
+        <location filename="../ui/unitconverter/formunitconverter.ui" line="161"/>
+        <location filename="../build/ui_formunitconverter.h" line="165"/>
         <source>Select desired magnitude.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/unitconverter/formunitconverter.ui" line="132"/>
-        <location filename="../build/ui_formunitconverter.h" line="153"/>
+        <location filename="../ui/unitconverter/formunitconverter.ui" line="142"/>
+        <location filename="../build/ui_formunitconverter.h" line="163"/>
         <source>Result of conversion</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/unitconverter/formunitconverter.cpp" line="158"/>
-        <location filename="../src/unitconverter/formunitconverter.cpp" line="159"/>
-        <source>Invalid expression</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1588,7 +1623,7 @@ Note that variables are not created during on-the-fly subcomputations in calcula
 <context>
     <name>LineEdit</name>
     <message>
-        <location filename="../src/lineedit.cpp" line="46"/>
+        <location filename="../src/lineedit.cpp" line="52"/>
         <source>Remove contents of this text box.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1597,42 +1632,42 @@ Note that variables are not created during on-the-fly subcomputations in calcula
     <name>QObject</name>
     <message>
         <location filename="../src/formsettings.cpp" line="173"/>
-        <location filename="../src/main.cpp" line="48"/>
+        <location filename="../src/main.cpp" line="49"/>
         <source>LANG_NAME</source>
         <extracomment>FOR TRANSLATOR: Name of language, e.g. English.</extracomment>
         <translation>English</translation>
     </message>
     <message>
         <location filename="../src/formsettings.cpp" line="174"/>
-        <location filename="../src/main.cpp" line="50"/>
+        <location filename="../src/main.cpp" line="51"/>
         <source>LANG_ABBREV</source>
         <extracomment>FOR TRANSLATOR: Abbreviation of language, e.g. en.</extracomment>
         <translation>en</translation>
     </message>
     <message>
         <location filename="../src/formsettings.cpp" line="175"/>
-        <location filename="../src/main.cpp" line="52"/>
+        <location filename="../src/main.cpp" line="53"/>
         <source>LANG_VERSION</source>
         <extracomment>FOR TRANSLATOR: Version of your translation, e.g. 1.0.</extracomment>
         <translation>1.0</translation>
     </message>
     <message>
         <location filename="../src/formsettings.cpp" line="176"/>
-        <location filename="../src/main.cpp" line="54"/>
+        <location filename="../src/main.cpp" line="55"/>
         <source>LANG_AUTHOR</source>
         <extracomment>FOR TRANSLATOR: Name of translator - optional.</extracomment>
         <translation>Martin Rotter</translation>
     </message>
     <message>
         <location filename="../src/formsettings.cpp" line="177"/>
-        <location filename="../src/main.cpp" line="56"/>
+        <location filename="../src/main.cpp" line="57"/>
         <source>LANG_EMAIL</source>
         <extracomment>FOR TRANSLATOR: Email of translator - optional.</extracomment>
         <translation>rotter.martinos@gmail.com</translation>
     </message>
     <message>
         <location filename="../src/formsettings.cpp" line="178"/>
-        <location filename="../src/main.cpp" line="58"/>
+        <location filename="../src/main.cpp" line="59"/>
         <source>LANG_WEBSITE</source>
         <extracomment>FOR TRANSLATOR: Website of language - optional.</extracomment>
         <translation>www.martin-rotter.8u.cz</translation>

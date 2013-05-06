@@ -1,23 +1,24 @@
 /*
-	This file is part of Qonverter.
-	
-	Qonverter is free software: you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation, either version 3 of the License, or
-	(at your option) any later version.
-	
-	Qonverter is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
-	
-	You should have received a copy of the GNU General Public License
-	along with Qonverter.  If not, see <http://www.gnu.org/licenses/>.
-	
-	Copyright 2012 - 2013 Martin Rotter
+ This file is part of Qonverter.
+
+ Qonverter is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ Qonverter is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with Qonverter.  If not, see <http://www.gnu.org/licenses/>.
+
+ Copyright 2012 - 2013 Martin Rotter
 */
 
 #include <QListWidgetItem>
+#include <QToolTip>
 
 #include "formunitconverter.h"
 #include "calculatorwrapper.h"
@@ -34,6 +35,9 @@ FormUnitConverter::FormUnitConverter(QWidget *parent)
   // Needed because classical singleton fails due to UI files behavior.
   s_instance = this;
 
+  // TODO: Obtain error info (modify manageCalculatedResult signature to accept
+  // error too. Display error under the input line edit.
+
   // If calculation is wanted by this component, then
   // global calculator should calculate it.
   connect(FormUnitConverter::getInstance(), &FormUnitConverter::calculationWanted,
@@ -41,8 +45,7 @@ FormUnitConverter::FormUnitConverter(QWidget *parent)
 
   // If global calculator calculated the result, then
   // this component should process the result.
-  connect(CalculatorWrapper::getInstance().getCalculator(),
-          &Calculator::resultCalculated,
+  connect(CalculatorWrapper::getInstance().getCalculator(), &Calculator::resultCalculated,
           FormUnitConverter::getInstance(), &FormUnitConverter::manageCalculatedResult);
 
   // When text changes, then it should be recalculated.
@@ -137,7 +140,10 @@ void FormUnitConverter::manageConvertedResult(const QString &result) {
 }
 
 void FormUnitConverter::manageCalculatedResult(Calculator::CallerFunction function,
-                                               const Value &value) {
+                                               const Value &value,
+                                               const QString &info) {
+  Q_UNUSED(info);
+
   switch (function) {
     // User entered valid expression which can be converted.
     case Calculator::CONVERTER_ONTHEFLY: {
@@ -150,13 +156,18 @@ void FormUnitConverter::manageCalculatedResult(Calculator::CallerFunction functi
                             m_ui->m_cmbInputUnit->currentIndex(),
                             m_ui->m_cmbOutputUnit->currentIndex(),
                             textual_value);
+
+      m_ui->m_txtInput->setIcon(MarkedLineEdit::OK);
       break;
     }
       // Error - no conversions here.
     case Calculator::CONVERTER_ERROR:
       m_calculated = false;
-      m_ui->m_txtCalculatedInput->setText(tr("Invalid expression"));
-      m_ui->m_txtConvertedInput->setText(tr("Invalid expression"));
+      m_ui->m_txtCalculatedInput->clear();
+      m_ui->m_txtConvertedInput->clear();
+
+      // TODO: Notice here via QToolTip or QBaloonTip.
+      m_ui->m_txtInput->setIcon(MarkedLineEdit::ERROR);
     default:
       break;
   }

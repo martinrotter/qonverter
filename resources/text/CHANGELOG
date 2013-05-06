@@ -2,6 +2,7 @@
 [1.0.7]
 <ul>
 <li>Added option to setup max number of visible items for auto-completion.</li>
+<li>Validated text boxes equipped with status icons.</li>
 <li>Updated dark skin once again.</li>
 <li>Fixed memory leak when loading and saving variables.</li>
 <li>Explicit/implicit variables are now stored in persistent storage so 

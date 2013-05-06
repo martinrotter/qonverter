@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>339</width>
-    <height>238</height>
+    <height>222</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -23,6 +23,16 @@
    <string>Add Variable</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Name</string>
+     </property>
+     <property name="buddy">
+      <cstring>m_txtName</cstring>
+     </property>
+    </widget>
+   </item>
    <item row="2" column="0">
     <widget class="QLabel" name="label_4">
      <property name="text">
@@ -40,13 +50,19 @@
      </property>
     </widget>
    </item>
-   <item row="0" column="0">
-    <widget class="QLabel" name="label">
-     <property name="text">
-      <string>Name</string>
+   <item row="0" column="1" colspan="3">
+    <widget class="MarkedLineEdit" name="m_txtName">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
      </property>
-     <property name="buddy">
-      <cstring>m_txtName</cstring>
+     <property name="text">
+      <string>0</string>
+     </property>
+     <property name="placeholderText">
+      <string>Name of variable</string>
      </property>
     </widget>
    </item>
@@ -106,26 +122,13 @@
      </item>
     </widget>
    </item>
-   <item row="0" column="1" colspan="3">
-    <widget class="LineEdit" name="m_txtName">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="text">
-      <string>0</string>
-     </property>
-     <property name="placeholderText">
-      <string>Name of variable</string>
-     </property>
-    </widget>
-   </item>
    <item row="2" column="1" colspan="3">
     <widget class="LineEdit" name="m_txtCalculatedValue">
      <property name="enabled">
-      <bool>false</bool>
+      <bool>true</bool>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
      </property>
      <property name="placeholderText">
       <string>Calculated value</string>
@@ -136,45 +139,6 @@
     <widget class="LineEdit" name="m_txtDescription">
      <property name="placeholderText">
       <string>Description of variable</string>
-     </property>
-    </widget>
-   </item>
-   <item row="5" column="0" colspan="4">
-    <spacer name="verticalSpacer">
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-     <property name="sizeType">
-      <enum>QSizePolicy::Fixed</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>20</width>
-       <height>10</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="6" column="0" colspan="4">
-    <widget class="QDialogButtonBox" name="m_btnBox">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="standardButtons">
-      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="1" colspan="2">
-    <widget class="LineEdit" name="m_txtValue">
-     <property name="text">
-      <string>0</string>
-     </property>
-     <property name="placeholderText">
-      <string>Input value here</string>
      </property>
     </widget>
    </item>
@@ -189,8 +153,34 @@
      <property name="text">
       <string/>
      </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     </property>
      <property name="wordWrap">
       <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0" colspan="4">
+    <widget class="QDialogButtonBox" name="m_btnBox">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1" colspan="2">
+    <widget class="MarkedLineEdit" name="m_txtValue">
+     <property name="text">
+      <string>0</string>
+     </property>
+     <property name="placeholderText">
+      <string>Input value here</string>
      </property>
     </widget>
    </item>
@@ -201,6 +191,11 @@
    <class>LineEdit</class>
    <extends>QLineEdit</extends>
    <header>lineedit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>MarkedLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>markedlineedit.h</header>
   </customwidget>
  </customwidgets>
  <tabstops>

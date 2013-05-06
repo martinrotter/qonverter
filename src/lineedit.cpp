@@ -40,68 +40,70 @@
 
 
 LineEdit::LineEdit(QWidget *parent) : QLineEdit(parent) {
-  m_clearButton = new QToolButton(this);
+  m_btnClear = new QToolButton(this);
 
   int frame_width = frameWidth();
-  m_clearButton->setIcon(QIcon::fromTheme("edit-clear",
-                                          QIcon(":/graphics/clear_contents.png")));
-  m_clearButton->setIconSize(QSize(sizeHint().height() - 4 * frame_width,
-                                   sizeHint().height() - 4 * frame_width));
-  m_clearButton->setCursor(Qt::ArrowCursor);
-  m_clearButton->setStyleSheet("QToolButton { border: none; padding: 0px; }");
-  m_clearButton->setToolTip(tr("Remove contents of this text box."));
-  m_clearButton->hide();
+  m_btnClear->setIcon(QIcon::fromTheme("edit-clear",
+                                       QIcon(":/graphics/clear_contents.png")));
+  m_btnClear->setIconSize(QSize(sizeHint().height() - 4 * frame_width,
+                                sizeHint().height() - 4 * frame_width));
+  m_btnClear->setCursor(Qt::ArrowCursor);
+  m_btnClear->setStyleSheet("QToolButton { border: none; padding: 0px; }");
+  m_btnClear->setToolTip(tr("Remove contents of this text box."));
+  m_btnClear->hide();
   m_clearButtonEnabled = true;
 
-  // TODO: Udelat novou tridu ValidatedLineEdit, te pres style sheet dat novej margin vpravo,
-  // v tomto marginu pridat novej QToolButton s ikonou,
-  // ta se bude menit pri textChanged a bude zobrazovat "fajfku".
-  // Pri kliknuti na fajfku se zobrazi stav
-  // napriklad jako tooltip nebo balloon tip
-  // http://qt.gitorious.org/qt/qt/blobs/4.7/src/gui/util/qsystemtrayicon_p.h trida (QBaloonTip)
-  // pokusit se tu tridu vyseparovat.
-
   // Create necessary connections.
-  connect(m_clearButton, &QToolButton::clicked, this, &LineEdit::clear);
+  connect(m_btnClear, &QToolButton::clicked, this, &LineEdit::clear);
   connect(this, &LineEdit::textChanged, this, &LineEdit::onTextChanged);
 
   // Add extra padding to the right of the line edit. It looks better.
-  setStyleSheet(QString("LineEdit { padding-right: %1px; }").arg(m_clearButton->sizeHint().width() +
-                                                                 frame_width + 1));
+  setStyleSheet(QString(LINE_EDIT_PADDING).arg(m_btnClear->sizeHint().width() + frameWidth() + 1));
+
+  // Set minimum size for line edit.
   QSize min_size_hint = minimumSizeHint();
   setMinimumSize(qMax(min_size_hint.width(),
-                      m_clearButton->sizeHint().height() + frame_width),
+                      m_btnClear->sizeHint().height() + frame_width),
                  qMax(min_size_hint.height(),
-                      m_clearButton->sizeHint().height() + frame_width));
+                      m_btnClear->sizeHint().height() + frame_width));
 }
 
 LineEdit::~LineEdit() {
-  delete m_clearButton;
+  delete m_btnClear;
 }
 
 void LineEdit::onTextChanged(const QString &new_text) {
   // If line edit is not read only (or not enabled) and clear button
   // is enabled, then make sure it's displayed.
-  if (isReadOnly() == false && isEnabled() == true && m_clearButtonEnabled == true) {
-    m_clearButton->setVisible(new_text.isEmpty() == false);
+  if (m_clearButtonEnabled == true) {
+    m_btnClear->setVisible(new_text.isEmpty() == false);
   }
   else {
-    m_clearButton->setVisible(false);
+    m_btnClear->setVisible(false);
   }
 }
 
 void LineEdit::setClearButtonEnabled(bool enable) {
   m_clearButtonEnabled = enable;
+
+  if (m_clearButtonEnabled) {
+    setStyleSheet(QString(LINE_EDIT_PADDING).arg(m_btnClear->sizeHint().width() + frameWidth() + 1));
+  }
+  else {
+    setStyleSheet(QString(LINE_EDIT_PADDING).arg(0));
+  }
+
+  onTextChanged(text());
 }
 
 void LineEdit::setEnabled(bool enable) {
   QLineEdit::setEnabled(enable);
-  onTextChanged(text());
+  setClearButtonEnabled(enable);
 }
 
 void LineEdit::setReadOnly(bool read_only) {
   QLineEdit::setReadOnly(read_only);
-  onTextChanged(text());
+  setClearButtonEnabled(!read_only);
 }
 
 int LineEdit::frameWidth() const {
@@ -128,7 +130,7 @@ void LineEdit::resizeEvent(QResizeEvent *event) {
   Q_UNUSED(event);
 
   // Place clear button correctly, according to size of line edit.
-  QSize sz = m_clearButton->sizeHint();
-  m_clearButton->move(rect().right()  - sz.width(),
-                      rect().bottom() - sz.height() + frameWidth());
+  QSize sz = m_btnClear->sizeHint();
+  m_btnClear->move(rect().right()  - sz.width(),
+                   rect().bottom() - sz.height() + frameWidth());
 }

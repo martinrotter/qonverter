@@ -1,20 +1,20 @@
 /*
-	This file is part of Qonverter.
-	
-	Qonverter is free software: you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation, either version 3 of the License, or
-	(at your option) any later version.
-	
-	Qonverter is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
-	
-	You should have received a copy of the GNU General Public License
-	along with Qonverter.  If not, see <http://www.gnu.org/licenses/>.
-	
-	Copyright 2012 - 2013 Martin Rotter
+ This file is part of Qonverter.
+
+ Qonverter is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ Qonverter is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with Qonverter.  If not, see <http://www.gnu.org/licenses/>.
+
+ Copyright 2012 - 2013 Martin Rotter
 */
 
 /****************************************************************************
@@ -29,8 +29,9 @@
 #ifndef LINEEDIT_H
 #define LINEEDIT_H
 
-#include <QLineEdit>
+#define LINE_EDIT_PADDING "LineEdit { padding-right: %1px; }"
 
+#include <QLineEdit>
 
 class QToolButton;
 
@@ -51,23 +52,26 @@ class LineEdit : public QLineEdit {
     void setClearButtonEnabled(bool enable);
 
     // Tweak default implementations.
-    void setEnabled(bool enable);
-    void setReadOnly(bool read_only);
+    virtual void setEnabled(bool enable);
+    virtual void setReadOnly(bool read_only);
 
   protected slots:
+    // Executed if text changes.
     void onTextChanged(const QString &new_text);
 
   protected:
     // Places clear button into the correct position.
     void resizeEvent(QResizeEvent *event);
 
+    // Catch mathematical dots & commas.
     void keyPressEvent(QKeyEvent *event);
 
     // Returns width of QLineEdit frame.
     int frameWidth() const;
 
+    QToolButton *m_btnClear;
+
   private:
-    QToolButton *m_clearButton;
     bool m_clearButtonEnabled;
 };
 

@@ -15,5 +15,7 @@
         <file>graphics/swap.png</file>
         <file>graphics/qt_logo.png</file>
         <file>graphics/variables.png</file>
+        <file>graphics/valid.png</file>
+        <file>graphics/invalid.png</file>
     </qresource>
 </RCC>

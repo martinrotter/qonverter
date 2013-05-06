@@ -29,6 +29,22 @@
    <property name="spacing">
     <number>2</number>
    </property>
+   <item row="2" column="1">
+    <spacer name="verticalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Minimum</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
    <item row="5" column="1">
     <layout class="QGridLayout" name="gridLayout">
      <property name="spacing">
@@ -85,6 +101,16 @@
      </item>
     </layout>
    </item>
+   <item row="1" column="1">
+    <widget class="MarkedLineEdit" name="m_txtInput">
+     <property name="toolTip">
+      <string>Insert your mathematical expression here.</string>
+     </property>
+     <property name="placeholderText">
+      <string>Input expression</string>
+     </property>
+    </widget>
+   </item>
    <item row="3" column="1">
     <widget class="LineEdit" name="m_txtCalculatedInput">
      <property name="enabled">
@@ -104,22 +130,6 @@
      </property>
     </widget>
    </item>
-   <item row="2" column="1">
-    <spacer name="verticalSpacer_2">
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-     <property name="sizeType">
-      <enum>QSizePolicy::Fixed</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>20</width>
-       <height>40</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
    <item row="6" column="1">
     <widget class="LineEdit" name="m_txtConvertedInput">
      <property name="toolTip">
@@ -133,13 +143,31 @@
      </property>
     </widget>
    </item>
-   <item row="1" column="1">
-    <widget class="LineEdit" name="m_txtInput">
-     <property name="toolTip">
-      <string>Insert your mathematical expression here.</string>
+   <item row="0" column="0" rowspan="8">
+    <widget class="QListWidget" name="m_listMagnitudes">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
      </property>
-     <property name="placeholderText">
-      <string>Input expression</string>
+     <property name="maximumSize">
+      <size>
+       <width>150</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Select desired magnitude.</string>
+     </property>
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>false</bool>
+     </property>
+     <property name="resizeMode">
+      <enum>QListView::Fixed</enum>
      </property>
     </widget>
    </item>
@@ -172,34 +200,6 @@
      </property>
     </spacer>
    </item>
-   <item row="0" column="0" rowspan="8">
-    <widget class="QListWidget" name="m_listMagnitudes">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Maximum" vsizetype="Expanding">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>150</width>
-       <height>16777215</height>
-      </size>
-     </property>
-     <property name="toolTip">
-      <string>Select desired magnitude.</string>
-     </property>
-     <property name="editTriggers">
-      <set>QAbstractItemView::NoEditTriggers</set>
-     </property>
-     <property name="alternatingRowColors">
-      <bool>false</bool>
-     </property>
-     <property name="resizeMode">
-      <enum>QListView::Fixed</enum>
-     </property>
-    </widget>
-   </item>
   </layout>
  </widget>
  <customwidgets>
@@ -207,6 +207,11 @@
    <class>LineEdit</class>
    <extends>QLineEdit</extends>
    <header>lineedit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>MarkedLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>markedlineedit.h</header>
   </customwidget>
  </customwidgets>
  <resources>

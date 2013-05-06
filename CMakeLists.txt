@@ -209,6 +209,7 @@ set(APP_SOURCES
   src/calculator/constantsfiltermodel.cpp
   src/messagebox.cpp
   src/doublespinbox.cpp
+  src/markedlineedit.cpp
 )
 
 # Add headers.
@@ -238,6 +239,7 @@ set(APP_HEADERS
   src/formwelcome.h
   src/calculator/constantsfiltermodel.h
   src/doublespinbox.h
+  src/markedlineedit.h
 )
 
 # Add form files.

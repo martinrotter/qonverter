@@ -79,12 +79,12 @@ void FormEditVariable::checkName(const QString &name) {
   if (CalculatorWrapper::getInstance().getCalculator()->isNameAllowed(name) == true ||
       (m_originalName.isEmpty() == false && name == m_originalName)) {
     // Name can be used for memory place.
-    m_ui->m_txtName->setPalette(m_defaultPalette);
+    m_ui->m_txtName->setIcon(MarkedLineEdit::OK);
     m_correctName = true;
   }
   else {
     // Name cannot be used for memory place.
-    m_ui->m_txtName->setPalette(m_errorPalette);
+    m_ui->m_txtName->setIcon(MarkedLineEdit::ERROR);
     m_correctName = false;
   }
 
@@ -100,12 +100,12 @@ void FormEditVariable::manageResult(Calculator::CallerFunction function,
                    m_ui->m_cmbType->currentIndex();
   m_convertedValue = result;
   m_ui->m_txtCalculatedValue->setText(QString::fromStdWString(result.ToString()));
-  m_ui->m_txtCalculatedValue->setPalette(m_correctValue ?
-                                           m_defaultPalette :
-                                           m_errorPalette);
+  m_ui->m_txtValue->setIcon(m_correctValue ?
+                              MarkedLineEdit::OK :
+                              MarkedLineEdit::ERROR);
   m_ui->m_lblInfo->setText(m_correctValue ?
-                             tr("Result of expression is of type '%1' and can be used as initial value for variable '%2'.").arg(m_ui->m_cmbType->currentText(),
-                                                                                                                                m_ui->m_txtName->text()):
+                             tr("Result of expression is of type '%1' and can be used as value for variable '%2'.").arg(m_ui->m_cmbType->currentText(),
+                                                                                                                        m_ui->m_txtName->text()):
                              tr("Result of expression is not of type '%1'. Make sure correct type is selected. If you select 'VOID' type, then make sure your expression evaluates to 'VOID'. Empty expression does that.").arg(m_ui->m_cmbType->currentText()));
   m_ui->m_btnBox->button(QDialogButtonBox::Ok)->setEnabled(m_correctName && m_correctValue);
 }
@@ -162,9 +162,9 @@ int FormEditVariable::execEdit(const QString &name, const QString &value,
     }
     else {
       MessageBox::warning(this,
-                           tr("Invalid Variable Setup"),
-                           tr("Cannot edit variable \'%1\'. "
-                              "Its value is not well-formed or another error occured.").arg(m_ui->m_txtName->text()));
+                          tr("Invalid Variable Setup"),
+                          tr("Cannot edit variable \'%1\'. "
+                             "Its value is not well-formed or another error occured.").arg(m_ui->m_txtName->text()));
     }
   });
 

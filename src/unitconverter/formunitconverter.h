@@ -45,7 +45,9 @@ class FormUnitConverter : public QWidget {
     static FormUnitConverter *getInstance();
 
   protected slots:
-    void manageCalculatedResult(Calculator::CallerFunction function, const Value &value);
+    void manageCalculatedResult(Calculator::CallerFunction function,
+                                const Value &value,
+                                const QString &info);
     void manageConvertedResult(const QString &result);
     void requestConversion();
 
