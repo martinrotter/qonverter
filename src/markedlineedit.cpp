@@ -1,22 +1,40 @@
+/*
+    This file is part of Qonverter.
+
+    Qonverter is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Qonverter is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Qonverter.  If not, see <http://www.gnu.org/licenses/>.
+
+    Copyright 2012 - 2013 Martin Rotter
+*/
+
 #include <QToolButton>
+#include <QEvent>
+#include <QMessageBox>
+
 #include "markedlineedit.h"
+#include "toolbutton.h"
 
 
-// TODO: Pri kliknuti na fajfku se zobrazi stav
-// napriklad jako tooltip nebo balloon tip
-// http://qt.gitorious.org/qt/qt/blobs/4.7/src/gui/util/qsystemtrayicon_p.h trida (QBaloonTip)
-// pokusit se tu tridu vyseparovat.
-// nastavit korektnější šířku pro ikonu
 MarkedLineEdit::MarkedLineEdit(QWidget *parent) : LineEdit(parent) {
-  m_btnMark = new QToolButton(this);
+  m_btnMark = new ToolButton(this);
 
   int frame_width = frameWidth();
   QSize sz = sizeHint();
 
   // Prepare icons for valid and invalid state.
-  m_iconOk = QIcon::fromTheme("security-high",
+  m_iconOk = QIcon::fromTheme("dialog-ok-apply",
                               QIcon(":/graphics/valid.png"));
-  m_iconError = QIcon::fromTheme("security-low",
+  m_iconError = QIcon::fromTheme("edit-delete",
                                  QIcon(":/graphics/invalid.png"));
 
   // Set the icon to have the same dimensions as is the height of line edit.
@@ -29,6 +47,11 @@ MarkedLineEdit::MarkedLineEdit(QWidget *parent) : LineEdit(parent) {
   // Make sure that mark icon has no border and padding.
   m_btnMark->setStyleSheet("QToolButton { border: none; padding: 0px; }");
 
+  // Forward signal from mark icon.
+  connect(m_btnMark, &ToolButton::hovered, [=] () {
+    emit markIconHovered(m_status);
+  });
+
   // Make room at the right end of line edit for mark button.
   // Make sure there is extra margin between line edit and mark icon.
   // There is very UNPLEASANT issue in Qt. Default CSS properties of child
@@ -39,6 +62,22 @@ MarkedLineEdit::MarkedLineEdit(QWidget *parent) : LineEdit(parent) {
 
 MarkedLineEdit::~MarkedLineEdit() {
   delete m_btnMark;
+}
+
+bool MarkedLineEdit::event(QEvent *e) {
+  switch (e->type()) {
+    case QEvent::ToolTip: {
+      QPoint distance = QCursor::pos() - mapToGlobal(m_btnMark->pos());
+      if (sqrt((distance.x() ^ 2) + (distance.y() ^ 2)) < 10) {
+        return true;
+      }
+      break;
+    }
+    default:
+      break;
+  }
+
+  return LineEdit::event(e);
 }
 
 void MarkedLineEdit::resizeEvent(QResizeEvent *event) {
@@ -77,7 +116,9 @@ void MarkedLineEdit::setEnabled(bool enable) {
 }
 
 void MarkedLineEdit::setIcon(Status icon) {
-  switch (icon) {
+  m_status = icon;
+
+  switch (m_status) {
     case OK:
       m_btnMark->setIcon(m_iconOk);
       break;

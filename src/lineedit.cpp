@@ -15,16 +15,8 @@
     along with Qonverter.  If not, see <http://www.gnu.org/licenses/>.
 
     Copyright 2012 - 2013 Martin Rotter
+    Copyright 2007 Trolltech ASA
 */
-
-/****************************************************************************
-**
-** Copyright (c) 2007 Trolltech ASA <info@trolltech.com>
-**
-** Use, modification and distribution is allowed without limitation,
-** warranty, liability or support of any kind.
-**
-****************************************************************************/
 
 #include <QToolButton>
 #include <QStyle>
@@ -40,9 +32,9 @@
 
 
 LineEdit::LineEdit(QWidget *parent) : QLineEdit(parent) {
-  m_btnClear = new QToolButton(this);
-
   int frame_width = frameWidth();
+
+  m_btnClear = new QToolButton(this);
   m_btnClear->setIcon(QIcon::fromTheme("edit-clear",
                                        QIcon(":/graphics/clear_contents.png")));
   m_btnClear->setIconSize(QSize(sizeHint().height() - 4 * frame_width,
@@ -51,14 +43,13 @@ LineEdit::LineEdit(QWidget *parent) : QLineEdit(parent) {
   m_btnClear->setStyleSheet("QToolButton { border: none; padding: 0px; }");
   m_btnClear->setToolTip(tr("Remove contents of this text box."));
   m_btnClear->hide();
-  m_clearButtonEnabled = true;
+
+  // Enable clear button.
+  setClearButtonEnabled(true);
 
   // Create necessary connections.
   connect(m_btnClear, &QToolButton::clicked, this, &LineEdit::clear);
   connect(this, &LineEdit::textChanged, this, &LineEdit::onTextChanged);
-
-  // Add extra padding to the right of the line edit. It looks better.
-  setStyleSheet(QString(LINE_EDIT_PADDING).arg(m_btnClear->sizeHint().width() + frameWidth() + 1));
 
   // Set minimum size for line edit.
   QSize min_size_hint = minimumSizeHint();
@@ -75,12 +66,7 @@ LineEdit::~LineEdit() {
 void LineEdit::onTextChanged(const QString &new_text) {
   // If line edit is not read only (or not enabled) and clear button
   // is enabled, then make sure it's displayed.
-  if (m_clearButtonEnabled == true) {
-    m_btnClear->setVisible(new_text.isEmpty() == false);
-  }
-  else {
-    m_btnClear->setVisible(false);
-  }
+  m_btnClear->setVisible(m_clearButtonEnabled && !new_text.isEmpty());
 }
 
 void LineEdit::setClearButtonEnabled(bool enable) {

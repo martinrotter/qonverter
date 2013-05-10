@@ -17,35 +17,22 @@
     Copyright 2012 - 2013 Martin Rotter
 */
 
-#ifndef CONSTANTSVIEW_H
-#define CONSTANTSVIEW_H
+#include <QEvent>
 
-#include <QTreeView>
+#include "toolbutton.h"
 
 
-class ConstantsModel;
-class ConstantsFilterModel;
+ToolButton::ToolButton(QWidget *parent) : QToolButton(parent) {
+}
 
-class ConstantsView : public QTreeView {
-    Q_OBJECT
+bool ToolButton::event(QEvent *e) {
+  switch (e->type()) {
+    case QEvent::Enter:
+      emit hovered();
+      break;
+    default:
+      break;
+  }
 
-  public:
-    // Constructors and destructors.
-    explicit ConstantsView(QWidget *parent = 0);
-    ~ConstantsView();
-
-    // Resets state of this tree view.
-    void reset();
-
-  signals:
-    void currentItemChanged(const QModelIndex &current);
-
-  protected:
-    void currentChanged(const QModelIndex &current, const QModelIndex &previous);
-
-  private:
-    ConstantsModel *m_model;
-    ConstantsFilterModel *m_filterModel;
-};
-
-#endif // CONSTANTSVIEW_H
+  return QToolButton::event(e);
+}

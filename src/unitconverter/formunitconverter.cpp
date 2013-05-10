@@ -18,14 +18,15 @@
 */
 
 #include <QListWidgetItem>
-#include <QToolTip>
 
 #include "formunitconverter.h"
 #include "calculatorwrapper.h"
 #include "defs.h"
 #include "unitconverter.h"
+#include "balloontip.h"
 
 
+// TODO: Continue refactoring from this point.
 FormUnitConverter *FormUnitConverter::s_instance;
 
 FormUnitConverter::FormUnitConverter(QWidget *parent)
@@ -35,8 +36,7 @@ FormUnitConverter::FormUnitConverter(QWidget *parent)
   // Needed because classical singleton fails due to UI files behavior.
   s_instance = this;
 
-  // TODO: Obtain error info (modify manageCalculatedResult signature to accept
-  // error too. Display error under the input line edit.
+  m_ui->m_txtInput->setIcon(MarkedLineEdit::ERROR);
 
   // If calculation is wanted by this component, then
   // global calculator should calculate it.
@@ -69,6 +69,20 @@ FormUnitConverter::FormUnitConverter(QWidget *parent)
 
   connect(m_ui->m_cmbOutputUnit, &QComboBox::currentTextChanged, [=] () {
     requestConversion();
+  });
+
+  connect(m_ui->m_txtInput, &MarkedLineEdit::markIconHovered,
+          [=] (const MarkedLineEdit::Status &status) {
+    if (status == MarkedLineEdit::ERROR) {
+      BalloonTip::showBalloon(m_calculationInformation,
+                              mapToGlobal(m_ui->m_txtInput->pos() + QPoint(22, 12)),
+                              -1);
+    }
+    else {
+      BalloonTip::showBalloon(tr("Input expression is valid."),
+                              mapToGlobal(m_ui->m_txtInput->pos() + QPoint(22, 12)),
+                              -1);
+    }
   });
 
   // If we need to convert, then do the conversion.
@@ -131,7 +145,7 @@ FormUnitConverter *FormUnitConverter::getInstance() {
   return s_instance;
 }
 
-LineEdit *FormUnitConverter::getInput() {
+MarkedLineEdit *FormUnitConverter::getInput() {
   return m_ui->m_txtInput;
 }
 
@@ -142,7 +156,7 @@ void FormUnitConverter::manageConvertedResult(const QString &result) {
 void FormUnitConverter::manageCalculatedResult(Calculator::CallerFunction function,
                                                const Value &value,
                                                const QString &info) {
-  Q_UNUSED(info);
+  //Q_UNUSED(info);
 
   switch (function) {
     // User entered valid expression which can be converted.
@@ -157,17 +171,23 @@ void FormUnitConverter::manageCalculatedResult(Calculator::CallerFunction functi
                             m_ui->m_cmbOutputUnit->currentIndex(),
                             textual_value);
 
+      BalloonTip::hideBalloon();
       m_ui->m_txtInput->setIcon(MarkedLineEdit::OK);
       break;
     }
       // Error - no conversions here.
-    case Calculator::CONVERTER_ERROR:
+    case Calculator::CONVERTER_ERROR: {
       m_calculated = false;
+      m_calculationInformation = info;
       m_ui->m_txtCalculatedInput->clear();
       m_ui->m_txtConvertedInput->clear();
 
-      // TODO: Notice here via QToolTip or QBaloonTip.
+      BalloonTip::showBalloon(info,
+                              mapToGlobal(m_ui->m_txtInput->pos() + QPoint(22, 12)),
+                              -1);
       m_ui->m_txtInput->setIcon(MarkedLineEdit::ERROR);
+      break;
+    }
     default:
       break;
   }

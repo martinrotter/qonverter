@@ -37,6 +37,8 @@
 #include "stackedwidget.h"
 #include "systemtrayicon.h"
 #include "database.h"
+#include "balloontip.h"
+
 
 FormMain::FormMain(QWidget *parent) : QMainWindow(parent), m_ui(new Ui::FormMain) {
   m_ui->setupUi(this);
@@ -171,6 +173,9 @@ void FormMain::saveBeforeQuit() {
   // too soon.
   CalculatorWrapper::getInstance().getCalculator()->saveMemoryPlaces();
 
+  // Make sure that global BalloonTip gets erased.
+  BalloonTip::erase();
+
   // Databases are now not needed, all data are stored in this point.
   Database::removeAllConnections();
 
@@ -179,6 +184,13 @@ void FormMain::saveBeforeQuit() {
 
   qDebug("Exiting the application.");
 }
+
+#if defined(Q_OS_WIN)
+void FormMain::moveEvent(QMoveEvent *event) {
+  BalloonTip::hideBalloon();
+  QMainWindow::moveEvent(event);
+}
+#endif
 
 void FormMain::createMenus() {
   // Create switcher for Calculator/Unit Converter/Currency Converter.

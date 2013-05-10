@@ -40,7 +40,7 @@ class FormUnitConverter : public QWidget {
 
     // Returns input text box.
     // This is used for setting default focus from the main window.
-    LineEdit *getInput();
+    MarkedLineEdit *getInput();
 
     static FormUnitConverter *getInstance();
 
@@ -59,6 +59,7 @@ class FormUnitConverter : public QWidget {
   private:
     Ui::FormUnitConverter *m_ui;
     bool m_calculated;
+    QString m_calculationInformation;
 
     static FormUnitConverter *s_instance;
 };

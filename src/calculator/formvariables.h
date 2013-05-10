@@ -24,6 +24,7 @@
 
 #include "ui_formvariables.h"
 
+
 namespace Ui {
   class FormVariables;
 }

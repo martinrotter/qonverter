@@ -15,16 +15,8 @@
  along with Qonverter.  If not, see <http://www.gnu.org/licenses/>.
 
  Copyright 2012 - 2013 Martin Rotter
+ Copyright 2007 Trolltech ASA
 */
-
-/****************************************************************************
-**
-** Copyright (c) 2007 Trolltech ASA <info@trolltech.com>
-**
-** Use, modification and distribution is allowed without limitation,
-** warranty, liability or support of any kind.
-**
-****************************************************************************/
 
 #ifndef LINEEDIT_H
 #define LINEEDIT_H
@@ -32,6 +24,7 @@
 #define LINE_EDIT_PADDING "LineEdit { padding-right: %1px; }"
 
 #include <QLineEdit>
+
 
 class QToolButton;
 

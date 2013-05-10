@@ -104,7 +104,7 @@ void CalculatorInput::insertCompletion(const QString& completion) {
 
   // Insert additional "()" if function is the actual completion
   // and move anchor one piece left.
-  if (CalculatorWrapper::getInstance().getCalculator()->isFunDefined(completion) == true) {
+  if (CalculatorWrapper::getInstance().getCalculator()->isFunDefined(completion)) {
     tc.insertText("()");
     tc.movePosition(QTextCursor::Left);
   }
@@ -157,7 +157,7 @@ bool CalculatorInput::matchLeftPar(QTextBlock current_block, int index, int num_
 
   // No match yet? Then try next block
   current_block = current_block.next();
-  if (current_block.isValid() == true) {
+  if (current_block.isValid()) {
     return matchLeftPar(current_block, 0, num_right_par, lft, rgt);
   }
 
@@ -190,7 +190,7 @@ bool CalculatorInput::matchRightPar(QTextBlock current_block, int index, int num
 
   // No match yet? Then try previous block
   current_block = current_block.previous();
-  if (current_block.isValid() == true) {
+  if (current_block.isValid()) {
     // Recalculate correct index first
     TextBlockData *data = static_cast<TextBlockData*>(current_block.userData());
     QVector<ParenthesisInfo*> infos = data->getParenthesises();
@@ -207,7 +207,7 @@ void CalculatorInput::keyPressEvent(QKeyEvent *e) {
   switch (e->key()) {
     case Qt::Key_Enter:
     case Qt::Key_Return:
-      if (m_completer->popup()->isVisible() == false) {
+      if (!m_completer->popup()->isVisible()) {
         emit submitted(toPlainText());
         return;
       }
@@ -234,16 +234,16 @@ void CalculatorInput::keyPressEvent(QKeyEvent *e) {
   m_completer->setModel(CalculatorWrapper::getInstance().getCalculator()->getConstantsModel());
 
   bool trigger_hortcut = ((e->modifiers() & Qt::ControlModifier) && e->key() == Qt::Key_Space);
-  if (trigger_hortcut == false) {
+  if (!trigger_hortcut) {
     QPlainTextEdit::keyPressEvent(e);
   }
 
-  if (e->text().isEmpty() == false) {
+  if (!e->text().isEmpty()) {
     emit textEdited(toPlainText());
   }
 
   bool ctrl_shift_pressed = e->modifiers() & (Qt::ControlModifier | Qt::ShiftModifier);
-  if (ctrl_shift_pressed == true && e->text().isEmpty() == true) {
+  if (ctrl_shift_pressed && e->text().isEmpty()) {
     return;
   }
 
@@ -262,9 +262,9 @@ void CalculatorInput::keyPressEvent(QKeyEvent *e) {
   bool has_modifier = (e->modifiers() != Qt::NoModifier) &&
                       (ctrl_shift_pressed == false);
 
-  if ((trigger_hortcut == false) &&
-      (has_modifier == true || e->text().isEmpty() == true || completion_prefix.length() < 1 ||
-       word_delimiters.contains(e->text().right(1)) == true)) {
+  if (!trigger_hortcut &&
+      (has_modifier || e->text().isEmpty() || completion_prefix.length() < 1 ||
+       word_delimiters.contains(e->text().right(1)))) {
     m_completer->popup()->hide();
     return;
   }

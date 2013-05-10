@@ -26,7 +26,6 @@
 #include <QPointer>
 #include <QSqlDatabase>
 
-#include "mpParser.h"
 #include "memoryplace.h"
 #include "memorymap.h"
 #include "constantsmodel.h"
@@ -100,21 +99,23 @@ class Calculator : public QObject {
     void changeAns(const Value &new_value);
 
     // Returns variable or constant data by name or by index.
-    QVariant queryVariable(const QString &name, ConstantsModel::QueryType info_class);
-    QVariant queryVariable(int index, ConstantsModel::QueryType info_class);
+    QVariant queryVariable(const QString &name,
+                           const ConstantsModel::QueryType &info_class);
+    QVariant queryVariable(int index,
+                           const ConstantsModel::QueryType &info_class);
 
     // Returns total count of variables/constants.
     int countOfMemoryPlaces();
 
     // Calculates input expression.
-    // This method returns result synchronously w/o exception handling.
+    // This method returns result SYNCHRONOUSLY w/o exception handling.
     // It it primarily used for evaluating stored variables.
-    Value calculateExpressionSynchronously(Calculator::CallerFunction function,
-                                           QString expression);
+    Value calculateExpressionSynchronously(const Calculator::CallerFunction &function,
+                                           const QString &expression);
 
   signals:
     // Is emitted if result is calculated:
-    // a) result is calculated successfully and is stored in result variables, into is empty.
+    // a) result is calculated successfully and is stored in result variables, info is empty.
     // b) error occurred and exception info is stored in info variable, result is empty.
     void resultCalculated(const Calculator::CallerFunction &function,
                           const Value &result = Value(),
@@ -130,7 +131,8 @@ class Calculator : public QObject {
     // Calculates input expression.
     // This method encapsulates calculateExpressionSynchronously method
     // and is purposed for ASYNCHRONOUS calculations.
-    void calculateExpression(Calculator::CallerFunction function, QString expression);
+    void calculateExpression(const Calculator::CallerFunction &function,
+                             const QString &expression);
 
   private:
     ConstantsModel *m_constantsModel;

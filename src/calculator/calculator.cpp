@@ -32,8 +32,8 @@
 #include "settings.h"
 #include "defs.h"
 #include "database.h"
-#include "constantsmodel.h"
 #include "mpFuncNonCmplx.h"
+#include "mpParser.h"
 
 
 Calculator::Calculator(QObject *parent) : QObject(parent) {
@@ -278,12 +278,13 @@ int Calculator::countOfMemoryPlaces() {
 }
 
 QVariant Calculator::queryVariable(const QString &name,
-                                   ConstantsModel::QueryType info_class) {
+                                   const ConstantsModel::QueryType &info_class) {
   QList<QString> keys = m_memoryPlaces.uniqueKeys();
   return queryVariable(keys.indexOf(name), info_class);
 }
 
-QVariant Calculator::queryVariable(int index, ConstantsModel::QueryType info_class) {
+QVariant Calculator::queryVariable(int index,
+                                   const ConstantsModel::QueryType &info_class) {
   if (index >= 0 && index < m_memoryPlaces.size()) {
     QList<QString> keys = m_memoryPlaces.uniqueKeys();
 
@@ -409,8 +410,8 @@ void Calculator::initialize() {
   emit initialized();
 }
 
-Value Calculator::calculateExpressionSynchronously(Calculator::CallerFunction function,
-                                                   QString expression) {
+Value Calculator::calculateExpressionSynchronously(const Calculator::CallerFunction &function,
+                                                   const QString &expression) {
   switch (function) {
     case CALCULATOR_ONTHEFLY:
     case CONVERTER_ONTHEFLY:
@@ -434,8 +435,8 @@ Value Calculator::calculateExpressionSynchronously(Calculator::CallerFunction fu
   return m_parser->Eval();
 }
 
-void Calculator::calculateExpression(Calculator::CallerFunction function,
-                                     QString expression) {
+void Calculator::calculateExpression(const CallerFunction &function,
+                                     const QString &expression) {
   Value result;
 
   try {

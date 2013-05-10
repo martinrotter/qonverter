@@ -59,7 +59,7 @@ class FormCalculator : public QWidget {
     void resizeEvent(QResizeEvent *event);
 
   public slots:
-    void manageResult(Calculator::CallerFunction function,
+    void manageResult(const Calculator::CallerFunction &function,
                       const Value &result,
                       const QString &info);
 
@@ -67,7 +67,8 @@ class FormCalculator : public QWidget {
     void insertToken();
 
   signals:
-    void calculationWanted(Calculator::CallerFunction function, QString expression);
+    void calculationWanted(const Calculator::CallerFunction &function,
+                           const QString &expression);
 
   private:
     Ui::FormCalculator *m_ui;

@@ -1,9 +1,12 @@
 <body>
 [1.0.7]
 <ul>
+<li>New validated text boxes for unit converter and variabled add dialog.</li>
+<li>Added some Oxygen fallback icons.</li>
 <li>Added option to setup max number of visible items for auto-completion.</li>
 <li>Validated text boxes equipped with status icons.</li>
 <li>Updated dark skin once again.</li>
+<li>Application refactored.</li>
 <li>Fixed memory leak when loading and saving variables.</li>
 <li>Explicit/implicit variables are now stored in persistent storage so 
 that they can be used in next Qonverter session.</li>

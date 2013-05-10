@@ -76,8 +76,8 @@ FormEditVariable::~FormEditVariable() {
 }
 
 void FormEditVariable::checkName(const QString &name) {
-  if (CalculatorWrapper::getInstance().getCalculator()->isNameAllowed(name) == true ||
-      (m_originalName.isEmpty() == false && name == m_originalName)) {
+  if (CalculatorWrapper::getInstance().getCalculator()->isNameAllowed(name) ||
+      (!m_originalName.isEmpty() && name == m_originalName)) {
     // Name can be used for memory place.
     m_ui->m_txtName->setIcon(MarkedLineEdit::OK);
     m_correctName = true;
@@ -92,7 +92,7 @@ void FormEditVariable::checkName(const QString &name) {
   m_ui->m_btnBox->button(QDialogButtonBox::Ok)->setEnabled(m_correctName && m_correctValue);
 }
 
-void FormEditVariable::manageResult(Calculator::CallerFunction function,
+void FormEditVariable::manageResult(const Calculator::CallerFunction &function,
                                     const Value &result) {
   Q_UNUSED(function);
 
@@ -121,7 +121,7 @@ int FormEditVariable::execAdd() {
     if (CalculatorWrapper::getInstance().getCalculator()->addMemoryPlace(m_ui->m_txtName->text(),
                                                                          m_ui->m_txtDescription->text(),
                                                                          MemoryPlace::EXPLICIT_VARIABLE,
-                                                                         m_convertedValue) == true) {
+                                                                         m_convertedValue)) {
       accept();
     }
     else {
@@ -157,7 +157,7 @@ int FormEditVariable::execEdit(const QString &name, const QString &value,
     if (CalculatorWrapper::getInstance().getCalculator()->editMemoryPlace(m_ui->m_txtName->text(),
                                                                           m_ui->m_txtDescription->text(),
                                                                           var_type,
-                                                                          m_convertedValue) == true) {
+                                                                          m_convertedValue)) {
       accept();
     }
     else {

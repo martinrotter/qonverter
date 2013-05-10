@@ -49,11 +49,12 @@ class FormEditVariable : public QDialog {
   signals:
     // Emitted if dialog needs to verify type of result
     // of input formula.
-    void calculationWanted(Calculator::CallerFunction function, QString expression);
+    void calculationWanted(const Calculator::CallerFunction &function,
+                           const QString &expression);
 
   protected slots:
     // Displays information about proposed expression.
-    void manageResult(Calculator::CallerFunction function, const Value &result);
+    void manageResult(const Calculator::CallerFunction &function, const Value &result);
 
     // Checks if proposed name can be used for memory place.
     void checkName(const QString &name);

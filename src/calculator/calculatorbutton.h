@@ -50,7 +50,7 @@ class CalculatorButton : public QPushButton {
 
     // Returns textual output to be printed out after the push of this button.
     // Output may be the same as the text of this button.
-    QString output();
+    QString output() const;
 
   private:
     // Type of the button.

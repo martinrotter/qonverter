@@ -107,7 +107,7 @@ void FormVariables::addVariable() {
 void FormVariables::editVariable() {
   QModelIndex current_idx = m_filterModel->mapToSource(m_ui->m_treeVarsConsts->currentIndex());
 
-  if (current_idx.isValid() == false) {
+  if (!current_idx.isValid()) {
     return;
   }
 

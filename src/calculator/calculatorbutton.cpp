@@ -37,7 +37,7 @@ int CalculatorButton::type() const {
   return m_type;
 }
 
-QString CalculatorButton::output() {
+QString CalculatorButton::output() const {
   if (property("type").toInt() == (int) CalculatorButton::FUNCTION) {
     // HINT: Each and every "function" button needs to have
     // explicitly set m_output to correct output without "()".

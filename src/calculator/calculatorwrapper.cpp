@@ -54,7 +54,7 @@ Calculator *CalculatorWrapper::getCalculator() {
 }
 
 CalculatorWrapper &CalculatorWrapper::getInstance() {
-  if (s_instance.isNull() == true) {
+  if (s_instance.isNull()) {
     s_instance.reset(new CalculatorWrapper());
     s_instance.data()->m_thread->start();
   }

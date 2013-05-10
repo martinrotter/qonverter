@@ -83,21 +83,21 @@ int main(int argc, char *argv[]) {
   }
 
   // These settings needs to be set before any QSettings object.
-  qonverter_app.setApplicationName(APP_NAME);
-  qonverter_app.setApplicationVersion(APP_VERSION);
-  qonverter_app.setOrganizationName(APP_AUTHORS);
-  qonverter_app.setOrganizationDomain(APP_URL);
-  qonverter_app.setWindowIcon(QIcon(":/graphics/qonverter.png"));
+  QApplication::setApplicationName(APP_NAME);
+  QApplication::setApplicationVersion(APP_VERSION);
+  QApplication::setOrganizationName(APP_AUTHORS);
+  QApplication::setOrganizationDomain(APP_URL);
+  QApplication::setWindowIcon(QIcon(":/graphics/qonverter.png"));
 
   // Some Linux-based desktop environments have problem to correctly
   // exit application with setQuitOnLastWindowClosed(true) and
   // existing viible QSystemTrayIcon instance.
-  qonverter_app.setQuitOnLastWindowClosed(false);
+  QApplication::setQuitOnLastWindowClosed(false);
 
   // Load style and skin.
-  qonverter_app.setStyle(Settings::value(APP_CFG_GUI,
+  QApplication::setStyle(Settings::value(APP_CFG_GUI,
                                          "style",
-                                         qonverter_app.style()->objectName()).toString());
+                                         QApplication::style()->objectName()).toString());
   UiFactory::loadSkin(Settings::value(APP_CFG_GUI,
                                       "skin",
                                       "base/plain.qss").toString());
@@ -112,7 +112,7 @@ int main(int argc, char *argv[]) {
 
   // Try to load selected language file.
   if (app_translator.load(lang, APP_LANG_PATH) == true) {
-    qonverter_app.installTranslator(&app_translator);
+    QApplication::installTranslator(&app_translator);
     qDebug("Language \'%s\' was loaded successfully.", qPrintable(lang));
 
     // Set up locale.
@@ -133,7 +133,7 @@ int main(int argc, char *argv[]) {
            qPrintable(QString("qt_%1.qm").arg(locale_name)));
   }
   else {
-    qonverter_app.installTranslator(&qt_translator);
+    QApplication::installTranslator(&qt_translator);
     qDebug("Language for Qt \'%s\' was loaded successfully.",
            qPrintable(QString("qt_%1.qm").arg(locale_name)));
   }
@@ -164,5 +164,5 @@ int main(int argc, char *argv[]) {
     qonverter_window.showWindow();
   }
 
-  return qonverter_app.exec();
+  return QApplication::exec();
 }

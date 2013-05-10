@@ -138,7 +138,7 @@ FormCalculator::FormCalculator(QWidget *parent) : QWidget(parent), m_ui(new Ui::
 
   // User is changing input epression via keypad or keyboard.
   connect(m_ui->m_input, &CalculatorInput::textEdited, [=] (QString expression) {
-    if (Settings::value(APP_CFG_CALC, "on-the-fly", true).toBool() == true) {
+    if (Settings::value(APP_CFG_CALC, "on-the-fly", true).toBool()) {
       qDebug().nospace() << "Asking for calculation from thread " << QThread::currentThreadId() << ".";
       emit calculationWanted(Calculator::CALCULATOR_ONTHEFLY, expression);
     }
@@ -247,7 +247,7 @@ void FormCalculator::resizeEvent(QResizeEvent *event) {
   m_label->adjust();
 }
 
-void FormCalculator::manageResult(Calculator::CallerFunction function,
+void FormCalculator::manageResult(const Calculator::CallerFunction &function,
                                   const Value &result,
                                   const QString &info) {
   switch (function) {

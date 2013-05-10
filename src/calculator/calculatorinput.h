@@ -67,6 +67,7 @@ class CalculatorInput : public QPlainTextEdit {
     // Goes through contents and highlights matching parenthesises.
     void matchPar();
 
+    // Inserts selected completion into text box.
     void insertCompletion(const QString& completion);
 
   private:
