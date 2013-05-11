@@ -3,14 +3,10 @@
  * Qonverter skin file *
  ***********************
  * Author:  Martin Rotter
- * Version: 1.0
+ * Version: 1.1
  *
  * This is plain skin.
  * This skins contains nothing.
  *
  * Distributed under GNU GPLv3 license
  */
-
-LineEdit {
-	padding-right: 25px;
-}

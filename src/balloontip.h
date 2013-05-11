@@ -29,14 +29,18 @@ class QEvent;
 class QTimerEvent;
 class QMouseEvent;
 
-class BalloonTip : public QWidget
-{
+class BalloonTip : public QWidget {
     Q_OBJECT
+
   public:
+    // Displays/hides/queries global BalloonTip.
+    // New global instance is created if necessary.
     static void showBalloon(const QString& msg, const QPoint& pos,
-                            int timeout, bool showArrow = true);
+                            int timeout, bool show_arrow = true);
     static void hideBalloon();
     static bool isBalloonVisible();
+
+    // Completely deletes global BalloonTip instance from memory.
     static void erase();
 
     bool eventFilter(QObject *o, QEvent *e);
@@ -48,15 +52,15 @@ class BalloonTip : public QWidget
     void balloon(const QPoint&, int, bool);
 
   protected:
-    void paintEvent(QPaintEvent *);
-    void resizeEvent(QResizeEvent *);
+    void paintEvent(QPaintEvent *event);
+    void resizeEvent(QResizeEvent *event);
     void mousePressEvent(QMouseEvent *event);
-    void timerEvent(QTimerEvent *e);
+    void timerEvent(QTimerEvent *event);
 
   private:
-    QLabel *msgLabel;
-    QPixmap pixmap;
-    int timerId;
+    QLabel *m_lblMessage;
+    QPixmap m_pixmap;
+    int m_timerId;
 
     static BalloonTip *s_instance;
 };

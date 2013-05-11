@@ -48,7 +48,7 @@ void BalloonTip::showBalloon(const QString& message, const QPoint& pos,
     s_instance = new BalloonTip();
   }
 
-  s_instance->msgLabel->setText(message);
+  s_instance->m_lblMessage->setText(message);
 
   if (timeout < 0) {
     // Fetch show duration from seetings
@@ -62,7 +62,6 @@ void BalloonTip::hideBalloon() {
   if (s_instance == nullptr) {
     return;
   }
-
   s_instance->hide();
 }
 
@@ -73,9 +72,7 @@ bool BalloonTip::isBalloonVisible() {
 void BalloonTip::erase() {
   if (s_instance != nullptr) {
     s_instance->hideBalloon();
-
     delete s_instance;
-    s_instance = 0;
 
     qDebug("Removed global BalloonTip.");
   }
@@ -129,77 +126,65 @@ bool BalloonTip::eventFilter(QObject *o, QEvent *e) {
   return false;
 }
 
-BalloonTip::BalloonTip() : QWidget(0, Qt::ToolTip), timerId(-1) {
-  setAttribute(Qt::WA_DeleteOnClose);
+BalloonTip::BalloonTip() : QWidget(0, Qt::ToolTip), m_timerId(-1) {
+  //setAttribute(Qt::WA_DeleteOnClose);
 
+  // Install global event filter for this widget.
   qApp->installEventFilter(this);
 
-  msgLabel = new QLabel(this);
-#ifdef Q_OS_WINCE
-  f.setBold(false);
-  msgLabel->setFont(f);
-#endif
-  msgLabel->installEventFilter(this);
-  msgLabel->setTextFormat(Qt::PlainText);
-  msgLabel->setAlignment(Qt::AlignTop | Qt::AlignLeft);
+  m_lblMessage = new QLabel(this);
+  m_lblMessage->installEventFilter(this);
+  m_lblMessage->setTextFormat(Qt::PlainText);
+  m_lblMessage->setAlignment(Qt::AlignTop | Qt::AlignLeft);
 
   // Smart size for the message label.
-#ifdef Q_OS_WINCE
-  int limit = QApplication::desktop()->availableGeometry(msgLabel).size().width() / 2;
-#else
-  int limit = QApplication::desktop()->availableGeometry(msgLabel).size().width() / 3;
-#endif
-  if (msgLabel->sizeHint().width() > limit) {
-    msgLabel->setWordWrap(true);
+  int limit = QApplication::desktop()->availableGeometry(m_lblMessage).size().width() / 3;
 
-    if (msgLabel->sizeHint().width() > limit) {
-      /*
-      msgLabel->d_func()->ensureTextControl();
-      if (QTextControl *control = msgLabel->d_func()->control) {
-        QTextOption opt = control->document()->defaultTextOption();
-        opt.setWrapMode(QTextOption::WrapAnywhere);
-        control->document()->setDefaultTextOption(opt);
-      }
-      */
-    }
-#ifdef Q_OS_WINCE
-    // Make sure that the text isn't wrapped "somewhere" in the balloon widget
-    // in the case that we have a long title label.
-    setMaximumWidth(limit);
-#else
+  // Set word wrap if message is too long.
+  if (m_lblMessage->sizeHint().width() > limit) {
+    m_lblMessage->setWordWrap(true);
+
     // Here we allow the text being much smaller than the balloon widget
     // to emulate the weird standard windows behavior.
-    msgLabel->setFixedSize(limit, msgLabel->heightForWidth(limit));
-#endif
+    m_lblMessage->setFixedSize(limit, m_lblMessage->heightForWidth(limit));
   }
 
+  // Compose all elements into grid layout.
   QGridLayout *layout = new QGridLayout(this);
-
-  layout->addWidget(msgLabel, 0, 0, -1, -1);
+  layout->addWidget(m_lblMessage, 0, 0, -1, -1);
   layout->setSizeConstraint(QLayout::SetFixedSize);
   layout->setMargin(3);
   setLayout(layout);
 
+  // Set tooltip-like palette.
   QPalette pal = palette();
   pal.setColor(QPalette::Window, QColor(0xff, 0xff, 0xe1));
   pal.setColor(QPalette::WindowText, Qt::black);
   setPalette(pal);
 
-  setWindowOpacity(0.83);
+  // Set window opacity.
+  // This actually afffects just operating systems
+  // with hardware accelerated environments or window opacity enabled.
+  setWindowOpacity(0.80);
 }
 
 BalloonTip::~BalloonTip() {
+  // Unregister global filter for this widget.
   qApp->removeEventFilter(this);
+
+  // Ensure that singleton is set to nullptr.
   s_instance = nullptr;
 }
 
-void BalloonTip::paintEvent(QPaintEvent *) {
+void BalloonTip::paintEvent(QPaintEvent *event) {
+  Q_UNUSED(event);
+
   QPainter painter(this);
-  painter.drawPixmap(rect(), pixmap);
+  painter.drawPixmap(rect(), m_pixmap);
 }
 
-void BalloonTip::resizeEvent(QResizeEvent *ev) {
-  QWidget::resizeEvent(ev);
+void BalloonTip::resizeEvent(QResizeEvent *event) {
+  QWidget::resizeEvent(event);
 }
 
 void BalloonTip::balloon(const QPoint& pos, int msecs, bool showArrow) {
@@ -207,18 +192,18 @@ void BalloonTip::balloon(const QPoint& pos, int msecs, bool showArrow) {
   QSize sh = sizeHint();
   const int border = 1;
   const int ah = 18, ao = 18, aw = 18, rc = 7;
-  bool arrowAtTop = (pos.y() + sh.height() + ah < scr.height());
-  bool arrowAtLeft = (pos.x() + sh.width() - ao < scr.width());
+  bool arrow_at_top = (pos.y() + sh.height() + ah < scr.height());
+  bool arrow_at_left = (pos.x() + sh.width() - ao < scr.width());
   setContentsMargins(border + 3,
-                     border + (arrowAtTop ? ah : 0) + 2,
+                     border + (arrow_at_top ? ah : 0) + 2,
                      border + 3,
-                     border + (arrowAtTop ? 0 : ah) + 2);
+                     border + (arrow_at_top ? 0 : ah) + 2);
   updateGeometry();
   sh  = sizeHint();
 
   int ml, mr, mt, mb;
   QSize sz = sizeHint();
-  if (!arrowAtTop) {
+  if (!arrow_at_top) {
     ml = mt = 0;
     mr = sz.width() - 1;
     mb = sz.height() - ah - 1;
@@ -242,7 +227,7 @@ void BalloonTip::balloon(const QPoint& pos, int msecs, bool showArrow) {
   move(qMax(pos.x() - sz.width(), scr.left()), pos.y());
 #else
   path.moveTo(ml + rc, mt);
-  if (arrowAtTop && arrowAtLeft) {
+  if (arrow_at_top && arrow_at_left) {
     if (showArrow) {
       path.lineTo(ml + ao, mt);
       path.lineTo(ml + ao, mt - ah);
@@ -251,7 +236,7 @@ void BalloonTip::balloon(const QPoint& pos, int msecs, bool showArrow) {
 
     move(qMax(pos.x() - ao, scr.left() + 2), pos.y());
   }
-  else if (arrowAtTop && !arrowAtLeft) {
+  else if (arrow_at_top && !arrow_at_left) {
     if (showArrow) {
       path.lineTo(mr - ao - aw, mt);
       path.lineTo(mr - ao, mt - ah);
@@ -264,7 +249,7 @@ void BalloonTip::balloon(const QPoint& pos, int msecs, bool showArrow) {
   path.arcTo(QRect(mr - rc*2, mt, rc*2, rc*2), 90, -90);
   path.lineTo(mr, mb - rc);
   path.arcTo(QRect(mr - rc*2, mb - rc*2, rc*2, rc*2), 0, -90);
-  if (!arrowAtTop && !arrowAtLeft) {
+  if (!arrow_at_top && !arrow_at_left) {
     if (showArrow) {
       path.lineTo(mr - ao, mb);
       path.lineTo(mr - ao, mb + ah);
@@ -274,7 +259,7 @@ void BalloonTip::balloon(const QPoint& pos, int msecs, bool showArrow) {
     move(qMin(pos.x() - sh.width() + ao, scr.right() - sh.width() - 2),
          pos.y() - sh.height());
   }
-  else if (!arrowAtTop && arrowAtLeft) {
+  else if (!arrow_at_top && arrow_at_left) {
     if (showArrow) {
       path.lineTo(ao + aw, mb);
       path.lineTo(ao, mb + ah);
@@ -299,14 +284,14 @@ void BalloonTip::balloon(const QPoint& pos, int msecs, bool showArrow) {
 #endif
 
   // Draw the border.
-  pixmap = QPixmap(sz);
-  QPainter painter2(&pixmap);
+  m_pixmap = QPixmap(sz);
+  QPainter painter2(&m_pixmap);
   painter2.setPen(QPen(palette().color(QPalette::Window).darker(160), border));
   painter2.setBrush(palette().color(QPalette::Window));
   painter2.drawPath(path);
 
   if (msecs > 0) {
-    timerId = startTimer(msecs);
+    m_timerId = startTimer(msecs);
   }
   show();
 }
@@ -317,9 +302,9 @@ void BalloonTip::mousePressEvent(QMouseEvent *event) {
   close();
 }
 
-void BalloonTip::timerEvent(QTimerEvent *e) {
-  if (e->timerId() == timerId) {
-    killTimer(timerId);
+void BalloonTip::timerEvent(QTimerEvent *event) {
+  if (event->timerId() == m_timerId) {
+    killTimer(m_timerId);
 
     if (!underMouse()) {
       close();
@@ -327,5 +312,5 @@ void BalloonTip::timerEvent(QTimerEvent *e) {
     return;
   }
 
-  QWidget::timerEvent(e);
+  QWidget::timerEvent(event);
 }

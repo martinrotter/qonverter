@@ -92,6 +92,7 @@ void UnitConverter::loadUnitsAndMangitudes() {
   // Frequency
   QList<double> list_frequency; list_frequency << 1 << 1/60.0 << 0.15915494327;
 
+  // Put everything into single list.
   m_unitValues << list_accel << list_angle << list_area << list_density <<
                   list_current << list_voltage << list_work << list_force <<
                   list_entropy << list_length << list_luminance << list_luminosity <<
@@ -165,6 +166,7 @@ void UnitConverter::loadUnitsAndMangitudes() {
   QList<QString> frequency; frequency << QObject::tr("Hz (Hertz)") << QObject::tr("rpm (revolutions per minute)") <<
                                          QObject::tr("rad/s");
 
+  // Put all unit names into single list.
   m_unitNames << acceleration << angle << area << density <<
                  current << voltage << work << force <<
                  entropy << length << luminance << luminosity <<
@@ -172,6 +174,7 @@ void UnitConverter::loadUnitsAndMangitudes() {
                  volume << moment << charge << illuminance <<
                  frequency;
 
+  // Put all magnitude names into single list.
   m_magnitudeNames << QObject::tr("Acceleration") << QObject::tr("Angle") << QObject::tr("Area") <<
                       QObject::tr("Density") << QObject::tr("El. current") <<
                       QObject::tr("El. voltage") << QObject::tr("Energy & work") <<
@@ -195,7 +198,7 @@ QList<QString> UnitConverter::getUnits(int i) {
 }
 
 UnitConverter &UnitConverter::getInstance() {
-  if (s_instance.isNull() == true) {
+  if (s_instance.isNull()) {
     s_instance.reset(new UnitConverter());
   }
 

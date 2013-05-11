@@ -27,7 +27,6 @@
 
 class ToolButton;
 
-// TODO: Check and REFACTOR MarkedLineEdit and LineEdit classes.
 class MarkedLineEdit : public LineEdit {
     Q_OBJECT
 

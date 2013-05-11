@@ -45,14 +45,15 @@ class FormUnitConverter : public QWidget {
     static FormUnitConverter *getInstance();
 
   protected slots:
-    void manageCalculatedResult(Calculator::CallerFunction function,
+    void manageCalculatedResult(const Calculator::CallerFunction &function,
                                 const Value &value,
                                 const QString &info);
     void manageConvertedResult(const QString &result);
     void requestConversion();
 
   signals:
-    void calculationWanted(Calculator::CallerFunction function, QString expression);
+    void calculationWanted(const Calculator::CallerFunction &function,
+                           const QString &expression);
     void conversionWanted(int magnitude_index, int input_unit,
                           int output_unit, const QString &input_value);
 

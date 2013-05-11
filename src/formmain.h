@@ -41,11 +41,16 @@ class FormMain : public QMainWindow {
     explicit FormMain(QWidget *parent = 0);
     ~FormMain();
 
+    SystemTrayIcon * getTrayIcon();
+
+    static FormMain *getInstance();
+
   protected:
     // Creates menus and icons.
     void createTrayIcon();
     void createMenus();
 
+    // On Windows, we need to explicitly hide BallonTip if window is moved.
 #if defined(Q_OS_WIN)
     void moveEvent(QMoveEvent *event);
 #endif
@@ -76,6 +81,8 @@ class FormMain : public QMainWindow {
     Ui::FormMain *m_ui;
     QActionGroup *m_componentSwitcher;
     QPointer<SystemTrayIcon> m_trayIcon;
+
+    static FormMain *s_instance;
 };
 
 #endif // FORMMAIN_H

@@ -26,7 +26,6 @@
 #include "balloontip.h"
 
 
-// TODO: Continue refactoring from this point.
 FormUnitConverter *FormUnitConverter::s_instance;
 
 FormUnitConverter::FormUnitConverter(QWidget *parent)
@@ -36,6 +35,8 @@ FormUnitConverter::FormUnitConverter(QWidget *parent)
   // Needed because classical singleton fails due to UI files behavior.
   s_instance = this;
 
+  // We start with empty input text box, empty is not OK according
+  // to muParserX formula evaluation.
   m_ui->m_txtInput->setIcon(MarkedLineEdit::ERROR);
 
   // If calculation is wanted by this component, then
@@ -63,13 +64,11 @@ FormUnitConverter::FormUnitConverter(QWidget *parent)
   });
 
   // If one of the units is changed, then conversion should repeat.
-  connect(m_ui->m_cmbInputUnit, &QComboBox::currentTextChanged, [=] () {
-    requestConversion();
-  });
+  connect(m_ui->m_cmbInputUnit, &QComboBox::currentTextChanged,
+          this, &FormUnitConverter::requestConversion);
 
-  connect(m_ui->m_cmbOutputUnit, &QComboBox::currentTextChanged, [=] () {
-    requestConversion();
-  });
+  connect(m_ui->m_cmbOutputUnit, &QComboBox::currentTextChanged,
+          this, &FormUnitConverter::requestConversion);
 
   connect(m_ui->m_txtInput, &MarkedLineEdit::markIconHovered,
           [=] (const MarkedLineEdit::Status &status) {
@@ -127,7 +126,7 @@ FormUnitConverter::FormUnitConverter(QWidget *parent)
 }
 
 void FormUnitConverter::requestConversion() {
-  if (m_calculated == true &&
+  if (m_calculated &&
       m_ui->m_cmbInputUnit->currentIndex() >= 0 &&
       m_ui->m_cmbOutputUnit->currentIndex() >= 0) {
     emit conversionWanted(m_ui->m_listMagnitudes->currentItem()->data(32).toInt(),
@@ -153,11 +152,9 @@ void FormUnitConverter::manageConvertedResult(const QString &result) {
   m_ui->m_txtConvertedInput->setText(result);
 }
 
-void FormUnitConverter::manageCalculatedResult(Calculator::CallerFunction function,
+void FormUnitConverter::manageCalculatedResult(const Calculator::CallerFunction &function,
                                                const Value &value,
                                                const QString &info) {
-  //Q_UNUSED(info);
-
   switch (function) {
     // User entered valid expression which can be converted.
     case Calculator::CONVERTER_ONTHEFLY: {

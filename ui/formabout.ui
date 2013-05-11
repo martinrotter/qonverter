@@ -175,10 +175,10 @@ p, li { white-space: pre-wrap; }
            </rect>
           </property>
           <property name="autoFillBackground">
-           <bool>false</bool>
+           <bool>true</bool>
           </property>
           <attribute name="label">
-           <string>GNU GPL License</string>
+           <string>GNU GPL License (applies to Qonverter source code)</string>
           </attribute>
           <attribute name="toolTip">
            <string>GNU GPL License</string>
@@ -239,8 +239,16 @@ p, li { white-space: pre-wrap; }
           </layout>
          </widget>
          <widget class="QWidget" name="page_GNU_LGPL">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>685</width>
+            <height>149</height>
+           </rect>
+          </property>
           <attribute name="label">
-           <string>GNU LGPL License</string>
+           <string>GNU LGPL License (applies to some graphics)</string>
           </attribute>
           <attribute name="toolTip">
            <string>GNU LGPL License</string>
@@ -301,8 +309,16 @@ p, li { white-space: pre-wrap; }
           </layout>
          </widget>
          <widget class="QWidget" name="page_BSD">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>685</width>
+            <height>149</height>
+           </rect>
+          </property>
           <attribute name="label">
-           <string>BSD 3-Clause License</string>
+           <string>BSD 3-Clause License (applies to muParserX library)</string>
           </attribute>
           <attribute name="toolTip">
            <string>BSD 3-Clause License</string>
@@ -368,11 +384,11 @@ p, li { white-space: pre-wrap; }
             <x>0</x>
             <y>0</y>
             <width>685</width>
-            <height>176</height>
+            <height>149</height>
            </rect>
           </property>
           <attribute name="label">
-           <string>Go Squared License (for flags in settings)</string>
+           <string>Go Squared License (applies to graphical flags)</string>
           </attribute>
           <attribute name="toolTip">
            <string>Go Squared License (for flags in settings)</string>

@@ -29,6 +29,11 @@ class SystemTrayIcon : public QSystemTrayIcon {
   public:
     // Constructors and destructors.
     explicit SystemTrayIcon(const QIcon &icon, QObject *parent = 0);
+
+    void showMessage(const QString &title,
+                     const QString &msg,
+                     MessageIcon icon = QSystemTrayIcon::Information,
+                     int msecs = 10000);
 };
 
 #endif // SYSTEMTRAYICON_H

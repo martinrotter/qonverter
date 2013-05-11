@@ -297,9 +297,9 @@ set(APP_SKIN_DARK_IMAGES
 
 # Add needed text files.
 set(APP_MISC
-  resources/text/COPYING_GNU_HTML
+  resources/text/COPYING_GNU_GPL_HTML
   resources/text/AUTHORS
-  resources/text/COPYING_GNU
+  resources/text/COPYING_GNU_GPL
   resources/text/COPYING_BSD
   resources/text/COPYING_FLAGS
   resources/text/COPYING_GNU_LGPL_HTML

@@ -60,10 +60,10 @@ class UnitConverter : public QObject {
 
   private:
     // Holds coefficients of units.
-    QList<QList<double> > m_unitValues;
+    QList<QList<double>> m_unitValues;
 
     // Holds names of units.
-    QList<QList<QString> > m_unitNames;
+    QList<QList<QString>> m_unitNames;
 
     // Holds names of magnitudes.
     QList<QString> m_magnitudeNames;

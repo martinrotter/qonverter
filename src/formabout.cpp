@@ -36,7 +36,7 @@ FormAbout::FormAbout(QWidget *parent) : QDialog(parent), m_ui(new Ui::FormAbout)
   QFile file;
   str.setDevice(&file);
 
-  file.setFileName(APP_INFO_PATH + "/COPYING_GNU_HTML");
+  file.setFileName(APP_INFO_PATH + "/COPYING_GNU_GPL_HTML");
   if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
     m_ui->m_txtLicenseGnu->setText(str.readAll());
   }
@@ -107,12 +107,11 @@ FormAbout::FormAbout(QWidget *parent) : QDialog(parent), m_ui(new Ui::FormAbout)
                                                           QString::fromStdWString(MUP_PARSER_VERSION)));
 
   m_ui->m_txtInfo->setText(tr("<body>Qonverter is simple (yet powerful) calculator with some unusual functions."
-                              "<br><br>This software is distributed under the terms of GNU General Public License, version 3 or later. "
-                              "muParserX library is distributed under the terms of BSD 3-Clause License."
+                              "<br><br>This software is distributed under the terms of GNU General Public License, version 3 or later."
                               "<br><br>Contacts:"
                               "<ul><li><a href=\"mailto://rotter.martinos@gmail.com\">rotter.martinos@gmail</a>  ~email</li>"
                               "<li><a href=\"http://code.google.com/p/qonverter\">code.google.com/p/qonverter</a> ~website</li></ul>"
-                              "You can obtain source code for Qonverterd from its website."
+                              "You can obtain source code for Qonverter from its website."
                               "<br><br><br>Copyright 2011-%1 Martin Rotter</body>").arg(QDateTime::currentDateTime().date().year()));
 }
 

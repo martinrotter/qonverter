@@ -5,7 +5,7 @@
 <li>Added some Oxygen fallback icons.</li>
 <li>Added option to setup max number of visible items for auto-completion.</li>
 <li>Validated text boxes equipped with status icons.</li>
-<li>Updated dark skin once again.</li>
+<li>Updated dark and modern skins once again.</li>
 <li>Application refactored.</li>
 <li>Fixed memory leak when loading and saving variables.</li>
 <li>Explicit/implicit variables are now stored in persistent storage so 

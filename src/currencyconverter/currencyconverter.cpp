@@ -23,6 +23,7 @@
 
 #include "currencyconverter.h"
 #include "defs.h"
+#include "date.h"
 #include "downloader.h"
 
 
@@ -36,7 +37,7 @@ CurrencyConverter::~CurrencyConverter() {
 }
 
 CurrencyConverter &CurrencyConverter::getInstance() {
-  if (s_instance.isNull() == true) {
+  if (s_instance.isNull()) {
     s_instance.reset(new CurrencyConverter());
   }
 
@@ -63,8 +64,8 @@ void CurrencyConverter::initialize() {
   QFile custom_rates_file(custom_rates);
   QByteArray rates_data;
 
-  if (custom_rates_file.exists() == true &&
-      custom_rates_file.open(QIODevice::Text | QIODevice::ReadOnly) == true) {
+  if (custom_rates_file.exists() &&
+      custom_rates_file.open(QIODevice::Text | QIODevice::ReadOnly)) {
     rates_data = custom_rates_file.readAll();
     custom_rates_file.flush();
     custom_rates_file.close();
@@ -88,7 +89,7 @@ void CurrencyConverter::initialize() {
                      .firstChildElement("Cube");
 
   m_bankName = bank.text();
-  m_date = QDateTime::fromString(root.attribute("time"), "yyyy-MM-dd");
+  m_date = Date::fromString(root.attribute("time"));
 
   // Load rates data.
   m_currencies.clear();
@@ -100,7 +101,9 @@ void CurrencyConverter::initialize() {
   }
 }
 
-void CurrencyConverter::convert(double input_cash, const QString &input_currency, const QString &output_currency) {
+void CurrencyConverter::convert(double input_cash,
+                                const QString &input_currency,
+                                const QString &output_currency) {
   emit converted(input_cash / m_currencies[input_currency] * m_currencies[output_currency]);
 }
 
@@ -118,7 +121,7 @@ void CurrencyConverter::updateRates() {
                       QDir::separator() + APP_CUSTOM_RATES_PATH +
                       QDir::separator() + APP_CUSTOM_RATES_FILE);
 
-    if (output_file.open(QIODevice::Text | QIODevice::WriteOnly) == true) {
+    if (output_file.open(QIODevice::Text | QIODevice::WriteOnly)) {
       output_file.write(rates_file_data);
       output_file.flush();
       output_file.close();

@@ -34,6 +34,7 @@
   qPrintable(message));
 #endif
 
+
 void Debug::debugHandler(QtMsgType type,
                          const QMessageLogContext &placement,
                          const QString &message) {

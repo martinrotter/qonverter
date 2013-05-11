@@ -21,7 +21,6 @@
 #include <QDebug>
 #include <QSqlQuery>
 #include <QSqlRecord>
-#include <QMessageBox>
 
 #include <sstream>
 #include <iomanip>

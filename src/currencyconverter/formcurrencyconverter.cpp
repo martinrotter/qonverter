@@ -21,6 +21,8 @@
 #include "formcurrencyconverter.h"
 #include "currencyconverter.h"
 #include "lineedit.h"
+#include "formmain.h"
+#include "systemtrayicon.h"
 
 
 FormCurrencyConverter *FormCurrencyConverter::s_instance;
@@ -64,17 +66,19 @@ FormCurrencyConverter::FormCurrencyConverter(QWidget *parent)
 
     switch (status) {
       case CurrencyConverter::NOT_DOWNLOADED:
-        MessageBox::warning(this, tr("Rates Not Updated"),
-                             tr("Currency rates were not downloaded successfully. Check your internet connection."));
+        FormMain::getInstance()->getTrayIcon()->showMessage(tr("Rates Not Updated"),
+                                                            tr("Currency rates were not downloaded successfully. Check your internet connection."),
+                                                            QSystemTrayIcon::Warning);
         break;
       case CurrencyConverter::NOT_SAVED:
-        MessageBox::warning(this, tr("Rates Not Updated"),
-                             tr("Currency rates were not saved successfully. Target location is not writable."));
+        FormMain::getInstance()->getTrayIcon()->showMessage(tr("Rates Not Updated"),
+                                                            tr("Currency rates were not saved successfully. Target location is not writable."),
+                                                            QSystemTrayIcon::Warning);
         break;
       case CurrencyConverter::OK:
         initialize();
-        MessageBox::information(this, tr("Rates Updated"),
-                                tr("Currency rates were updated and loaded successfully."));
+        FormMain::getInstance()->getTrayIcon()->showMessage(tr("Rates Updated"),
+                                                            tr("Currency rates were updated and loaded successfully."));
         break;
       default:
         break;
@@ -82,16 +86,20 @@ FormCurrencyConverter::FormCurrencyConverter(QWidget *parent)
     }
   });
 
-  connect(m_ui->m_btnUpdateCurrencies, static_cast<void (QAbstractButton::*)(bool)>(&QAbstractButton::clicked),
-          &CurrencyConverter::getInstance(), &CurrencyConverter::updateRates);
+  // Update currencies if "Update definitions" button is clicked.
+  connect(m_ui->m_btnUpdateCurrencies,
+          static_cast<void (QAbstractButton::*)(bool)>(&QAbstractButton::clicked),
+          &CurrencyConverter::getInstance(),
+          &CurrencyConverter::updateRates);
 
   // Make initial initialization.
   initialize();
 }
 
 void FormCurrencyConverter::requestConversion() {
-  if (m_ui->m_listInput->selectedItems().isEmpty() == false &&
-      m_ui->m_listOutput->selectedItems().isEmpty() == false) {
+  // Request conversion if both currencies are selected.
+  if (!m_ui->m_listInput->selectedItems().isEmpty() &&
+      !m_ui->m_listOutput->selectedItems().isEmpty()) {
     emit conversionWanted(m_ui->m_spinInput->value(),
                           m_ui->m_listInput->currentItem()->text(),
                           m_ui->m_listOutput->currentItem()->text());

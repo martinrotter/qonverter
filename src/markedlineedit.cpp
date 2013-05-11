@@ -19,7 +19,6 @@
 
 #include <QToolButton>
 #include <QEvent>
-#include <QMessageBox>
 
 #include "markedlineedit.h"
 #include "toolbutton.h"

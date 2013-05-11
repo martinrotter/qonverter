@@ -33,15 +33,19 @@
 #include "calculatorwrapper.h"
 #include "unitconverter.h"
 #include "uifactory.h"
-#include "extensions.h"
 #include "stackedwidget.h"
 #include "systemtrayicon.h"
 #include "database.h"
 #include "balloontip.h"
 
 
+FormMain *FormMain::s_instance;
+
 FormMain::FormMain(QWidget *parent) : QMainWindow(parent), m_ui(new Ui::FormMain) {
   m_ui->setupUi(this);
+
+  // Initialize singleton.
+  s_instance = this;
 
   // Create connections and initialize user interface.
   createMenus();
@@ -64,6 +68,14 @@ FormMain::~FormMain() {
   if (!m_trayIcon.isNull()) {
     delete m_trayIcon.data();
   }
+}
+
+FormMain *FormMain::getInstance() {
+  return s_instance;
+}
+
+SystemTrayIcon *FormMain::getTrayIcon() {
+  return m_trayIcon.data();
 }
 
 void FormMain::createTrayIcon() {

@@ -3,110 +3,101 @@
  * Qonverter skin file *
  ***********************
  * Author:  Martin Rotter
- * Version: 2.1
+ * Version: 2.2
  *
  * Distributed under GNU GPL 3 (or later) license.
  */
 
-/* all buttons */
 QPushButton {
-    border: 1px solid #8f8f91;
-    border-radius: 2px;
-    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #f0f0f0, stop: 1 #e1e1e1);
-    padding: 1px;
-		min-width: 30px;
-		min-height: 20px;
+  border: 1px solid #8f8f91;
+  border-radius: 2px;
+  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #f0f0f0, stop: 1 #e1e1e1);
+  padding: 1px;
+  min-width: 30px;
+  min-height: 20px;
 }
 QPushButton:pressed {
-    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #f0f0f0, stop: 1 #e1e1e1);
+  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #f0f0f0, stop: 1 #e1e1e1)
 }
 QPushButton:hover {
-    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #e1e1e1, stop: 1 #d1d1d1);
+  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #e1e1e1, stop: 1 #d1d1d1)
 }
-
-/* calculator buttons */
 CalculatorButton[type="0"] {
-    background-color: rgb(164, 211, 252, 240);
+  background-color: rgb(164, 211, 252, 240)
 }
 CalculatorButton[type="0"]:hover {
-    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #76aee7, stop: 1 #82c0ff);
+  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #76aee7, stop: 1 #82c0ff)
 }
 CalculatorButton[type="1"] {
-    background-color: rgb(242, 182, 182, 240);
+  background-color: rgb(242, 182, 182, 240)
 }
 CalculatorButton[type="1"]:hover {
-    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #d80000, stop: 1 #f20000);
+  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #d80000, stop: 1 #f20000)
 }
 CalculatorButton[type="2"] {
-    background-color: rgb(245, 245, 245);
+  background-color: rgb(245, 245, 245)
 }
 CalculatorButton[type="2"]:hover {
-    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #d7d7d7, stop: 1 #e6e6e6);
+  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #d7d7d7, stop: 1 #e6e6e6)
 }
 CalculatorButton[type="3"] {
-    background-color: rgb(251, 153, 14, 240);
+  background-color: rgb(251, 153, 14, 240)
 }
 CalculatorButton[type="3"]:hover {
-    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #e89116, stop: 1 #fb9d18);
+  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #e89116, stop: 1 #fb9d18)
 }
 CalculatorButton[type="4"] {
-    background-color: rgb(242, 241, 182, 240);
+  background-color: rgb(242, 241, 182, 240)
 }
 CalculatorButton[type="4"]:hover {
-    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #e4e237, stop: 1 #f3f13b);
+  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #e4e237, stop: 1 #f3f13b)
 }
 CalculatorButton[type="5"] {
-    background-color: rgb(154, 237, 165, 240);
+  background-color: rgb(154, 237, 165, 240)
 }
 CalculatorButton[type="5"]:hover {
-    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #07de7b, stop: 1 #07ee84);
+  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #07de7b, stop: 1 #07ee84)
 }
 CalculatorButton[type="6"] {
-    background-color: rgb(232, 174, 221, 240);
+  background-color: rgb(232, 174, 221, 240)
 }
 CalculatorButton[type="6"]:hover {
-    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #d34cbb, stop: 1 #e854ce);
+  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #d34cbb, stop: 1 #e854ce)
 }
-
-/* text boxes */
 QTextEdit, QPlainTextEdit {
-    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffffff, stop: 1 #f7f7f7);
-    border-radius: 2px;
-    border: 1px solid gray;
-    selection-background-color: #e1e1e1;
-	selection-color: black;
+  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffffff, stop: 1 #f7f7f7);
+  border-radius: 2px;
+  border: 1px solid gray;
+  selection-background-color: #e1e1e1;
+  selection-color: black;
 }
 QLineEdit {
-    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffffff, stop: 1 #f7f7f7);
-    border-radius: 1px;
-    border: 1px solid gray;
-    selection-background-color: #e1e1e1;
-    selection-color: black;
+  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffffff, stop: 1 #f7f7f7);
+  border-radius: 1px;
+  border: 1px solid gray;
+  selection-background-color: #e1e1e1;
+  selection-color: black;
 }
 QLineEdit[readOnly="true"] {
-    color: gray;
-    font-weight: lighter;
+  color: gray;
+  font-weight: lighter;
 }
 LineEdit {
-    padding-right: 25px;
+  padding-right: 25px
 }
-
-/* spin boxes and other stuff */
 QDoubleSpinBox {
-    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffffff, stop: 1 #f7f7f7);
-    border-radius: 1px;
-	border: 1px solid gray;
+  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffffff, stop: 1 #f7f7f7);
+  border-radius: 1px;
+  border: 1px solid gray;
 }
-
-/* tooltips */
 FloatingLabel {
-	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffffff, stop: 1 #f7f7f7);
-    border-radius: 1px;
-    border: 1px solid gray;
-	padding: 2px 2px;
+  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffffff, stop: 1 #f7f7f7);
+  border-radius: 1px;
+  border: 1px solid gray;
+  padding: 2px 2px;
 }
 QToolTip {
-	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffffff, stop: 1 #f7f7f7);
-    border-radius: 1px;
-    border: 1px solid gray;
+  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffffff, stop: 1 #f7f7f7);
+  border-radius: 1px;
+  border: 1px solid gray;
 }

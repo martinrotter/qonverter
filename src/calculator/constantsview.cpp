@@ -18,7 +18,6 @@
 */
 
 #include <QHeaderView>
-#include <QMessageBox>
 #include <QModelIndex>
 
 #include "constantsview.h"
