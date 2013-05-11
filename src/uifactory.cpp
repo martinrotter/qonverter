@@ -46,7 +46,7 @@ bool UiFactory::loadSkin(const QString &skin, QWidget *widget) {
                             skin_folder + QDir::separator() + skin_file_name);
 
   // Try to load up skin contents.
-  if (skin_file_full_path.open(QIODevice::Text | QIODevice::ReadOnly) == false) {
+  if (!skin_file_full_path.open(QIODevice::Text | QIODevice::ReadOnly)) {
     qDebug("Loading of sking %s failed because "
            "skin file does not exist or is not readable.",
            qPrintable(skin_file_name));

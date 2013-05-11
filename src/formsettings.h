@@ -68,7 +68,8 @@ class FormSettings : public QDialog {
     void setButtonColor(QPushButton *button, const QColor &color);
 
     // Saves newly selected color.
-    void saveColor(const CalculatorHighlighter::HighlighterRole &role, const QColor &color);
+    void saveColor(const CalculatorHighlighter::HighlighterRole &role,
+                   const QColor &color);
 
   private:
     Ui::FormSettings *m_ui;

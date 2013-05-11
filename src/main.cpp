@@ -34,10 +34,6 @@
 #include "settings.h"
 #include "uifactory.h"
 
-#ifdef HAVE_DBUS
-#include "dbusadaptor.h"
-#endif
-
 // TODO: Check out possibility of using Google Breakpad
 // http://blog.inventic.eu/2012/08/qt-and-google-breakpad/
 // https://code.google.com/p/google-breakpad/
@@ -111,7 +107,7 @@ int main(int argc, char *argv[]) {
   QString locale_name = lang.section(separator, 1, 1);
 
   // Try to load selected language file.
-  if (app_translator.load(lang, APP_LANG_PATH) == true) {
+  if (app_translator.load(lang, APP_LANG_PATH)) {
     QApplication::installTranslator(&app_translator);
     qDebug("Language \'%s\' was loaded successfully.", qPrintable(lang));
 
@@ -128,13 +124,13 @@ int main(int argc, char *argv[]) {
   }
 
   // Setup translation for Qt itself and try to load it.
-  if (qt_translator.load(QString("qt_%1.qm").arg(locale_name), APP_LANG_PATH) == false) {
-    qDebug("Language for Qt \'%s\' wasn't loaded successfully.",
+  if (qt_translator.load(QString("qt_%1.qm").arg(locale_name), APP_LANG_PATH)) {
+    QApplication::installTranslator(&qt_translator);
+    qDebug("Language for Qt \'%s\' was loaded successfully.",
            qPrintable(QString("qt_%1.qm").arg(locale_name)));
   }
   else {
-    QApplication::installTranslator(&qt_translator);
-    qDebug("Language for Qt \'%s\' was loaded successfully.",
+    qDebug("Language for Qt \'%s\' wasn't loaded successfully.",
            qPrintable(QString("qt_%1.qm").arg(locale_name)));
   }
 
@@ -142,20 +138,14 @@ int main(int argc, char *argv[]) {
   FormMain qonverter_window;
   qonverter_window.setWindowTitle(QString("%1 %2").arg(APP_NAME, APP_VERSION));
 
-#ifdef HAVE_DBUS
-  new DBusAdaptor(&qonverter_window);
-  QDBusConnection::sessionBus().registerService(DBUS_SERVICE);
-  QDBusConnection::sessionBus().registerObject(DBUS_PATH, &qonverter_window);
-#endif
-
-  if (Settings::value(APP_CFG_GEN, "first_start", true).toBool() == true) {
+  if (Settings::value(APP_CFG_GEN, "first_start", true).toBool()) {
     FormWelcome(&qonverter_window).exec();
     Settings::setValue(APP_CFG_GEN, "first_start", false);
   }
 
-  if (Settings::value(APP_CFG_GEN, "start_hidden", false).toBool() == true &&
-      QSystemTrayIcon::isSystemTrayAvailable() == true &&
-      Settings::value(APP_CFG_GUI, "tray_icon_enabled", false).toBool() == true) {
+  if (Settings::value(APP_CFG_GEN, "start_hidden", false).toBool() &&
+      QSystemTrayIcon::isSystemTrayAvailable() &&
+      Settings::value(APP_CFG_GUI, "tray_icon_enabled", false).toBool()) {
     // Hide window on startup. But only if tray icon is enabled and available on this operating
     // system and hiding is enabled in settings.
     qonverter_window.hideWindow();

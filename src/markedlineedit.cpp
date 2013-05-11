@@ -27,9 +27,6 @@
 MarkedLineEdit::MarkedLineEdit(QWidget *parent) : LineEdit(parent) {
   m_btnMark = new ToolButton(this);
 
-  int frame_width = frameWidth();
-  QSize sz = sizeHint();
-
   // Prepare icons for valid and invalid state.
   m_iconOk = QIcon::fromTheme("dialog-ok-apply",
                               QIcon(":/graphics/valid.png"));
@@ -37,6 +34,7 @@ MarkedLineEdit::MarkedLineEdit(QWidget *parent) : LineEdit(parent) {
                                  QIcon(":/graphics/invalid.png"));
 
   // Set the icon to have the same dimensions as is the height of line edit.
+  QSize sz = sizeHint();
   m_btnMark->setIconSize(QSize(sz.height(),
                                sz.height()));
 
@@ -55,6 +53,7 @@ MarkedLineEdit::MarkedLineEdit(QWidget *parent) : LineEdit(parent) {
   // Make sure there is extra margin between line edit and mark icon.
   // There is very UNPLEASANT issue in Qt. Default CSS properties of child
   // class override properties of parent class.
+  int frame_width = frameWidth();
   setStyleSheet(QString("%1 %2").arg(QString(MARKED_LINE_EDIT_MARGIN).arg(sz.height() + frame_width),
                                      QString(LINE_EDIT_PADDING).arg(m_btnClear->sizeHint().width() + frameWidth() + 1)));
 }

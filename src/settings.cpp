@@ -68,7 +68,7 @@ QSettings::Status Settings::setupSettings() {
   QString app_path = qApp->applicationDirPath() + QDir::separator() +
                      APP_CFG_PATH;
 
-  if (QFile(app_path).exists() == true) {
+  if (QFile(app_path).exists()) {
     s_instance = new QSettings(app_path, QSettings::IniFormat);
     qDebug("Initializing settings in %s.",
            qPrintable(QDir::toNativeSeparators(app_path)));

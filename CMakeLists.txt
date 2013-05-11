@@ -212,6 +212,7 @@ set(APP_SOURCES
   src/markedlineedit.cpp
   src/balloontip.cpp
   src/toolbutton.cpp
+  src/fontdialog.cpp
 )
 
 # Add headers.

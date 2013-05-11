@@ -64,7 +64,7 @@
         <translation>Artinova konstanta</translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="125"/>
+        <location filename="../src/calculator/calculator.cpp" line="124"/>
         <source>predefined memory</source>
         <translation>předdefinovaná paměť</translation>
     </message>
@@ -302,75 +302,91 @@
     <name>FormAbout</name>
     <message>
         <location filename="../ui/formabout.ui" line="29"/>
-        <location filename="../build/ui_formabout.h" line="321"/>
+        <location filename="../build/ui_formabout.h" line="323"/>
         <source>About Qonverter</source>
         <translation>O aplikaci Qonverter</translation>
     </message>
     <message>
         <location filename="../ui/formabout.ui" line="121"/>
-        <location filename="../build/ui_formabout.h" line="324"/>
+        <location filename="../build/ui_formabout.h" line="326"/>
         <source>Information</source>
         <translation>Informace</translation>
     </message>
     <message>
         <location filename="../ui/formabout.ui" line="160"/>
-        <location filename="../build/ui_formabout.h" line="333"/>
+        <location filename="../build/ui_formabout.h" line="335"/>
         <source>Licenses</source>
         <translation>Použité licence</translation>
     </message>
     <message>
         <location filename="../ui/formabout.ui" line="181"/>
+        <location filename="../build/ui_formabout.h" line="327"/>
+        <source>GNU GPL License (applies to Qonverter source code)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../ui/formabout.ui" line="184"/>
-        <location filename="../build/ui_formabout.h" line="325"/>
-        <location filename="../build/ui_formabout.h" line="326"/>
+        <location filename="../build/ui_formabout.h" line="328"/>
         <source>GNU GPL License</source>
         <translation>Licence GNU GPL</translation>
     </message>
     <message>
-        <location filename="../ui/formabout.ui" line="243"/>
-        <location filename="../ui/formabout.ui" line="246"/>
-        <location filename="../build/ui_formabout.h" line="327"/>
-        <location filename="../build/ui_formabout.h" line="328"/>
+        <location filename="../ui/formabout.ui" line="251"/>
+        <location filename="../build/ui_formabout.h" line="329"/>
+        <source>GNU LGPL License (applies to some graphics)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/formabout.ui" line="254"/>
+        <location filename="../build/ui_formabout.h" line="330"/>
         <source>GNU LGPL License</source>
         <translation>Licence GNU LGPL</translation>
     </message>
     <message>
-        <location filename="../ui/formabout.ui" line="305"/>
-        <location filename="../ui/formabout.ui" line="308"/>
-        <location filename="../build/ui_formabout.h" line="329"/>
-        <location filename="../build/ui_formabout.h" line="330"/>
+        <location filename="../ui/formabout.ui" line="321"/>
+        <location filename="../build/ui_formabout.h" line="331"/>
+        <source>BSD 3-Clause License (applies to muParserX library)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/formabout.ui" line="324"/>
+        <location filename="../build/ui_formabout.h" line="332"/>
         <source>BSD 3-Clause License</source>
         <translation>Licence BSD-3 Clause</translation>
     </message>
     <message>
-        <location filename="../ui/formabout.ui" line="375"/>
-        <location filename="../ui/formabout.ui" line="378"/>
-        <location filename="../build/ui_formabout.h" line="331"/>
-        <location filename="../build/ui_formabout.h" line="332"/>
+        <location filename="../ui/formabout.ui" line="391"/>
+        <location filename="../build/ui_formabout.h" line="333"/>
+        <source>Go Squared License (applies to graphical flags)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/formabout.ui" line="394"/>
+        <location filename="../build/ui_formabout.h" line="334"/>
         <source>Go Squared License (for flags in settings)</source>
         <translation>Licence Go Squared (pro vlajky v nastavení)</translation>
     </message>
     <message>
-        <location filename="../ui/formabout.ui" line="441"/>
-        <location filename="../build/ui_formabout.h" line="335"/>
+        <location filename="../ui/formabout.ui" line="457"/>
+        <location filename="../build/ui_formabout.h" line="337"/>
         <source>Thanks to</source>
         <translation>Poděkování</translation>
     </message>
     <message>
-        <location filename="../ui/formabout.ui" line="473"/>
-        <location filename="../build/ui_formabout.h" line="334"/>
+        <location filename="../ui/formabout.ui" line="489"/>
+        <location filename="../build/ui_formabout.h" line="336"/>
         <source>Thanks to page is available only in English language.</source>
         <translation>Poděkování je k dispozici pouze v anglickém jazyce.</translation>
     </message>
     <message>
-        <location filename="../ui/formabout.ui" line="481"/>
-        <location filename="../build/ui_formabout.h" line="337"/>
+        <location filename="../ui/formabout.ui" line="497"/>
+        <location filename="../build/ui_formabout.h" line="339"/>
         <source>Changelog</source>
         <translation>Historie změn</translation>
     </message>
     <message>
-        <location filename="../ui/formabout.ui" line="510"/>
-        <location filename="../build/ui_formabout.h" line="336"/>
+        <location filename="../ui/formabout.ui" line="526"/>
+        <location filename="../build/ui_formabout.h" line="338"/>
         <source>Changelog page is available only in English language.</source>
         <translation>Historie změn je k dispozici pouze v anglickém jazyce.</translation>
     </message>
@@ -399,8 +415,8 @@
     </message>
     <message>
         <location filename="../src/formabout.cpp" line="109"/>
-        <source>&lt;body&gt;Qonverter is simple (yet powerful) calculator with some unusual functions.&lt;br&gt;&lt;br&gt;This software is distributed under the terms of GNU General Public License, version 3 or later. muParserX library is distributed under the terms of BSD 3-Clause License.&lt;br&gt;&lt;br&gt;Contacts:&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;mailto://rotter.martinos@gmail.com&quot;&gt;rotter.martinos@gmail&lt;/a&gt;  ~email&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://code.google.com/p/qonverter&quot;&gt;code.google.com/p/qonverter&lt;/a&gt; ~website&lt;/li&gt;&lt;/ul&gt;You can obtain source code for Qonverterd from its website.&lt;br&gt;&lt;br&gt;&lt;br&gt;Copyright 2011-%1 Martin Rotter&lt;/body&gt;</source>
-        <translation>&lt;body&gt;Qonverter je jednoduchá (a přesto užitečná) kalkulačka s neobvyklými funkcemi.&lt;br&gt;&lt;br&gt;Tento softwre je šířen pod GNU General Public License, verze 3 nebo novější. muParserX knihovna je šířena pod BSD 3-Clause License.&lt;br&gt;&lt;br&gt;Kontakty:&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;mailto://rotter.martinos@gmail.com&quot;&gt;rotter.martinos@gmail&lt;/a&gt;  ~email&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://code.google.com/p/qonverter&quot;&gt;code.google.com/p/qonverter&lt;/a&gt; ~website&lt;/li&gt;&lt;/ul&gt;Zdrojové kódy aplikace je možno získat na jejím webu.&lt;br&gt;&lt;br&gt;&lt;br&gt;Copyright 2011-%1 Martin Rotter&lt;/body&gt;</translation>
+        <source>&lt;body&gt;Qonverter is simple (yet powerful) calculator with some unusual functions.&lt;br&gt;&lt;br&gt;This software is distributed under the terms of GNU General Public License, version 3 or later.&lt;br&gt;&lt;br&gt;Contacts:&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;mailto://rotter.martinos@gmail.com&quot;&gt;rotter.martinos@gmail&lt;/a&gt;  ~email&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://code.google.com/p/qonverter&quot;&gt;code.google.com/p/qonverter&lt;/a&gt; ~website&lt;/li&gt;&lt;/ul&gt;You can obtain source code for Qonverter from its website.&lt;br&gt;&lt;br&gt;&lt;br&gt;Copyright 2011-%1 Martin Rotter&lt;/body&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -790,28 +806,28 @@ jednotka</translation>
         <translation>Výstupní částka</translation>
     </message>
     <message>
-        <location filename="../src/currencyconverter/formcurrencyconverter.cpp" line="67"/>
-        <location filename="../src/currencyconverter/formcurrencyconverter.cpp" line="71"/>
+        <location filename="../src/currencyconverter/formcurrencyconverter.cpp" line="69"/>
+        <location filename="../src/currencyconverter/formcurrencyconverter.cpp" line="74"/>
         <source>Rates Not Updated</source>
         <translation>Kurzby nebyly aktualizovány</translation>
     </message>
     <message>
-        <location filename="../src/currencyconverter/formcurrencyconverter.cpp" line="68"/>
+        <location filename="../src/currencyconverter/formcurrencyconverter.cpp" line="70"/>
         <source>Currency rates were not downloaded successfully. Check your internet connection.</source>
         <translation>Kurzy měn nebyly úspěšně staženy. Zkontrolujte své internetové připojení.</translation>
     </message>
     <message>
-        <location filename="../src/currencyconverter/formcurrencyconverter.cpp" line="72"/>
+        <location filename="../src/currencyconverter/formcurrencyconverter.cpp" line="75"/>
         <source>Currency rates were not saved successfully. Target location is not writable.</source>
         <translation>Kurzy měn nebyly úspěšně uloženy na disk. Do cílového adresáře nelze zapisovat.</translation>
     </message>
     <message>
-        <location filename="../src/currencyconverter/formcurrencyconverter.cpp" line="76"/>
+        <location filename="../src/currencyconverter/formcurrencyconverter.cpp" line="80"/>
         <source>Rates Updated</source>
         <translation>Kurzy byly aktualizovány</translation>
     </message>
     <message>
-        <location filename="../src/currencyconverter/formcurrencyconverter.cpp" line="77"/>
+        <location filename="../src/currencyconverter/formcurrencyconverter.cpp" line="81"/>
         <source>Currency rates were updated and loaded successfully.</source>
         <translation>Kurzy měn byly úspěšně aktualizovány a načteny.</translation>
     </message>
@@ -1047,37 +1063,37 @@ jednotka</translation>
         <translation>Zobrazí přehledný seznam deklarovaných proměnných.</translation>
     </message>
     <message>
-        <location filename="../src/formmain.cpp" line="102"/>
+        <location filename="../src/formmain.cpp" line="116"/>
         <source>Close opened modal dialogs first.</source>
         <translation>Nejdříve zavřete všechny modální dialogy.</translation>
     </message>
     <message>
-        <location filename="../src/formmain.cpp" line="114"/>
+        <location filename="../src/formmain.cpp" line="128"/>
         <source>System Tray Icon Not Available</source>
         <translation>Notifikační ikona není k dispozici</translation>
     </message>
     <message>
-        <location filename="../src/formmain.cpp" line="115"/>
+        <location filename="../src/formmain.cpp" line="129"/>
         <source>Your system doesn&apos;t seem to support system tray icon. Tray icon wasn&apos;t loaded and Qonverter runs in single window mode.</source>
         <translation>Váš operační systém nepodporuje notifikační ikony. Ikona nebyla načtena a Qonverter poběží v režimu jednoho okna.</translation>
     </message>
     <message>
-        <location filename="../src/formmain.cpp" line="208"/>
+        <location filename="../src/formmain.cpp" line="232"/>
         <source>Tray Icon Menu</source>
         <translation>Menu notifikační ikony</translation>
     </message>
     <message>
-        <location filename="../src/formmain.cpp" line="232"/>
+        <location filename="../src/formmain.cpp" line="256"/>
         <source>Application is hidden in notification area.</source>
         <translation>Aplikace je skryta v notifikační oblasti.</translation>
     </message>
     <message>
-        <location filename="../src/formmain.cpp" line="275"/>
+        <location filename="../src/formmain.cpp" line="299"/>
         <source>&lt;p&gt;This software uses Qt.&lt;/p&gt;&lt;p&gt;Check &lt;a href=&quot;http://www.qt-project.org&quot;&gt;www.qt-project.org&lt;/a&gt; for more information.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Tento software používá Qt.&lt;/p&gt;&lt;p&gt;Pro bližší informace navštivte &lt;a href=&quot;http://www.qt-project.org&quot;&gt;www.qt-project.org&lt;/a&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../src/formmain.cpp" line="274"/>
+        <location filename="../src/formmain.cpp" line="298"/>
         <source>About Qt</source>
         <translation>O Qt</translation>
     </message>
@@ -1450,64 +1466,69 @@ Proměnné nejsou vytvářený v průběžném režimu kalkulačky nebo převodn
 <context>
     <name>FormUnitConverter</name>
     <message>
-        <location filename="../ui/unitconverter/formunitconverter.ui" line="94"/>
-        <location filename="../build/ui_formunitconverter.h" line="154"/>
+        <location filename="../ui/unitconverter/formunitconverter.ui" line="110"/>
+        <location filename="../build/ui_formunitconverter.h" line="148"/>
         <source>Input expression</source>
         <translation>Vstupní výraz</translation>
     </message>
     <message>
         <location filename="../ui/unitconverter/formunitconverter.ui" line="120"/>
-        <location filename="../build/ui_formunitconverter.h" line="156"/>
+        <location filename="../build/ui_formunitconverter.h" line="150"/>
         <source>Result of your expression is displayed here.</source>
         <translation>Výsledek vstupního výrazu je zobrazen zde.</translation>
     </message>
     <message>
-        <location filename="../ui/unitconverter/formunitconverter.ui" line="52"/>
-        <location filename="../build/ui_formunitconverter.h" line="142"/>
+        <location filename="../ui/unitconverter/formunitconverter.ui" line="68"/>
+        <location filename="../build/ui_formunitconverter.h" line="136"/>
         <source>Swap selected units.</source>
         <translation>Prohodí zvolené jednotky.</translation>
     </message>
     <message>
-        <location filename="../ui/unitconverter/formunitconverter.ui" line="75"/>
-        <location filename="../build/ui_formunitconverter.h" line="146"/>
+        <location filename="../ui/unitconverter/formunitconverter.ui" line="91"/>
+        <location filename="../build/ui_formunitconverter.h" line="140"/>
         <source>Select input unit.</source>
         <translation>Zvolte vstupní jednotku.</translation>
     </message>
     <message>
-        <location filename="../ui/unitconverter/formunitconverter.ui" line="82"/>
-        <location filename="../build/ui_formunitconverter.h" line="149"/>
+        <location filename="../ui/unitconverter/formunitconverter.ui" line="98"/>
+        <location filename="../build/ui_formunitconverter.h" line="143"/>
         <source>Select output unit.</source>
         <translation>Zvolte výstupní jednotku.</translation>
     </message>
     <message>
         <location filename="../ui/unitconverter/formunitconverter.ui" line="129"/>
-        <location filename="../build/ui_formunitconverter.h" line="159"/>
+        <location filename="../build/ui_formunitconverter.h" line="153"/>
         <source>Result of expression</source>
         <translation>Výsledek výrazu</translation>
     </message>
     <message>
         <location filename="../ui/unitconverter/formunitconverter.ui" line="136"/>
-        <location filename="../build/ui_formunitconverter.h" line="161"/>
+        <location filename="../build/ui_formunitconverter.h" line="155"/>
         <source>Final result of conversion is displayed here.</source>
         <translation>Konečný výsledek převodu je zobrazen zde.</translation>
     </message>
     <message>
-        <location filename="../ui/unitconverter/formunitconverter.ui" line="91"/>
-        <location filename="../build/ui_formunitconverter.h" line="152"/>
+        <location filename="../ui/unitconverter/formunitconverter.ui" line="107"/>
+        <location filename="../build/ui_formunitconverter.h" line="146"/>
         <source>Insert your mathematical expression here.</source>
         <translation>Vložte svůj matematický výraz sem.</translation>
     </message>
     <message>
         <location filename="../ui/unitconverter/formunitconverter.ui" line="161"/>
-        <location filename="../build/ui_formunitconverter.h" line="165"/>
+        <location filename="../build/ui_formunitconverter.h" line="159"/>
         <source>Select desired magnitude.</source>
         <translation>Zvolte veličinu.</translation>
     </message>
     <message>
         <location filename="../ui/unitconverter/formunitconverter.ui" line="142"/>
-        <location filename="../build/ui_formunitconverter.h" line="163"/>
+        <location filename="../build/ui_formunitconverter.h" line="157"/>
         <source>Result of conversion</source>
         <translation>Výsledek převodu</translation>
+    </message>
+    <message>
+        <location filename="../src/unitconverter/formunitconverter.cpp" line="81"/>
+        <source>Input expression is valid.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1627,7 +1648,7 @@ Proměnné nejsou vytvářený v průběžném režimu kalkulačky nebo převodn
 <context>
     <name>LineEdit</name>
     <message>
-        <location filename="../src/lineedit.cpp" line="52"/>
+        <location filename="../src/lineedit.cpp" line="44"/>
         <source>Remove contents of this text box.</source>
         <translation>Smazat obsah tohoto textového pole.</translation>
     </message>
@@ -1636,938 +1657,938 @@ Proměnné nejsou vytvářený v průběžném režimu kalkulačky nebo převodn
     <name>QObject</name>
     <message>
         <location filename="../src/formsettings.cpp" line="173"/>
-        <location filename="../src/main.cpp" line="49"/>
+        <location filename="../src/main.cpp" line="45"/>
         <source>LANG_NAME</source>
         <extracomment>FOR TRANSLATOR: Name of language, e.g. English.</extracomment>
         <translation>Čeština</translation>
     </message>
     <message>
         <location filename="../src/formsettings.cpp" line="174"/>
-        <location filename="../src/main.cpp" line="51"/>
+        <location filename="../src/main.cpp" line="47"/>
         <source>LANG_ABBREV</source>
         <extracomment>FOR TRANSLATOR: Abbreviation of language, e.g. en.</extracomment>
         <translation>cs</translation>
     </message>
     <message>
         <location filename="../src/formsettings.cpp" line="175"/>
-        <location filename="../src/main.cpp" line="53"/>
+        <location filename="../src/main.cpp" line="49"/>
         <source>LANG_VERSION</source>
         <extracomment>FOR TRANSLATOR: Version of your translation, e.g. 1.0.</extracomment>
         <translation>1.5</translation>
     </message>
     <message>
         <location filename="../src/formsettings.cpp" line="176"/>
-        <location filename="../src/main.cpp" line="55"/>
+        <location filename="../src/main.cpp" line="51"/>
         <source>LANG_AUTHOR</source>
         <extracomment>FOR TRANSLATOR: Name of translator - optional.</extracomment>
         <translation>Martin Rotter</translation>
     </message>
     <message>
         <location filename="../src/formsettings.cpp" line="177"/>
-        <location filename="../src/main.cpp" line="57"/>
+        <location filename="../src/main.cpp" line="53"/>
         <source>LANG_EMAIL</source>
         <extracomment>FOR TRANSLATOR: Email of translator - optional.</extracomment>
         <translation>rotter.martinos@gmail.com</translation>
     </message>
     <message>
         <location filename="../src/formsettings.cpp" line="178"/>
-        <location filename="../src/main.cpp" line="59"/>
+        <location filename="../src/main.cpp" line="55"/>
         <source>LANG_WEBSITE</source>
         <extracomment>FOR TRANSLATOR: Website of language - optional.</extracomment>
         <translation>www.martin-rotter.8u.cz</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="102"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="103"/>
         <source>m/sÂ²</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="102"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="103"/>
         <source>ft/sÂ²</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="102"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="103"/>
         <source>gal</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="102"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="103"/>
         <source>g (standard gravity)</source>
         <translation>g (standardní gravitace)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="103"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="104"/>
         <source>rad</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="103"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="104"/>
         <source>grad</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="103"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="104"/>
         <source>deg</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="104"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="105"/>
         <source>mÂ²</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="104"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="105"/>
         <source>mmÂ²</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="104"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="105"/>
         <source>cmÂ²</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="104"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="105"/>
         <source>dmÂ²</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="104"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="105"/>
         <source>a (are</source>
         <translation>a (ar)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="104"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="105"/>
         <source>ha (hectare)</source>
         <translation>ha (hektar)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="105"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="106"/>
         <source>kmÂ²</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="105"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="106"/>
         <source>ftÂ² (square foot)</source>
         <translation>ft² čtverečná stopa)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="105"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="106"/>
         <source>ydÂ² (square yard)</source>
         <translation>yd² (čtverečný yard)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="106"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="107"/>
         <source>miÂ² (square mile)</source>
         <translation>mi² (čtverečná míle)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="106"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="107"/>
         <source>rood (rood)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="107"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="108"/>
         <source>cuerda [Puerto Rico]</source>
         <translation>cuerda [Portoriko]</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="108"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="109"/>
         <source>kg/m3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="108"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="109"/>
         <source>g/cm3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="108"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="109"/>
         <source>g/m3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="108"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="109"/>
         <source>mg/m3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="109"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="110"/>
         <source>lb/US gal (pound per gallon)</source>
         <translation>lb/US gal (libra na galon)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="110"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="111"/>
         <source>lb/UK gal (pound per gallon)</source>
         <translation>lb/UK gal (libra na galon)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="111"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="112"/>
         <source>lb/cu.yd (pound per cubic yard)</source>
         <translation>lb/cu.yd (lbra na kubický yard)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="112"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="113"/>
         <source>lb/cu.ft (pound per cubic foot)</source>
         <translation>lb/cu.ft (libra na kubickou stopu)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="113"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="114"/>
         <source>lb/cu.in (pound per cubic inch)</source>
         <translation>lb/cu.in (libra na kubický palec)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="114"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="115"/>
         <source>abamp (electromag. unit)</source>
         <translation>abamp (elektromag. jedn.)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="114"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="115"/>
         <source>esu/s</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="118"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="119"/>
         <source>cal (calorie)</source>
         <translation>cal (kalorie)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="118"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="119"/>
         <source>chu-it (Celsius heat unit)</source>
         <translation>chu-it (Celsiova teplotní jedn.)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="119"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="120"/>
         <source>eh (atomic unit of energy)</source>
         <translation>eh (atomová jedn. energie)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="121"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="122"/>
         <source>pond</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="121"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="122"/>
         <source>kilopond</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="122"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="123"/>
         <source>B (byte)</source>
         <translation>B (bajt)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="122"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="123"/>
         <source>b (bit)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="122"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="123"/>
         <source>kB (kilobyte)</source>
         <translation>kB (kilobajt)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="123"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="124"/>
         <source>MB (megabyte)</source>
         <translation>MB (megabajt)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="123"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="124"/>
         <source>GB (gigabyte)</source>
         <translation>GB (gigabajt)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="123"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="124"/>
         <source>TB (terabyte)</source>
         <translation>TB (terabajt)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="124"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="125"/>
         <source>KiB (kibibyte)</source>
         <translation>KiB (kibibajt)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="124"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="125"/>
         <source>MiB (mebibyte)</source>
         <translation>MiB (mebibajt)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="124"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="125"/>
         <source>GiB (gibibyte)</source>
         <translation>GiB (gibibajt)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="125"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="126"/>
         <source>TiB (tebibyte)</source>
         <translation>TiB (tebibajt)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="125"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="126"/>
         <source>J/K</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="125"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="126"/>
         <source>Nibble</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="126"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="127"/>
         <source>m</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="126"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="127"/>
         <source>mm</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="126"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="127"/>
         <source>cm</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="126"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="127"/>
         <source>km</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="126"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="127"/>
         <source>mi (mile)</source>
         <translation>mi (míle)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="127"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="128"/>
         <source>AU (astronom. unit)</source>
         <translation>AU (astronom. jednotka)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="127"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="128"/>
         <source>fm (fermi)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="127"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="128"/>
         <source>ft (foot)</source>
         <translation>ft (stopa)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="128"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="129"/>
         <source>in (inch)</source>
         <translation>in (palec)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="128"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="129"/>
         <source>nmi (intern. nautical mile)</source>
         <translation>nmi (mezin. námořní míle)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="128"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="129"/>
         <source>yd (yard)</source>
         <translation>yd (yard)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="129"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="130"/>
         <source>cd/mÂ²</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="129"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="130"/>
         <source>sb (stilb)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="130"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="131"/>
         <source>cd (candela)</source>
         <translation>cd (kandela)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="131"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="132"/>
         <source>cp (international candle)</source>
         <translation>cp (mezinárodní svíčka)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="132"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="133"/>
         <source>paraffin candle</source>
         <translation>parafínová svíčka</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="132"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="133"/>
         <source>DB (decimal candle)</source>
         <translation>DB (desetinná svíčka)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="134"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="135"/>
         <source>pentane candle</source>
         <translation>pentanová svíčka</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="134"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="135"/>
         <source>spermacet candle</source>
         <translation>spermacetová svíčka</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="135"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="136"/>
         <source>carcel lamp</source>
         <translation>Carcelova lampa</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="186"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="189"/>
         <source>Frequency</source>
         <translation>Frekvence</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="114"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="115"/>
         <source>A (Amper)</source>
         <translation>A (Ampér)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="115"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="116"/>
         <source>V (Volt)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="115"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="116"/>
         <source>aV (abVolt)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="116"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="117"/>
         <source>V int. (international Volt)</source>
         <translation>V int. (mezinárodní Volt)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="116"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="117"/>
         <source>sV (statVolt)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="117"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="118"/>
         <source>j (Joule)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="117"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="118"/>
         <source>btu-iso (Brittish thermal unit)</source>
         <translation>btu-iso (britská termální jednotka)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="119"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="120"/>
         <source>eV (electronVolt)</source>
         <translation>eV (elektronVolt)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="121"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="122"/>
         <source>N (Newton)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="129"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="130"/>
         <source>L (Lambert)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="133"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="134"/>
         <source>violle (Violle&apos;s candle)</source>
         <translation>violle (Violleho svíčka)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="135"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="136"/>
         <source>Harcourt&apos;s lamp</source>
         <translation>Harcourtova lampa</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="137"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="138"/>
         <source>kg (kilogram)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="137"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="138"/>
         <source>g (gram)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="137"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="138"/>
         <source>mg (miligram)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="138"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="139"/>
         <source>q (quintal)</source>
         <translation>q (metrický cent)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="138"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="139"/>
         <source>t (tonne)</source>
         <translation>t (tuna)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="138"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="139"/>
         <source>pound (troy)</source>
         <translation>libra (trojská)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="139"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="140"/>
         <source>pound (avoirdupois)</source>
         <translation>libra (avoirdupois)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="139"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="140"/>
         <source>ounce (avoirdupois)</source>
         <translation>unce (avoirdupois)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="140"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="141"/>
         <source>kt (carat)</source>
         <translation>kt (karát)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="140"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="141"/>
         <source>ct (metric carat)</source>
         <translation>ct (metrický karát)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="140"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="141"/>
         <source>u (atomic mass unit)</source>
         <translation>u (atomová hmotn. jednotka)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="141"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="142"/>
         <source>sc. (apoth. scruple)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="141"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="142"/>
         <source>@ (arroba [ESP])</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="141"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="142"/>
         <source>arroba [POR] </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="142"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="143"/>
         <source>dr (dram)</source>
         <translation>dr (panák)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="142"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="143"/>
         <source>gr (grain)</source>
         <translation>gr (zrnko)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="142"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="143"/>
         <source>cwt (short hundredweight US)</source>
         <translation>cwt (krátký hundredweight US)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="143"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="144"/>
         <source>ton (short ton US)</source>
         <translation>ton (malá tuna US)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="143"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="144"/>
         <source>ztr (zentner)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="144"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="145"/>
         <source>w (watt)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="144"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="145"/>
         <source>hp (horsepower)</source>
         <translation>hp (koňská síla)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="144"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="145"/>
         <source>BTU/h</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="145"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="146"/>
         <source>pa (pascal)</source>
         <translation>pa (pascal)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="145"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="146"/>
         <source>atm (standard atmosphere)</source>
         <translation>atm (standardní atmosféra)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="146"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="147"/>
         <source>at (technical atmosphere)</source>
         <translation>at (technická atmosféra)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="146"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="147"/>
         <source>bar</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="146"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="147"/>
         <source>torr-mmHg</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="147"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="148"/>
         <source>psi (pound per square inch)</source>
         <translation>psi (libra na čtv. palec)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="148"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="149"/>
         <source>s</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="148"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="149"/>
         <source>Âµs</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="148"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="149"/>
         <source>ms</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="148"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="149"/>
         <source>min</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="148"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="149"/>
         <source>h</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="148"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="149"/>
         <source>day</source>
         <translation>den</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="148"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="149"/>
         <source>week</source>
         <translation>týden</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="149"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="150"/>
         <source>month</source>
         <translation>měsíc</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="149"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="150"/>
         <source>year</source>
         <translation>rok</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="149"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="150"/>
         <source>decade</source>
         <translation>dekáda</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="149"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="150"/>
         <source>century</source>
         <translation>století</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="149"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="150"/>
         <source>millenium</source>
         <translation>milénium</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="150"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="151"/>
         <source>hl (helek [Hebrew])</source>
         <translation>hl (helek [Hebrejský])</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="161"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="162"/>
         <source>C (Coulomb)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="162"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="163"/>
         <source>abC (abCoulomb)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="150"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="151"/>
         <source>a (tropical year)</source>
         <translation>a (tropický rok)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="150"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="151"/>
         <source>S (Svedberg)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="151"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="152"/>
         <source>sidereal time</source>
         <translation>hvězdný čas</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="152"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="153"/>
         <source>m/s</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="152"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="153"/>
         <source>cm/h</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="152"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="153"/>
         <source>m/h</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="152"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="153"/>
         <source>km/h</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="152"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="153"/>
         <source>mp/h</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="153"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="154"/>
         <source>ft/s</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="153"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="154"/>
         <source>M (mach at sea level)</source>
         <translation>M (Mach na hladině moře)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="153"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="154"/>
         <source>kn (knot)</source>
         <translation>kn (uzel)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="154"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="155"/>
         <source>c (speed of light in vacuum)</source>
         <translation>c (rych. světla ve vakuu)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="154"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="155"/>
         <source>s (speed of light in air)</source>
         <translation>s (rych. světla v atmosféře)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="155"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="156"/>
         <source>mÂ³</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="155"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="156"/>
         <source>ml/cmÂ³</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="155"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="156"/>
         <source>l/dmÂ³</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="155"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="156"/>
         <source>hl</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="155"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="156"/>
         <source>pint (USA)</source>
         <translation>pinta (USA)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="156"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="157"/>
         <source>pint (UK)</source>
         <translation>pinta (UK)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="156"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="157"/>
         <source>gallon (USA)</source>
         <translation>galon (USA)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="156"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="157"/>
         <source>gallon (UK)</source>
         <translation>galon (UK)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="157"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="158"/>
         <source>bll (barrel of petroleum)</source>
         <translation>bll (barel ropy)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="158"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="159"/>
         <source>NÂ·m (Newton metre)</source>
         <translation>N m (Newton metr)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="158"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="159"/>
         <source>m kg (metre kilogram)</source>
         <translation>m kg (metr kilogram)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="159"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="160"/>
         <source>in lbf (inch-pound force)</source>
         <translation>in lbf (síla palcové libry)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="160"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="161"/>
         <source>ft pdl (foot-poundal)</source>
         <translation>ft pdl (foot-poundal)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="160"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="161"/>
         <source>ft lbf (foot-pound force)</source>
         <translation>ft lbf (síla stopové libry)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="161"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="162"/>
         <source>F (Faraday)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="161"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="162"/>
         <source>statC (statcoulomb)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="163"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="164"/>
         <source>lx (lux)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="163"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="164"/>
         <source>ph (phot)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="164"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="165"/>
         <source>lm/in2 (lumen per square inch)</source>
         <translation>lm/in2 (lumen na čtverečný palec)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="164"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="165"/>
         <source>fc (footcandle)</source>
         <translation>fc (jednostopá svíce)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="165"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="166"/>
         <source>Hz (Hertz)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="165"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="166"/>
         <source>rpm (revolutions per minute)</source>
         <translation>rpm (otáčky za minutu)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="166"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="167"/>
         <source>rad/s</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="175"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="178"/>
         <source>Acceleration</source>
         <translation>Zrychlení</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="175"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="178"/>
         <source>Angle</source>
         <translation>Úhel</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="175"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="178"/>
         <source>Area</source>
         <translation>Obsah</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="176"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="179"/>
         <source>Density</source>
         <translation>Hustota</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="176"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="179"/>
         <source>El. current</source>
         <translation>Elektrický proud</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="177"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="180"/>
         <source>El. voltage</source>
         <translation>Elektrické napětí</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="177"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="180"/>
         <source>Energy &amp; work</source>
         <translation>Práce</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="178"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="181"/>
         <source>Force</source>
         <translation>Síla</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="179"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="182"/>
         <source>Length</source>
         <translation>Délka</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="179"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="182"/>
         <source>Luminance</source>
         <translation>Jas</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="180"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="183"/>
         <source>Luminosity</source>
         <translation>Svítivost</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="180"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="183"/>
         <source>Mass</source>
         <translation>Hmotnost</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="181"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="184"/>
         <source>Power</source>
         <translation>Výkon</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="182"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="185"/>
         <source>Pressure</source>
         <translation>Tlak</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="183"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="186"/>
         <source>Time</source>
         <translation>Čas</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="183"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="186"/>
         <source>Velocity</source>
         <translation>Rychlost</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="184"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="187"/>
         <source>Volume</source>
         <translation>Objem</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="184"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="187"/>
         <source>Torque</source>
         <translation>Moment síly</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="185"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="188"/>
         <source>El. charge</source>
         <translation>Elektrický náboj</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="185"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="188"/>
         <source>Illuminance</source>
         <translation>Intenzita osvětlení</translation>
     </message>
@@ -2822,27 +2843,27 @@ Proměnné nejsou vytvářený v průběžném režimu kalkulačky nebo převodn
         <translation>Pravděpodobně došlo k aritmetickému přetečení ve funkci/operátoru &quot;$IDENT$&quot;.</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="106"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="107"/>
         <source>cuerda [Guatemala]</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="115"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="116"/>
         <source>kV (kiloVolt)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="120"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="121"/>
         <source>kWh (kiloWatt-hour)</source>
         <translation>kWh (kiloWatt-hodina)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="136"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="137"/>
         <source>HK (Hefner&apos;s candle)</source>
         <translation>HK (Hefnerova svíčka)</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="178"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="181"/>
         <source>Digital information</source>
         <translation>Digitální informace</translation>
     </message>

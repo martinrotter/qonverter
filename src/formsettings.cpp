@@ -20,7 +20,6 @@
 #include <QDir>
 #include <QTranslator>
 #include <QProcess>
-#include <QFontDialog>
 #include <QColorDialog>
 #include <QStyleFactory>
 
@@ -28,6 +27,7 @@
 #include "settings.h"
 #include "formsettings.h"
 #include "formmain.h"
+#include "fontdialog.h"
 #include "defs.h"
 #include "uifactory.h"
 #include "calculatorhighlighter.h"
@@ -73,15 +73,15 @@ FormSettings::FormSettings(QWidget *parent) : QDialog(parent), m_ui(new Ui::Form
 
   // Display change font dialog and reload settings.
   connect(m_ui->m_btnCalcFont, &QPushButton::clicked, [=] () {
-    m_tempSettings.m_calcFont = QFontDialog::getFont(nullptr, m_tempSettings.m_calcFont,
-                                                     this, tr("Change Calculator Input Font"));
+    m_tempSettings.m_calcFont = FontDialog::getFont(nullptr, m_tempSettings.m_calcFont,
+                                                    this, tr("Change Calculator Input Font"));
     loadCalculator();
   });
 
   // Display change font dialog and reload settings.
   connect(m_ui->m_btnOtfFont, &QPushButton::clicked, [=] () {
-    m_tempSettings.m_otfFont = QFontDialog::getFont(nullptr, m_tempSettings.m_otfFont,
-                                                    this, tr("Change On-The-Fly Mode Font"));
+    m_tempSettings.m_otfFont = FontDialog::getFont(nullptr, m_tempSettings.m_otfFont,
+                                                   this, tr("Change On-The-Fly Mode Font"));
     loadCalculator();
   });
 

@@ -64,7 +64,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="125"/>
+        <location filename="../src/calculator/calculator.cpp" line="124"/>
         <source>predefined memory</source>
         <translation type="unfinished"></translation>
     </message>
@@ -302,75 +302,91 @@
     <name>FormAbout</name>
     <message>
         <location filename="../ui/formabout.ui" line="29"/>
-        <location filename="../build/ui_formabout.h" line="321"/>
+        <location filename="../build/ui_formabout.h" line="323"/>
         <source>About Qonverter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/formabout.ui" line="121"/>
-        <location filename="../build/ui_formabout.h" line="324"/>
+        <location filename="../build/ui_formabout.h" line="326"/>
         <source>Information</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/formabout.ui" line="160"/>
-        <location filename="../build/ui_formabout.h" line="333"/>
+        <location filename="../build/ui_formabout.h" line="335"/>
         <source>Licenses</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/formabout.ui" line="181"/>
+        <location filename="../build/ui_formabout.h" line="327"/>
+        <source>GNU GPL License (applies to Qonverter source code)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../ui/formabout.ui" line="184"/>
-        <location filename="../build/ui_formabout.h" line="325"/>
-        <location filename="../build/ui_formabout.h" line="326"/>
+        <location filename="../build/ui_formabout.h" line="328"/>
         <source>GNU GPL License</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/formabout.ui" line="243"/>
-        <location filename="../ui/formabout.ui" line="246"/>
-        <location filename="../build/ui_formabout.h" line="327"/>
-        <location filename="../build/ui_formabout.h" line="328"/>
+        <location filename="../ui/formabout.ui" line="251"/>
+        <location filename="../build/ui_formabout.h" line="329"/>
+        <source>GNU LGPL License (applies to some graphics)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/formabout.ui" line="254"/>
+        <location filename="../build/ui_formabout.h" line="330"/>
         <source>GNU LGPL License</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/formabout.ui" line="305"/>
-        <location filename="../ui/formabout.ui" line="308"/>
-        <location filename="../build/ui_formabout.h" line="329"/>
-        <location filename="../build/ui_formabout.h" line="330"/>
+        <location filename="../ui/formabout.ui" line="321"/>
+        <location filename="../build/ui_formabout.h" line="331"/>
+        <source>BSD 3-Clause License (applies to muParserX library)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/formabout.ui" line="324"/>
+        <location filename="../build/ui_formabout.h" line="332"/>
         <source>BSD 3-Clause License</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/formabout.ui" line="375"/>
-        <location filename="../ui/formabout.ui" line="378"/>
-        <location filename="../build/ui_formabout.h" line="331"/>
-        <location filename="../build/ui_formabout.h" line="332"/>
+        <location filename="../ui/formabout.ui" line="391"/>
+        <location filename="../build/ui_formabout.h" line="333"/>
+        <source>Go Squared License (applies to graphical flags)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/formabout.ui" line="394"/>
+        <location filename="../build/ui_formabout.h" line="334"/>
         <source>Go Squared License (for flags in settings)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/formabout.ui" line="441"/>
-        <location filename="../build/ui_formabout.h" line="335"/>
+        <location filename="../ui/formabout.ui" line="457"/>
+        <location filename="../build/ui_formabout.h" line="337"/>
         <source>Thanks to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/formabout.ui" line="473"/>
-        <location filename="../build/ui_formabout.h" line="334"/>
+        <location filename="../ui/formabout.ui" line="489"/>
+        <location filename="../build/ui_formabout.h" line="336"/>
         <source>Thanks to page is available only in English language.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/formabout.ui" line="481"/>
-        <location filename="../build/ui_formabout.h" line="337"/>
+        <location filename="../ui/formabout.ui" line="497"/>
+        <location filename="../build/ui_formabout.h" line="339"/>
         <source>Changelog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/formabout.ui" line="510"/>
-        <location filename="../build/ui_formabout.h" line="336"/>
+        <location filename="../ui/formabout.ui" line="526"/>
+        <location filename="../build/ui_formabout.h" line="338"/>
         <source>Changelog page is available only in English language.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -399,7 +415,7 @@
     </message>
     <message>
         <location filename="../src/formabout.cpp" line="109"/>
-        <source>&lt;body&gt;Qonverter is simple (yet powerful) calculator with some unusual functions.&lt;br&gt;&lt;br&gt;This software is distributed under the terms of GNU General Public License, version 3 or later. muParserX library is distributed under the terms of BSD 3-Clause License.&lt;br&gt;&lt;br&gt;Contacts:&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;mailto://rotter.martinos@gmail.com&quot;&gt;rotter.martinos@gmail&lt;/a&gt;  ~email&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://code.google.com/p/qonverter&quot;&gt;code.google.com/p/qonverter&lt;/a&gt; ~website&lt;/li&gt;&lt;/ul&gt;You can obtain source code for Qonverterd from its website.&lt;br&gt;&lt;br&gt;&lt;br&gt;Copyright 2011-%1 Martin Rotter&lt;/body&gt;</source>
+        <source>&lt;body&gt;Qonverter is simple (yet powerful) calculator with some unusual functions.&lt;br&gt;&lt;br&gt;This software is distributed under the terms of GNU General Public License, version 3 or later.&lt;br&gt;&lt;br&gt;Contacts:&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;mailto://rotter.martinos@gmail.com&quot;&gt;rotter.martinos@gmail&lt;/a&gt;  ~email&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://code.google.com/p/qonverter&quot;&gt;code.google.com/p/qonverter&lt;/a&gt; ~website&lt;/li&gt;&lt;/ul&gt;You can obtain source code for Qonverter from its website.&lt;br&gt;&lt;br&gt;&lt;br&gt;Copyright 2011-%1 Martin Rotter&lt;/body&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -788,28 +804,28 @@ currency</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/currencyconverter/formcurrencyconverter.cpp" line="67"/>
-        <location filename="../src/currencyconverter/formcurrencyconverter.cpp" line="71"/>
+        <location filename="../src/currencyconverter/formcurrencyconverter.cpp" line="69"/>
+        <location filename="../src/currencyconverter/formcurrencyconverter.cpp" line="74"/>
         <source>Rates Not Updated</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/currencyconverter/formcurrencyconverter.cpp" line="68"/>
+        <location filename="../src/currencyconverter/formcurrencyconverter.cpp" line="70"/>
         <source>Currency rates were not downloaded successfully. Check your internet connection.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/currencyconverter/formcurrencyconverter.cpp" line="72"/>
+        <location filename="../src/currencyconverter/formcurrencyconverter.cpp" line="75"/>
         <source>Currency rates were not saved successfully. Target location is not writable.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/currencyconverter/formcurrencyconverter.cpp" line="76"/>
+        <location filename="../src/currencyconverter/formcurrencyconverter.cpp" line="80"/>
         <source>Rates Updated</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/currencyconverter/formcurrencyconverter.cpp" line="77"/>
+        <location filename="../src/currencyconverter/formcurrencyconverter.cpp" line="81"/>
         <source>Currency rates were updated and loaded successfully.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1045,37 +1061,37 @@ currency</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/formmain.cpp" line="102"/>
+        <location filename="../src/formmain.cpp" line="116"/>
         <source>Close opened modal dialogs first.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/formmain.cpp" line="114"/>
+        <location filename="../src/formmain.cpp" line="128"/>
         <source>System Tray Icon Not Available</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/formmain.cpp" line="115"/>
+        <location filename="../src/formmain.cpp" line="129"/>
         <source>Your system doesn&apos;t seem to support system tray icon. Tray icon wasn&apos;t loaded and Qonverter runs in single window mode.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/formmain.cpp" line="208"/>
+        <location filename="../src/formmain.cpp" line="232"/>
         <source>Tray Icon Menu</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/formmain.cpp" line="232"/>
+        <location filename="../src/formmain.cpp" line="256"/>
         <source>Application is hidden in notification area.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/formmain.cpp" line="275"/>
+        <location filename="../src/formmain.cpp" line="299"/>
         <source>&lt;p&gt;This software uses Qt.&lt;/p&gt;&lt;p&gt;Check &lt;a href=&quot;http://www.qt-project.org&quot;&gt;www.qt-project.org&lt;/a&gt; for more information.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/formmain.cpp" line="274"/>
+        <location filename="../src/formmain.cpp" line="298"/>
         <source>About Qt</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1446,63 +1462,68 @@ Note that variables are not created during on-the-fly subcomputations in calcula
 <context>
     <name>FormUnitConverter</name>
     <message>
-        <location filename="../ui/unitconverter/formunitconverter.ui" line="94"/>
-        <location filename="../build/ui_formunitconverter.h" line="154"/>
+        <location filename="../ui/unitconverter/formunitconverter.ui" line="110"/>
+        <location filename="../build/ui_formunitconverter.h" line="148"/>
         <source>Input expression</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/unitconverter/formunitconverter.ui" line="120"/>
-        <location filename="../build/ui_formunitconverter.h" line="156"/>
+        <location filename="../build/ui_formunitconverter.h" line="150"/>
         <source>Result of your expression is displayed here.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/unitconverter/formunitconverter.ui" line="52"/>
-        <location filename="../build/ui_formunitconverter.h" line="142"/>
+        <location filename="../ui/unitconverter/formunitconverter.ui" line="68"/>
+        <location filename="../build/ui_formunitconverter.h" line="136"/>
         <source>Swap selected units.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/unitconverter/formunitconverter.ui" line="75"/>
-        <location filename="../build/ui_formunitconverter.h" line="146"/>
+        <location filename="../ui/unitconverter/formunitconverter.ui" line="91"/>
+        <location filename="../build/ui_formunitconverter.h" line="140"/>
         <source>Select input unit.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/unitconverter/formunitconverter.ui" line="82"/>
-        <location filename="../build/ui_formunitconverter.h" line="149"/>
+        <location filename="../ui/unitconverter/formunitconverter.ui" line="98"/>
+        <location filename="../build/ui_formunitconverter.h" line="143"/>
         <source>Select output unit.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/unitconverter/formunitconverter.ui" line="129"/>
-        <location filename="../build/ui_formunitconverter.h" line="159"/>
+        <location filename="../build/ui_formunitconverter.h" line="153"/>
         <source>Result of expression</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/unitconverter/formunitconverter.ui" line="136"/>
-        <location filename="../build/ui_formunitconverter.h" line="161"/>
+        <location filename="../build/ui_formunitconverter.h" line="155"/>
         <source>Final result of conversion is displayed here.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/unitconverter/formunitconverter.ui" line="91"/>
-        <location filename="../build/ui_formunitconverter.h" line="152"/>
+        <location filename="../ui/unitconverter/formunitconverter.ui" line="107"/>
+        <location filename="../build/ui_formunitconverter.h" line="146"/>
         <source>Insert your mathematical expression here.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/unitconverter/formunitconverter.ui" line="161"/>
-        <location filename="../build/ui_formunitconverter.h" line="165"/>
+        <location filename="../build/ui_formunitconverter.h" line="159"/>
         <source>Select desired magnitude.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/unitconverter/formunitconverter.ui" line="142"/>
-        <location filename="../build/ui_formunitconverter.h" line="163"/>
+        <location filename="../build/ui_formunitconverter.h" line="157"/>
         <source>Result of conversion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/unitconverter/formunitconverter.cpp" line="81"/>
+        <source>Input expression is valid.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1623,7 +1644,7 @@ Note that variables are not created during on-the-fly subcomputations in calcula
 <context>
     <name>LineEdit</name>
     <message>
-        <location filename="../src/lineedit.cpp" line="52"/>
+        <location filename="../src/lineedit.cpp" line="44"/>
         <source>Remove contents of this text box.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1632,938 +1653,938 @@ Note that variables are not created during on-the-fly subcomputations in calcula
     <name>QObject</name>
     <message>
         <location filename="../src/formsettings.cpp" line="173"/>
-        <location filename="../src/main.cpp" line="49"/>
+        <location filename="../src/main.cpp" line="45"/>
         <source>LANG_NAME</source>
         <extracomment>FOR TRANSLATOR: Name of language, e.g. English.</extracomment>
         <translation>English</translation>
     </message>
     <message>
         <location filename="../src/formsettings.cpp" line="174"/>
-        <location filename="../src/main.cpp" line="51"/>
+        <location filename="../src/main.cpp" line="47"/>
         <source>LANG_ABBREV</source>
         <extracomment>FOR TRANSLATOR: Abbreviation of language, e.g. en.</extracomment>
         <translation>en</translation>
     </message>
     <message>
         <location filename="../src/formsettings.cpp" line="175"/>
-        <location filename="../src/main.cpp" line="53"/>
+        <location filename="../src/main.cpp" line="49"/>
         <source>LANG_VERSION</source>
         <extracomment>FOR TRANSLATOR: Version of your translation, e.g. 1.0.</extracomment>
         <translation>1.0</translation>
     </message>
     <message>
         <location filename="../src/formsettings.cpp" line="176"/>
-        <location filename="../src/main.cpp" line="55"/>
+        <location filename="../src/main.cpp" line="51"/>
         <source>LANG_AUTHOR</source>
         <extracomment>FOR TRANSLATOR: Name of translator - optional.</extracomment>
         <translation>Martin Rotter</translation>
     </message>
     <message>
         <location filename="../src/formsettings.cpp" line="177"/>
-        <location filename="../src/main.cpp" line="57"/>
+        <location filename="../src/main.cpp" line="53"/>
         <source>LANG_EMAIL</source>
         <extracomment>FOR TRANSLATOR: Email of translator - optional.</extracomment>
         <translation>rotter.martinos@gmail.com</translation>
     </message>
     <message>
         <location filename="../src/formsettings.cpp" line="178"/>
-        <location filename="../src/main.cpp" line="59"/>
+        <location filename="../src/main.cpp" line="55"/>
         <source>LANG_WEBSITE</source>
         <extracomment>FOR TRANSLATOR: Website of language - optional.</extracomment>
         <translation>www.martin-rotter.8u.cz</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="102"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="103"/>
         <source>m/sÂ²</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="102"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="103"/>
         <source>ft/sÂ²</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="102"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="103"/>
         <source>gal</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="102"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="103"/>
         <source>g (standard gravity)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="103"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="104"/>
         <source>rad</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="103"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="104"/>
         <source>grad</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="103"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="104"/>
         <source>deg</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="104"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="105"/>
         <source>mÂ²</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="104"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="105"/>
         <source>mmÂ²</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="104"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="105"/>
         <source>cmÂ²</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="104"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="105"/>
         <source>dmÂ²</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="104"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="105"/>
         <source>a (are</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="104"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="105"/>
         <source>ha (hectare)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="105"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="106"/>
         <source>kmÂ²</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="105"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="106"/>
         <source>ftÂ² (square foot)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="105"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="106"/>
         <source>ydÂ² (square yard)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="106"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="107"/>
         <source>miÂ² (square mile)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="106"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="107"/>
         <source>rood (rood)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="107"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="108"/>
         <source>cuerda [Puerto Rico]</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="108"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="109"/>
         <source>kg/m3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="108"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="109"/>
         <source>g/cm3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="108"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="109"/>
         <source>g/m3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="108"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="109"/>
         <source>mg/m3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="109"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="110"/>
         <source>lb/US gal (pound per gallon)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="110"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="111"/>
         <source>lb/UK gal (pound per gallon)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="111"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="112"/>
         <source>lb/cu.yd (pound per cubic yard)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="112"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="113"/>
         <source>lb/cu.ft (pound per cubic foot)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="113"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="114"/>
         <source>lb/cu.in (pound per cubic inch)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="114"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="115"/>
         <source>abamp (electromag. unit)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="114"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="115"/>
         <source>esu/s</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="118"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="119"/>
         <source>cal (calorie)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="118"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="119"/>
         <source>chu-it (Celsius heat unit)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="119"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="120"/>
         <source>eh (atomic unit of energy)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="121"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="122"/>
         <source>pond</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="121"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="122"/>
         <source>kilopond</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="122"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="123"/>
         <source>B (byte)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="122"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="123"/>
         <source>b (bit)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="122"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="123"/>
         <source>kB (kilobyte)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="123"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="124"/>
         <source>MB (megabyte)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="123"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="124"/>
         <source>GB (gigabyte)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="123"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="124"/>
         <source>TB (terabyte)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="124"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="125"/>
         <source>KiB (kibibyte)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="124"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="125"/>
         <source>MiB (mebibyte)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="124"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="125"/>
         <source>GiB (gibibyte)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="125"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="126"/>
         <source>TiB (tebibyte)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="125"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="126"/>
         <source>J/K</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="125"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="126"/>
         <source>Nibble</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="126"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="127"/>
         <source>m</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="126"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="127"/>
         <source>mm</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="126"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="127"/>
         <source>cm</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="126"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="127"/>
         <source>km</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="126"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="127"/>
         <source>mi (mile)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="127"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="128"/>
         <source>AU (astronom. unit)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="127"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="128"/>
         <source>fm (fermi)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="127"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="128"/>
         <source>ft (foot)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="128"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="129"/>
         <source>in (inch)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="128"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="129"/>
         <source>nmi (intern. nautical mile)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="128"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="129"/>
         <source>yd (yard)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="129"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="130"/>
         <source>cd/mÂ²</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="129"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="130"/>
         <source>sb (stilb)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="130"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="131"/>
         <source>cd (candela)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="131"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="132"/>
         <source>cp (international candle)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="132"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="133"/>
         <source>paraffin candle</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="132"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="133"/>
         <source>DB (decimal candle)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="134"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="135"/>
         <source>pentane candle</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="134"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="135"/>
         <source>spermacet candle</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="135"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="136"/>
         <source>carcel lamp</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="186"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="189"/>
         <source>Frequency</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="114"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="115"/>
         <source>A (Amper)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="115"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="116"/>
         <source>V (Volt)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="115"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="116"/>
         <source>aV (abVolt)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="116"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="117"/>
         <source>V int. (international Volt)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="116"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="117"/>
         <source>sV (statVolt)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="117"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="118"/>
         <source>j (Joule)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="117"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="118"/>
         <source>btu-iso (Brittish thermal unit)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="119"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="120"/>
         <source>eV (electronVolt)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="121"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="122"/>
         <source>N (Newton)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="129"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="130"/>
         <source>L (Lambert)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="133"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="134"/>
         <source>violle (Violle&apos;s candle)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="135"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="136"/>
         <source>Harcourt&apos;s lamp</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="137"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="138"/>
         <source>kg (kilogram)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="137"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="138"/>
         <source>g (gram)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="137"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="138"/>
         <source>mg (miligram)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="138"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="139"/>
         <source>q (quintal)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="138"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="139"/>
         <source>t (tonne)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="138"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="139"/>
         <source>pound (troy)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="139"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="140"/>
         <source>pound (avoirdupois)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="139"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="140"/>
         <source>ounce (avoirdupois)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="140"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="141"/>
         <source>kt (carat)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="140"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="141"/>
         <source>ct (metric carat)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="140"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="141"/>
         <source>u (atomic mass unit)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="141"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="142"/>
         <source>sc. (apoth. scruple)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="141"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="142"/>
         <source>@ (arroba [ESP])</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="141"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="142"/>
         <source>arroba [POR] </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="142"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="143"/>
         <source>dr (dram)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="142"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="143"/>
         <source>gr (grain)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="142"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="143"/>
         <source>cwt (short hundredweight US)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="143"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="144"/>
         <source>ton (short ton US)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="143"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="144"/>
         <source>ztr (zentner)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="144"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="145"/>
         <source>w (watt)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="144"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="145"/>
         <source>hp (horsepower)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="144"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="145"/>
         <source>BTU/h</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="145"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="146"/>
         <source>pa (pascal)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="145"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="146"/>
         <source>atm (standard atmosphere)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="146"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="147"/>
         <source>at (technical atmosphere)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="146"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="147"/>
         <source>bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="146"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="147"/>
         <source>torr-mmHg</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="147"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="148"/>
         <source>psi (pound per square inch)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="148"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="149"/>
         <source>s</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="148"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="149"/>
         <source>Âµs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="148"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="149"/>
         <source>ms</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="148"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="149"/>
         <source>min</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="148"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="149"/>
         <source>h</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="148"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="149"/>
         <source>day</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="148"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="149"/>
         <source>week</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="149"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="150"/>
         <source>month</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="149"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="150"/>
         <source>year</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="149"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="150"/>
         <source>decade</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="149"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="150"/>
         <source>century</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="149"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="150"/>
         <source>millenium</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="150"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="151"/>
         <source>hl (helek [Hebrew])</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="161"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="162"/>
         <source>C (Coulomb)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="162"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="163"/>
         <source>abC (abCoulomb)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="150"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="151"/>
         <source>a (tropical year)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="150"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="151"/>
         <source>S (Svedberg)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="151"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="152"/>
         <source>sidereal time</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="152"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="153"/>
         <source>m/s</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="152"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="153"/>
         <source>cm/h</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="152"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="153"/>
         <source>m/h</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="152"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="153"/>
         <source>km/h</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="152"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="153"/>
         <source>mp/h</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="153"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="154"/>
         <source>ft/s</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="153"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="154"/>
         <source>M (mach at sea level)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="153"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="154"/>
         <source>kn (knot)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="154"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="155"/>
         <source>c (speed of light in vacuum)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="154"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="155"/>
         <source>s (speed of light in air)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="155"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="156"/>
         <source>mÂ³</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="155"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="156"/>
         <source>ml/cmÂ³</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="155"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="156"/>
         <source>l/dmÂ³</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="155"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="156"/>
         <source>hl</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="155"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="156"/>
         <source>pint (USA)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="156"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="157"/>
         <source>pint (UK)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="156"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="157"/>
         <source>gallon (USA)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="156"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="157"/>
         <source>gallon (UK)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="157"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="158"/>
         <source>bll (barrel of petroleum)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="158"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="159"/>
         <source>NÂ·m (Newton metre)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="158"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="159"/>
         <source>m kg (metre kilogram)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="159"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="160"/>
         <source>in lbf (inch-pound force)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="160"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="161"/>
         <source>ft pdl (foot-poundal)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="160"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="161"/>
         <source>ft lbf (foot-pound force)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="161"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="162"/>
         <source>F (Faraday)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="161"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="162"/>
         <source>statC (statcoulomb)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="163"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="164"/>
         <source>lx (lux)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="163"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="164"/>
         <source>ph (phot)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="164"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="165"/>
         <source>lm/in2 (lumen per square inch)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="164"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="165"/>
         <source>fc (footcandle)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="165"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="166"/>
         <source>Hz (Hertz)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="165"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="166"/>
         <source>rpm (revolutions per minute)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="166"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="167"/>
         <source>rad/s</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="175"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="178"/>
         <source>Acceleration</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="175"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="178"/>
         <source>Angle</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="175"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="178"/>
         <source>Area</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="176"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="179"/>
         <source>Density</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="176"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="179"/>
         <source>El. current</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="177"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="180"/>
         <source>El. voltage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="177"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="180"/>
         <source>Energy &amp; work</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="178"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="181"/>
         <source>Force</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="179"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="182"/>
         <source>Length</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="179"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="182"/>
         <source>Luminance</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="180"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="183"/>
         <source>Luminosity</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="180"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="183"/>
         <source>Mass</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="181"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="184"/>
         <source>Power</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="182"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="185"/>
         <source>Pressure</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="183"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="186"/>
         <source>Time</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="183"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="186"/>
         <source>Velocity</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="184"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="187"/>
         <source>Volume</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="184"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="187"/>
         <source>Torque</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="185"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="188"/>
         <source>El. charge</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="185"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="188"/>
         <source>Illuminance</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2818,27 +2839,27 @@ Note that variables are not created during on-the-fly subcomputations in calcula
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="106"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="107"/>
         <source>cuerda [Guatemala]</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="115"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="116"/>
         <source>kV (kiloVolt)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="120"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="121"/>
         <source>kWh (kiloWatt-hour)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="136"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="137"/>
         <source>HK (Hefner&apos;s candle)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="178"/>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="181"/>
         <source>Digital information</source>
         <translation type="unfinished"></translation>
     </message>
