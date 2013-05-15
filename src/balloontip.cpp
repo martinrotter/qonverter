@@ -140,14 +140,19 @@ BalloonTip::BalloonTip() : QWidget(0, Qt::ToolTip), m_timerId(-1) {
   // Smart size for the message label.
   int limit = QApplication::desktop()->availableGeometry(m_lblMessage).size().width() / 3;
 
+  // Force word wrap and reasonable maximum width for balloon.
+  m_lblMessage->setMaximumWidth(limit);
+  m_lblMessage->setWordWrap(true);
+
+  /*
   // Set word wrap if message is too long.
   if (m_lblMessage->sizeHint().width() > limit) {
-    m_lblMessage->setWordWrap(true);
 
     // Here we allow the text being much smaller than the balloon widget
     // to emulate the weird standard windows behavior.
     m_lblMessage->setFixedSize(limit, m_lblMessage->heightForWidth(limit));
   }
+  */
 
   // Compose all elements into grid layout.
   QGridLayout *layout = new QGridLayout(this);

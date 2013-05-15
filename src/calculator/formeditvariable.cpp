@@ -23,6 +23,7 @@
 #include "formeditvariable.h"
 #include "calculatorwrapper.h"
 #include "calculator.h"
+#include "balloontip.h"
 
 
 FormEditVariable::FormEditVariable(QWidget *parent)
@@ -79,35 +80,43 @@ void FormEditVariable::checkName(const QString &name) {
   if (CalculatorWrapper::getInstance().getCalculator()->isNameAllowed(name) ||
       (!m_originalName.isEmpty() && name == m_originalName)) {
     // Name can be used for memory place.
+    m_ui->m_txtName->setStatusText(tr("Variable name is valid."));
     m_ui->m_txtName->setIcon(MarkedLineEdit::OK);
-    m_correctName = true;
   }
   else {
     // Name cannot be used for memory place.
+    m_ui->m_txtName->setStatusText(tr("Variable name is invalid. Variable with the same name already exists are the name is now well-formed."));
     m_ui->m_txtName->setIcon(MarkedLineEdit::ERROR);
-    m_correctName = false;
   }
 
   // Enable or disable "OK" button according to input data.
-  m_ui->m_btnBox->button(QDialogButtonBox::Ok)->setEnabled(m_correctName && m_correctValue);
+  m_ui->m_btnBox->button(QDialogButtonBox::Ok)->setEnabled(m_ui->m_txtName->icon() == MarkedLineEdit::OK &&
+                                                           m_ui->m_txtValue->icon() == MarkedLineEdit::OK);
 }
 
 void FormEditVariable::manageResult(const Calculator::CallerFunction &function,
                                     const Value &result) {
   Q_UNUSED(function);
 
-  m_correctValue = m_mappedTypes[QString(result.GetType())] ==
-                   m_ui->m_cmbType->currentIndex();
+  bool is_value_correct = m_mappedTypes[QString(result.GetType())] ==
+                          m_ui->m_cmbType->currentIndex();
   m_convertedValue = result;
   m_ui->m_txtCalculatedValue->setText(QString::fromStdWString(result.ToString()));
-  m_ui->m_txtValue->setIcon(m_correctValue ?
+  m_ui->m_txtValue->setIcon(is_value_correct ?
                               MarkedLineEdit::OK :
                               MarkedLineEdit::ERROR);
-  m_ui->m_lblInfo->setText(m_correctValue ?
-                             tr("Result of expression is of type '%1' and can be used as value for variable '%2'.").arg(m_ui->m_cmbType->currentText(),
-                                                                                                                        m_ui->m_txtName->text()):
-                             tr("Result of expression is not of type '%1'. Make sure correct type is selected. If you select 'VOID' type, then make sure your expression evaluates to 'VOID'. Empty expression does that.").arg(m_ui->m_cmbType->currentText()));
-  m_ui->m_btnBox->button(QDialogButtonBox::Ok)->setEnabled(m_correctName && m_correctValue);
+  m_ui->m_txtValue->setStatusText(is_value_correct ?
+                                    tr("Result of expression is of type '%1' and can be used as value for your variable.").arg(m_ui->m_cmbType->currentText()):
+                                    tr("Result of expression is not of type '%1'. Make sure correct type is selected. If you select 'VOID' type, then make sure your expression evaluates to 'VOID'. Empty expression does that.").arg(m_ui->m_cmbType->currentText()));
+
+  /*
+   m_ui->m_lblInfo->setText(m_correctValue ?
+                                 tr("Result of expression is of type '%1' and can be used as value for variable '%2'.").arg(m_ui->m_cmbType->currentText(),
+                                                                                                                            m_ui->m_txtName->text()):
+                                 tr("Result of expression is not of type '%1'. Make sure correct type is selected. If you select 'VOID' type, then make sure your expression evaluates to 'VOID'. Empty expression does that.").arg(m_ui->m_cmbType->currentText()));
+   */
+  m_ui->m_btnBox->button(QDialogButtonBox::Ok)->setEnabled(m_ui->m_txtName->icon() == MarkedLineEdit::OK &&
+                                                           m_ui->m_txtValue->icon() == MarkedLineEdit::OK);
 }
 
 int FormEditVariable::execAdd() {

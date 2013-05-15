@@ -60,7 +60,6 @@ class FormUnitConverter : public QWidget {
   private:
     Ui::FormUnitConverter *m_ui;
     bool m_calculated;
-    QString m_calculationInformation;
 
     static FormUnitConverter *s_instance;
 };

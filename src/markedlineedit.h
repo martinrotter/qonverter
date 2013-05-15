@@ -38,9 +38,15 @@ class MarkedLineEdit : public LineEdit {
 
     explicit MarkedLineEdit(QWidget *parent = 0);
     ~MarkedLineEdit();
-    
+
   public slots:
+    Status icon();
     void setIcon(Status icon);
+    void setStatusText(const QString &text);
+    void setMarkDisplayLength(int length);
+
+    void showStatus();
+    void hideStatus();
 
     virtual void setEnabled(bool enable);
 
@@ -56,8 +62,11 @@ class MarkedLineEdit : public LineEdit {
     QIcon m_iconError;
 
     ToolButton *m_btnMark;
+    int m_markDisplayLength;
     bool m_btnMarkEnabled;
+
     Status m_status;
+    QString m_statusText;
 };
 
 #endif // MARKEDLINEEDIT_H

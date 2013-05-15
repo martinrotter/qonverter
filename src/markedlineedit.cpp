@@ -22,9 +22,11 @@
 
 #include "markedlineedit.h"
 #include "toolbutton.h"
+#include "balloontip.h"
 
 
-MarkedLineEdit::MarkedLineEdit(QWidget *parent) : LineEdit(parent) {
+MarkedLineEdit::MarkedLineEdit(QWidget *parent)
+  : LineEdit(parent), m_markDisplayLength(-1) {
   m_btnMark = new ToolButton(this);
 
   // Prepare icons for valid and invalid state.
@@ -45,9 +47,7 @@ MarkedLineEdit::MarkedLineEdit(QWidget *parent) : LineEdit(parent) {
   m_btnMark->setStyleSheet("QToolButton { border: none; padding: 0px; }");
 
   // Forward signal from mark icon.
-  connect(m_btnMark, &ToolButton::hovered, [=] () {
-    emit markIconHovered(m_status);
-  });
+  connect(m_btnMark, &ToolButton::hovered, this, &MarkedLineEdit::showStatus);
 
   // Make room at the right end of line edit for mark button.
   // Make sure there is extra margin between line edit and mark icon.
@@ -111,6 +111,28 @@ void MarkedLineEdit::setEnabled(bool enable) {
   }
 
   onTextChanged(text());
+}
+
+void MarkedLineEdit::setMarkDisplayLength(int length) {
+  m_markDisplayLength = length;
+}
+
+void MarkedLineEdit::setStatusText(const QString &text) {
+  m_statusText = text;
+}
+
+void MarkedLineEdit::hideStatus() {
+  BalloonTip::hideBalloon();
+}
+
+void MarkedLineEdit::showStatus() {
+  BalloonTip::showBalloon(m_statusText,
+                          mapToGlobal(QPoint(22, sizeHint().height() - 3)),
+                          m_markDisplayLength);
+}
+
+MarkedLineEdit::Status MarkedLineEdit::icon() {
+  return m_status;
 }
 
 void MarkedLineEdit::setIcon(Status icon) {

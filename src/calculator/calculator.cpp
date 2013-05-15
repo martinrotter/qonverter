@@ -134,7 +134,7 @@ void Calculator::consolidateMemoryPlaces() {
 
     variable_name = QString::fromStdWString(item->first);
 
-    if (m_memoryPlaces.contains(variable_name) == false) {
+    if (!m_memoryPlaces.contains(variable_name)) {
       // We found variable which exists in calculator engine,
       // but is not in external calculator list, ergo, this variable was
       // implicitly created during calculator engine lifetime.
@@ -179,7 +179,7 @@ void Calculator::saveMemoryPlaces() {
 }
 
 bool Calculator::removeMemoryPlace(const QString &name) {
-  if (m_memoryPlaces.contains(name) == true) {
+  if (m_memoryPlaces.contains(name)) {
     // Variable/constant was found so remove it.
     if (m_memoryPlaces.value(name)->m_type == MemoryPlace::CONSTANT) {
       // Remove constant.
@@ -202,7 +202,7 @@ bool Calculator::addMemoryPlace(const QString &name,
                                 const MemoryPlace::Type &type,
                                 const Value &initial_value) {
   try {
-    if (m_memoryPlaces.contains(name) == true) {
+    if (m_memoryPlaces.contains(name)) {
       throw ParserError(ErrorContext(ecINTERNAL_ERROR, 0, name.toStdWString()));
     }
     else {

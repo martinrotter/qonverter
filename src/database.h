@@ -28,12 +28,13 @@ class Database {
     // Establishes new SQLite connection and returns its handle.
     static QSqlDatabase addDatabaseConnection(const QString &name);
 
-    // Returns handle of an existing connection.
+    // Returns handle of the existing connection.
     static QSqlDatabase getDatabaseConnection(const QString &name);
 
     // Removes already existing SQLite connection.
     static void removeDatabaseConnection(const QString &name);
 
+    // Removes all established connections.
     static void removeAllConnections();
 
   private:

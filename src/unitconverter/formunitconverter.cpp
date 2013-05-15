@@ -70,20 +70,6 @@ FormUnitConverter::FormUnitConverter(QWidget *parent)
   connect(m_ui->m_cmbOutputUnit, &QComboBox::currentTextChanged,
           this, &FormUnitConverter::requestConversion);
 
-  connect(m_ui->m_txtInput, &MarkedLineEdit::markIconHovered,
-          [=] (const MarkedLineEdit::Status &status) {
-    if (status == MarkedLineEdit::ERROR) {
-      BalloonTip::showBalloon(m_calculationInformation,
-                              mapToGlobal(m_ui->m_txtInput->pos() + QPoint(22, 12)),
-                              -1);
-    }
-    else {
-      BalloonTip::showBalloon(tr("Input expression is valid."),
-                              mapToGlobal(m_ui->m_txtInput->pos() + QPoint(22, 12)),
-                              -1);
-    }
-  });
-
   // If we need to convert, then do the conversion.
   connect(FormUnitConverter::getInstance(), &FormUnitConverter::conversionWanted,
           &UnitConverter::getInstance(), &UnitConverter::convert);
@@ -158,9 +144,12 @@ void FormUnitConverter::manageCalculatedResult(const Calculator::CallerFunction 
   switch (function) {
     // User entered valid expression which can be converted.
     case Calculator::CONVERTER_ONTHEFLY: {
+      m_calculated = true;
+
       QString textual_value = QString::fromStdWString(value.ToString());
 
-      m_calculated = true;
+      m_ui->m_txtInput->setStatusText(tr("Input expression is valid."));
+      m_ui->m_txtInput->setIcon(MarkedLineEdit::OK);
       m_ui->m_txtCalculatedInput->setText(textual_value);
 
       emit conversionWanted(m_ui->m_listMagnitudes->currentItem()->data(32).toInt(),
@@ -168,21 +157,19 @@ void FormUnitConverter::manageCalculatedResult(const Calculator::CallerFunction 
                             m_ui->m_cmbOutputUnit->currentIndex(),
                             textual_value);
 
-      BalloonTip::hideBalloon();
-      m_ui->m_txtInput->setIcon(MarkedLineEdit::OK);
+      m_ui->m_txtInput->hideStatus();
       break;
     }
       // Error - no conversions here.
     case Calculator::CONVERTER_ERROR: {
       m_calculated = false;
-      m_calculationInformation = info;
+
       m_ui->m_txtCalculatedInput->clear();
       m_ui->m_txtConvertedInput->clear();
 
-      BalloonTip::showBalloon(info,
-                              mapToGlobal(m_ui->m_txtInput->pos() + QPoint(22, 12)),
-                              -1);
+      m_ui->m_txtInput->setStatusText(info);
       m_ui->m_txtInput->setIcon(MarkedLineEdit::ERROR);
+      m_ui->m_txtInput->showStatus();
       break;
     }
     default:
