@@ -256,7 +256,7 @@ void FormCalculator::manageResult(const Calculator::CallerFunction &function,
       m_label->showText(info,
                         Settings::value(APP_CFG_CALC,
                                         "length_error",
-                                        3000).toInt());
+                                        6000).toInt());
       break;
     case Calculator::CALCULATOR_ONTHEFLY:
       m_label->showText(tr("<b>Result: </b>") + QString::fromStdWString(result.ToString()),

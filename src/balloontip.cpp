@@ -53,7 +53,7 @@ void BalloonTip::showBalloon(const QString& message, const QPoint& pos,
   if (timeout < 0) {
     // Fetch show duration from seetings
     // instead of constant 10 sec value.
-    timeout = Settings::value(APP_CFG_CALC, "length_error", 3000).toInt();
+    timeout = Settings::value(APP_CFG_CALC, "length_error", 6000).toInt();
   }
   s_instance->balloon(pos, timeout, showArrow);
 }

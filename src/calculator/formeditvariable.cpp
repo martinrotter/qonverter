@@ -109,12 +109,13 @@ void FormEditVariable::manageResult(const Calculator::CallerFunction &function,
                                     tr("Result of expression is of type '%1' and can be used as value for your variable.").arg(m_ui->m_cmbType->currentText()):
                                     tr("Result of expression is not of type '%1'. Make sure correct type is selected. If you select 'VOID' type, then make sure your expression evaluates to 'VOID'. Empty expression does that.").arg(m_ui->m_cmbType->currentText()));
 
-  /*
-   m_ui->m_lblInfo->setText(m_correctValue ?
-                                 tr("Result of expression is of type '%1' and can be used as value for variable '%2'.").arg(m_ui->m_cmbType->currentText(),
-                                                                                                                            m_ui->m_txtName->text()):
-                                 tr("Result of expression is not of type '%1'. Make sure correct type is selected. If you select 'VOID' type, then make sure your expression evaluates to 'VOID'. Empty expression does that.").arg(m_ui->m_cmbType->currentText()));
-   */
+  if (!is_value_correct) {
+    m_ui->m_txtValue->showStatus();
+  }
+  else {
+    m_ui->m_txtValue->hideStatus();
+  }
+
   m_ui->m_btnBox->button(QDialogButtonBox::Ok)->setEnabled(m_ui->m_txtName->icon() == MarkedLineEdit::OK &&
                                                            m_ui->m_txtValue->icon() == MarkedLineEdit::OK);
 }

@@ -293,7 +293,7 @@ void FormSettings::loadCalculator() {
                                                 false).toBool());
   m_ui->m_spinErrorTime->setValue(Settings::value(APP_CFG_CALC,
                                                   "length_error",
-                                                  3000).toInt());
+                                                  6000).toInt());
   m_ui->m_spinFlyTime->setValue(Settings::value(APP_CFG_CALC,
                                                 "length_fly",
                                                 1500).toInt());
