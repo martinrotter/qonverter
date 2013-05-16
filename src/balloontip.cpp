@@ -98,11 +98,6 @@ bool BalloonTip::eventFilter(QObject *o, QEvent *e) {
       break;
     }
 #endif
-      /*
-    case QEvent::Leave:
-      close();
-      break;
-      */
     case QEvent::WindowActivate:
     case QEvent::WindowDeactivate:
     case QEvent::MouseButtonPress:
@@ -113,13 +108,6 @@ bool BalloonTip::eventFilter(QObject *o, QEvent *e) {
     case QEvent::Wheel:
       close();
       break;
-      /*
-    case QEvent::MouseMove:
-      if (o == this && !rect().isNull() &&
-          !rect().contains(static_cast<QMouseEvent*>(e)->pos())) {
-        close();
-      }
-      */
     default:
       break;
   }
@@ -127,8 +115,6 @@ bool BalloonTip::eventFilter(QObject *o, QEvent *e) {
 }
 
 BalloonTip::BalloonTip() : QWidget(0, Qt::ToolTip), m_timerId(-1) {
-  //setAttribute(Qt::WA_DeleteOnClose);
-
   // Install global event filter for this widget.
   qApp->installEventFilter(this);
 
@@ -143,16 +129,6 @@ BalloonTip::BalloonTip() : QWidget(0, Qt::ToolTip), m_timerId(-1) {
   // Force word wrap and reasonable maximum width for balloon.
   m_lblMessage->setMaximumWidth(limit);
   m_lblMessage->setWordWrap(true);
-
-  /*
-  // Set word wrap if message is too long.
-  if (m_lblMessage->sizeHint().width() > limit) {
-
-    // Here we allow the text being much smaller than the balloon widget
-    // to emulate the weird standard windows behavior.
-    m_lblMessage->setFixedSize(limit, m_lblMessage->heightForWidth(limit));
-  }
-  */
 
   // Compose all elements into grid layout.
   QGridLayout *layout = new QGridLayout(this);
@@ -170,7 +146,7 @@ BalloonTip::BalloonTip() : QWidget(0, Qt::ToolTip), m_timerId(-1) {
   // Set window opacity.
   // This actually afffects just operating systems
   // with hardware accelerated environments or window opacity enabled.
-  setWindowOpacity(0.80);
+  setWindowOpacity(0.85);
 }
 
 BalloonTip::~BalloonTip() {

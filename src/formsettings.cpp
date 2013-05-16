@@ -127,7 +127,7 @@ FormSettings::FormSettings(QWidget *parent) : QDialog(parent), m_ui(new Ui::Form
 
   // Make sure fonts are loaded from settings just when dialog is created.
   m_tempSettings.m_calcFont = Settings::value(APP_CFG_CALC, "font_input",
-                                              qApp->font()).value<QFont>();
+                                              QFont("Sans", 20)).value<QFont>();
   m_tempSettings.m_otfFont = Settings::value(APP_CFG_CALC, "on_the_fly_font",
                                              qApp->font()).value<QFont>();
 

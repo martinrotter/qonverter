@@ -125,7 +125,7 @@ void CalculatorInput::initialize() {
   // Gets current font from settings and applies it to input.
   setFont(Settings::value(APP_CFG_CALC,
                           "font_input",
-                          QFont()).value<QFont>());
+                          QFont("Sans", 20)).value<QFont>());
   // Set maximum number of visible items for completer.
   m_completer->setMaxVisibleItems(Settings::value(APP_CFG_CALC,
                                                   "completer_max_items",
