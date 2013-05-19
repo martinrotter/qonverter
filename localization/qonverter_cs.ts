@@ -302,91 +302,76 @@
     <name>FormAbout</name>
     <message>
         <location filename="../ui/formabout.ui" line="29"/>
-        <location filename="../build/ui_formabout.h" line="323"/>
         <source>About Qonverter</source>
         <translation>O aplikaci Qonverter</translation>
     </message>
     <message>
         <location filename="../ui/formabout.ui" line="121"/>
-        <location filename="../build/ui_formabout.h" line="326"/>
         <source>Information</source>
         <translation>Informace</translation>
     </message>
     <message>
         <location filename="../ui/formabout.ui" line="160"/>
-        <location filename="../build/ui_formabout.h" line="335"/>
         <source>Licenses</source>
         <translation>Použité licence</translation>
     </message>
     <message>
         <location filename="../ui/formabout.ui" line="181"/>
-        <location filename="../build/ui_formabout.h" line="327"/>
         <source>GNU GPL License (applies to Qonverter source code)</source>
-        <translation type="unfinished"></translation>
+        <translation>GNU GPL Licence (týká se zdrojového kódu Qonverteru)</translation>
     </message>
     <message>
         <location filename="../ui/formabout.ui" line="184"/>
-        <location filename="../build/ui_formabout.h" line="328"/>
         <source>GNU GPL License</source>
         <translation>Licence GNU GPL</translation>
     </message>
     <message>
         <location filename="../ui/formabout.ui" line="251"/>
-        <location filename="../build/ui_formabout.h" line="329"/>
         <source>GNU LGPL License (applies to some graphics)</source>
-        <translation type="unfinished"></translation>
+        <translation>GNU LGPL (týká se některých souborů s grafikou)</translation>
     </message>
     <message>
         <location filename="../ui/formabout.ui" line="254"/>
-        <location filename="../build/ui_formabout.h" line="330"/>
         <source>GNU LGPL License</source>
         <translation>Licence GNU LGPL</translation>
     </message>
     <message>
         <location filename="../ui/formabout.ui" line="321"/>
-        <location filename="../build/ui_formabout.h" line="331"/>
         <source>BSD 3-Clause License (applies to muParserX library)</source>
-        <translation type="unfinished"></translation>
+        <translation>BSD 3-Clause Licence (týká se knihovny muParserX)</translation>
     </message>
     <message>
         <location filename="../ui/formabout.ui" line="324"/>
-        <location filename="../build/ui_formabout.h" line="332"/>
         <source>BSD 3-Clause License</source>
         <translation>Licence BSD-3 Clause</translation>
     </message>
     <message>
         <location filename="../ui/formabout.ui" line="391"/>
-        <location filename="../build/ui_formabout.h" line="333"/>
         <source>Go Squared License (applies to graphical flags)</source>
-        <translation type="unfinished"></translation>
+        <translation>Go Squared Licence (týká se grafických vlaječek)</translation>
     </message>
     <message>
         <location filename="../ui/formabout.ui" line="394"/>
-        <location filename="../build/ui_formabout.h" line="334"/>
         <source>Go Squared License (for flags in settings)</source>
         <translation>Licence Go Squared (pro vlajky v nastavení)</translation>
     </message>
     <message>
         <location filename="../ui/formabout.ui" line="457"/>
-        <location filename="../build/ui_formabout.h" line="337"/>
         <source>Thanks to</source>
         <translation>Poděkování</translation>
     </message>
     <message>
         <location filename="../ui/formabout.ui" line="489"/>
-        <location filename="../build/ui_formabout.h" line="336"/>
         <source>Thanks to page is available only in English language.</source>
         <translation>Poděkování je k dispozici pouze v anglickém jazyce.</translation>
     </message>
     <message>
         <location filename="../ui/formabout.ui" line="497"/>
-        <location filename="../build/ui_formabout.h" line="339"/>
         <source>Changelog</source>
         <translation>Historie změn</translation>
     </message>
     <message>
         <location filename="../ui/formabout.ui" line="526"/>
-        <location filename="../build/ui_formabout.h" line="338"/>
         <source>Changelog page is available only in English language.</source>
         <translation>Historie změn je k dispozici pouze v anglickém jazyce.</translation>
     </message>
@@ -416,308 +401,258 @@
     <message>
         <location filename="../src/formabout.cpp" line="109"/>
         <source>&lt;body&gt;Qonverter is simple (yet powerful) calculator with some unusual functions.&lt;br&gt;&lt;br&gt;This software is distributed under the terms of GNU General Public License, version 3 or later.&lt;br&gt;&lt;br&gt;Contacts:&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;mailto://rotter.martinos@gmail.com&quot;&gt;rotter.martinos@gmail&lt;/a&gt;  ~email&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://code.google.com/p/qonverter&quot;&gt;code.google.com/p/qonverter&lt;/a&gt; ~website&lt;/li&gt;&lt;/ul&gt;You can obtain source code for Qonverter from its website.&lt;br&gt;&lt;br&gt;&lt;br&gt;Copyright 2011-%1 Martin Rotter&lt;/body&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;body&gt;Qonverter je jednoduchá (a přesto mocná) kalkulačka s neobvyklými funkcemi.&lt;br&gt;&lt;br&gt;Qonverter je šířen pod podmínkami licence GNU General Public License, verze 3 nebo novější.&lt;br&gt;&lt;br&gt;Kontakty:&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;mailto://rotter.martinos@gmail.com&quot;&gt;rotter.martinos@gmail&lt;/a&gt;  ~email&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://code.google.com/p/qonverter&quot;&gt;code.google.com/p/qonverter&lt;/a&gt; ~web&lt;/li&gt;&lt;/ul&gt;Zdrojový kód Qonverteru lze získat na jeho webové stránce.&lt;br&gt;&lt;br&gt;&lt;br&gt;Copyright 2011-%1 Martin Rotter&lt;/body&gt;</translation>
     </message>
 </context>
 <context>
     <name>FormCalculator</name>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="683"/>
-        <location filename="../build/ui_formcalculator.h" line="807"/>
         <source>Computes factorial.</source>
         <translation>Vypočítá faktoriál.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="609"/>
-        <location filename="../build/ui_formcalculator.h" line="801"/>
         <source>Inserts pair of parenthesises.</source>
         <translation>Vloží pár závorek.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="64"/>
-        <location filename="../build/ui_formcalculator.h" line="753"/>
         <source>Input your mathematical expressions here.</source>
         <translation>Zadejte svůj matematický výraz sem.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="119"/>
-        <location filename="../build/ui_formcalculator.h" line="756"/>
         <source>Logical disjunction.</source>
         <translation>Logický součet.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="150"/>
-        <location filename="../build/ui_formcalculator.h" line="759"/>
         <source>Calculates median from decimal values.</source>
         <translation>Vypočítá medián ze vstupních desetinných čísel.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="181"/>
-        <location filename="../build/ui_formcalculator.h" line="762"/>
         <source>Inequality &apos;&lt;&apos; operator.</source>
         <translation>Operátor nerovnosti &apos;&lt;&apos;.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="212"/>
-        <location filename="../build/ui_formcalculator.h" line="765"/>
         <source>Inequality &apos;&gt;&apos; operator.</source>
         <translation>Operátor nerovnosti &apos;&gt;&apos;.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="243"/>
-        <location filename="../build/ui_formcalculator.h" line="768"/>
         <source>Equality operator.</source>
         <translation>Operátor rovnosti.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="274"/>
-        <location filename="../build/ui_formcalculator.h" line="771"/>
         <source>Logical conjunction.</source>
         <translation>Logický součin.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="305"/>
-        <location filename="../build/ui_formcalculator.h" line="774"/>
         <source>Bitwise AND operator.</source>
         <translation>Bitový AND operátor.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="342"/>
-        <location filename="../build/ui_formcalculator.h" line="777"/>
         <source>Clear input of the calculator.</source>
         <translation>Vymazat vstup kalkulačky.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="373"/>
-        <location filename="../build/ui_formcalculator.h" line="780"/>
         <source>Real part of the complex number.</source>
         <translation>Reálná část komplexního čísla.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="404"/>
-        <location filename="../build/ui_formcalculator.h" line="783"/>
         <source>Bitwise OR operator.</source>
         <translation>Bitový OR operátor.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="435"/>
-        <location filename="../build/ui_formcalculator.h" line="786"/>
         <source>Absolute value of the number.</source>
         <translation>Absolutní hodnota čísla.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="466"/>
-        <location filename="../build/ui_formcalculator.h" line="789"/>
         <source>Multiplies the number with another.</source>
         <translation>Vynásobí číslo s jiným číslem.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="497"/>
-        <location filename="../build/ui_formcalculator.h" line="792"/>
         <source>Sinus of an angle.</source>
         <translation>Sinus úhlu.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="534"/>
-        <location filename="../build/ui_formcalculator.h" line="795"/>
         <source>7</source>
         <translation></translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="571"/>
-        <location filename="../build/ui_formcalculator.h" line="798"/>
         <source>8</source>
         <translation></translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="652"/>
-        <location filename="../build/ui_formcalculator.h" line="804"/>
         <source>9</source>
         <translation></translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="720"/>
-        <location filename="../build/ui_formcalculator.h" line="810"/>
         <source>4</source>
         <translation></translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="757"/>
-        <location filename="../build/ui_formcalculator.h" line="813"/>
         <source>5</source>
         <translation></translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="788"/>
-        <location filename="../build/ui_formcalculator.h" line="816"/>
         <source>Natural logarithm.</source>
         <translation>Přirozený logaritmus.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="819"/>
-        <location filename="../build/ui_formcalculator.h" line="819"/>
         <source>Minimum of the numeric array.</source>
         <translation>Minimum z pole čísel.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="856"/>
-        <location filename="../build/ui_formcalculator.h" line="822"/>
         <source>1</source>
         <translation></translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="893"/>
-        <location filename="../build/ui_formcalculator.h" line="825"/>
         <source>2</source>
         <translation></translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="930"/>
-        <location filename="../build/ui_formcalculator.h" line="828"/>
         <source>3</source>
         <translation></translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="961"/>
-        <location filename="../build/ui_formcalculator.h" line="831"/>
         <source>Exponents the base by number.</source>
         <translation>Exponuje základ s daným exponentem.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="998"/>
-        <location filename="../build/ui_formcalculator.h" line="834"/>
         <source>6</source>
         <translation></translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1029"/>
-        <location filename="../build/ui_formcalculator.h" line="837"/>
         <source>Norm of the complex number.</source>
         <translation>Norma komplexního čísla.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1060"/>
-        <location filename="../build/ui_formcalculator.h" line="840"/>
         <source>Divides one number with another.</source>
         <translation>Vydělí jedno číslo druhým.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1091"/>
-        <location filename="../build/ui_formcalculator.h" line="843"/>
         <source>Maximum of the numeric array.</source>
         <translation>Maximum z pole čísel.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1122"/>
-        <location filename="../build/ui_formcalculator.h" line="846"/>
         <source>Logarithm with base 10.</source>
         <translation>Logaritmus o základu 10.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1153"/>
-        <location filename="../build/ui_formcalculator.h" line="849"/>
         <source>Subtracts two numbers.</source>
         <translation>Odečte dvě čísla.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1190"/>
-        <location filename="../build/ui_formcalculator.h" line="852"/>
         <source>Calculate the expression.</source>
         <translation>Vypočítat vzorec.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1221"/>
-        <location filename="../build/ui_formcalculator.h" line="855"/>
         <source>Cosinus of an angle.</source>
         <translation>Kosinus úhlu.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1252"/>
-        <location filename="../build/ui_formcalculator.h" line="858"/>
         <source>Exponential function.</source>
         <translation>Exponenciální funkce.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1289"/>
-        <location filename="../build/ui_formcalculator.h" line="861"/>
         <source>0</source>
         <translation></translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1320"/>
-        <location filename="../build/ui_formcalculator.h" line="864"/>
         <source>Tangent of an angle.</source>
         <translation>Tangens úhlu.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1351"/>
-        <location filename="../build/ui_formcalculator.h" line="867"/>
         <source>Sum of the numeric array.</source>
         <translation>Součet pole čísel.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1382"/>
-        <location filename="../build/ui_formcalculator.h" line="870"/>
         <source>Argument of the complex number.</source>
         <translation>Argument komplexního čísla.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1413"/>
-        <location filename="../build/ui_formcalculator.h" line="873"/>
         <source>Imaginary part of the complex number.</source>
         <translation>Imaginární část komplexního čísla.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1444"/>
-        <location filename="../build/ui_formcalculator.h" line="876"/>
         <source>Computes the square root of a number.</source>
         <translation>Druhá odmocnina čísla.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1482"/>
-        <location filename="../build/ui_formcalculator.h" line="879"/>
         <source>.</source>
         <translation></translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1513"/>
-        <location filename="../build/ui_formcalculator.h" line="882"/>
         <source>Adds two numbers.</source>
         <translation>Sečte dvě čísla.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1544"/>
-        <location filename="../build/ui_formcalculator.h" line="885"/>
         <source>Shifts the number to right.</source>
         <translation>Bitově posune číslo vpravo.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1575"/>
-        <location filename="../build/ui_formcalculator.h" line="888"/>
         <source>Shifts the number to left.</source>
         <translation>Bitově posune číslo vlevo.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1606"/>
-        <location filename="../build/ui_formcalculator.h" line="891"/>
         <source>Set the value of &apos;m&apos; variable to value of entered expression.</source>
         <translation>Nastaví hodnotu proměnné &apos;m&apos; na výsledek zadaného výrazu.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1674"/>
-        <location filename="../build/ui_formcalculator.h" line="897"/>
         <source>Add the result of entered expression to the &apos;m&apos; variable.</source>
         <translation>Přičíst výsledek zadaného výrazu k proměnné &apos;m&apos;.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1711"/>
-        <location filename="../build/ui_formcalculator.h" line="900"/>
         <source>Subtract the result of entered expression from the &apos;m&apos; variable.</source>
         <translation>Odečíst výsledek zadaného výrazu od proměnné &apos;m&apos;.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formcalculator.ui" line="1637"/>
-        <location filename="../build/ui_formcalculator.h" line="894"/>
         <source>Set the &apos;m&apos; variable to zero.</source>
         <translation>Nastaví proměnnou &apos;m&apos; na hodnotu 0.</translation>
     </message>
@@ -731,7 +666,6 @@
     <name>FormCurrencyConverter</name>
     <message>
         <location filename="../ui/currencyconverter/formcurrencyconverter.ui" line="43"/>
-        <location filename="../build/ui_formcurrencyconverter.h" line="224"/>
         <source>Input
 currency</source>
         <translation>Vstupní
@@ -739,7 +673,6 @@ jednotka</translation>
     </message>
     <message>
         <location filename="../ui/currencyconverter/formcurrencyconverter.ui" line="57"/>
-        <location filename="../build/ui_formcurrencyconverter.h" line="226"/>
         <source>Output
 currency</source>
         <translation>Výstupní
@@ -747,61 +680,51 @@ jednotka</translation>
     </message>
     <message>
         <location filename="../ui/currencyconverter/formcurrencyconverter.ui" line="83"/>
-        <location filename="../build/ui_formcurrencyconverter.h" line="229"/>
         <source>Select input currency.</source>
         <translation>Zvolte vstupní jednotku.</translation>
     </message>
     <message>
         <location filename="../ui/currencyconverter/formcurrencyconverter.ui" line="99"/>
-        <location filename="../build/ui_formcurrencyconverter.h" line="232"/>
         <source>Select output currency.</source>
         <translation>Zvolte výstupní jednotku.</translation>
     </message>
     <message>
         <location filename="../ui/currencyconverter/formcurrencyconverter.ui" line="273"/>
-        <location filename="../build/ui_formcurrencyconverter.h" line="237"/>
         <source>Information</source>
         <translation>Informace</translation>
     </message>
     <message>
         <location filename="../ui/currencyconverter/formcurrencyconverter.ui" line="294"/>
-        <location filename="../build/ui_formcurrencyconverter.h" line="238"/>
         <source>Bank</source>
         <translation>Banka</translation>
     </message>
     <message>
         <location filename="../ui/currencyconverter/formcurrencyconverter.ui" line="304"/>
-        <location filename="../build/ui_formcurrencyconverter.h" line="239"/>
         <source>Date</source>
         <translation>Datum</translation>
     </message>
     <message>
         <location filename="../ui/currencyconverter/formcurrencyconverter.ui" line="332"/>
-        <location filename="../build/ui_formcurrencyconverter.h" line="241"/>
         <source>Click this button if you want to update currency rates via internet.</source>
         <translation>Klikněte na toto tlačítko, pokud chcete aktualizovat kurzy měn z internetu.</translation>
     </message>
     <message>
         <location filename="../ui/currencyconverter/formcurrencyconverter.ui" line="341"/>
-        <location filename="../build/ui_formcurrencyconverter.h" line="243"/>
         <source>Update definitions</source>
         <translation>Aktualizovat kurzy</translation>
     </message>
     <message>
         <location filename="../ui/currencyconverter/formcurrencyconverter.ui" line="119"/>
-        <location filename="../build/ui_formcurrencyconverter.h" line="234"/>
         <source>Exchange place</source>
         <translation>Směnárna</translation>
     </message>
     <message>
         <location filename="../ui/currencyconverter/formcurrencyconverter.ui" line="158"/>
-        <location filename="../build/ui_formcurrencyconverter.h" line="235"/>
         <source>Input cash</source>
         <translation>Vstupní částka</translation>
     </message>
     <message>
         <location filename="../ui/currencyconverter/formcurrencyconverter.ui" line="220"/>
-        <location filename="../build/ui_formcurrencyconverter.h" line="236"/>
         <source>Output cash</source>
         <translation>Výstupní částka</translation>
     </message>
@@ -836,136 +759,128 @@ jednotka</translation>
     <name>FormEditVariable</name>
     <message>
         <location filename="../ui/calculator/formeditvariable.ui" line="23"/>
-        <location filename="../build/ui_formeditvariable.h" line="150"/>
         <source>Add Variable</source>
         <translation>Přidat proměnnou</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formeditvariable.ui" line="29"/>
-        <location filename="../build/ui_formeditvariable.h" line="151"/>
         <source>Name</source>
         <translation>Název</translation>
     </message>
     <message>
-        <location filename="../ui/calculator/formeditvariable.ui" line="65"/>
-        <location filename="../build/ui_formeditvariable.h" line="155"/>
+        <location filename="../ui/calculator/formeditvariable.ui" line="88"/>
         <source>Name of variable</source>
         <translation>Název proměnné</translation>
     </message>
     <message>
-        <location filename="../ui/calculator/formeditvariable.ui" line="72"/>
-        <location filename="../build/ui_formeditvariable.h" line="156"/>
+        <location filename="../ui/calculator/formeditvariable.ui" line="56"/>
         <source>Description</source>
         <translation>Popis</translation>
     </message>
     <message>
-        <location filename="../ui/calculator/formeditvariable.ui" line="95"/>
-        <location filename="../build/ui_formeditvariable.h" line="159"/>
+        <location filename="../ui/calculator/formeditvariable.ui" line="108"/>
         <source>INTEGER</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ui/calculator/formeditvariable.ui" line="100"/>
-        <location filename="../build/ui_formeditvariable.h" line="160"/>
+        <location filename="../ui/calculator/formeditvariable.ui" line="113"/>
         <source>FLOAT</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ui/calculator/formeditvariable.ui" line="105"/>
-        <location filename="../build/ui_formeditvariable.h" line="161"/>
+        <location filename="../ui/calculator/formeditvariable.ui" line="118"/>
         <source>BOOLEAN</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ui/calculator/formeditvariable.ui" line="110"/>
-        <location filename="../build/ui_formeditvariable.h" line="162"/>
+        <location filename="../ui/calculator/formeditvariable.ui" line="123"/>
         <source>STRING</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ui/calculator/formeditvariable.ui" line="115"/>
-        <location filename="../build/ui_formeditvariable.h" line="163"/>
+        <location filename="../ui/calculator/formeditvariable.ui" line="128"/>
         <source>COMPLEX</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ui/calculator/formeditvariable.ui" line="120"/>
-        <location filename="../build/ui_formeditvariable.h" line="164"/>
+        <location filename="../ui/calculator/formeditvariable.ui" line="133"/>
         <source>VOID</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ui/calculator/formeditvariable.ui" line="141"/>
-        <location filename="../build/ui_formeditvariable.h" line="170"/>
+        <location filename="../ui/calculator/formeditvariable.ui" line="151"/>
         <source>Description of variable</source>
         <translation>Popis proměnné</translation>
     </message>
     <message>
-        <location filename="../ui/calculator/formeditvariable.ui" line="82"/>
-        <location filename="../build/ui_formeditvariable.h" line="167"/>
+        <location filename="../ui/calculator/formeditvariable.ui" line="95"/>
         <source>Select type of variable.</source>
         <translation>Zvolte typ proměnné.</translation>
     </message>
     <message>
-        <location filename="../src/calculator/formeditvariable.cpp" line="107"/>
-        <source>Result of expression is of type &apos;%1&apos; and can be used as value for variable &apos;%2&apos;.</source>
-        <translation>Výsledek výrazu má typ &apos;%1&apos; a může být tedy použit jako hodnota pro proměnnou &apos;%2&apos;.</translation>
+        <location filename="../src/calculator/formeditvariable.cpp" line="81"/>
+        <source>Variable name is valid.</source>
+        <translation>Jméno proměnné je v pořádku.</translation>
     </message>
     <message>
-        <location filename="../src/calculator/formeditvariable.cpp" line="129"/>
-        <location filename="../src/calculator/formeditvariable.cpp" line="165"/>
+        <location filename="../src/calculator/formeditvariable.cpp" line="86"/>
+        <source>Variable name is invalid. Variable with the same name already exists are the name is not well-formed.</source>
+        <translation>Jméno proměnné je chybné. Proměnná se stejným jménem již existuje nebo má zadané jméno nedovolený tvar.</translation>
+    </message>
+    <message>
+        <location filename="../src/calculator/formeditvariable.cpp" line="107"/>
+        <source>Result of expression is of type &apos;%1&apos; and can be used as value for your variable.</source>
+        <translation>Výsledek výrazu má typ &apos;%1&apos; a může být použit jako hodnota pro Vaši proměnnou.</translation>
+    </message>
+    <message>
+        <location filename="../src/calculator/formeditvariable.cpp" line="137"/>
+        <location filename="../src/calculator/formeditvariable.cpp" line="173"/>
         <source>Invalid Variable Setup</source>
         <translation>Špatné nastavení proměnné</translation>
     </message>
     <message>
-        <location filename="../src/calculator/formeditvariable.cpp" line="130"/>
+        <location filename="../src/calculator/formeditvariable.cpp" line="138"/>
         <source>Cannot add variable &apos;%1&apos;. Its name is invalid or is already used.</source>
         <translation>Nelze přidat proměnnou &apos;%1&apos;. Její jméno je chybné nebo je již používáno.</translation>
     </message>
     <message>
-        <location filename="../src/calculator/formeditvariable.cpp" line="148"/>
+        <location filename="../src/calculator/formeditvariable.cpp" line="156"/>
         <source>Edit Variable</source>
         <translation>Upravit proměnnou</translation>
     </message>
     <message>
-        <location filename="../src/calculator/formeditvariable.cpp" line="166"/>
+        <location filename="../src/calculator/formeditvariable.cpp" line="174"/>
         <source>Cannot edit variable &apos;%1&apos;. Its value is not well-formed or another error occured.</source>
         <translation>Nelze upravt proměnnou &apos;%1&apos;. Její hodnota nemá správný formát nebo se vyskytla jiná chyba.</translation>
     </message>
     <message>
-        <location filename="../ui/calculator/formeditvariable.ui" line="62"/>
-        <location filename="../ui/calculator/formeditvariable.ui" line="180"/>
-        <location filename="../build/ui_formeditvariable.h" line="154"/>
-        <location filename="../build/ui_formeditvariable.h" line="172"/>
+        <location filename="../ui/calculator/formeditvariable.ui" line="85"/>
+        <location filename="../ui/calculator/formeditvariable.ui" line="141"/>
         <source>0</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ui/calculator/formeditvariable.ui" line="183"/>
-        <location filename="../build/ui_formeditvariable.h" line="173"/>
+        <location filename="../ui/calculator/formeditvariable.ui" line="144"/>
         <source>Input value here</source>
         <translation>Vložte hodnotu</translation>
     </message>
     <message>
-        <location filename="../ui/calculator/formeditvariable.ui" line="39"/>
-        <location filename="../build/ui_formeditvariable.h" line="152"/>
+        <location filename="../ui/calculator/formeditvariable.ui" line="49"/>
         <source>Calc. Value</source>
         <translation>Vypočtená hodnota</translation>
     </message>
     <message>
-        <location filename="../ui/calculator/formeditvariable.ui" line="134"/>
-        <location filename="../build/ui_formeditvariable.h" line="169"/>
+        <location filename="../ui/calculator/formeditvariable.ui" line="72"/>
         <source>Calculated value</source>
         <translation>Vypočtená hodnota</translation>
     </message>
     <message>
-        <location filename="../ui/calculator/formeditvariable.ui" line="46"/>
-        <location filename="../build/ui_formeditvariable.h" line="153"/>
+        <location filename="../ui/calculator/formeditvariable.ui" line="39"/>
         <source>Input Value</source>
         <translation>Vstupní hodnota</translation>
     </message>
     <message>
-        <location filename="../src/calculator/formeditvariable.cpp" line="109"/>
+        <location filename="../src/calculator/formeditvariable.cpp" line="108"/>
         <source>Result of expression is not of type &apos;%1&apos;. Make sure correct type is selected. If you select &apos;VOID&apos; type, then make sure your expression evaluates to &apos;VOID&apos;. Empty expression does that.</source>
         <translation>Výsledek výrazu nemá typ &apos;%1&apos;. Ujistěte se, že je zvolen správný typ. Pokud vyberete typ &apos;VOID&apos;, tak se ujistětě, že se výraz na &apos;VOID&apos; vyhodnotí, což dělá například prázdný výraz.</translation>
     </message>
@@ -974,91 +889,76 @@ jednotka</translation>
     <name>FormMain</name>
     <message>
         <location filename="../ui/formmain.ui" line="65"/>
-        <location filename="../build/ui_formmain.h" line="165"/>
         <source>&amp;Help </source>
         <translation>&amp;Pomoc</translation>
     </message>
     <message>
         <location filename="../ui/formmain.ui" line="72"/>
-        <location filename="../build/ui_formmain.h" line="166"/>
         <source>&amp;File</source>
         <translation>&amp;Soubor</translation>
     </message>
     <message>
         <location filename="../ui/formmain.ui" line="78"/>
-        <location filename="../build/ui_formmain.h" line="167"/>
         <source>&amp;Tools</source>
         <translation>&amp;Nástroje</translation>
     </message>
     <message>
         <location filename="../ui/formmain.ui" line="86"/>
-        <location filename="../build/ui_formmain.h" line="168"/>
         <source>&amp;View</source>
         <translation>&amp;Zobrazit</translation>
     </message>
     <message>
         <location filename="../ui/formmain.ui" line="101"/>
-        <location filename="../build/ui_formmain.h" line="152"/>
         <source>About &amp;Qt</source>
         <translation>O knihovně &amp;Qt</translation>
     </message>
     <message>
         <location filename="../ui/formmain.ui" line="109"/>
-        <location filename="../build/ui_formmain.h" line="153"/>
         <source>&amp;About Qonverter</source>
         <translation>O aplikaci &amp;Qonverter</translation>
     </message>
     <message>
         <location filename="../ui/formmain.ui" line="117"/>
-        <location filename="../build/ui_formmain.h" line="154"/>
         <source>&amp;Settings</source>
         <translation>&amp;Nastavení</translation>
     </message>
     <message>
         <location filename="../ui/formmain.ui" line="125"/>
-        <location filename="../build/ui_formmain.h" line="155"/>
         <source>&amp;Quit</source>
         <translation>&amp;Konec</translation>
     </message>
     <message>
         <location filename="../ui/formmain.ui" line="147"/>
-        <location filename="../build/ui_formmain.h" line="157"/>
         <source>Display Calculator &amp;Keypad</source>
         <translation>Zobrazit &amp;klávesnici kalkulačky</translation>
     </message>
     <message>
         <location filename="../ui/formmain.ui" line="166"/>
-        <location filename="../build/ui_formmain.h" line="159"/>
         <source>&amp;Variables, Constants and Functions</source>
         <translation>&amp;Proměnné, konstanty a funkce</translation>
     </message>
     <message>
         <location filename="../ui/formmain.ui" line="172"/>
-        <location filename="../build/ui_formmain.h" line="163"/>
         <source>Ctrl+Shift+V</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/formmain.ui" line="180"/>
-        <location filename="../build/ui_formmain.h" line="164"/>
         <source>&amp;Calculator</source>
         <translation>&amp;Kalkulačka</translation>
     </message>
     <message>
         <location filename="../ui/formmain.ui" line="136"/>
-        <location filename="../build/ui_formmain.h" line="156"/>
         <source>&amp;Unit Converter</source>
         <translation>Převodník &amp;jednotek</translation>
     </message>
     <message>
         <location filename="../ui/formmain.ui" line="158"/>
-        <location filename="../build/ui_formmain.h" line="158"/>
         <source>Cu&amp;rrency Converter</source>
         <translation>Převodník &amp;měn</translation>
     </message>
     <message>
         <location filename="../ui/formmain.ui" line="169"/>
-        <location filename="../build/ui_formmain.h" line="161"/>
         <source>Displays simple list of declared variables.</source>
         <translation>Zobrazí přehledný seznam deklarovaných proměnných.</translation>
     </message>
@@ -1102,225 +1002,187 @@ jednotka</translation>
     <name>FormSettings</name>
     <message>
         <location filename="../ui/formsettings.ui" line="17"/>
-        <location filename="../build/ui_formsettings.h" line="564"/>
         <source>Settings</source>
         <translation>Nastavení</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="85"/>
-        <location filename="../build/ui_formsettings.h" line="565"/>
         <source>Launch Qonverter on operating system startup</source>
         <translation>Spustit Qonverter při startu operačního systému</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="99"/>
-        <location filename="../build/ui_formsettings.h" line="567"/>
         <source>Initial mode</source>
         <translation>Úvodní mód</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="115"/>
-        <location filename="../build/ui_formsettings.h" line="574"/>
         <source>Unit Converter</source>
         <translation>Převodník jednotek</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="120"/>
-        <location filename="../build/ui_formsettings.h" line="576"/>
         <source>Currency Converter</source>
         <translation>Převodník měn</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="92"/>
-        <location filename="../build/ui_formsettings.h" line="566"/>
         <source>Launch Qonverter hidden (this is allowed only if tray icon as enabled and available)</source>
         <translation>Spouštět Qonverter skrytý (povoleno pouze v režimu notifikační ikony)</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="243"/>
-        <location filename="../build/ui_formsettings.h" line="588"/>
         <source>Style</source>
         <translation>Styl</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="260"/>
-        <location filename="../build/ui_formsettings.h" line="592"/>
         <source>Skin</source>
         <translation>Skin</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="181"/>
-        <location filename="../build/ui_formsettings.h" line="579"/>
         <source>Tray Icon</source>
         <translation>Notifikační ikona</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="187"/>
-        <location filename="../build/ui_formsettings.h" line="580"/>
         <source>When main window is closed</source>
         <translation>Je-li hlavní okno zavřenout, tak</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="201"/>
-        <location filename="../build/ui_formsettings.h" line="583"/>
         <source>Minimize Qonverter to tray area</source>
         <translation>Minimalizovat Qonverter do notifikační oblasti</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="206"/>
-        <location filename="../build/ui_formsettings.h" line="584"/>
         <source>Quit Qonverter</source>
         <translation>Ukončit Qonverter</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="214"/>
-        <location filename="../build/ui_formsettings.h" line="586"/>
         <source>Use tray icon</source>
         <translation>Používat</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="227"/>
-        <location filename="../build/ui_formsettings.h" line="587"/>
         <source>Do not use tray icon</source>
         <translation>Nepoužívat</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="364"/>
-        <location filename="../build/ui_formsettings.h" line="602"/>
         <source>Country</source>
         <translation>Země</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="369"/>
-        <location filename="../build/ui_formsettings.h" line="601"/>
         <source>Code</source>
         <translation>Kód</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="374"/>
-        <location filename="../build/ui_formsettings.h" line="600"/>
         <source>Version</source>
         <translation>Verze</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="379"/>
-        <location filename="../build/ui_formsettings.h" line="599"/>
         <source>Author</source>
         <translation>Autor</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="384"/>
-        <location filename="../build/ui_formsettings.h" line="598"/>
         <source>Email</source>
         <translation>Email</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="389"/>
-        <location filename="../build/ui_formsettings.h" line="597"/>
         <source>Website</source>
         <translation>Webová stránka</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="469"/>
-        <location filename="../build/ui_formsettings.h" line="605"/>
         <source>Preview</source>
         <translation>Ukázka</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="523"/>
-        <location filename="../build/ui_formsettings.h" line="608"/>
         <source>Parenthesises (background)</source>
         <translation>Závorky (pozadí)</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="516"/>
-        <location filename="../build/ui_formsettings.h" line="607"/>
         <source>Numbers</source>
         <translation>Čísla</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="253"/>
-        <location filename="../build/ui_formsettings.h" line="590"/>
         <source>Styles are provided by the Qt core. Style is provided for each major desktop environment.</source>
         <translation>Styly poskytuje jádro knihovny Qt a jsou poskytovány pro většinu oblíbených desktopových prostředí.</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="270"/>
-        <location filename="../build/ui_formsettings.h" line="594"/>
         <source>Skins are style extenders. They are held in plain text files with CSS-like syntax. Skins can provide richer user experience.</source>
         <translation>Skiny jsou nadstavby stylů. Jsou uchovávány v běžných textových souborech a mají syntax podobnou k CSS. Skiny mohou nabídnout bohatší prožitek z rozhraní aplikace.</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="450"/>
-        <location filename="../build/ui_formsettings.h" line="603"/>
         <source>Input Text Box Colors &amp;&amp; Font</source>
         <translation>Barvy &amp;&amp; písmo vstupního textového pole</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="530"/>
         <location filename="../ui/formsettings.ui" line="685"/>
-        <location filename="../build/ui_formsettings.h" line="609"/>
-        <location filename="../build/ui_formsettings.h" line="631"/>
         <source>Change...</source>
         <translation>Změnit...</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="537"/>
-        <location filename="../build/ui_formsettings.h" line="610"/>
         <source>Parenthesises (foreground)</source>
         <translation>Závorky (popředí)</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="544"/>
-        <location filename="../build/ui_formsettings.h" line="611"/>
         <source>Font</source>
         <translation>Písmo</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="551"/>
-        <location filename="../build/ui_formsettings.h" line="612"/>
         <source>Functions</source>
         <translation>Funkce</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="572"/>
-        <location filename="../build/ui_formsettings.h" line="615"/>
         <source>Operators</source>
         <translation>Operátory</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="586"/>
-        <location filename="../build/ui_formsettings.h" line="617"/>
         <source>Strings</source>
         <translation>Řetězce</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="600"/>
-        <location filename="../build/ui_formsettings.h" line="620"/>
         <source>Restores colors of all elements to original state. Default colors depend on colors of your desktop environment.</source>
         <translation>Obnoví barvy všech textových elementů vstupu kalkulačky. Výchozí barvy závisí na barvách Vašeho desktopového prostředí.</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="603"/>
-        <location filename="../build/ui_formsettings.h" line="623"/>
         <source>s</source>
         <translation></translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="606"/>
-        <location filename="../build/ui_formsettings.h" line="625"/>
         <source>Restore default colors</source>
         <translation>Obnovit výchozí barvy</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="723"/>
-        <location filename="../build/ui_formsettings.h" line="634"/>
         <source>On-the-fly mode allows you to see subresult of your mathematical formula.</source>
         <translation>Průběžný režim Vás upozorňuje na mezivýsledek, zatímco píšete matematický vzorec.</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="736"/>
-        <location filename="../build/ui_formsettings.h" line="638"/>
         <source>Calculator allows you to declare new variables with assignment operator &quot;=&quot;. So if you write something like &quot;a = 123&quot; and evaluate the expression, then new variable &quot;a&quot; with value &quot;123&quot; is created.
 
 Note that variables are not created during on-the-fly subcomputations in calculator and unit converter.</source>
@@ -1330,51 +1192,42 @@ Proměnné nejsou vytvářený v průběžném režimu kalkulačky nebo převodn
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="741"/>
-        <location filename="../build/ui_formsettings.h" line="642"/>
         <source>Enable automatic variable creation</source>
         <translation>Povolit automatickou tvorbu proměnných</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="755"/>
-        <location filename="../build/ui_formsettings.h" line="644"/>
         <source>Auto-completion</source>
         <translation>Automatické doplňování</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="761"/>
-        <location filename="../build/ui_formsettings.h" line="645"/>
         <source>Maximum number of visible items</source>
         <translation>Maximální počet viditelných položek</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="774"/>
-        <location filename="../build/ui_formsettings.h" line="647"/>
         <source>Specifies maximum number of visible rows of auto-completion panel. Optimal value seems to be between 5 and 7.</source>
         <translation>Specifikuje maximální počet viditelných řádků v panelu automatického doplňování. Optimální hodnota se nachází někde mezi 5 a 7.</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="859"/>
-        <location filename="../build/ui_formsettings.h" line="653"/>
         <source>General</source>
         <translation>Obecné</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="870"/>
-        <location filename="../build/ui_formsettings.h" line="655"/>
         <source>User Interface</source>
         <translation>Rozhraní</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="875"/>
-        <location filename="../build/ui_formsettings.h" line="657"/>
         <source>Language</source>
         <translation>Lokalizace</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="110"/>
         <location filename="../ui/formsettings.ui" line="880"/>
-        <location filename="../build/ui_formsettings.h" line="572"/>
-        <location filename="../build/ui_formsettings.h" line="659"/>
         <source>Calculator</source>
         <translation>Kalkulačka</translation>
     </message>
@@ -1411,44 +1264,36 @@ Proměnné nejsou vytvářený v průběžném režimu kalkulačky nebo převodn
     <message>
         <location filename="../ui/formsettings.ui" line="643"/>
         <location filename="../ui/formsettings.ui" line="704"/>
-        <location filename="../build/ui_formsettings.h" line="628"/>
-        <location filename="../build/ui_formsettings.h" line="632"/>
         <source> ms</source>
         <translation></translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="662"/>
-        <location filename="../build/ui_formsettings.h" line="629"/>
         <source>Error messages are displayed for</source>
         <translation>Chybové zprávy jsou zobrazeny po</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="627"/>
-        <location filename="../build/ui_formsettings.h" line="627"/>
         <source>On-the-fly subresults are displayed for</source>
         <translation>On-the-fly mezivýsledky jsou zobrazeny po</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="616"/>
-        <location filename="../build/ui_formsettings.h" line="626"/>
         <source>On-The-Fly Mode</source>
         <translation>On-the-fly mód</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="726"/>
-        <location filename="../build/ui_formsettings.h" line="636"/>
         <source>Use on-the-fly mode for displaying subresults</source>
         <translation>Použít on-thy-fly mód pro zobrazení mezivýsledků</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="672"/>
-        <location filename="../build/ui_formsettings.h" line="630"/>
         <source>Font of on-the-fly mode popup panel</source>
         <translation>Písmo pro on-the-fly panel</translation>
     </message>
     <message>
         <location filename="../ui/formsettings.ui" line="748"/>
-        <location filename="../build/ui_formsettings.h" line="643"/>
         <source>Select result text when calculation finishes</source>
         <translation>Vybrat výsledek po výpočtu</translation>
     </message>
@@ -1467,66 +1312,56 @@ Proměnné nejsou vytvářený v průběžném režimu kalkulačky nebo převodn
     <name>FormUnitConverter</name>
     <message>
         <location filename="../ui/unitconverter/formunitconverter.ui" line="110"/>
-        <location filename="../build/ui_formunitconverter.h" line="148"/>
         <source>Input expression</source>
         <translation>Vstupní výraz</translation>
     </message>
     <message>
         <location filename="../ui/unitconverter/formunitconverter.ui" line="120"/>
-        <location filename="../build/ui_formunitconverter.h" line="150"/>
         <source>Result of your expression is displayed here.</source>
         <translation>Výsledek vstupního výrazu je zobrazen zde.</translation>
     </message>
     <message>
         <location filename="../ui/unitconverter/formunitconverter.ui" line="68"/>
-        <location filename="../build/ui_formunitconverter.h" line="136"/>
         <source>Swap selected units.</source>
         <translation>Prohodí zvolené jednotky.</translation>
     </message>
     <message>
         <location filename="../ui/unitconverter/formunitconverter.ui" line="91"/>
-        <location filename="../build/ui_formunitconverter.h" line="140"/>
         <source>Select input unit.</source>
         <translation>Zvolte vstupní jednotku.</translation>
     </message>
     <message>
         <location filename="../ui/unitconverter/formunitconverter.ui" line="98"/>
-        <location filename="../build/ui_formunitconverter.h" line="143"/>
         <source>Select output unit.</source>
         <translation>Zvolte výstupní jednotku.</translation>
     </message>
     <message>
         <location filename="../ui/unitconverter/formunitconverter.ui" line="129"/>
-        <location filename="../build/ui_formunitconverter.h" line="153"/>
         <source>Result of expression</source>
         <translation>Výsledek výrazu</translation>
     </message>
     <message>
         <location filename="../ui/unitconverter/formunitconverter.ui" line="136"/>
-        <location filename="../build/ui_formunitconverter.h" line="155"/>
         <source>Final result of conversion is displayed here.</source>
         <translation>Konečný výsledek převodu je zobrazen zde.</translation>
     </message>
     <message>
         <location filename="../ui/unitconverter/formunitconverter.ui" line="107"/>
-        <location filename="../build/ui_formunitconverter.h" line="146"/>
         <source>Insert your mathematical expression here.</source>
         <translation>Vložte svůj matematický výraz sem.</translation>
     </message>
     <message>
         <location filename="../ui/unitconverter/formunitconverter.ui" line="161"/>
-        <location filename="../build/ui_formunitconverter.h" line="159"/>
         <source>Select desired magnitude.</source>
         <translation>Zvolte veličinu.</translation>
     </message>
     <message>
         <location filename="../ui/unitconverter/formunitconverter.ui" line="142"/>
-        <location filename="../build/ui_formunitconverter.h" line="157"/>
         <source>Result of conversion</source>
         <translation>Výsledek převodu</translation>
     </message>
     <message>
-        <location filename="../src/unitconverter/formunitconverter.cpp" line="81"/>
+        <location filename="../src/unitconverter/formunitconverter.cpp" line="151"/>
         <source>Input expression is valid.</source>
         <translation>Vložený výraz je správný.</translation>
     </message>
@@ -1535,91 +1370,76 @@ Proměnné nejsou vytvářený v průběžném režimu kalkulačky nebo převodn
     <name>FormVariables</name>
     <message>
         <location filename="../ui/calculator/formvariables.ui" line="17"/>
-        <location filename="../build/ui_formvariables.h" line="173"/>
         <source>Variables, Constants and Functions</source>
         <translation>Proměnné, konstanty a funkce</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formvariables.ui" line="26"/>
-        <location filename="../build/ui_formvariables.h" line="174"/>
         <source>Delete Variable</source>
         <translation>Smazat proměnnou</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formvariables.ui" line="42"/>
-        <location filename="../build/ui_formvariables.h" line="175"/>
         <source>Edit Variable</source>
         <translation>Upravit proměnnou</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formvariables.ui" line="52"/>
-        <location filename="../build/ui_formvariables.h" line="176"/>
         <source>Add Variable</source>
         <translation>Přidat proměnnou</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formvariables.ui" line="88"/>
-        <location filename="../build/ui_formvariables.h" line="179"/>
         <source>Constants</source>
         <translation>Konstanty</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formvariables.ui" line="93"/>
-        <location filename="../build/ui_formvariables.h" line="180"/>
         <source>Impilicitly-created variables</source>
         <translation>Implicitně vytvořené proměnné</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formvariables.ui" line="98"/>
-        <location filename="../build/ui_formvariables.h" line="181"/>
         <source>Explicitly-created variables</source>
         <translation>Explicitně vytvořené proměnné</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formvariables.ui" line="103"/>
-        <location filename="../build/ui_formvariables.h" line="182"/>
         <source>Critical variables</source>
         <translation>Kritické proměnné</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formvariables.ui" line="108"/>
-        <location filename="../build/ui_formvariables.h" line="183"/>
         <source>Functions</source>
         <translation>Funkce</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formvariables.ui" line="113"/>
-        <location filename="../build/ui_formvariables.h" line="184"/>
         <source>All variables</source>
         <translation>Všechny proměnné</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formvariables.ui" line="118"/>
-        <location filename="../build/ui_formvariables.h" line="185"/>
         <source>Everything</source>
         <translation>Vše</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formvariables.ui" line="126"/>
-        <location filename="../build/ui_formvariables.h" line="187"/>
         <source>Display</source>
         <translation>Zobrazit</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formvariables.ui" line="198"/>
-        <location filename="../build/ui_formvariables.h" line="188"/>
         <source>Filter</source>
         <translation>Filtr</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formvariables.ui" line="208"/>
-        <location filename="../build/ui_formvariables.h" line="190"/>
         <source>Insert regular expression for filtering visible items.</source>
         <translation>Sem vložte regulární výraz pro filtrování viditelných položek.</translation>
     </message>
     <message>
         <location filename="../ui/calculator/formvariables.ui" line="211"/>
-        <location filename="../build/ui_formvariables.h" line="192"/>
         <source>Filter pattern for visible items</source>
         <translation>Filtrovací vzor pro vid. položky</translation>
     </message>
@@ -1628,19 +1448,16 @@ Proměnné nejsou vytvářený v průběžném režimu kalkulačky nebo převodn
     <name>FormWelcome</name>
     <message>
         <location filename="../ui/formwelcome.ui" line="17"/>
-        <location filename="../build/ui_formwelcome.h" line="94"/>
         <source>Welcome</source>
         <translation>Vítejte</translation>
     </message>
     <message>
         <location filename="../ui/formwelcome.ui" line="76"/>
-        <location filename="../build/ui_formwelcome.h" line="95"/>
         <source>Welcome to Qonverter</source>
         <translation>Vítejte v aplikaci Qonverter</translation>
     </message>
     <message>
         <location filename="../ui/formwelcome.ui" line="86"/>
-        <location filename="../build/ui_formwelcome.h" line="96"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Qonverter is simple and easy-to-use calculator and unit/currency converter. It offers calculations based on integers, floating-point numbers, boolean values and even on strings.&lt;/p&gt;&lt;p&gt;Make sure you explore all available features. If you find a bug or if you want to propose new feature, then create new &lt;a href=&quot;http://code.google.com/p/qonverter/issues/list&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;issue report&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Qonverter can be translated to any language. Contact its &lt;a href=&quot;mailto:rotter.martinos@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;author&lt;/span&gt;&lt;/a&gt; in case of your interest.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Qonverter je jednoduchá a dobře použitelná kalkulačka s převodníkem jednotek a měn. Nabízí možnost počítat s celými, desetinnými i komplexními čísly, booleovskými hodnotami nebo s řetězci.&lt;/p&gt;&lt;p&gt;Ujistěte se, že odhalíte všechny jeho funkce. Pokud najdete chybu nebo byste rádi v programu měli novou funkcionalitu, tak vyplňte &lt;a href=&quot;http://code.google.com/p/qonverter/issues/list&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;hlášení&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Qonverter může být lokalizován do kteréhokoliv jazyka. V případě zájmu kontaktujte &lt;a href=&quot;mailto:rotter.martinos@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;autora&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -1657,42 +1474,42 @@ Proměnné nejsou vytvářený v průběžném režimu kalkulačky nebo převodn
     <name>QObject</name>
     <message>
         <location filename="../src/formsettings.cpp" line="173"/>
-        <location filename="../src/main.cpp" line="48"/>
+        <location filename="../src/main.cpp" line="47"/>
         <source>LANG_NAME</source>
         <extracomment>FOR TRANSLATOR: Name of language, e.g. English.</extracomment>
         <translation>Čeština</translation>
     </message>
     <message>
         <location filename="../src/formsettings.cpp" line="174"/>
-        <location filename="../src/main.cpp" line="50"/>
+        <location filename="../src/main.cpp" line="49"/>
         <source>LANG_ABBREV</source>
         <extracomment>FOR TRANSLATOR: Abbreviation of language, e.g. en.</extracomment>
         <translation>cs</translation>
     </message>
     <message>
         <location filename="../src/formsettings.cpp" line="175"/>
-        <location filename="../src/main.cpp" line="52"/>
+        <location filename="../src/main.cpp" line="51"/>
         <source>LANG_VERSION</source>
         <extracomment>FOR TRANSLATOR: Version of your translation, e.g. 1.0.</extracomment>
         <translation>1.5</translation>
     </message>
     <message>
         <location filename="../src/formsettings.cpp" line="176"/>
-        <location filename="../src/main.cpp" line="54"/>
+        <location filename="../src/main.cpp" line="53"/>
         <source>LANG_AUTHOR</source>
         <extracomment>FOR TRANSLATOR: Name of translator - optional.</extracomment>
         <translation>Martin Rotter</translation>
     </message>
     <message>
         <location filename="../src/formsettings.cpp" line="177"/>
-        <location filename="../src/main.cpp" line="56"/>
+        <location filename="../src/main.cpp" line="55"/>
         <source>LANG_EMAIL</source>
         <extracomment>FOR TRANSLATOR: Email of translator - optional.</extracomment>
         <translation>rotter.martinos@gmail.com</translation>
     </message>
     <message>
         <location filename="../src/formsettings.cpp" line="178"/>
-        <location filename="../src/main.cpp" line="58"/>
+        <location filename="../src/main.cpp" line="57"/>
         <source>LANG_WEBSITE</source>
         <extracomment>FOR TRANSLATOR: Website of language - optional.</extracomment>
         <translation>www.martin-rotter.8u.cz</translation>

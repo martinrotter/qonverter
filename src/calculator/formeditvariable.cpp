@@ -33,11 +33,9 @@ FormEditVariable::FormEditVariable(QWidget *parent)
   // Set flags.
   setWindowFlags(Qt::MSWindowsFixedSizeDialogHint | Qt::Dialog);
 
-  // Set palletes.
-  m_defaultPalette = m_ui->m_txtCalculatedValue->palette();
-  m_errorPalette = m_defaultPalette;
-  m_errorPalette.setColor(QPalette::Base, QColor(255, 0, 0, 20));
-  m_defaultPalette.setColor(QPalette::Base, QColor(0, 255, 0, 20));
+  // Set longer intervals for BalloonTip display.
+  m_ui->m_txtName->setStatusDisplayLength(12000);
+  m_ui->m_txtValue->setStatusDisplayLength(12000);
 
   // Set mappings.
   m_mappedTypes["INTEGER"] = m_mappedTypes["i"] = 0;
@@ -85,7 +83,7 @@ void FormEditVariable::checkName(const QString &name) {
   }
   else {
     // Name cannot be used for memory place.
-    m_ui->m_txtName->setStatusText(tr("Variable name is invalid. Variable with the same name already exists are the name is now well-formed."));
+    m_ui->m_txtName->setStatusText(tr("Variable name is invalid. Variable with the same name already exists are the name is not well-formed."));
     m_ui->m_txtName->setIcon(MarkedLineEdit::ERROR);
   }
 

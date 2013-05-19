@@ -26,8 +26,8 @@
 
 
 MarkedLineEdit::MarkedLineEdit(QWidget *parent)
-  : LineEdit(parent), m_markDisplayLength(-1) {
-  m_btnMark = new ToolButton(this);
+  : LineEdit(parent), m_statusDisplayLength(-1) {
+  m_btnStatus = new ToolButton(this);
 
   // Prepare icons for valid and invalid state.
   m_iconOk = QIcon::fromTheme("dialog-ok-apply",
@@ -37,17 +37,17 @@ MarkedLineEdit::MarkedLineEdit(QWidget *parent)
 
   // Set the icon to have the same dimensions as is the height of line edit.
   QSize sz = sizeHint();
-  m_btnMark->setIconSize(QSize(sz.height(),
-                               sz.height()));
+  m_btnStatus->setIconSize(QSize(sz.height(),
+                                 sz.height()));
 
   // Set correct cursor.
-  m_btnMark->setCursor(Qt::ArrowCursor);
+  m_btnStatus->setCursor(Qt::ArrowCursor);
 
   // Make sure that mark icon has no border and padding.
-  m_btnMark->setStyleSheet("QToolButton { border: none; padding: 0px; }");
+  m_btnStatus->setStyleSheet("QToolButton { border: none; padding: 0px; }");
 
   // Forward signal from mark icon.
-  connect(m_btnMark, &ToolButton::hovered, this, &MarkedLineEdit::showStatus);
+  connect(m_btnStatus, &ToolButton::hovered, this, &MarkedLineEdit::showStatus);
 
   // Make room at the right end of line edit for mark button.
   // Make sure there is extra margin between line edit and mark icon.
@@ -59,13 +59,13 @@ MarkedLineEdit::MarkedLineEdit(QWidget *parent)
 }
 
 MarkedLineEdit::~MarkedLineEdit() {
-  delete m_btnMark;
+  delete m_btnStatus;
 }
 
 bool MarkedLineEdit::event(QEvent *e) {
   switch (e->type()) {
     case QEvent::ToolTip: {
-      QPoint distance = QCursor::pos() - mapToGlobal(m_btnMark->pos());
+      QPoint distance = QCursor::pos() - mapToGlobal(m_btnStatus->pos());
       if (sqrt((distance.x() ^ 2) + (distance.y() ^ 2)) < 10) {
         return true;
       }
@@ -82,7 +82,7 @@ void MarkedLineEdit::resizeEvent(QResizeEvent *event) {
   Q_UNUSED(event);
 
   QSize sz_clear = m_btnClear->sizeHint();
-  QSize sz_mark = m_btnMark->sizeHint();
+  QSize sz_mark = m_btnStatus->sizeHint();
   QSize sz_lineedit = sizeHint();
 
   int frame_width = frameWidth();
@@ -92,8 +92,8 @@ void MarkedLineEdit::resizeEvent(QResizeEvent *event) {
                    rect().bottom() - sz_clear.height() + frame_width);
 
   // Move mark button to the right of line edit.
-  m_btnMark->move(rect().right() - sz_lineedit.height(),
-                  rect().bottom() - sz_mark.height() + 2 * frame_width);
+  m_btnStatus->move(rect().right() - sz_lineedit.height(),
+                    rect().bottom() - sz_mark.height() + 2 * frame_width);
 }
 
 void MarkedLineEdit::setEnabled(bool enable) {
@@ -113,8 +113,8 @@ void MarkedLineEdit::setEnabled(bool enable) {
   onTextChanged(text());
 }
 
-void MarkedLineEdit::setMarkDisplayLength(int length) {
-  m_markDisplayLength = length;
+void MarkedLineEdit::setStatusDisplayLength(int length) {
+  m_statusDisplayLength = length;
 }
 
 void MarkedLineEdit::setStatusText(const QString &text) {
@@ -128,7 +128,7 @@ void MarkedLineEdit::hideStatus() {
 void MarkedLineEdit::showStatus() {
   BalloonTip::showBalloon(m_statusText,
                           mapToGlobal(QPoint(22, sizeHint().height() - 3)),
-                          m_markDisplayLength);
+                          m_statusDisplayLength);
 }
 
 MarkedLineEdit::Status MarkedLineEdit::icon() {
@@ -140,10 +140,10 @@ void MarkedLineEdit::setIcon(Status icon) {
 
   switch (m_status) {
     case OK:
-      m_btnMark->setIcon(m_iconOk);
+      m_btnStatus->setIcon(m_iconOk);
       break;
     case ERROR:
-      m_btnMark->setIcon(m_iconError);
+      m_btnStatus->setIcon(m_iconError);
       break;
     default:
       break;

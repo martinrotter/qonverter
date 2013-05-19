@@ -42,28 +42,28 @@ class MarkedLineEdit : public LineEdit {
   public slots:
     Status icon();
     void setIcon(Status icon);
+
     void setStatusText(const QString &text);
-    void setMarkDisplayLength(int length);
+    void setStatusDisplayLength(int length);
 
     void showStatus();
     void hideStatus();
 
-    virtual void setEnabled(bool enable);
+    void setEnabled(bool enable);
 
   protected:
     void resizeEvent(QResizeEvent *event);
     bool event(QEvent *e);
 
   signals:
-    void markIconHovered(const MarkedLineEdit::Status &status);
+    void statusIconHovered(const MarkedLineEdit::Status &status);
 
   private:
     QIcon m_iconOk;
     QIcon m_iconError;
 
-    ToolButton *m_btnMark;
-    int m_markDisplayLength;
-    bool m_btnMarkEnabled;
+    ToolButton *m_btnStatus;
+    int m_statusDisplayLength;
 
     Status m_status;
     QString m_statusText;

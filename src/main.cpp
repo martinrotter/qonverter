@@ -39,8 +39,7 @@
 // https://code.google.com/p/google-breakpad/
 // https://github.com/AlekSi/breakpad-qt
 
-// TODO: Dodělat  aplikaci prekladu bez restartu aplikace.
-// retranslateUi.
+// TODO: Implement restart-free translations. (retranslateUi)
 
 
 int main(int argc, char *argv[]) {

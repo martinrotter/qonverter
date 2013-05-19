@@ -45,8 +45,8 @@ class LineEdit : public QLineEdit {
     void setClearButtonEnabled(bool enable);
 
     // Tweak default implementations.
-    virtual void setEnabled(bool enable);
-    virtual void setReadOnly(bool read_only);
+    void setEnabled(bool enable);
+    void setReadOnly(bool read_only);
 
   protected slots:
     // Executed if text changes.

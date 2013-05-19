@@ -62,8 +62,6 @@ class FormEditVariable : public QDialog {
   private:
     Ui::FormEditVariable *m_ui;
     QMap<QString, int> m_mappedTypes;
-    QPalette m_defaultPalette;
-    QPalette m_errorPalette;
     Value m_convertedValue;
     QString m_originalName;
 };
