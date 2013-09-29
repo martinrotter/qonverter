@@ -14,16 +14,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="324"/>
-        <source>ApÃ©ry&apos;s constant</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/calculator/calculator.cpp" line="325"/>
-        <source>EulerâMascheroni constant</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../src/calculator/calculator.cpp" line="326"/>
         <source>Pythagoras&apos; constant</source>
         <translation type="unfinished"></translation>
@@ -81,6 +71,16 @@
     <message>
         <location filename="../src/calculator/calculator.cpp" line="321"/>
         <source>silver ratio</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/calculator/calculator.cpp" line="324"/>
+        <source>Apéry&apos;s constant</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/calculator/calculator.cpp" line="325"/>
+        <source>Euler–Mascheroni constant</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -260,12 +260,17 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="486"/>
+        <location filename="../src/calculator/calculator.cpp" line="372"/>
+        <source>modulo operation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/calculator/calculator.cpp" line="488"/>
         <source>result of &apos;ans&apos; before previous calculation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/calculator/calculator.cpp" line="490"/>
+        <location filename="../src/calculator/calculator.cpp" line="492"/>
         <source>result of previous calculation</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1512,16 +1517,6 @@ Note that variables are not created during on-the-fly subcomputations in calcula
     </message>
     <message>
         <location filename="../src/unitconverter/unitconverter.cpp" line="103"/>
-        <source>m/sÂ²</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="103"/>
-        <source>ft/sÂ²</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="103"/>
         <source>gal</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1547,52 +1542,12 @@ Note that variables are not created during on-the-fly subcomputations in calcula
     </message>
     <message>
         <location filename="../src/unitconverter/unitconverter.cpp" line="105"/>
-        <source>mÂ²</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="105"/>
-        <source>mmÂ²</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="105"/>
-        <source>cmÂ²</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="105"/>
-        <source>dmÂ²</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="105"/>
         <source>a (are</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/unitconverter/unitconverter.cpp" line="105"/>
         <source>ha (hectare)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="106"/>
-        <source>kmÂ²</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="106"/>
-        <source>ftÂ² (square foot)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="106"/>
-        <source>ydÂ² (square yard)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="107"/>
-        <source>miÂ² (square mile)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1802,11 +1757,6 @@ Note that variables are not created during on-the-fly subcomputations in calcula
     </message>
     <message>
         <location filename="../src/unitconverter/unitconverter.cpp" line="130"/>
-        <source>cd/mÂ²</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="130"/>
         <source>sb (stilb)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1856,6 +1806,56 @@ Note that variables are not created during on-the-fly subcomputations in calcula
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="103"/>
+        <source>m/s²</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="103"/>
+        <source>ft/s²</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="105"/>
+        <source>m²</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="105"/>
+        <source>mm²</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="105"/>
+        <source>cm²</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="105"/>
+        <source>dm²</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="106"/>
+        <source>km²</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="106"/>
+        <source>ft² (square foot)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="106"/>
+        <source>yd² (square yard)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="107"/>
+        <source>mi² (square mile)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../src/unitconverter/unitconverter.cpp" line="116"/>
         <source>V (Volt)</source>
         <translation type="unfinished"></translation>
@@ -1898,6 +1898,11 @@ Note that variables are not created during on-the-fly subcomputations in calcula
     <message>
         <location filename="../src/unitconverter/unitconverter.cpp" line="130"/>
         <source>L (Lambert)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="130"/>
+        <source>cd/m²</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2057,11 +2062,6 @@ Note that variables are not created during on-the-fly subcomputations in calcula
     </message>
     <message>
         <location filename="../src/unitconverter/unitconverter.cpp" line="149"/>
-        <source>Âµs</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="149"/>
         <source>ms</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2083,6 +2083,11 @@ Note that variables are not created during on-the-fly subcomputations in calcula
     <message>
         <location filename="../src/unitconverter/unitconverter.cpp" line="149"/>
         <source>week</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="149"/>
+        <source>µs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2113,6 +2118,21 @@ Note that variables are not created during on-the-fly subcomputations in calcula
     <message>
         <location filename="../src/unitconverter/unitconverter.cpp" line="151"/>
         <source>hl (helek [Hebrew])</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="156"/>
+        <source>m³</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="156"/>
+        <source>ml/cm³</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/unitconverter/unitconverter.cpp" line="156"/>
+        <source>l/dm³</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2192,21 +2212,6 @@ Note that variables are not created during on-the-fly subcomputations in calcula
     </message>
     <message>
         <location filename="../src/unitconverter/unitconverter.cpp" line="156"/>
-        <source>mÂ³</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="156"/>
-        <source>ml/cmÂ³</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="156"/>
-        <source>l/dmÂ³</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/unitconverter/unitconverter.cpp" line="156"/>
         <source>hl</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2237,12 +2242,12 @@ Note that variables are not created during on-the-fly subcomputations in calcula
     </message>
     <message>
         <location filename="../src/unitconverter/unitconverter.cpp" line="159"/>
-        <source>NÂ·m (Newton metre)</source>
+        <source>m kg (metre kilogram)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/unitconverter/unitconverter.cpp" line="159"/>
-        <source>m kg (metre kilogram)</source>
+        <source>N·m (Newton metre)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

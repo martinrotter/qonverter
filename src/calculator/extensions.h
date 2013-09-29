@@ -65,6 +65,55 @@ class OprtSqrt : public IOprtInfix {
     }
 };
 
+class FunMod : public ICallback {
+  public:
+    FunMod() : ICallback(cmFUNC, _T("mod"), 2) {
+    }
+
+    virtual void Eval(ptr_val_type &ret, const ptr_val_type *a_pArg, int a_iArgc) {
+      if (a_iArgc < 2) {
+        throw ParserError(ErrorContext(ecTOO_FEW_PARAMS, GetExprPos(),
+                                       GetIdent()));
+      }
+      else if (a_iArgc > 2) {
+        throw ParserError(ErrorContext(ecTOO_MANY_PARAMS, GetExprPos(),
+                                       GetIdent()));
+      }
+
+      QList<int_type> list_of_elems;
+
+      for (int i = 0; i < a_iArgc; i++) {
+        switch(a_pArg[i]->GetType()) {
+          case 'i':
+            list_of_elems << a_pArg[i]->GetInteger();
+            break;
+          default: {
+            throw ParserError(ErrorContext(ecTYPE_CONFLICT_FUN,
+                                           i+1,
+                                           GetIdent(),
+                                           a_pArg[i]->GetType(),
+                                           'i',
+                                           a_iArgc));
+          }
+        }
+      }
+
+      if (list_of_elems[1] == 0) {
+        throw ParserError(ErrorContext(ecDIV_BY_ZERO));
+      }
+
+      *ret = list_of_elems[0] % list_of_elems[1];
+    }
+
+    const char_type* GetDesc() const {
+      return _T("mod(x,y,z,...) - Modulo operation");
+    }
+
+    IToken* Clone() const {
+      return new FunMod(*this);
+    }
+};
+
 class FunMedian : public ICallback {
   public:
     FunMedian() : ICallback(cmFUNC, _T("median"), -1) {

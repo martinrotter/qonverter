@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 2.8.10)
 project(qonverter)
 set(APP_NAME "Qonverter")
 set(APP_LOW_NAME "qonverter")
-set(APP_VERSION "1.0.7-alpha")
+set(APP_VERSION "1.0.8-alpha")
 set(APP_AUTHOR "Martin Rotter")
 set(APP_URL "http://code.google.com/p/qonverter")
 
@@ -269,12 +269,22 @@ set(APP_RESOURCES
 set(APP_TRANSLATIONS
   localization/qonverter_en.ts
   localization/qonverter_cs.ts
+  localization/qonverter_hu.ts
+  localization/qonverter_fr.ts
+  localization/qonverter_ru.ts
+  localization/qonverter_es.ts
+  localization/qonverter_vn.ts
   localization/qt_cs.ts
 )
 
 set(APP_TRANSLATIONS_WO_QT
   localization/qonverter_en.ts
   localization/qonverter_cs.ts
+  localization/qonverter_hu.ts
+  localization/qonverter_fr.ts
+  localization/qonverter_ru.ts
+  localization/qonverter_es.ts
+  localization/qonverter_vn.ts
 )
 
 # Add skins.
@@ -414,7 +424,7 @@ set(CPACK_PACKAGE_NAME ${APP_LOW_NAME})
 set(CPACK_PACKAGE_VERSION ${APP_VERSION})
 set(CPACK_SOURCE_GENERATOR "TGZ")
 set(CPACK_SOURCE_PACKAGE_FILE_NAME "${CPACK_PACKAGE_NAME}-${CPACK_PACKAGE_VERSION}-src")
-set(CPACK_IGNORE_FILES "/resources/aur/;\\\\.psd$;/resources/deployment;/CVS/;/\\\\.svn/;/\\\\.git/;\\\\.swp$;/CMakeLists.txt.user;\\\\.#;/#;\\\\.tar.gz$;/CMakeFiles/;CMakeCache.txt;\\\\.qm$;/build/;\\\\.diff$;.DS_Store'")
+set(CPACK_IGNORE_FILES "/ideas/;/resources/aur/;\\\\.psd$;/resources/deployment;/CVS/;/\\\\.svn/;/\\\\.git/;\\\\.swp$;/CMakeLists.txt.user;\\\\.#;/#;\\\\.tar.gz$;/CMakeFiles/;CMakeCache.txt;\\\\.qm$;/build/;\\\\.diff$;.DS_Store'")
 set(CPACK_SOURCE_IGNORE_FILES ${CPACK_IGNORE_FILES})
 
 # Load packaging facilities.

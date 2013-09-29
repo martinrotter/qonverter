@@ -369,6 +369,7 @@ void Calculator::loadConstants() {
   addMemoryPlace("conj", tr("complex conjugate of the complex number"), MemoryPlace::FUNCTION);
   addMemoryPlace("norm", tr("norm of the complex number"), MemoryPlace::FUNCTION);
   addMemoryPlace("median", tr("median"), MemoryPlace::FUNCTION);
+  addMemoryPlace("mod", tr("modulo operation"), MemoryPlace::FUNCTION);
 }
 
 void Calculator::initialize() {
@@ -382,6 +383,7 @@ void Calculator::initialize() {
   // All operators and functions are freed automatically.
   m_parser->DefineInfixOprtChars(_T("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ()/+-*^?<>=#!$%&|~'_√"));
   m_parser->DefineFun(new FunMedian());
+  m_parser->DefineFun(new FunMod());
   m_parser->DefineInfixOprt(new OprtSqrt());
 
   // These are normally in pckNON_COMPLEX but that package
