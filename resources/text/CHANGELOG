@@ -1,4 +1,8 @@
 <body>
+[1.0.8]
+<ul>
+<li>Added modulo operation.</li>
+</ul>
 [1.0.7]
 <ul>
 <li>New validated text boxes for unit converter and variabled add dialog.</li>
